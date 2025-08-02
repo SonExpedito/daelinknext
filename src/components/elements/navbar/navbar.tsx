@@ -7,7 +7,8 @@ export default function Navbar() {
         <div className="w-full h-20 background-primary px-12">
             <div className="w-full h-full relative flex items-center justify-center text-color ">
 
-                <img src="./logo.png" alt="Logo" className=" object-contain h-2/4 absolute left-0" />
+                <Link href="/" className="flex h-full items-center absolute left-0">
+                <img src="./logo.png" alt="Logo" className=" flex object-contain h-2/4 " /></Link>
 
                 <div className="flex gap-4 h-full w-auto justify-center items-center ">
                     <Link href="/" className="text-color text-hover">Empresas</Link>
@@ -22,7 +23,7 @@ export default function Navbar() {
                         <img
                             src="https://images2.minutemediacdn.com/image/upload/c_crop,w_4000,h_2250,x_0,y_9/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_en_international_web/01jczr9sq67ky36mtztb.jpg"
                             alt="User"
-                            className="rounded-full cursor-pointer object-cover h-10 w-10"
+                            className="rounded-full cursor-pointer object-cover h-10 w-10 border-blue-400 border-4"
                         />
                     </button>
                 </div>

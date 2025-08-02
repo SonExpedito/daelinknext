@@ -37,6 +37,10 @@ body {
   color: var(--text-primary);
 }
 
+.text-background {
+  color: var(--background);
+}
+
 .texto-hover {
   transition: color 0.3s ease;
 }
@@ -45,11 +49,23 @@ body {
   color: var(--primary);
 }
 
+.primary-color {
+  color: var(--primary);
+}
+
+.secondary-color {
+  color: var(--secundary);
+}
+
 
 /**Background e Cores ***/
 
 .background-primary {
   background-color: var(--background);
+}
+
+.foreground-color {
+  background-color: var(--foreground);
 }
 
 .background-blue {
@@ -60,10 +76,3 @@ body {
   background-color: var(--secundary);
 }
 
-.primary-color {
-  color: var(--primary);
-}
-
-.secondary-color {
-  color: var(--secundary);
-}

@@ -1,3 +1,13 @@
 .heroHeight {
   height: 40rem;
 }
+
+.card-drop {
+  filter: drop-shadow(5px 6px 0px var(--foreground, rgba(0, 0, 0, 0.1)));
+  transition: filter 0.3s ease;
+}
+
+
+.sectionHeight {
+  height: 35rem;
+}
