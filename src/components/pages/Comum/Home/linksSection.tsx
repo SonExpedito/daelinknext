@@ -24,11 +24,9 @@ export default function LinkSection() {
 
                 <div className="h-full w-1/2 grid grid-cols-2 items-center justify-items-center ">
                     {linkslogos.map((link, index) => (
-                        <img key={index} src={link.src} alt={link.alt} className="object-contain h-24" />
+                        <img key={index} src={link.src} alt={link.alt} className="object-contain h-24 cursor-pointer hover-size" />
                     ))}
                 </div>
-
-
 
                 <div className='h-full w-1/2 flex items-center justify-center'>
                     <p className='text-color text-2xl  px-12'>{linksText}</p>

@@ -4,16 +4,17 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className="w-full h-20 background-primary px-12">
-            <div className="w-full h-full relative flex items-center justify-center text-color ">
+        <div className="w-full h-20 background-primary px-12 fixed z-50">
+            <div className="h-full w-full flex relative justify-center items-center  text-color ">
 
-                <Link href="/" className="flex h-full items-center absolute left-0">
-                <img src="./logo.png" alt="Logo" className=" flex object-contain h-2/4 " /></Link>
+                <Link href="/" className="absolute left-0 flex h-full items-center">
+                    <img src="./logo.png" alt="Logo" className=" flex object-contain h-2/4"/>
+                </Link>
 
-                <div className="flex gap-4 h-full w-auto justify-center items-center ">
-                    <Link href="/" className="text-color text-hover">Empresas</Link>
-                    <Link href="/about" className="text-color text-hover">Vagas</Link>
-                    <Link href="/contact" className="text-color text-hover">Sobre</Link>
+                <div className="h-full items-center flex  justify-center gap-4 text-background text-color">
+                    <Link href="/empresas" className="text-color text-hover">Empresas</Link>
+                    <Link href="/vagas" className="text-color text-hover">Vagas</Link>
+                    <Link href="/sobre" className="text-color text-hover">Sobre</Link>
                 </div>
 
                 <div className="flex gap-4 h-full  w-auto justify-center items-center  absolute right-0  ">
@@ -27,10 +28,7 @@ export default function Navbar() {
                         />
                     </button>
                 </div>
-
             </div>
-
-
         </div>
     )
 

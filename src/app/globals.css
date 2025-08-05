@@ -7,8 +7,8 @@
   --secundary: #07BEB8;
   --text-primary: #1C1C1C;
 
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
-
 
 @theme inline {
   --color-background: var(--background);
@@ -17,19 +17,34 @@
   /* atualizado */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1C1C1C;
-    --foreground: #ffffff;
-    --text-primary: #F5F5F5;
-  }
+[data-theme="dark"],
+[data-theme="light"] {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="dark"] {
+  --background: #1C1C1C;
+  --foreground: #ffffff;
+  --text-primary: #F5F5F5;
+}
+
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #1C1C1C;
+  --text-primary: #1C1C1C;
 }
 
 body {
   background: var(--background);
-  color: var(--color-foreground);
+  color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+.theme-transition {
+  transition: --background 0.4s ease, color 0.4s ease;
+}
+
+
 
 /**Textos **/
 
@@ -64,7 +79,7 @@ body {
   background-color: var(--background);
 }
 
-.foreground-color {
+.background-secondary {
   background-color: var(--foreground);
 }
 
@@ -75,4 +90,3 @@ body {
 .background-green {
   background-color: var(--secundary);
 }
-

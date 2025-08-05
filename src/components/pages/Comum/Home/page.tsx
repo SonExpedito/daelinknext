@@ -4,6 +4,8 @@ import Button from '@/src/components/elements/buttons/button';
 import './homepage.css';
 import Link from 'next/link';
 import LinkSection from './linksSection';
+import AppCard from './appCard';
+import WorldShow from './worldShow';
 
 export default function HomePage() {
 
@@ -34,7 +36,7 @@ Assim como você, buscamos a nossa.`
                         </div>
 
 
-                        <p className='text-color flex text-2xl '>{heroTexts[0].description}</p>
+                        <p className='text-color flex text-2xl'>{heroTexts[0].description}</p>
 
                         <div className='flex gap-4 items-center '>
                             <Button label="Acessar" onClick={() => { handleButtonClick() }} />
@@ -63,6 +65,8 @@ Assim como você, buscamos a nossa.`
             </div>
 
             <LinkSection />
+            <AppCard />
+            <WorldShow />
         </>
     );
 }

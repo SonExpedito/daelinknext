@@ -1,5 +1,5 @@
 .heroHeight {
-  height: 40rem;
+  height: 45rem;
 }
 
 .card-drop {
@@ -7,7 +7,30 @@
   transition: filter 0.3s ease;
 }
 
-
+ /* Empresas Links */
 .sectionHeight {
   height: 35rem;
 }
+
+.hover-size:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/*Phone Card*/
+
+.appPhoneHeight {
+  height: 38rem;
+}
+
+
+/* World Show*/
+.worldShowHeight {
+  height: 35rem;
+}
+
+@media (max-width: 80rem) {
+  .card-responsive  {
+    width: 92%;
+  }
+} 
