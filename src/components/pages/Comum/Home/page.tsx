@@ -67,6 +67,10 @@ Assim como você, buscamos a nossa.`
             <LinkSection />
             <AppCard />
             <WorldShow />
+
+            <div className='w-full items-center justify-center flex py-6 text-center'>
+                <h1 className='text-lg font-bold text-color'>Dica: Clique na Lua e no Sol, para mudar as cores dos seu Dia</h1>
+            </div>
         </>
     );
 }
