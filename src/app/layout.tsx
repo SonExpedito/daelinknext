@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/elements/navbar/navbar";
-import Footer from "../components/elements/footer/footer";
+
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,6 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Daelink",
   description: "Plataforma de Conectividade PCD",
+  icons: { icon: "/favicon.ico" }, // favicon aqui
 };
 
 export default function RootLayout({
@@ -22,18 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body
         className={`${inter.variable} antialiased`}
 
       >
-        <Navbar />
 
         {children}
-
-        <Footer />
       </body>
     </html>
   );

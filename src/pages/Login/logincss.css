@@ -1,0 +1,9 @@
+.shadow-container {
+    filter: drop-shadow(0px 8px 0px var(--backround, rgba(0, 0, 0, 0.5)));
+    transition: filter 0.3s ease;
+}
+
+/* logincss.css */
+.drop-shadow-white {
+    filter: drop-shadow(0 4 1px #F5F5F5);
+}

@@ -6,8 +6,10 @@ import Link from 'next/link';
 import LinkSection from './linksSection';
 import AppCard from './appCard';
 import WorldShow from './worldShow';
+import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
+    const router = useRouter();
 
     const heroTexts = [
         {
@@ -18,7 +20,7 @@ Assim como você, buscamos a nossa.`
 
 
     function handleButtonClick() {
-        alert("Button clicked! Redirecting to the next page...");
+        router.push("/login");
     }
 
 
@@ -40,7 +42,7 @@ Assim como você, buscamos a nossa.`
 
                         <div className='flex gap-4 items-center '>
                             <Button label="Acessar" onClick={() => { handleButtonClick() }} />
-                            <Link className='text-lg cursor-pointer' href='/about'>Conheça-nos</Link>
+                            <Link className='text-lg cursor-pointer' href='/sobre'>Conheça-nos</Link>
                         </div>
                     </div>
                 </div>

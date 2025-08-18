@@ -18,7 +18,7 @@ export default function Beneficios() {
             title: "Inteligente", icon: <BrainCog size={55} />, color: "background-green",
             description: 'Sistema de recomendação avançado que otimiza os resultados de busca, tornando a experiência mais rápida, eficiente e personalizada.'
         },
-    ]
+    ] 
 
     return (
         <div className="w-full beneficiosheight grid grid-cols-4 justify-items-center place-items-center">
@@ -33,8 +33,6 @@ export default function Beneficios() {
 
                 </div>
             ))}
-
-
         </div>
     );
 }
