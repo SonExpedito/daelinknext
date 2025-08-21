@@ -6,7 +6,7 @@ export default function WorldShow() {
     return (
         <div className="w-full flex items-center justify-center worldShowHeight">
             <div className="h-full w-1/2 flex justify-center items-center ">
-                <img src="./home/world.png" alt="Mapa Mundi Empresarial" className=" w-10/12  lg:max-lg:h-9/12" />
+                <img src="./home/globo.png" alt="Mapa Mundi Empresarial" className=" w-10/12  lg:max-lg:h-9/12" />
             </div>
 
             <div className="h-full w-1/2 flex flex-col justify-center items-center text-color gap-2 text-center">

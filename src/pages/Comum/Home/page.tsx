@@ -41,7 +41,7 @@ Assim como você, buscamos a nossa.`
                         <p className='text-color flex text-2xl'>{heroTexts[0].description}</p>
 
                         <div className='flex gap-4 items-center '>
-                            <Button label="Acessar" onClick={() => { handleButtonClick() }} />
+                            <Button label="Acessar" onClick={() => { handleButtonClick() }} type='button' />
                             <Link className='text-lg cursor-pointer' href='/sobre'>Conheça-nos</Link>
                         </div>
                     </div>
