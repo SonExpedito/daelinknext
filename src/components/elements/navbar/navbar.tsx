@@ -2,78 +2,19 @@
 
 import { Search, AlignJustify } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { logout } from "@/src/api/Auth";
 import { useRouter } from "next/navigation";
-
-
+import { useUserStore } from "@/src/components/store/userstore";
 
 export default function Navbar() {
-    const [userProfile, setUserProfile] = useState<any>(null);
-    const [userType, setUserType] = useState<string | null>(null);
     const router = useRouter();
 
-    useEffect(() => {
-        const stored = localStorage.getItem('tipo');
-        if (stored) setUserType(stored);
-
-        // escuta mudanças vindas de outras abas
-        function handleStorage(e: StorageEvent) {
-            if (e.key === 'tipo') {
-                setUserType(e.newValue);
-            }
-        }
-        window.addEventListener('storage', handleStorage);
-
-        const getUser = async () => {
-            try {
-                // 1️⃣ Tenta buscar empresa
-                const companyRes = await axios.get('/get-company', { withCredentials: true });
-                if (companyRes.data) {
-                    console.log("Empresa encontrada:", companyRes.data);
-                    setUserProfile(companyRes.data);
-                    return; // para aqui se achou empresa
-                }
-            } catch (err: any) {
-                if (err.response?.status === 404) {
-                    console.log("Empresa não encontrada.");
-                } else {
-                    console.error('Erro ao buscar empresa:', err.response?.data || err.message);
-                    return; // se for outro erro, para a execução
-                }
-            }
-
-            try {
-                // 2️⃣ Tenta buscar PCD
-                const pcdRes = await axios.get('/get-pcd', { withCredentials: true });
-                if (pcdRes.data) {
-                    console.log("PCD encontrado:", pcdRes.data);
-                    setUserProfile(pcdRes.data);
-                    return; // para aqui se achou PCD
-                }
-            } catch (err: any) {
-                if (err.response?.status === 404) {
-                    console.log("PCD não encontrado.");
-                } else {
-                    console.error('Erro ao buscar PCD:', err.response?.data || err.message);
-                    return;
-                }
-            }
-
-            // 3️⃣ Se chegou aqui, nenhum dos dois foi encontrado
-            console.error("Nenhum usuário encontrado (Empresa ou PCD).");
-        };
-
-        getUser();
-    }, []);
-
+    // Pegue direto do store
+    const userProfile = useUserStore((state) => state.userProfile);
+    const userType = useUserStore((state) => state.userType);
+    const logout = useUserStore((state) => state.logout);
 
     async function LogoutProfile() {
-        logout();
-        localStorage.removeItem('userId');
-        localStorage.removeItem('tipo');
-        await axios.post('http://localhost:3000/logout', {}, { withCredentials: true })
+        await logout();
         router.push('/login');
     }
 
@@ -101,8 +42,6 @@ export default function Navbar() {
             : userType === "Empresa"
                 ? navLinks.Empresa
                 : navLinks.generic;
-
-
 
     return (
         <div className="w-full h-20 background-primary px-12 sticky top-0 z-50">

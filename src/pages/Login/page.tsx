@@ -1,17 +1,13 @@
 'use client'
 import { useEffect, useState } from "react";
 import "./logincss.css";
-import { db, auth } from "@/src/api/firebase"; // usa instâncias já inicializadas
+import { auth } from "@/src/api/firebase";
 import Link from "next/link";
 import Button from "@/src/components/elements/buttons/button";
 import { Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
-
-import { doc, getDoc } from 'firebase/firestore';
-import { signInWithEmailAndPassword } from "firebase/auth";
 import Modal from "@/src/components/elements/modal/modal";
-import axios from "axios";
-
+import { useUserStore } from "@/src/components/store/userstore";
 
 export default function LoginPage() {
     const [open, setOpen] = useState(false);
@@ -29,7 +25,7 @@ export default function LoginPage() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % images.length);
-        }, 45000); // troca a cada 30 segundos
+        }, 45000);
         return () => clearInterval(interval);
     }, []);
 
@@ -37,19 +33,21 @@ export default function LoginPage() {
         const root = document.documentElement;
         const prev = root.getAttribute('data-theme');
         root.setAttribute('data-theme', 'light');
-        root.classList.remove('dark'); // caso algum toggle adicione
+        root.classList.remove('dark');
         return () => {
             if (prev) root.setAttribute('data-theme', prev); else root.removeAttribute('data-theme');
         };
     }, []);
-
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     auth.languageCode = 'it';
 
-   
+    // Hook zustand
+    const loginUser = useUserStore((state) => state.loginUser);
+    const setUserType = useUserStore((state) => state.setUserType);
+
     const handleLogin = async () => {
         if (!email || !password) {
             setMsg("Preencha todos os campos.");
@@ -58,80 +56,33 @@ export default function LoginPage() {
             return;
         }
 
-        try {
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            const uid = userCredential.user.uid;
-
-            try {
-                // Busca docs nas duas coleções em paralelo
-                const [pcdDocSnap, empresaDocSnap] = await Promise.all([
-                    getDoc(doc(db, "PCD", uid)),
-                    getDoc(doc(db, "Empresa", uid))
-                ]);
-
-                let tipo: string | null = null;
-                let dados: any = null;
-
-                if (pcdDocSnap.exists()) {
-                    dados = pcdDocSnap.data();
-                    tipo = (dados?.tipo ?? "PCD");
-                } else if (empresaDocSnap.exists()) {
-                    dados = empresaDocSnap.data();
-                    tipo = (dados?.tipo ?? "Empresa");
-                }
-
-                if (tipo) {
-                    setMsg("Autenticado com sucesso");
-                    setOpen(true);
-
-                    setTimeout(async () => {
-                        try {
-                            await axios.post(
-                                "http://localhost:3000/cookie",
-                                { uid, tipo },
-                                { withCredentials: true }
-                            );
-                        } catch (e) {
-                            console.warn("Falha ao definir cookie backend", e);
-                        }
-
-                        localStorage.setItem("userId", uid);
-                        localStorage.setItem("tipo", tipo);
-                        router.push(`/`);
-                    }, 1200);
-                } else {
-                    setMsg("Usuário não encontrado nas coleções.");
-                    setOpen(true);
-                    setTimeout(() => setOpen(false), 2200);
-                }
-            } catch (error) {
-                console.error(error);
-                setMsg("Erro ao obter dados do usuário.");
-                setOpen(true);
-                setTimeout(() => setOpen(false), 2200);
-            }
-        } catch (error) {
-            console.error(error);
-            setMsg("Credenciais inválidas.");
+        const success = await loginUser(email, password);
+        if (success) {
+            // Garante que o tipo está atualizado no zustand (caso o loginUser não tenha feito)
+            const tipo = localStorage.getItem("tipo");
+            setUserType(tipo); // tipo pode ser "PCD", "Empresa" ou null
+            setMsg("Autenticado com sucesso");
+            setOpen(true);
+            setTimeout(() => {
+                router.push(`/`);
+            }, 1200);
+        } else {
+            setMsg("Credenciais inválidas ou usuário não encontrado.");
             setOpen(true);
             setTimeout(() => setOpen(false), 2200);
         }
     };
-  
 
     return (
         <>
             <Modal
                 isOpen={open}
                 onClose={() => setOpen(false)}
-                message={msg}   // Aqui a mensagem é dinâmica
-                type="display" // Tipo só exibição
+                message={msg}
+                type="display"
             />
 
             <div data-theme="light" className="h-screen w-screen flex items-center justify-center relative overflow-hidden">
-
-
-                {/* Slider de imagens */}
                 {images.map((img, index) => (
                     <div
                         key={index}
@@ -142,22 +93,18 @@ export default function LoginPage() {
                             alt="Background"
                             className="w-full h-full object-cover scale-105 brightness-55 contrast-105 saturate-110"
                         />
-                        {/* Glassmorphism overlay */}
                         <div className="pointer-events-none absolute inset-0 bg-white/5 backdrop-saturate-150 border border-white/30 shadow-inner" />
-                        {/* Optional subtle gradient to enhance depth */}
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 mix-blend-overlay" />
                     </div>
                 ))}
 
-                {/* Glassmorphism effect */}
                 <div className="absolute h-3/4 w-6/12 flex flex-col items-center justify-center rounded-3xl bg-white/70 border border-white/70 shadow-2xl backdrop-blur-2xl backdrop-saturate-150 transition-all duration-300 gap-8">
                     <Link href="/"><img src="/logo.png" className="h-12 object-contain" alt="Logo" /></Link>
                     <h1 className="text-3xl font-bold">Bem Vindo de Volta!</h1>
 
-                    {/* Formulário principal */}
                     <form
                         onSubmit={(e) => {
-                            e.preventDefault(); // impede reload da página
+                            e.preventDefault();
                             handleLogin();
                         }}
                         className="flex flex-col w-full h-fit justify-center items-center gap-4"
@@ -208,11 +155,7 @@ export default function LoginPage() {
                         </button>
                     </div>
                 </div>
-
-
-
             </div>
         </>
     );
 }
-

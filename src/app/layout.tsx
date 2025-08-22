@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import UserInitializer from "@/src/components/store/UserInitializer";
 import "./globals.css";
 
 
@@ -27,7 +28,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
 
       >
-
+        <UserInitializer />
         {children}
       </body>
     </html>
