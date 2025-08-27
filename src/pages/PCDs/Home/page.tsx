@@ -2,15 +2,18 @@ import Button from '@/src/components/elements/buttons/button';
 import { useUserStore } from '@/src/components/store/userstore';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import AppCard from '../../Comum/Home/appCard';
+import HomeCards from './homecards';
 
 export default function HomePCD() {
     const userProfile = useUserStore((state) => state.userProfile);
+    const router = useRouter();
 
     const [firstName = "", secondName = ""] = (userProfile?.name ?? "").split(" ");
     const displayName = `${firstName} ${secondName}`.trim();
 
     function handleButtonClick() {
-        throw new Error('Function not implemented.');
+        router.push('/sobre');
     }
 
     return (
@@ -26,7 +29,10 @@ export default function HomePCD() {
                         </div>
 
 
-                        <p className='text-color flex text-2xl'></p>
+                        <p className='text-color flex text-2xl flex-wrap'>
+                            Nem sempre as coisas dão certo de uma vez, persistir é a sua, é nossa 
+                            <span className='secondary-color'>conexão.</span>
+                        </p>
 
                         <div className='flex gap-4 items-center '>
                             <Button label="Processos" onClick={() => { handleButtonClick() }} type='button' />
@@ -49,6 +55,9 @@ export default function HomePCD() {
                     </div>
                 </div>
             </div>
+
+            <AppCard />
+            <HomeCards />
         </>
     );
 }

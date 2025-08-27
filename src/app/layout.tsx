@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import UserInitializer from "@/src/components/store/UserInitializer";
+import ClientWrapper from "@/src/components/provider/ClientWrapper";
 import "./globals.css";
-
+import Modal from "@/src/components/elements/modal/modal";
 
 
 const inter = Inter({
@@ -25,11 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
-
-      >
+        className={`${inter.variable} antialiased`}>
+        <Modal />
         <UserInitializer />
-        {children}
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );

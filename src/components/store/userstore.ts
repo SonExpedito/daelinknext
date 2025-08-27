@@ -1,8 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "@/src/api/firebase"; // ajuste para seu projeto
-import { doc, getDoc } from "firebase/firestore";
+import { auth } from "@/src/api/firebase";
 import { logout as firebaseLogout } from "@/src/api/Auth";
 
 type UserProfile = { id?: string; nome?: string;[key: string]: any };
@@ -12,10 +11,10 @@ interface UserState {
   userProfile: UserProfile | null;
   loading: boolean;
   error: string | null;
+  setLoading: (state: boolean) => void;  // <-- método adicionado
   fetchUser: () => Promise<void>;
   loginUser: (email: string, password: string) => Promise<boolean>;
-  setUserType: (type: string | null) => void;
-  logout: () => void;
+  logout: () => Promise<void>;
 }
 
 export const useUserStore = create<UserState>((set) => ({
@@ -24,45 +23,24 @@ export const useUserStore = create<UserState>((set) => ({
   loading: false,
   error: null,
 
-  setUserType: (type) => {
-    if (type) localStorage.setItem("tipo", type);
-    else localStorage.removeItem("tipo");
-    set({ userType: type });
-  },
-
-  logout: async () => {
-    try {
-      await firebaseLogout(); // faz logout no Firebase Auth
-      localStorage.removeItem("tipo");
-      localStorage.removeItem("userId");
-      await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
-    } catch (e) {
-      console.warn("Erro ao fazer logout", e);
-    }
-    set({ userType: null, userProfile: null });
-  },
+  setLoading: (state: boolean) => set({ loading: state }),
 
   fetchUser: async () => {
-    const uid = localStorage.getItem("userId");
-    const tipo = localStorage.getItem("tipo");
-    if (!uid || !tipo) {
-      set({ userType: null, userProfile: null });
-      return;
-    }
+    set({ loading: true, error: null });
     try {
-      // Busca o perfil correto baseado no tipo
-      const docRef = doc(db, tipo, uid);
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        set({
-          userType: tipo,
-          userProfile: docSnap.data(),
-        });
-      } else {
-        set({ userType: null, userProfile: null });
+      const response = await axios.get<{ userType: string; userProfile: UserProfile }>(
+        "http://localhost:3000/me",
+        { withCredentials: true }
+      );
+      const { userType, userProfile } = response.data;
+      set({ userType, userProfile, loading: false });
+    } catch (err: any) {
+      console.error("Erro ao buscar usuário:", err);
+      let errorMsg = "Erro ao buscar usuário";
+      if (err.response && err.response.status === 401) {
+        errorMsg = "Sessão expirada. Faça login novamente.";
       }
-    } catch (e) {
-      set({ userType: null, userProfile: null });
+      set({ userType: null, userProfile: null, loading: false, error: errorMsg });
     }
   },
 
@@ -70,57 +48,32 @@ export const useUserStore = create<UserState>((set) => ({
     set({ loading: true, error: null });
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const uid = userCredential.user.uid;
+      const idToken = await userCredential.user.getIdToken();
 
-      // Busca nas coleções PCD e Empresa
-      const [pcdDocSnap, empresaDocSnap] = await Promise.all([
-        getDoc(doc(db, "PCD", uid)),
-        getDoc(doc(db, "Empresa", uid)),
-      ]);
+      await axios.post(
+        "http://localhost:3000/session",
+        { token: idToken },
+        { withCredentials: true }
+      );
 
-      let tipo: string | null = null;
-      let dados: any = null;
+      await useUserStore.getState().fetchUser();
 
-      if (pcdDocSnap.exists()) {
-        dados = pcdDocSnap.data();
-        tipo = dados?.tipo ?? "PCD";
-      } else if (empresaDocSnap.exists()) {
-        dados = empresaDocSnap.data();
-        tipo = dados?.tipo ?? "Empresa";
-      }
-
-      if (!tipo) {
-        set({ loading: false, error: "Usuário não encontrado" });
-        return false;
-      }
-
-      // Chama backend para criar cookie
-      try {
-        await axios.post(
-          "http://localhost:3000/cookie",
-          { uid, tipo },
-          { withCredentials: true }
-        );
-      } catch (e) {
-        console.warn("Falha ao definir cookie no backend", e);
-      }
-
-      // Atualiza estado e persiste localmente
-      localStorage.setItem("userId", uid);
-      localStorage.setItem("tipo", tipo);
-
-      set({
-        userType: tipo,
-        userProfile: dados,
-        loading: false,
-        error: null,
-      });
-
+      set({ loading: false });
       return true;
-    } catch (error: any) {
-      console.error(error);
+    } catch (error) {
+      console.error("Erro no login:", error);
       set({ loading: false, error: "Credenciais inválidas" });
       return false;
     }
+  },
+
+  logout: async () => {
+    try {
+      await firebaseLogout();
+      await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
+    } catch (e) {
+      console.warn("Erro ao fazer logout:", e);
+    }
+    set({ userType: null, userProfile: null });
   },
 }));

@@ -1,21 +1,24 @@
 // src/app/api/logout/route.ts
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 
 export async function POST() {
-  const response = NextResponse.json({ message: "cookies deletados" });
+  const cookieStore = await cookies();
 
-  // cookies que você quer limpar
-  const cookiesToRemove = ["tokenId", "userType"];
+  // Agora remove também o cookie de sessão
+  const cookiesToRemove = ["session", "tokenId", "userType"];
 
   cookiesToRemove.forEach((cookieName) => {
-    response.cookies.set(cookieName, "", {
-      httpOnly: true,
-      secure: true,
-      sameSite: "lax",
-      expires: new Date(0), // expira imediatamente
+    cookieStore.set({
+      name: cookieName,
+      value: "",
       path: "/",
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production" ? true : false,
+      sameSite: process.env.NODE_ENV === "production" ? "strict" : "lax",
+      expires: new Date(0),
     });
   });
 
-  return response;
+  return NextResponse.json({ message: "cookies deletados" });
 }

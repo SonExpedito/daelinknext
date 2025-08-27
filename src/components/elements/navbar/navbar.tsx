@@ -48,7 +48,7 @@ export default function Navbar() {
             <div className="h-full w-full flex relative justify-center items-center text-color ">
 
                 <Link href="/" className="absolute left-0 flex h-full items-center">
-                    <img src="./logo.png" alt="Logo" className="flex object-contain h-2/4" />
+                    <img src="/logo.png" alt="Logo" className="flex object-contain h-2/4" />
                 </Link>
 
                 {/* Links */}
@@ -78,7 +78,7 @@ export default function Navbar() {
                             />
                         </button>
                     ) : (
-                        <Link href="/login" className="text-color text-hover">
+                        <Link href="/login" className="primary-color text-hover font-bold  text-lg ">
                             Login
                         </Link>
                     )}

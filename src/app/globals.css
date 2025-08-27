@@ -44,7 +44,10 @@ body {
   transition: --background 0.4s ease, color 0.4s ease;
 }
 
-
+.hover-size:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
 
 /**Textos **/
 

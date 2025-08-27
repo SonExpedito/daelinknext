@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="h-full w-full flex relative justify-center items-center  text-background ">
 
                 <div className="absolute left-0 flex h-full items-center gap-2 ">
-                    <img src="./link.png" alt="Logo" className="flex object-contain h-2/5" />
+                    <img src="/link.png" alt="Logo" className="flex object-contain h-2/5" />
                     <p className="text-xl"><span className="font-bold">DAE</span>, Inc.</p>
                 </div>
 

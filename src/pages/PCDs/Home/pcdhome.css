@@ -1,0 +1,7 @@
+.homecardsheight {
+    height: 60vh;
+}
+
+.cardshadow {
+    box-shadow: 0px 8px 2px var(--foreground, rgba(0, 0, 0, 0.1));
+}

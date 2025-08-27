@@ -24,8 +24,19 @@ export async function POST(req: Request) {
       );
     }
 
+    const vagaData = snapshot.data();
+    let empresa = null;
+
+    if (vagaData?.empresaId) {
+      const empresaRef = doc(db, "Empresa", vagaData.empresaId);
+      const empresaSnap = await getDoc(empresaRef);
+      if (empresaSnap.exists()) {
+        empresa = { id: empresaSnap.id, ...empresaSnap.data() };
+      }
+    }
+
     return NextResponse.json(
-      { id: snapshot.id, ...snapshot.data() },
+      { id: snapshot.id, ...vagaData, empresa },
       { status: 200 }
     );
   } catch (error) {

@@ -6,12 +6,10 @@ import Link from "next/link";
 import Button from "@/src/components/elements/buttons/button";
 import { Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
-import Modal from "@/src/components/elements/modal/modal";
 import { useUserStore } from "@/src/components/store/userstore";
+import { useUIStore } from "@/src/components/store/modalstore";
 
 export default function LoginPage() {
-    const [open, setOpen] = useState(false);
-    const [msg, setMsg] = useState("Mensagem inicial...");
     const router = useRouter();
 
     const images = [
@@ -46,42 +44,31 @@ export default function LoginPage() {
 
     // Hook zustand
     const loginUser = useUserStore((state) => state.loginUser);
-    const setUserType = useUserStore((state) => state.setUserType);
+
+    const openModal = useUIStore((state) => state.openModal);
+    const closeModal = useUIStore((state) => state.closeModal);
 
     const handleLogin = async () => {
         if (!email || !password) {
-            setMsg("Preencha todos os campos.");
-            setOpen(true);
-            setTimeout(() => setOpen(false), 2200);
+            openModal("Preencha todos os campos.");
             return;
         }
 
         const success = await loginUser(email, password);
+
         if (success) {
-            // Garante que o tipo está atualizado no zustand (caso o loginUser não tenha feito)
-            const tipo = localStorage.getItem("tipo");
-            setUserType(tipo); // tipo pode ser "PCD", "Empresa" ou null
-            setMsg("Autenticado com sucesso");
-            setOpen(true);
-            setTimeout(() => {
-                router.push(`/`);
-            }, 1200);
+            openModal("Autenticado com sucesso!");
+            setTimeout(() => router.push(`/`), 1200);
         } else {
-            setMsg("Credenciais inválidas ou usuário não encontrado.");
-            setOpen(true);
-            setTimeout(() => setOpen(false), 2200);
+            openModal("Credenciais inválidas ou usuário não encontrado.");
+            setTimeout(() => closeModal(), 1200);
+
         }
     };
 
+
     return (
         <>
-            <Modal
-                isOpen={open}
-                onClose={() => setOpen(false)}
-                message={msg}
-                type="display"
-            />
-
             <div data-theme="light" className="h-screen w-screen flex items-center justify-center relative overflow-hidden">
                 {images.map((img, index) => (
                     <div

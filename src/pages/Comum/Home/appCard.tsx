@@ -3,8 +3,6 @@ import "./homepage.css";
 
 export default function AppCard() {
 
-
-
     return (
         <div className="w-full flex items-center justify-center appPhoneHeight cardcontainer-responsive ">
             <div className="h-11/12 w-2/3 flex background-secondary rounded-4xl  card-responsive ">
