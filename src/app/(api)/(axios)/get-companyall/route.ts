@@ -19,6 +19,8 @@ export async function GET() {
     }));
 
     return NextResponse.json(empresas, { status: 200 });
+
+    
   } catch (error) {
     console.error("Error fetching company data:", error);
     return NextResponse.json(

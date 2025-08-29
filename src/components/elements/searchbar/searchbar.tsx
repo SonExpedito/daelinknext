@@ -8,13 +8,20 @@ interface SearchBarProps {
   onSearch: (value: string) => void;
 }
 
-export default function SearchBar({ placeholder = "Busque uma específica", onSearch }: SearchBarProps) {
+export default function SearchBar({
+  placeholder = "Busque uma específica",
+  onSearch,
+}: SearchBarProps) {
   const [query, setQuery] = useState("");
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setQuery(value);
+    onSearch(value); // dispara em tempo real
+  };
+
   const handleSearch = () => {
-    if (query.trim() !== "") {
-      onSearch(query);
-    }
+    onSearch(query); // ainda funciona no botão
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -30,7 +37,7 @@ export default function SearchBar({ placeholder = "Busque uma específica", onSe
         placeholder={placeholder}
         className="flex-1 outline-none text-color placeholder-gray-500"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleInputChange} // agora busca em tempo real
         onKeyDown={handleKeyDown}
       />
       <button onClick={handleSearch} className="ml-2">

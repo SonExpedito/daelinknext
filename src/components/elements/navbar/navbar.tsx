@@ -67,16 +67,20 @@ export default function Navbar() {
                     </button>
 
                     {userProfile ? (
-                        <button onClick={LogoutProfile}>
+                        <button
+                            onClick={LogoutProfile}
+                           className="rounded-full p-1 border border-blue-400/70 backdrop-blur-md bg-blue-400/60 hover:bg-blue-400/80 transition duration-300"
+                        >
                             <img
                                 src={
                                     userProfile?.imageUrl ||
                                     "https://images2.minutemediacdn.com/image/upload/c_crop,w_4000,h_2250,x_0,y_9/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_en_international_web/01jczr9sq67ky36mtztb.jpg"
                                 }
                                 alt="User"
-                                className="rounded-full cursor-pointer object-cover h-10 w-10 border-blue-400 border-4"
+                                className="rounded-full cursor-pointer object-cover h-10 w-10"
                             />
                         </button>
+
                     ) : (
                         <Link href="/login" className="primary-color text-hover font-bold  text-lg ">
                             Login

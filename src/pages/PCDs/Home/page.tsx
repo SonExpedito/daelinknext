@@ -16,6 +16,8 @@ export default function HomePCD() {
         router.push('/sobre');
     }
 
+    const text = `Nem sempre as coisas dão certo de uma vez, persistir é a sua, é nossa força.`;
+
     return (
         <>
             <div className="w-full flex items-center justify-center heroHeight ">
@@ -30,12 +32,11 @@ export default function HomePCD() {
 
 
                         <p className='text-color flex text-2xl flex-wrap'>
-                            Nem sempre as coisas dão certo de uma vez, persistir é a sua, é nossa 
-                            <span className='secondary-color'>conexão.</span>
+                           {text} <span className='secondary-color'>conexão.</span>       
                         </p>
 
                         <div className='flex gap-4 items-center '>
-                            <Button label="Processos" onClick={() => { handleButtonClick() }} type='button' />
+                            <Button label="Processos" onClick={() => { handleButtonClick() }} type='button'  className='background-blue'/>
                             <Link className='text-lg cursor-pointer' href='/sobre'>Sobre</Link>
                         </div>
                     </div>

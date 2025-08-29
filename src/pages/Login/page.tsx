@@ -58,7 +58,10 @@ export default function LoginPage() {
 
         if (success) {
             openModal("Autenticado com sucesso!");
-            setTimeout(() => router.push(`/`), 1200);
+            setTimeout(() => {
+                closeModal();
+                router.push(`/`);
+            }, 1200);
         } else {
             openModal("Credenciais inválidas ou usuário não encontrado.");
             setTimeout(() => closeModal(), 1200);
@@ -123,7 +126,7 @@ export default function LoginPage() {
                             </button>
                         </div>
 
-                        <Button label="Login" type="submit" onClick={() => { }} />
+                        <Button label="Login" type="submit" onClick={() => { }} className="background-secondary"/>
                     </form>
 
                     <Link

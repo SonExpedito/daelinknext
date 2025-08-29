@@ -4,7 +4,8 @@ import axios from "axios";
 import Carregamento from '@/src/components/elements/carregamento/carregamento';
 import { useUIStore } from "@/src/components/store/modalstore";
 import { useRouter } from "next/navigation";
-import { p } from "framer-motion/client";
+import VoltarIcon from "@/src/components/elements/voltar/page";
+import ErrorCard from "@/src/components/elements/errorcard/errorcard";
 
 type Empresa = {
   name: string;
@@ -17,7 +18,7 @@ type Vaga = {
   salario?: string;
   tipo?: string;
   local?: string;
-  descricao?: string;
+  detalhes?: string;
   vaga?: string;
   status?: string;
 };
@@ -67,11 +68,12 @@ export default function VagasinfoPage({ vagaId }: Props) {
     { label: 'Salario', value: `R$${vaga?.salario}` },
     { label: 'Tipo', value: vaga?.tipo },
     { label: 'Endereço', value: vaga?.local },
-    { label: '=', value: vaga?.descricao },
+    { label: 'Descrição', value: vaga?.detalhes },
   ]
 
   return (
     <>
+      <VoltarIcon />
       {loading ? (
         <Carregamento />
       ) : (
@@ -84,18 +86,15 @@ export default function VagasinfoPage({ vagaId }: Props) {
             <p>{vaga.status}</p>
 
             <div className="w-full h-fit flex flex-col items-center justify-center gap-4">
-               {dados.map((item, index) => (
+              {dados.map((item, index) => (
                 <p key={index} className="text-color font-normal text-lg capitalize">
                   <span className="font-bold">{item.label}:</span> {item.value}</p>
               ))}
 
             </div>
-
-           
-
           </div>
         ) : (
-          <p>Empresa não encontrada.</p>
+          <ErrorCard label="Empresa não encontrada." />
         )
       )}
     </>
