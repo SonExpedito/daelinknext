@@ -97,12 +97,12 @@ export default function ComapanyTabs({ empresa }: Props) {
             {/* Conteúdo das tabs com efeito liquid glass */}
             <div className="mt-4 p-6 rounded-2xl transition-all duration-500">
                 {activeTab === 1 && (
-                    <div className="w-full h-auto min-h-[30rem] px-6">
+                    <div className="w-full h-auto min-h-[24rem] px-6">
                         <p className="text-color">Aqui vão os posts da empresa.</p>
                     </div>
                 )}
                 {activeTab === 2 && (
-                    <div className="w-full min-h-[30rem] h-auto px-6">
+                    <div className="w-full min-h-[24rem] h-auto px-6">
                         <div className="w-full h-full flex items-center justify-center gap-40">
                             <div className="h-full w-1/2 flex items-center justify-center">
                                 <img src={empresa.sobreimg || "/errors/sobreimgpadrao.jpg"} alt={empresa.name} className="h-full object-cover rounded-3xl" />
@@ -119,7 +119,7 @@ export default function ComapanyTabs({ empresa }: Props) {
                 )}
                 {activeTab === 3 && (
                     <div
-                        className={`w-full min-h-[30rem] px-6 flex justify-center`}
+                        className={`w-full min-h-[24rem] px-6 flex justify-center`}
                     >
                         {loading ? (
                             <Carregamento />
@@ -128,10 +128,11 @@ export default function ComapanyTabs({ empresa }: Props) {
                                 {vagas.map((vaga) => (
                                     <div
                                         key={vaga.id}
-                                        className="w-72 h-40 p-4 rounded-2xl flex items-center justify-center cursor-pointer 
-                                        border border-white/30 shadow-inner hover:scale-105 transition-transform duration-300
-                                    bg-white/10 backdrop-blur-[20px] saturate-150"
                                         onClick={() => VagaDetalhes(vaga.id)}
+                                        className="w-72 h-40 p-4 rounded-2xl flex items-center justify-center cursor-pointer
+                                        border border-black/80 dark:border-white/30 shadow-inner hover:scale-105 transition-transform duration-300
+                                        bg-gradient-to-br from-black/80 via-black/15 to-black/80 dark:from-white/20 dark:via-white/15 dark:to-white/20
+                                        backdrop-blur-[22px] saturate-150"
                                     >
                                         <div className="h-full w-[42%] flex items-center justify-center">
                                             <Briefcase size={50} className="text-color" />
@@ -145,7 +146,7 @@ export default function ComapanyTabs({ empresa }: Props) {
                                 ))}
                             </div>
                         ) : (
-                           <ErrorCard label="Nenhuma vaga disponível." />
+                            <ErrorCard label="Nenhuma vaga disponível." />
                         )}
                     </div>
                 )}

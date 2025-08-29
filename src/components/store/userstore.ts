@@ -68,12 +68,14 @@ export const useUserStore = create<UserState>((set) => ({
   },
 
   logout: async () => {
+    set({ loading: true, error: null });
     try {
       await firebaseLogout();
       await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
     } catch (e) {
       console.warn("Erro ao fazer logout:", e);
+      set({ loading: false, error: "Erro ao fazer logout" });
     }
-    set({ userType: null, userProfile: null });
+    set({ userType: null, userProfile: null, loading: false });
   },
 }));

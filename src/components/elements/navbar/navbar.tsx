@@ -7,8 +7,6 @@ import { useUserStore } from "@/src/components/store/userstore";
 
 export default function Navbar() {
     const router = useRouter();
-
-    // Pegue direto do store
     const userProfile = useUserStore((state) => state.userProfile);
     const userType = useUserStore((state) => state.userType);
     const logout = useUserStore((state) => state.logout);
@@ -35,6 +33,11 @@ export default function Navbar() {
             { href: "/sobre", label: "Sobre" },
         ],
     };
+
+    const dropdownLinks = [
+        { href: "/perfil", label: "Perfil" },
+        { href: "/configuracoes", label: "Configurações" },
+    ]
 
     const currentLinks =
         userType === "PCD"
@@ -67,19 +70,41 @@ export default function Navbar() {
                     </button>
 
                     {userProfile ? (
-                        <button
-                            onClick={LogoutProfile}
-                           className="rounded-full p-1 border border-blue-400/70 backdrop-blur-md bg-blue-400/60 hover:bg-blue-400/80 transition duration-300"
-                        >
-                            <img
-                                src={
-                                    userProfile?.imageUrl ||
-                                    "https://images2.minutemediacdn.com/image/upload/c_crop,w_4000,h_2250,x_0,y_9/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_en_international_web/01jczr9sq67ky36mtztb.jpg"
-                                }
-                                alt="User"
-                                className="rounded-full cursor-pointer object-cover h-10 w-10"
-                            />
-                        </button>
+                        <div className="relative group">
+                            <button
+                                className="flex items-center justify-center rounded-full p-1 border border-blue-400/70 backdrop-blur-md 
+        bg-blue-400/60 hover:bg-blue-400/80 transition duration-300"
+                            >
+                                <img
+                                    src={
+                                        userProfile?.imageUrl ||
+                                        "https://images2.minutemediacdn.com/image/upload/c_crop,w_4000,h_2250,x_0,y_9/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_en_international_web/01jczr9sq67ky36mtztb.jpg"
+                                    }
+                                    alt="User"
+                                    className="rounded-full cursor-pointer object-cover h-10 w-10"
+                                />
+                            </button>
+
+                            <div
+                                className="absolute top-12 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col items-center gap-2
+        rounded-2xl p-4 shadow-lg border border-white/20
+        bg-white/10 backdrop-blur-xl backdrop-saturate-150
+        hover:bg-white/20 transition duration-300"
+                            >
+                                {dropdownLinks.map((link) => (
+                                    <Link key={link.href} href={link.href} className="text-color text-hover">
+                                        {link.label}
+                                    </Link>
+                                ))}
+
+                                <button
+                                    className="text-color text-hover cursor-pointer"
+                                    onClick={LogoutProfile}
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                        </div>
 
                     ) : (
                         <Link href="/login" className="primary-color text-hover font-bold  text-lg ">
