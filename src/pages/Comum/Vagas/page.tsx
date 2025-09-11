@@ -1,33 +1,24 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import type {Vaga } from "@/src/components/types/bdtypes";
+import axios from 'axios';
 import Carregamento from '@/src/components/elements/carregamento/carregamento';
 import SearchBar from '@/src/components/elements/searchbar/searchbar';
 import { useUIStore } from '@/src/components/store/modalstore';
+import ErrorCard from '@/src/components/elements/errorcard/errorcard';
 
-interface Empresa {
-    imageUrl?: string;
-    imageProfile?: string;
-    name?: string;
-}
 
-interface Vaga {
-    id: string;
-    vaga: string;
-    tipo?: string;
-    salario?: string;
-    empresa?: Empresa | null;
-}
 
 export default function VagasPage() {
     const [vagas, setVagas] = useState<Vaga[]>([]);
     const [filteredVagas, setFilteredVagas] = useState<Vaga[]>([]);
-    const [loading, setLoading] = useState(true);
     const router = useRouter();
+
     const openModal = useUIStore((state) => state.openModal);
     const closeModal = useUIStore((state) => state.closeModal);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const getVagas = async () => {
@@ -115,9 +106,7 @@ export default function VagasPage() {
                             </div>
                         ))
                     ) : (
-                        <p className="text-center text-2xl text-color font-semibold">
-                            Nenhuma vaga encontrada.
-                        </p>
+                        <ErrorCard label="Nenhuma vaga encontrada." />
                     )}
                 </div>
             )}

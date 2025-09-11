@@ -13,7 +13,7 @@ export default function HomePCD() {
     const displayName = `${firstName} ${secondName}`.trim();
 
     function handleButtonClick() {
-        router.push('/sobre');
+        router.push('/processos');
     }
 
     const text = `Nem sempre as coisas dão certo de uma vez, persistir é a sua, é nossa força.`;

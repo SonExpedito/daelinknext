@@ -1,0 +1,151 @@
+'use client'
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useUIStore } from "@/src/components/store/modalstore";
+import { FileBadge, MessagesSquare, ClipboardList } from 'lucide-react';
+import type { Processo, ChatMessage, ChatResponse, Documento } from "@/src/components/types/bdtypes";
+import VoltarIcon from "@/src/components/elements/voltar/page";
+import ErrorCard from "@/src/components/elements/errorcard/errorcard";
+import Carregamento from '@/src/components/elements/carregamento/carregamento';
+import axios from "axios";
+import Button from "@/src/components/elements/buttons/button";
+
+type Props = { processoid: string; };
+
+
+
+export default function ProcessosInfoPage({ processoid }: Props) {
+    const [processo, setProcesso] = useState<Processo | null>(null);
+    const [chat, setChat] = useState<ChatMessage[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    const openModal = useUIStore(state => state.openModal);
+    const closeModal = useUIStore(state => state.closeModal);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (!processoid?.trim()) {
+            setLoading(false);
+            openModal("Processo não encontrado.");
+            router.replace("/processos");
+            setTimeout(() => closeModal(), 1200);
+            return;
+        }
+
+        setLoading(true);
+
+        axios.post<Processo>("/get-processo", { processoid: processoid.trim() })
+            .then(res => {
+                if (!res.data) throw new Error("Processo não encontrado.");
+                setProcesso(res.data);
+
+                return axios.post<ChatResponse>("/get-chat", {
+                    processoId: processoid.trim(),
+                });
+            })
+            .then(chatRes => {
+                if (chatRes.data.empty) setChat([]);
+                else setChat(chatRes.data.data);
+            })
+            .catch(err => {
+                openModal(err.message || "Erro ao buscar processo/chat.");
+                router.replace("/processos");
+            })
+            .then(() => setLoading(false));
+
+    }, [processoid, router, openModal, closeModal]);
+
+    function getSituacaoClass(situacao?: string) {
+        switch (situacao) {
+            case "Dispensado": return "bg-gray-400";
+            case "Pendente": return "background-blue";
+            case "Concluído": return "background-green";
+            default: return "bg-gray-200";
+        }
+    }
+
+    function vagaPush(vagaId?: string) {
+        router.push(vagaId ? `/vagas/${vagaId}` : "/vagas");
+    }
+
+    function docsPush(docId?: string) {
+
+        { processoid: processoid.trim() }
+        if (processo?.documentos.length === 0) {
+            openModal("Criando Documentos para o Processo...");
+
+            axios.post<Documento>("/create-doc", { processoid: processoid.trim() })
+                .then(res => {
+                    const newDocId = res.data.id;
+                    if (!newDocId) throw new Error("ID não retornado");
+                    closeModal();
+                    router.push(`/documento/${processoid}`);
+                })
+                .catch(err => {
+                    closeModal();
+                    openModal(err.message || "Erro ao criar documento.");
+                    setTimeout(() => closeModal(), 1500);
+                });
+            return;
+        }
+
+        // Se já existir documento
+        router.push(docId ? `/documento/${processoid}` : "/docs");
+    }
+
+    function chatPush(processoid: string) {
+        if (chat.length > 0) {
+            router.push(`/chat/${processoid}`);
+        }
+    }
+
+    return (
+        <>
+            <VoltarIcon />
+            {loading ? <Carregamento /> : processo ? (
+                <div className="h-[85vh] w-full flex items-center py-12">
+                    {/* Coluna esquerda */}
+                    <div className="h-full w-[45%] flex flex-col items-center justify-center gap-4">
+                        <div className="h-60 w-60 flex items-center justify-center rounded-3xl p-1 border border-white/30 bg-white/10 backdrop-blur-xl shadow-lg hover:bg-white/20 transition duration-300">
+                            <img src={processo.empresa?.imageUrl || "/errors/profileimg.png"} alt={processo.empresa?.name || "Sem Foto"} className="h-full object-cover rounded-3xl" />
+                        </div>
+                        <h1 className="text-3xl font-bold text-color">{processo.empresa?.name || "Sem Nome"}</h1>
+                        <p className="text-color text-lg font-medium">{processo.empresa?.area || "Sem Descrição"}</p>
+                    </div>
+
+                    {/* Coluna direita */}
+                    <div className="h-full w-[55%] flex flex-col gap-16 justify-center items-center">
+                        <div className="h-fit w-full flex-col flex gap-8 items-left justify-center">
+                            <h1 className="text-4xl font-bold text-color">{processo.nome || "Sem Título"}</h1>
+                            <h2 className={`text-[#F5F5F5] text-xl font-bold px-4 py-1 rounded-full w-32 flex items-center justify-center ${getSituacaoClass(processo.situacao)}`}>{processo.situacao || "Situação não encontrada"}</h2>
+                            <div className="w-3/4 text-color bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-lg p-4">{processo.vaga?.descricao || "Sem Descrição"}</div>
+                        </div>
+
+                        <div className="h-auto w-full flex">
+                            <div className="h-full w-[60%] flex flex-col gap-8 justify-center">
+                                <Button
+                                    label={<><MessagesSquare /> {chat.length > 0 ? "Chat" : "Não iniciado pela empresa"}</>}
+                                    type="button"
+                                    className={`w-3/4 h-12 items-center justify-center gap-2 font-bold ${chat.length > 0 ? "background-green" : "bg-gray-400 cursor-not-allowed"}`}
+                                    onClick={() => chatPush(processo.id)}
+                                />
+                                <Button
+                                    label={<><ClipboardList /> Revisar dados da Vaga</>}
+                                    type="button"
+                                    className="w-3/4 h-12 bg-[#b62178] items-center justify-center gap-2 font-bold"
+                                    onClick={() => vagaPush(processo.vagaId)}
+                                />
+                            </div>
+                            <div className="h-full w-[40%] flex flex-col justify-center items-start">
+                                <button type="button" onClick={() => docsPush(processo.documentos[0]?.id)}
+                                    className="h-full w-3/4 bg-[#5B21B6] rounded-3xl hover-size cursor-pointer flex items-center justify-center gap-2 text-white font-bold text-lg">
+                                    <FileBadge /> Conferir Documentos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ) : <ErrorCard label="Empresa não encontrada." />}
+        </>
+    );
+}

@@ -7,21 +7,7 @@ import { useRouter } from "next/navigation";
 import VoltarIcon from "@/src/components/elements/voltar/page";
 import ErrorCard from "@/src/components/elements/errorcard/errorcard";
 
-type Empresa = {
-  name: string;
-  imageProfile: string;
-};
-
-type Vaga = {
-  empresa?: Empresa;
-  area?: string;
-  salario?: string;
-  tipo?: string;
-  local?: string;
-  detalhes?: string;
-  vaga?: string;
-  status?: string;
-};
+import type { Vaga } from "@/src/components/types/bdtypes";
 
 type Props = {
   vagaId: string;

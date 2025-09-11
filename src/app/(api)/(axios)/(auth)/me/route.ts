@@ -36,7 +36,10 @@ export async function GET() {
       return NextResponse.json({ error: "Usuário não encontrado" }, { status: 404 });
     }
 
-    return NextResponse.json({ userType, userProfile, uid });
+    return NextResponse.json({
+  userType,
+  userProfile: { ...userProfile, id: uid },
+});
   } catch (error) {
     console.error(error);
     return NextResponse.json({ error: "Sessão inválida" }, { status: 401 });

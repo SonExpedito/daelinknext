@@ -1,21 +1,13 @@
 'use client'
 
-import './empresas.css'
 import SearchBar from '@/src/components/elements/searchbar/searchbar';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUIStore } from '@/src/components/store/modalstore';
+import type { Empresa} from "@/src/components/types/bdtypes";
 import axios from 'axios';
 import Carregamento from '@/src/components/elements/carregamento/carregamento';
 import ErrorCard from '@/src/components/elements/errorcard/errorcard';
-
-interface Empresa {
-    id: string;
-    imageUrl?: string;
-    imageProfile?: string;
-    name?: string;
-    area?: string;
-}
 
 
 export default function EmpresasPage() {
@@ -86,11 +78,11 @@ export default function EmpresasPage() {
                     {filteredEmpresas.length > 0 ? (
                         filteredEmpresas.map((empresa) => (
                             <div key={empresa.id}
-                                onClick={() => EmpresaDetalhes(empresa.id)}
+                                onClick={() => empresa.id && EmpresaDetalhes(empresa.id)}
                                 tabIndex={0}
                                 role="button"
                                 onKeyDown={(e) => {
-                                    if (e.key === "Enter" || e.key === " ") {
+                                    if ((e.key === "Enter" || e.key === " ") && empresa.id) {
                                         EmpresaDetalhes(empresa.id);
                                     }
                                 }}
@@ -98,7 +90,7 @@ export default function EmpresasPage() {
                                 items-center justify-center cursor-pointer hover-size overflow-hidden gap-4 ">
 
                                 <img src={empresa.imageProfile || "/errors/bannererror.png"} alt={empresa.name || "Empresa não informada"}
-                                    className="object-contain h-3/5 rounded-3xl bannershadow" />
+                                    className="object-contain h-[70%] rounded-3xl bannershadow" />
 
                                 <div className='flex flex-col items-center justify-center'>
                                     <p className="text-color font-medium text-lg ">{empresa.area}</p>

@@ -4,7 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/src/api/firebase";
 import { logout as firebaseLogout } from "@/src/api/Auth";
 
-type UserProfile = { id?: string; nome?: string;[key: string]: any };
+type UserProfile = { id?: string; nome?: string; email?: string; [key: string]: any };
 
 interface UserState {
   userType: string | null;

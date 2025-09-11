@@ -1,29 +1,12 @@
 import { useUIStore } from "@/src/components/store/modalstore";
-import { use, useEffect, useState } from "react";
-
+import {useEffect, useState } from "react";
+import type { Empresa, Vaga} from "@/src/components/types/bdtypes";
 import Carregamento from "@/src/components/elements/carregamento/carregamento";
 import { Briefcase } from 'lucide-react';
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import ErrorCard from "@/src/components/elements/errorcard/errorcard";
 
-interface Empresa {
-    id: string;
-    name?: string;
-    sobreimg?: string;
-    descricao?: string;
-    email?: string;
-    cep?: string;
-    cnpj?: string;
-}
-
-interface Vaga {
-    id: string;
-    vaga: string;
-    tipo?: string;
-    salario?: string;
-    empresa?: Empresa | null;
-}
 
 type Props = {
     empresa: Empresa;
@@ -78,7 +61,7 @@ export default function ComapanyTabs({ empresa }: Props) {
                         key={tab.id}
                         id={`tab-${tab.id}`}
                         role="tab"
-                        aria-selected={activeTab === tab.id}// booleano
+                        aria-selected={activeTab === tab.id ? "true" : "false"}
                         aria-controls={`tabpanel-${tab.id}`}
                         tabIndex={activeTab === tab.id ? 0 : -1}
                         onClick={() => setActiveTab(tab.id)}
@@ -124,7 +107,7 @@ export default function ComapanyTabs({ empresa }: Props) {
                         {loading ? (
                             <Carregamento />
                         ) : vagas && vagas.length > 0 ? (
-                            <div className="w-full h-full grid grid-cols-2 gap-4 justify-center">
+                            <div className="w-full h-full grid grid-cols-3 gap-4 gap-y-12 justify-items-center ">
                                 {vagas.map((vaga) => (
                                     <div
                                         key={vaga.id}

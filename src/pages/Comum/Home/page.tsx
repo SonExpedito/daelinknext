@@ -41,7 +41,7 @@ Assim como você, buscamos a nossa.`
                         <p className='text-color flex text-2xl'>{heroTexts[0].description}</p>
 
                         <div className='flex gap-4 items-center '>
-                            <Button label="Acessar" onClick={() => { handleButtonClick() }} type='button' />
+                            <Button label="Acessar" onClick={() => { handleButtonClick() }} type='button' className='background-blue' />
                             <Link className='text-lg cursor-pointer' href='/sobre'>Conheça-nos</Link>
                         </div>
                     </div>
@@ -54,12 +54,12 @@ Assim como você, buscamos a nossa.`
 
                         <div className="flex flex-col items-center gap-4">
                             <p className="text-4xl font-bold secondary-color">RE</p>
-                            <img src="./home/card1.png" alt="Company Card" className="object-contain h-72 card-drop" />
+                            <img src="./home/card1.png" alt="Company Card" className="object-contain h-72" />
                         </div>
 
 
                         <div className="flex flex-col items-center gap-4">
-                            <img src="./home/card2.png" alt="Company Card" className="object-contain h-72 card-drop" />
+                            <img src="./home/card2.png" alt="Company Card" className="object-contain h-72 " />
                             <p className="text-4xl font-bold secondary-color">IMAGINE</p>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+'use client'
 import { ChevronLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -9,7 +10,7 @@ export default function VoltarIcon() {
   };
 
   return (
-    <div className="h-auto w-full flex items-center py-4 px-12 absolute">
+    <div className="h-auto w-full flex items-center py-4 px-12 absolute z-40">
       <div
         onClick={handleVoltar}
         className="flex items-center gap-2 cursor-pointer 

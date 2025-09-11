@@ -1,19 +1,9 @@
 import { db } from '@/src/api/firebase';
 import { NextResponse } from 'next/server';
 import { collection, getDocs } from 'firebase/firestore';
+import type { Empresa, Vaga } from "@/src/components/types/bdtypes";
 
-interface Empresa {
-  imageUrl?: string;
-  imageProfile?: string;
-  name?: string;
-}
 
-interface VagaData {
-  id: string;
-  empresaId?: string;
-  [key: string]: any;
-  empresa?: Empresa | null;
-}
 
 export async function GET() {
   try {
@@ -32,9 +22,9 @@ export async function GET() {
     });
 
     // Mapeia as vagas e associa a empresa
-    const vagasArray: VagaData[] = vagasSnapshot.docs.map(vagaDoc => {
-      const vagaData: VagaData = { id: vagaDoc.id, ...(vagaDoc.data() as any) };
-      vagaData.empresa = vagaData.empresaId ? empresasMap[vagaData.empresaId] || null : null;
+    const vagasArray: Vaga[] = vagasSnapshot.docs.map(vagaDoc => {
+      const vagaData: Vaga = { id: vagaDoc.id, ...(vagaDoc.data() as any) };
+      vagaData.empresa = vagaData.empresaId ? empresasMap[vagaData.empresaId] || undefined : undefined;
       return vagaData;
     });
 

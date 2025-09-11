@@ -13,7 +13,7 @@ export default function Navbar() {
 
     async function LogoutProfile() {
         await logout();
-        router.push('/login');
+        router.refresh;
     }
 
     const navLinks = {

@@ -1,20 +1,29 @@
 "use client";
 
 interface ButtonProps {
-  label: string;
-  type: "button" | "submit" | "reset";
+  label: React.ReactNode; // Ícone, texto, etc.
+  type?: "button" | "submit" | "reset";
   onClick?: () => void;
   className?: string;
+  disabled?: boolean; // ✅ Agora aceita disabled
 }
 
-export default function Button({ label, onClick, type, className }: ButtonProps) {
+export default function Button({
+  label,
+  onClick,
+  type = "button",
+  className,
+  disabled = false,
+}: ButtonProps) {
   return (
     <button
       onClick={onClick}
       type={type}
-      className={`px-4 py-1 rounded-full text-white text-lg cursor-pointer transition-all 
-        hover:scale-105 hover:opacity-90 border border-white/30 shadow-md
+      disabled={disabled}
+      className={`px-4 py-1 flex rounded-full text-white text-lg transition-all
+        border border-white/30 shadow-md
         backdrop-blur-xl backdrop-saturate-150
+        ${disabled ? "opacity-50 cursor-not-allowed hover:scale-100 hover:opacity-50" : "cursor-pointer hover:scale-105 hover:opacity-90"}
         ${className ?? ""}`}
     >
       {label}
