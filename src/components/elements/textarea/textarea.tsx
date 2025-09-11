@@ -19,7 +19,7 @@ const TextareaAutoResize = forwardRef<TextareaAutoResizeRef, Props>(
   ({ value, onChange, className = '', ...rest }, ref) => {
     const taRef = useRef<HTMLTextAreaElement>(null);
 
-    useImperativeHandle(ref, () => taRef.current);
+    useImperativeHandle(ref, () => taRef.current!);
 
     const resize = () => {
       const el = taRef.current;
