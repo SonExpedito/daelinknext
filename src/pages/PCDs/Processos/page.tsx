@@ -96,7 +96,7 @@ export default function ProcessosPage() {
     return (
         <>
             <div className="w-full h-auto py-20 flex flex-col items-center justify-center gap-12">
-                <h1 className="text-5xl secondary-color font-bold">Processos</h1>
+                <h1 className="text-5xl secondary-color font-bold">Processos Seletivos</h1>
                 <SearchBar onSearch={handleSearch} placeholder="Busque por um processo ou empresa" />
             </div>
 

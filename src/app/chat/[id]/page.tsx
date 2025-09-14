@@ -8,7 +8,7 @@ export default async function Chat({ params }: { params: Promise<{ id: string }>
     return (
         <>
             <Navbar />
-            <ChatPage processoid={id} />
+            <ChatPage chatId={id} />
             <Footer />
         </>
     );

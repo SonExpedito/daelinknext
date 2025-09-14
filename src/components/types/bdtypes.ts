@@ -1,3 +1,18 @@
+export type PCD = {
+    id?: string;
+    name?: string;
+    cpf?: string;
+    deficiencia?: string;
+    descricao?: string;
+    imageProfile?: string;
+    imageUrl?: string;
+    email?: string;
+    dataNasc?: string;
+    laudomedico?: string;
+    sobre?: string;
+    telefone?: string;
+}
+
 export type Empresa = {
     imageUrl?: string;
     imageProfile?: string;
@@ -10,6 +25,7 @@ export type Empresa = {
     descricao?: string;
     email?: string;
     sobre?: string;
+    telefone?: string;
 };
 
 export type Vaga = {
@@ -49,13 +65,18 @@ export type Processo = {
     [key: string]: any;
 };
 
-export type ChatMessage = {
+export type Chat = {
     id: string;
     processoId: string;
-    userId: string;
+    empresaId: string;
+    pcdId: string;
 };
 
-export type ChatResponse = {
-    empty: boolean;
-    data: ChatMessage[];
+export type Mensagem = {
+    id: string;
+    pcdId: string;
+    empresaId: string;
+    fileUrl: string;
+    data: Date;
 };
+

@@ -16,7 +16,6 @@ export async function POST(req: Request) {
     if (!snapshot.exists()) {
       return NextResponse.json({ message: "Empresa não encontrada." }, { status: 404 });
     }
-
     const empresaData = snapshot.data();
 
     return NextResponse.json({ id: snapshot.id, ...empresaData }, { status: 200 });

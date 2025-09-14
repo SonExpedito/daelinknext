@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useUIStore } from "@/src/components/store/modalstore";
 import { FileBadge, MessagesSquare, ClipboardList } from 'lucide-react';
-import type { Processo, ChatMessage, ChatResponse, Documento } from "@/src/components/types/bdtypes";
+import type { Processo, Chat, Documento } from "@/src/components/types/bdtypes";
 import VoltarIcon from "@/src/components/elements/voltar/page";
 import ErrorCard from "@/src/components/elements/errorcard/errorcard";
 import Carregamento from '@/src/components/elements/carregamento/carregamento';
@@ -13,10 +13,9 @@ import Button from "@/src/components/elements/buttons/button";
 type Props = { processoid: string; };
 
 
-
 export default function ProcessosInfoPage({ processoid }: Props) {
     const [processo, setProcesso] = useState<Processo | null>(null);
-    const [chat, setChat] = useState<ChatMessage[]>([]);
+    const [chat, setChat] = useState<Chat | null>(null);
     const [loading, setLoading] = useState(true);
 
     const openModal = useUIStore(state => state.openModal);
@@ -32,28 +31,38 @@ export default function ProcessosInfoPage({ processoid }: Props) {
             return;
         }
 
-        setLoading(true);
-
-        axios.post<Processo>("/get-processo", { processoid: processoid.trim() })
-            .then(res => {
-                if (!res.data) throw new Error("Processo não encontrado.");
-                setProcesso(res.data);
-
-                return axios.post<ChatResponse>("/get-chat", {
-                    processoId: processoid.trim(),
+        const fetchData = async () => {
+            try {
+                // Buscar processo
+                const processoRes = await axios.post<Processo>("/get-processo", {
+                    processoid: processoid.trim()
                 });
-            })
-            .then(chatRes => {
-                if (chatRes.data.empty) setChat([]);
-                else setChat(chatRes.data.data);
-            })
-            .catch(err => {
+
+                if (!processoRes.data) throw new Error("Processo não encontrado.");
+                setProcesso(processoRes.data);
+
+                // Buscar chat
+                const chatRes = await axios.post<{ empty: boolean; data: Chat | null }>("/get-chat", {
+                    processoId: processoid.trim()
+                });
+
+                if (chatRes.data.empty || !chatRes.data.data) {
+                    setChat(null);
+                } else {
+                    setChat(chatRes.data.data); // agora é objeto único
+                }
+            } catch (err: any) {
                 openModal(err.message || "Erro ao buscar processo/chat.");
                 router.replace("/processos");
-            })
-            .then(() => setLoading(false));
+                setTimeout(() => closeModal(), 1200);
+            } finally {
+                setLoading(false);
+            }
+        };
 
+        fetchData();
     }, [processoid, router, openModal, closeModal]);
+
 
     function getSituacaoClass(situacao?: string) {
         switch (situacao) {
@@ -88,14 +97,12 @@ export default function ProcessosInfoPage({ processoid }: Props) {
                 });
             return;
         }
-
-        // Se já existir documento
         router.push(docId ? `/documento/${processoid}` : "/docs");
     }
 
-    function chatPush(processoid: string) {
-        if (chat.length > 0) {
-            router.push(`/chat/${processoid}`);
+    function chatPush(chatId?: string) {
+        if (chatId) {
+            router.push(`/chat/${chatId}`);
         }
     }
 
@@ -121,27 +128,26 @@ export default function ProcessosInfoPage({ processoid }: Props) {
                             <div className="w-3/4 text-color bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-lg p-4">{processo.vaga?.descricao || "Sem Descrição"}</div>
                         </div>
 
-                        <div className="h-auto w-full flex">
-                            <div className="h-full w-[60%] flex flex-col gap-8 justify-center">
+                        <div className="h-auto w-full flex gap-20">
+                            <div className="flex flex-col gap-4">
                                 <Button
-                                    label={<><MessagesSquare /> {chat.length > 0 ? "Chat" : "Não iniciado pela empresa"}</>}
+                                    label={<><MessagesSquare /> {chat ? "Chat" : "Não Iniciado"}</>}
                                     type="button"
-                                    className={`w-3/4 h-12 items-center justify-center gap-2 font-bold ${chat.length > 0 ? "background-green" : "bg-gray-400 cursor-not-allowed"}`}
-                                    onClick={() => chatPush(processo.id)}
+                                    className={`w-60 h-12 items-center justify-center gap-2 font-bold ${chat ? "background-green" : "bg-gray-400 cursor-not-allowed"}`}
+                                    onClick={() => chatPush(chat?.id)}
+                                    disabled={!chat}
                                 />
                                 <Button
-                                    label={<><ClipboardList /> Revisar dados da Vaga</>}
+                                    label={<><ClipboardList /> Revisar Vaga</>}
                                     type="button"
-                                    className="w-3/4 h-12 bg-[#b62178] items-center justify-center gap-2 font-bold"
+                                    className="w-60 h-12 bg-[#b62178] items-center justify-center gap-2 font-bold"
                                     onClick={() => vagaPush(processo.vagaId)}
                                 />
                             </div>
-                            <div className="h-full w-[40%] flex flex-col justify-center items-start">
-                                <button type="button" onClick={() => docsPush(processo.documentos[0]?.id)}
-                                    className="h-full w-3/4 bg-[#5B21B6] rounded-3xl hover-size cursor-pointer flex items-center justify-center gap-2 text-white font-bold text-lg">
-                                    <FileBadge /> Conferir Documentos
-                                </button>
-                            </div>
+                            <button type="button" onClick={() => docsPush(processo.documentos[0]?.id)}
+                                className="h-full w-[30%] bg-[#5B21B6] rounded-3xl hover-size cursor-pointer flex items-center justify-center gap-2 text-white font-bold text-lg">
+                                <FileBadge /> Conferir Documentos
+                            </button>
                         </div>
                     </div>
                 </div>
