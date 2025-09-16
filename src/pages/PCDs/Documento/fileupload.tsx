@@ -7,7 +7,7 @@ type Props = {
   existingFiles?: string[]; // urls vindas do banco
 };
 
-export default function MultiFileUpload({ onChange, existingFiles = [] }: Props) {
+export default function MultiFileUpload({ onChange, existingFiles = [] }: Readonly<Props>) {
   const [newFiles, setNewFiles] = useState<File[]>([]);
   const [keptFiles, setKeptFiles] = useState<string[]>([]);
 
@@ -66,7 +66,7 @@ export default function MultiFileUpload({ onChange, existingFiles = [] }: Props)
       {/* Arquivos salvos */}
       {keptFiles.map((url, index) => (
         <div
-          key={`saved-${index}`}
+          key={url}
           className="flex items-center justify-between px-4 py-2 rounded-2xl 
             bg-white/10 backdrop-blur-lg border border-white/20 shadow-md"
         >
@@ -100,7 +100,7 @@ export default function MultiFileUpload({ onChange, existingFiles = [] }: Props)
       {/* Arquivos novos */}
       {newFiles.map((file, index) => (
         <div
-          key={`new-${index}`}
+          key={`new-${file.name}-${file.lastModified}`}
           className="flex items-center justify-between px-4 py-2 rounded-2xl 
             bg-white/10 backdrop-blur-lg border border-white/20 shadow-md hover:bg-white/20 transition"
         >

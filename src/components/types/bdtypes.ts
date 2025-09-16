@@ -76,7 +76,9 @@ export type Mensagem = {
     id: string;
     pcdId: string;
     empresaId: string;
+    mensagem: string;
     fileUrl: string;
     data: Date;
+    origem: string;
 };
 

@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     const response = NextResponse.json({ message: "Sessão criada" });
     response.cookies.set("session", sessionCookie, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production" ? true : false,
+      secure: process.env.NODE_ENV === "production",
       sameSite: process.env.NODE_ENV === "production" ? "strict" : "lax",
       maxAge: 1000 * 60 * 60 * 24 * 5,
       path: "/",

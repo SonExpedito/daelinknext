@@ -1,11 +1,11 @@
 "use client";
 import { Search } from "lucide-react";
 import { useState } from "react";
-import "./search.css";
+
 
 interface SearchBarProps {
-  placeholder?: string;
-  onSearch: (value: string) => void;
+  readonly placeholder?: string;
+  readonly onSearch: (value: string) => void;
 }
 
 export default function SearchBar({
@@ -17,30 +17,45 @@ export default function SearchBar({
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    onSearch(value); // dispara em tempo real
+    onSearch(value);
   };
 
   const handleSearch = () => {
-    onSearch(query); // ainda funciona no botão
+    onSearch(query);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
+    if (e.key === "Enter") handleSearch();
   };
 
   return (
-    <div className="flex items-center background-primary px-4 py-4 w-full max-w-md barshadow rounded-xl">
+    <div
+      className="
+        flex items-center px-4 py-3 w-full max-w-md
+        rounded-2xl border border-white/30
+        bg-white/10 backdrop-blur-xl shadow-lg
+        hover:bg-white/20 transition duration-300
+      "
+    >
       <input
         type="text"
         placeholder={placeholder}
-        className="flex-1 outline-none text-color placeholder-gray-500"
+        className="
+          flex-1 bg-transparent outline-none
+          text-color
+        "
         value={query}
-        onChange={handleInputChange} // agora busca em tempo real
+        onChange={handleInputChange}
         onKeyDown={handleKeyDown}
       />
-      <button onClick={handleSearch} className="ml-2">
+      <button
+        onClick={handleSearch}
+        className="
+          ml-2 p-2 rounded-full
+          bg-white/20 hover:bg-white/30
+          transition duration-300
+        "
+      >
         <Search className="text-color w-5 h-5 cursor-pointer" />
       </button>
     </div>

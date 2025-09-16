@@ -5,7 +5,6 @@ import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 export async function POST(req: Request) {
   try {
     const { chatId } = await req.json();
-
     if (!chatId) {
       console.log("Missing chatId");
       return NextResponse.json(
