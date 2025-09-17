@@ -1,11 +1,11 @@
 "use client";
 
 interface ButtonProps {
-  label: React.ReactNode; // Ícone, texto, etc.
-  type?: "button" | "submit" | "reset";
-  onClick?: () => void;
-  className?: string;
-  disabled?: boolean; // ✅ Agora aceita disabled
+  readonly label: React.ReactNode; // Ícone, texto, etc.
+  readonly type?: "button" | "submit" | "reset";
+  readonly onClick?: () => void;
+  readonly className?: string;
+  readonly disabled?: boolean; // ✅ Agora aceita disabled
 }
 
 export default function Button({

@@ -1,5 +1,5 @@
 interface ErrorCardProps {
-    label: string;
+    readonly label: string;
 }
 
 

@@ -11,6 +11,7 @@ export type PCD = {
     laudomedico?: string;
     sobre?: string;
     telefone?: string;
+    trabalho?: string;
 }
 
 export type Empresa = {

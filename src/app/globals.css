@@ -34,7 +34,6 @@
   --text-primary: #1C1C1C;
 }
 
-
 body {
   height: 100%;
   background: var(--background);
@@ -58,11 +57,14 @@ body {
 }
 
 .card-border:hover {
+  /* Fallback for older browsers */
+  border: 2px solid rgba(28, 28, 28, 0.5); /* Adjust the color as needed */
+  /* Modern browsers */
   border: 2px solid color-mix(in srgb, var(--foreground) 50%, transparent);
 }
 
 .bannershadow {
-    box-shadow: 0px 8px 6px color-mix(in srgb, var(--foreground) 50%, transparent);
+    box-shadow: 0px 8px 2px color-mix(in srgb, var(--foreground) 50%, transparent);
 }
 
 /**Textos **/

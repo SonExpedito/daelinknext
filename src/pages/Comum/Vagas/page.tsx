@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import type {Vaga } from "@/src/components/types/bdtypes";
-import axios from 'axios';
+import type { Vaga } from "@/src/components/types/bdtypes";
 import Carregamento from '@/src/components/elements/carregamento/carregamento';
 import SearchBar from '@/src/components/elements/searchbar/searchbar';
 import { useUIStore } from '@/src/components/store/modalstore';
 import ErrorCard from '@/src/components/elements/errorcard/errorcard';
+import axios from 'axios';
 
 
 
@@ -78,18 +78,12 @@ export default function VagasPage() {
                 >
                     {filteredVagas.length > 0 ? (
                         filteredVagas.map((vaga) => (
-                            <div
+                            <button
                                 key={vaga.id}
                                 onClick={() => VagaDetalhes(vaga.id)}
-                                tabIndex={0}
-                                role="button"
-                                onKeyDown={(e) => {
-                                    if (e.key === "Enter" || e.key === " ") {
-                                        VagaDetalhes(vaga.id);
-                                    }
-                                }}
+                                type="button"
                                 className="w-90 h-40 p-4 rounded-3xl background-primary flex items-center 
-                                justify-center overflow-hidden hover-size cursor-pointer card-border"
+                                justify-center overflow-hidden hover-size cursor-pointer card-border focus:outline-none"
                             >
                                 <div className="h-full w-[48%] flex items-center justify-center ">
                                     <img
@@ -103,7 +97,7 @@ export default function VagasPage() {
                                     <p className="secondary-color">{vaga.tipo || "Tipo não informado"}</p>
                                     <p className="text-color">R${vaga.salario || "Salário não informado"}</p>
                                 </div>
-                            </div>
+                            </button>
                         ))
                     ) : (
                         <ErrorCard label="Nenhuma vaga encontrada." />

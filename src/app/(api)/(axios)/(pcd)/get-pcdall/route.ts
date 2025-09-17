@@ -1,10 +1,11 @@
 import { db } from '@/src/api/firebase';
 import { NextResponse } from 'next/server';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 
 export async function GET() {
   try {
-    const snapshot = await getDocs(collection(db, "PCD"));
+    const pcdQuery = query(collection(db, "PCD"), orderBy("trabalho", "asc"));
+    const snapshot = await getDocs(pcdQuery);
 
     if (snapshot.empty) {
       return NextResponse.json(
@@ -20,9 +21,9 @@ export async function GET() {
 
     return NextResponse.json(pcds, { status: 200 });
   } catch (error) {
-    console.error("Error fetching PCD data:", error);
+    console.error("Erro ao buscar PCDs:", error);
     return NextResponse.json(
-      { message: "Internal server error." },
+      { message: "Erro interno do servidor." },
       { status: 500 }
     );
   }

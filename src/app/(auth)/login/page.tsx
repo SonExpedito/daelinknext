@@ -6,6 +6,4 @@ export default function Login() {
         <LoginPage />
 
     )
-
-
 }

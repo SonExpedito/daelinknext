@@ -156,7 +156,7 @@ export default function ChatPage({ chatId }: Props) {
     }
 
     return (
-        <div className="w-full h-[84vh] flex justify-center items-center">
+        <div className="w-full h-[88vh] flex justify-center items-center">
             {content}
         </div>
     );

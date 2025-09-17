@@ -70,24 +70,20 @@ export default function EmpresasPage() {
                 <Carregamento />
             ) : (
                 <div
-                    className={`w-full pb-8 
+                    className={`w-full pb-2
                         ${filteredEmpresas.length > 0
                             ? "min-h-screen grid grid-cols-3 justify-items-center content-start gap-y-12"
                             : "h-[30rem] flex items-start justify-center"}`}
                 >
                     {filteredEmpresas.length > 0 ? (
                         filteredEmpresas.map((empresa) => (
-                            <div key={empresa.id}
+                            <button
+                                key={empresa.id}
+                                type="button"
                                 onClick={() => empresa.id && EmpresaDetalhes(empresa.id)}
-                                tabIndex={0}
-                                role="button"
-                                onKeyDown={(e) => {
-                                    if ((e.key === "Enter" || e.key === " ") && empresa.id) {
-                                        EmpresaDetalhes(empresa.id);
-                                    }
-                                }}
                                 className="flex flex-col h-72 w-80 card-border
-                                items-center justify-center cursor-pointer hover-size overflow-hidden gap-4 ">
+                                items-center justify-center cursor-pointer hover-size overflow-hidden gap-4 empresa-btn"
+                            >
 
                                 <img src={empresa.imageProfile || "/errors/bannererror.png"} alt={empresa.name || "Empresa não informada"}
                                     className="object-contain h-[70%] rounded-3xl bannershadow" />
@@ -96,7 +92,7 @@ export default function EmpresasPage() {
                                     <p className="text-color font-medium text-lg ">{empresa.area}</p>
                                     <h2 className="text-xl font-bold primary-color uppercase ">{empresa.name}</h2>
                                 </div>
-                            </div>
+                            </button>
                         ))
                     ) : (
                         <ErrorCard label="Nenhuma Empresa encontrada." />

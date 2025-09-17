@@ -13,7 +13,7 @@ export default function Navbar() {
 
     async function LogoutProfile() {
         await logout();
-        router.refresh;
+        router.refresh();
     }
 
     const navLinks = {
@@ -28,29 +28,33 @@ export default function Navbar() {
             { href: "/processos", label: "Processos" },
         ],
         Empresa: [
-            { href: "/dashboard", label: "Dashboard" },
-            { href: "/minhas-vagas", label: "Candidatos" },
+            { href: "/analytics", label: "Analytics" },
+            { href: "/candidatos", label: "Candidatos" },
             { href: "/sobre", label: "Sobre" },
         ],
     };
+
+    const logoLink = userType === "Empresa" ? "/dashboard" : "/";
 
     const dropdownLinks = [
         { href: "/perfil", label: "Perfil" },
         { href: "/configuracoes", label: "Configurações" },
     ]
 
-    const currentLinks =
-        userType === "PCD"
-            ? navLinks.PCD
-            : userType === "Empresa"
-                ? navLinks.Empresa
-                : navLinks.generic;
+    let currentLinks;
+    if (userType === "PCD") {
+        currentLinks = navLinks.PCD;
+    } else if (userType === "Empresa") {
+        currentLinks = navLinks.Empresa;
+    } else {
+        currentLinks = navLinks.generic;
+    }
 
     return (
         <div className="w-full h-20 background-primary px-12 sticky top-0 z-50">
             <div className="h-full w-full flex relative justify-center items-center text-color ">
 
-                <Link href="/" className="absolute left-0 flex h-full items-center">
+                <Link href={logoLink} className="absolute left-0 flex h-full items-center">
                     <img src="/logo.png" alt="Logo" className="flex object-contain h-2/4" />
                 </Link>
 

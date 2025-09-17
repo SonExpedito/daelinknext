@@ -12,7 +12,7 @@ type Props = {
     empresa: Empresa;
 };
 
-export default function ComapanyTabs({ empresa }: Props) {
+export default function ComapanyTabs({ empresa }: Readonly<Props>) {
     const [activeTab, setActiveTab] = useState(1);
     const empresaId = empresa.id;
     const [vagas, setVagas] = useState<Vaga[]>([]);
@@ -61,7 +61,7 @@ export default function ComapanyTabs({ empresa }: Props) {
                         key={tab.id}
                         id={`tab-${tab.id}`}
                         role="tab"
-                        aria-selected={activeTab === tab.id}
+                        aria-selected={activeTab === tab.id ? "true" : "false"}
                         aria-controls={`tabpanel-${tab.id}`}
                         tabIndex={activeTab === tab.id ? 0 : -1}
                         onClick={() => setActiveTab(tab.id)}
@@ -104,33 +104,44 @@ export default function ComapanyTabs({ empresa }: Props) {
                     <div
                         className={`w-full min-h-[24rem] px-6 flex justify-center`}
                     >
-                        {loading ? (
-                            <Carregamento />
-                        ) : vagas && vagas.length > 0 ? (
-                            <div className="w-full h-full grid grid-cols-3 gap-4 gap-y-12 justify-items-center ">
-                                {vagas.map((vaga) => (
-                                    <div
-                                        key={vaga.id}
-                                        onClick={() => VagaDetalhes(vaga.id)}
-                                        className="w-72 h-40 p-4 rounded-2xl flex items-center justify-center cursor-pointer
-                                        border border-black/80 dark:border-white/30 shadow-inner hover:scale-105 transition-transform duration-300
-                                        bg-gradient-to-br from-black/80 via-black/15 to-black/80 dark:from-white/20 dark:via-white/15 dark:to-white/20
-                                        backdrop-blur-[22px] saturate-150"
-                                    >
-                                        <div className="h-full w-[42%] flex items-center justify-center">
-                                            <Briefcase size={50} className="text-color" />
-                                        </div>
-                                        <div className="h-full w-[58%] flex flex-col justify-center items-center text-color">
-                                            <h3 className="font-bold">{vaga.vaga}</h3>
-                                            <p>{vaga.tipo}</p>
-                                            <p>R${vaga.salario}</p>
-                                        </div>
+                        {(() => {
+                            if (loading) {
+                                return <Carregamento />;
+                            }
+                            if (vagas && vagas.length > 0) {
+                                return (
+                                    <div className="w-full h-full grid grid-cols-3 gap-4 gap-y-12 justify-items-center ">
+                                        {vagas.map((vaga) => (
+                                            <button
+                                                key={vaga.id}
+                                                onClick={() => VagaDetalhes(vaga.id)}
+                                                className="w-72 h-40 p-4 rounded-2xl flex items-center justify-center cursor-pointer
+                                                border border-black/80 dark:border-white/30 shadow-inner hover:scale-105 transition-transform duration-300
+                                                bg-gradient-to-br from-black/80 via-black/15 to-black/80 dark:from-white/20 dark:via-white/15 dark:to-white/20
+                                                backdrop-blur-[22px] saturate-150"
+                                                tabIndex={0}
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "Enter" || e.key === " ") {
+                                                        VagaDetalhes(vaga.id);
+                                                    }
+                                                }}
+                                                type="button"
+                                            >
+                                                <div className="h-full w-[42%] flex items-center justify-center">
+                                                    <Briefcase size={50} className="text-color" />
+                                                </div>
+                                                <div className="h-full w-[58%] flex flex-col justify-center items-center text-color">
+                                                    <h3 className="font-bold">{vaga.vaga}</h3>
+                                                    <p>{vaga.tipo}</p>
+                                                    <p>R${vaga.salario}</p>
+                                                </div>
+                                            </button>
+                                        ))}
                                     </div>
-                                ))}
-                            </div>
-                        ) : (
-                            <ErrorCard label="Nenhuma vaga disponível." />
-                        )}
+                                );
+                            }
+                            return <ErrorCard label="Nenhuma vaga disponível." />;
+                        })()}
                     </div>
                 )}
             </div>

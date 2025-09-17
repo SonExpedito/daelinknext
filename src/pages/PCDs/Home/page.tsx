@@ -27,7 +27,8 @@ export default function HomePCD() {
                         <div className='flex gap-2'>
                             <img src="./link.png" alt="link Icon" className='w-8 h-8 object-cover' />
                             <h1 className='text-3xl font-bold text-color uppercase'>Continue.
-                                <span className='primary-color'> Transforme.</span> Caminhe.</h1>
+                                <span className='primary-color'>Transforme.</span> Caminhe.
+                            </h1>
                         </div>
 
 
@@ -49,7 +50,7 @@ export default function HomePCD() {
 
                         <div className="flex flex-col items-center gap-4">
                             <p className="text-4xl font-bold secondary-color uppercase">{firstName}</p>
-                            <img src={userProfile?.imageUrl} alt="Company Card" className="object-contain h-72 card-drop rounded-3xl" />
+                            <img src={userProfile?.imageUrl} alt="Company Card" className="object-cover h-72 w-72 card-drop rounded-3xl " />
                             <p className="text-4xl font-bold secondary-color uppercase">{secondName}</p>
                         </div>
 

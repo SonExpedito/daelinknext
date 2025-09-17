@@ -59,9 +59,11 @@ export default function LoginPage() {
 
         if (success) {
             openModal("Autenticado com sucesso!");
+            const userType = useUserStore.getState().userType;
             setTimeout(() => {
                 closeModal();
-                router.push(`/`);
+                if (userType === 'Empresa') router.push(`/dashboard`);
+                else if (userType === 'PCD') router.push(`/`);
             }, 1200);
         } else {
             openModal("Credenciais inválidas ou usuário não encontrado.");
@@ -72,11 +74,10 @@ export default function LoginPage() {
 
 
     return (
-        <>
             <div data-theme="light" className="h-screen w-screen flex items-center justify-center relative overflow-hidden">
                 {images.map((img, index) => (
                     <div
-                        key={index}
+                        key={img}
                         className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
                     >
                         <img
@@ -146,6 +147,5 @@ export default function LoginPage() {
                     </div>
                 </div>
             </div>
-        </>
     );
 }

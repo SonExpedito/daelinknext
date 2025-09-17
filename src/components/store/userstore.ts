@@ -1,8 +1,8 @@
 import { create } from "zustand";
 import axios from "axios";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/src/api/firebase";
-import { logout as firebaseLogout } from "@/src/api/Auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { auth  } from "@/src/api/firebase";
+
 
 type UserProfile = { id?: string; nome?: string; email?: string; [key: string]: any };
 
@@ -70,7 +70,7 @@ export const useUserStore = create<UserState>((set) => ({
   logout: async () => {
     set({ loading: true, error: null });
     try {
-      await firebaseLogout();
+      await signOut(auth);
       await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
     } catch (e) {
       console.warn("Erro ao fazer logout:", e);
