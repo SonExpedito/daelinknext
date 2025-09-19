@@ -8,11 +8,10 @@ export default function DashboardPage() {
     const UserProfile = useUserStore(state => state.userProfile);
 
     const leftLinks = [
-        { name: "Processos Ativos", href: "/processospanel", img: "/dashboard/processos.png", textcolor: "primary-color" },
+        { name: "Vagas & Processos", href: "/vagaspanel", img: "/dashboard/vagas.png", textcolor: "primary-color" },
         { name: "Candidatos", href: "/candidatos", img: "/dashboard/candidatos.png", textcolor: "secondary-color" },
     ];
     const rightLinks = [
-        { name: "Vagas", href: "/vagaspanel", img: "/dashboard/vagas.png" },
         { name: "Analytics", href: "/analytics", img: "/dashboard/analytics.png" },
     ];
 
@@ -35,7 +34,7 @@ export default function DashboardPage() {
                             <h1 className={"text-3xl font-bold text-center " + link.textcolor + " uppercase "}>{link.name}</h1>
                         </div>
                         <div className="h-full w-2/3 flex items-center justify-center gap-2">
-                            <img src={link.img} alt="" className="object-contain" />
+                            <img src={link.img} alt={`Imagem de ${link.name}`} className="object-contain" />
                         </div>
                     </Link>
                 ))}
@@ -45,7 +44,7 @@ export default function DashboardPage() {
             <div className="h-[80%] w-[34%] flex flex-col items-center justify-center gap-8">
 
                 {rightLinks.map(link => (
-                    <Link key={link.name} href={link.href} className="h-[35%] w-full flex
+                    <Link key={link.name} href={link.href} className="h-[65%] w-full flex
                     hover-size cursor-pointer rounded-3xl overflow-hidden
                     border border-white/50 
                      bg-white/10 backdrop-blur-xl shadow-lg
@@ -55,7 +54,7 @@ export default function DashboardPage() {
                             <h1 className={"text-3xl font-bold text-center uppercase text-color "}>{link.name}</h1>
                         </div>
                         <div className="h-full w-[55%] flex items-center justify-center gap-2">
-                            <img src={link.img} alt="" className="object-contain" />
+                            <img src={link.img} alt="" className="object-contain h-full" />
 
                         </div>
                     </Link>

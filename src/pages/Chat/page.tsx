@@ -8,6 +8,7 @@ import { useUserStore } from "@/src/components/store/userstore";
 import Carregamento from "@/src/components/elements/carregamento/carregamento";
 import axios from "axios";
 import MessageContainer from "./messages/message";
+import Button from "@/src/components/elements/buttons/button";
 
 
 type Props = { readonly chatId: string; };
@@ -120,33 +121,15 @@ export default function ChatPage({ chatId }: Props) {
 
                     <div className="w-auto h-auto flex flex-col gap-6 items-center justify-center">
                         <h1 className="text-color text-xl">Contatos</h1>
-                        <button
-                            onClick={handleEmail}
-                            className="flex items-center gap-2 cursor-pointer 
-                        font-bold text-white background-blue px-4 py-1 rounded-full
-                        border border-white/30 shadow-md backdrop-blur-xl backdrop-saturate-150
-                        hover:scale-105 hover:opacity-90 transition-all "
-                        >
-                            <Mail size={24} />
-                            <p className="text-lg">Email</p>
-                        </button>
+                        <Button type="button" label={<><Mail size={24} /> Contatar</>} className="background-blue" onClick={handleEmail} />
 
-                        <button
-                            onClick={handleTelefone}
-                            className="flex items-center gap-2 cursor-pointer 
-                        font-bold text-white bg-[#5B21B6] px-4 py-1 rounded-full
-                        border border-white/30 shadow-md backdrop-blur-xl backdrop-saturate-150
-                        hover:scale-105 hover:opacity-90 transition-all "
-                        >
-                            <Phone size={24} />
-                            <p className="text-lg">Telefone</p>
-                        </button>
+                        <Button type="button" label={<><Phone size={24} /> Contatar</>} className="background-blue" onClick={handleTelefone} />
 
                     </div>
 
                 </div>
                 <div className="w-[65%] h-full">
-                   <MessageContainer participante={participante} chat={chat} />
+                    <MessageContainer participante={participante} chat={chat} />
                 </div>
 
             </>

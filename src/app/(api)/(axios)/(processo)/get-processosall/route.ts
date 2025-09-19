@@ -1,7 +1,7 @@
 import { db } from '@/src/api/firebase';
 import { NextResponse } from 'next/server';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import type { Empresa, Vaga, Processo } from "@/src/components/types/bdtypes";
+import type { Empresa, Processo } from "@/src/components/types/bdtypes";
 
 
 

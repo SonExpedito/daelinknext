@@ -3,7 +3,7 @@ export type PCD = {
     name?: string;
     cpf?: string;
     deficiencia?: string;
-    descricao?: string;
+    descrição?: string;
     imageProfile?: string;
     imageUrl?: string;
     email?: string;
@@ -12,6 +12,7 @@ export type PCD = {
     sobre?: string;
     telefone?: string;
     trabalho?: string;
+    perfilvertical?: boolean;
 }
 
 export type Empresa = {

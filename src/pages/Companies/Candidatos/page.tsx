@@ -97,7 +97,7 @@ export default function CandidatosPage() {
   };
 
   const PcdDetalhes = (id: string) => {
-    router.push(`/candidato/${id}`);
+    router.push(`/candidatos/${id}`);
   };
 
   return (
@@ -144,7 +144,7 @@ export default function CandidatosPage() {
               </button>
             ))
           ) : (
-            <ErrorCard label="Nenhuma PCD encontrada." />
+            <ErrorCard label="Nenhum PCD encontrado." />
           )}
         </div>
       )}

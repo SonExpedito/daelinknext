@@ -1,6 +1,7 @@
 import { db } from '@/src/api/firebase';
 import { NextResponse } from 'next/server';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import type { PCD } from "@/src/components/types/bdtypes";
 
 export async function GET() {
   try {
@@ -14,7 +15,7 @@ export async function GET() {
       );
     }
 
-    const pcds: any[] = snapshot.docs.map(doc => ({
+    const pcds: PCD[] = snapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data(),
     }));

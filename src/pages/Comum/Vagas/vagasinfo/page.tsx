@@ -13,7 +13,7 @@ type Props = {
   vagaId: string;
 };
 
-export default function VagasinfoPage({ vagaId }: Props) {
+export default function VagasinfoPage({ vagaId }: Readonly<Props>) {
   const [vaga, setVaga] = useState<Vaga | null>(null);
   const [loading, setLoading] = useState(true);
   const openModal = useUIStore((state) => state.openModal);
@@ -57,32 +57,34 @@ export default function VagasinfoPage({ vagaId }: Props) {
     { label: 'Descrição', value: vaga?.detalhes },
   ]
 
+  let content;
+  if (loading) {
+    content = <Carregamento />;
+  } else if (vaga?.empresa) {
+    content = (
+      <div className="h-auto w-full flex flex-col items-center justify-center gap-8 py-12">
+        <img src={vaga.empresa.imageProfile} alt={vaga.empresa.name}
+          className="w-[37%] object-contain rounded-3xl" />
+        <h1 className="text-4xl font-bold text-color">{vaga.vaga}</h1>
+        <p>{vaga.status}</p>
+
+        <div className="w-full h-fit flex flex-col items-center justify-center gap-4">
+          {dados.map((item) => (
+            <p key={item.label} className="text-color font-normal text-lg capitalize">
+              <span className="font-bold">{item.label}:</span> {item.value}
+            </p>
+          ))}
+        </div>
+      </div>
+    );
+  } else {
+    content = <ErrorCard label="Empresa não encontrada." />;
+  }
+
   return (
     <>
       <VoltarIcon />
-      {loading ? (
-        <Carregamento />
-      ) : (
-        vaga?.empresa ? (
-          <div className="h-auto w-full flex flex-col items-center justify-center gap-8 py-12">
-
-            <img src={vaga.empresa.imageProfile} alt={vaga.empresa.name}
-              className="w-[37%] object-contain rounded-3xl" />
-            <h1 className="text-4xl font-bold text-color">{vaga.vaga}</h1>
-            <p>{vaga.status}</p>
-
-            <div className="w-full h-fit flex flex-col items-center justify-center gap-4">
-              {dados.map((item, index) => (
-                <p key={index} className="text-color font-normal text-lg capitalize">
-                  <span className="font-bold">{item.label}:</span> {item.value}</p>
-              ))}
-
-            </div>
-          </div>
-        ) : (
-          <ErrorCard label="Empresa não encontrada." />
-        )
-      )}
+      {content}
     </>
   );
 }
