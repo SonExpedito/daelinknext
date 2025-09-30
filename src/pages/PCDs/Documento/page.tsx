@@ -6,8 +6,7 @@ import type { Processo } from "@/src/components/types/bdtypes";
 import { useUserStore } from "@/src/components/store/userstore";
 import Carregamento from "@/src/components/elements/carregamento/carregamento";
 import VoltarIcon from "@/src/components/elements/voltar/page";
-import TextareaAutoResize from "@/src/components/elements/textarea/textarea";
-import Input from "@/src/components/elements/input/input";
+import { Input, TextareaAutoResize } from "@/src/components/elements/input/input";
 import Button from "@/src/components/elements/buttons/button";
 import MultiFileUpload from "./fileupload";
 import axios from "axios";
@@ -18,7 +17,7 @@ type Props = {
   processoid: string;
 };
 
-export default function DocumentoPage({ processoid }: Props) {
+export default function DocumentoPage({ processoid }: Readonly<Props>) {
   const [processo, setProcesso] = useState<Processo | null>(null);
   const [loading, setLoading] = useState(true);
   const userProfile = useUserStore(state => state.userProfile);
@@ -92,93 +91,104 @@ export default function DocumentoPage({ processoid }: Props) {
     openModal("Documentos e campos atualizados!");
     setLoading(false);
     setTimeout(() => {
-                closeModal();
-                router.push(`/processos/${processoid}`);
-            }, 1200);
+      closeModal();
+      router.push(`/processos/${processoid}`);
+    }, 1200);
   };
+
+  let content;
+  if (loading) {
+    content = <Carregamento />;
+  } else if (processo) {
+    content = (
+      <div className="h-[110vh] max-h-auto w-full flex items-center py-12">
+        {/* Coluna esquerda */}
+        <div className="h-full w-[45%] flex flex-col items-center justify-center gap-4">
+          <div className="h-60 w-60 flex items-center justify-center rounded-3xl p-1 border border-white/30 bg-white/10 backdrop-blur-xl shadow-lg hover:bg-white/20 transition duration-300">
+            <img
+              src={processo.empresa?.imageUrl || "/errors/profileimg.png"}
+              alt={processo.empresa?.name || "Sem Foto"}
+              className="h-full object-cover rounded-3xl"
+            />
+          </div>
+          <h1 className="text-3xl font-bold text-color">
+            {processo.vaga?.vaga || "Sem Nome"}
+          </h1>
+          <p className="text-color text-lg font-medium">
+            {processo.vaga?.descricao || "Sem Descrição"}
+          </p>
+        </div>
+
+        {/* Coluna direita */}
+        <div className="h-full w-[55%] flex flex-col items-center justify-center gap-8">
+          <h2 className="text-white text-xl font-bold px-4 py-2 rounded-full flex items-center justify-center background-blue">
+            Preencha com mais Informações
+          </h2>
+          <form className="flex w-full flex-col gap-6" onSubmit={handleSubmit}>
+
+            <Input
+              type="email"
+              label="Email"
+              value={userProfile?.email || ""}
+              readOnly
+              placeholder="Email para contato"
+              onChange={() => { }}
+              wrapperClass="w-3/4"
+            />
+
+            <div className="flex flex-col gap-2">
+              <h1 className="text-lg font-medium text-color">Objetivo</h1>
+              <TextareaAutoResize
+                value={objetivo}
+                onChange={setObjetivo}
+                placeholder="Digite seu objetivo na Vaga"
+                rows={3}
+                wrapperClass="w-3/4"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <h1 className="text-lg font-medium text-color">Experiência</h1>
+              <TextareaAutoResize
+                value={experiencia}
+                onChange={setExperiencia}
+                placeholder="Digite suas experiências"
+                rows={3}
+                wrapperClass="w-3/4"
+              />
+            </div>
+
+            <MultiFileUpload
+              onChange={setDocs} 
+              existingFiles={docs.keptFiles}
+            />
+
+            <div className="flex gap-8">
+              <Button
+                label="Enviar Docs"
+                className="background-green w-32 justify-center items-center "
+                type="submit"
+              />
+
+              <Button
+                label="Resetar"
+                className="bg-red-400 w-32 justify-center items-center "
+                type="reset"
+              />
+            </div>
+
+          </form>
+        </div>
+      </div>
+    );
+  } else {
+    content = null;
+  }
 
   return (
     <>
       <VoltarIcon />
-      {loading ? (
-        <Carregamento />
-      ) : processo ? (
-        <div className="h-[110vh] max-h-auto w-full flex items-center py-12">
-          {/* Coluna esquerda */}
-          <div className="h-full w-[45%] flex flex-col items-center justify-center gap-4">
-            <div className="h-60 w-60 flex items-center justify-center rounded-3xl p-1 border border-white/30 bg-white/10 backdrop-blur-xl shadow-lg hover:bg-white/20 transition duration-300">
-              <img
-                src={processo.empresa?.imageUrl || "/errors/profileimg.png"}
-                alt={processo.empresa?.name || "Sem Foto"}
-                className="h-full object-cover rounded-3xl"
-              />
-            </div>
-            <h1 className="text-3xl font-bold text-color">
-              {processo.vaga?.vaga || "Sem Nome"}
-            </h1>
-            <p className="text-color text-lg font-medium">
-              {processo.vaga?.descricao || "Sem Descrição"}
-            </p>
-          </div>
-
-          {/* Coluna direita */}
-          <div className="h-full w-[55%] flex flex-col items-center justify-center gap-8">
-            <h2 className="text-[#F5F5F5] text-xl font-bold px-4 py-2 rounded-full flex items-center justify-center background-blue">
-              Preencha com mais Informações
-            </h2>
-            <form className="flex w-full flex-col gap-6" onSubmit={handleSubmit}>
-
-              <Input
-                label="Email"
-                value={userProfile?.email || ""}
-                readOnly
-                placeholder="Email para contato"
-                className="ring-1 text-color bg-white"
-              />
-
-              <div className="flex flex-col gap-2">
-                <h1 className="text-lg font-medium text-color">Objetivo</h1>
-                <TextareaAutoResize
-                  value={objetivo}
-                  onChange={setObjetivo}
-                  placeholder="Digite seu objetivo na Vaga"
-                  rows={3}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <h1 className="text-lg font-medium text-color">Experiência</h1>
-                <TextareaAutoResize
-                  value={experiencia}
-                  onChange={setExperiencia}
-                  placeholder="Digite suas experiências"
-                  rows={3}
-                />
-              </div>
-
-              <MultiFileUpload
-                onChange={setDocs}       // Recebe { newFiles, keptFiles }
-                existingFiles={docs.keptFiles}
-              />
-
-              <div className="flex gap-8">
-                <Button
-                  label="Enviar Docs"
-                  className="background-green w-32 justify-center items-center "
-                  type="submit"
-                />
-
-                <Button
-                  label="Resetar"
-                  className="bg-red-400 w-32 justify-center items-center "
-                  type="reset"
-                />
-              </div>
-
-            </form>
-          </div>
-        </div>
-      ) : null}
+      {content}
     </>
   );
 }

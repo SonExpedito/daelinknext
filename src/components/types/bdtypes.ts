@@ -1,86 +1,99 @@
 export type PCD = {
-    id?: string;
-    name?: string;
-    cpf?: string;
-    deficiencia?: string;
-    descrição?: string;
-    imageProfile?: string;
-    imageUrl?: string;
-    email?: string;
-    dataNasc?: string;
-    laudomedico?: string;
-    sobre?: string;
-    telefone?: string;
-    trabalho?: string;
-    perfilvertical?: boolean;
-}
+  id?: string;
+  name?: string;
+  genero?: string;
+  dataNasc?: string;
+  cpf?: string;
+  telefone?: string;
+  email?: string;
+
+  deficiencia?: string;
+  trabalho?: string;
+  descrição?: string;
+  sobre?: string;
+  laudomedico?: string;
+
+  imageUrl?: string;       // foto de perfil
+  imageProfile?: string;   // banner
+  perfilvertical?: boolean;
+  empresapick?: boolean;   // se já foi vinculado a empresa
+};
 
 export type Empresa = {
-    imageUrl?: string;
-    imageProfile?: string;
-    sobreimg?: string;
-    name?: string;
-    area?: string;
-    id?: string;
-    cep?: string;
-    cnpj?: string;
-    descricao?: string;
-    email?: string;
-    sobre?: string;
-    telefone?: string;
+  id?: string;
+  name?: string;
+  cnpj?: string;
+  area?: string;
+  descricao?: string;
+  sobre?: string;
+  sobreimg?: string;
+
+  email?: string;
+  telefone?: string;
+  cep?: string;
+
+  imageUrl?: string;       // logo
+  imageProfile?: string;   // banner
 };
 
 export type Vaga = {
-    id: string;
-    empresaId?: string;
-    empresa?: Empresa;
-    area?: string;
-    salario?: string;
-    tipo?: string;
-    local?: string;
-    detalhes?: string;
-    vaga?: string;
-    status?: string;
-    descricao?: string;
+  id: string;
+  vaga?: string;           // título da vaga
+  descricao?: string;
+  detalhes?: string;
+  area?: string;
+  tipo?: string;
+  local?: string;
+  salario?: string;
+  status?: string;
+
+  empresaId?: string;
+  empresa?: Empresa;
+
+  img?: string;
+  createdAt?: string;
 };
 
 export type Documento = {
-    [key: string]: any;
-    id: string;
-    nome: string;
-    experiencia: string;
-    objetivo: string;
-    files: string[];
-    status?: string;
+  id: string;
+  nome: string;
+  experiencia: string;
+  objetivo: string;
+  arquivos: string[];
+  status?: string;
+  [key: string]: any;
 };
 
 export type Processo = {
-    id: string;
-    nome: string;
-    vagaId?: string;
-    empresaId?: string;
-    processoId?: string;
-    documento?: Documento;
-    empresa?: Empresa;
-    vaga?: Vaga;
-    situacao?: string;
-    [key: string]: any;
+  id: string;
+  nome: string;
+  situacao?: string;
+
+  processoId?: string;
+  empresaId?: string;
+  vagaId?: string;
+
+  empresa?: Empresa;
+  vaga?: Vaga;
+  documento?: Documento;
+
+  [key: string]: any;
 };
 
 export type Chat = {
-    id: string;
-    processoId: string;
-    empresaId: string;
-    pcdId: string;
+  id: string;
+  processoId: string;
+  empresaId: string;
+  pcdId: string;
 };
 
 export type Mensagem = {
-    id: string;
-    pcdId: string;
-    empresaId: string;
-    mensagem: string;
-    fileUrl: string;
-    data: Date;
-    origem: string;
-};
+  id: string;
+  mensagem: string;
+  fileUrl: string;
+  data: Date;
+  origem: string;
 
+  pcdId: string;
+  empresaId: string;
+};

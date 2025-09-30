@@ -28,6 +28,13 @@ export default function ChatPage({ chatId }: Props) {
     const router = useRouter();
 
     useEffect(() => {
+        // Desabilita scroll do body enquanto o chat estiver montado
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => { document.body.style.overflow = previousOverflow; };
+    }, []);
+
+    useEffect(() => {
         if (!chatId?.trim()) {
             setLoading(false);
             openModal("Chat não encontrado.");
@@ -121,9 +128,9 @@ export default function ChatPage({ chatId }: Props) {
 
                     <div className="w-auto h-auto flex flex-col gap-6 items-center justify-center">
                         <h1 className="text-color text-xl">Contatos</h1>
-                        <Button type="button" label={<><Mail size={24} /> Contatar</>} className="background-blue" onClick={handleEmail} />
+                        <Button type="button" label={<><Mail size={24} /> Email</>} className="background-blue" onClick={handleEmail} />
 
-                        <Button type="button" label={<><Phone size={24} /> Contatar</>} className="background-blue" onClick={handleTelefone} />
+                        <Button type="button" label={<><Phone size={24} /> Telefone</>} className="bg-[#5B21B6]" onClick={handleTelefone} />
 
                     </div>
 
@@ -139,7 +146,7 @@ export default function ChatPage({ chatId }: Props) {
     }
 
     return (
-        <div className="w-full h-[88vh] flex justify-center items-center">
+        <div className="w-full h-screen overflow-hidden flex justify-center items-center">{/* scroll global bloqueado via effect */}
             {content}
         </div>
     );

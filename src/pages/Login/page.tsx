@@ -8,7 +8,6 @@ import { Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useUserStore } from "@/src/components/store/userstore";
 import { useUIStore } from "@/src/components/store/modalstore";
-import Input from "@/src/components/elements/input/input";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -101,15 +100,16 @@ export default function LoginPage() {
                         }}
                         className="flex flex-col w-full h-fit justify-center items-center gap-4"
                     >
-                        <Input
+                        <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Email"
                             required
+                            className="w-2/4 bg-white/70 rounded-2xl p-4 mt-1 pr-12 placeholder-gray-500"
                         />
 
-                        <div className="relative w-2/4 mb-4">
+                        <div className="relative w-2/4 mb-4 items-center">
                             <input
                                 type={showPassword ? "text" : "password"}
                                 className="w-full bg-white/70 rounded-2xl p-4 mt-1 pr-12 placeholder-gray-500"

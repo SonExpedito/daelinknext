@@ -23,8 +23,8 @@ export default function Beneficios() {
     return (
         <div className="w-full beneficiosheight grid grid-cols-4 justify-items-center place-items-center">
 
-            {cards.map((card, index) => (
-                <div key={index} className="w-auto h-auto flex flex-col items-center justify-center gap-4 p-4">
+            {cards.map((card) => (
+                <div key={card.title} className="w-auto h-auto flex flex-col items-center justify-center gap-4 p-4">
                     <div className={`flex items-center justify-center text-background text-3xl ${card.color} p-4 rounded-full`}>
                         {card.icon}
                     </div>

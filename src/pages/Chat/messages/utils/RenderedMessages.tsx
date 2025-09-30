@@ -1,7 +1,7 @@
 "use client";
 import { Download } from "lucide-react";
 import type { Mensagem, PCD, Empresa } from "@/src/components/types/bdtypes";
-import { getSituacaoClass, getName, isImage } from "../utils/messageHelpers";
+import {getName, isImage } from "../utils/messageHelpers";
 
 type Props = {
   mensagens: Mensagem[];
@@ -16,6 +16,10 @@ export default function RenderedMessages({ mensagens, participante, userType }: 
         const hasFile = !!mensagem.fileUrl;
         const isImg = hasFile && isImage(mensagem.fileUrl);
 
+        // garante que "Você" (userType) fique sempre à direita
+        const alignClass =
+          mensagem.origem === userType ? "self-end background-blue" : "self-start background-green";
+
         return (
           <div
             key={mensagem.id}
@@ -25,15 +29,15 @@ export default function RenderedMessages({ mensagens, participante, userType }: 
               bg-white/10 border border-white/20
               backdrop-blur-md backdrop-saturate-125
               transition duration-300 hover-size
-              ${getSituacaoClass(mensagem.origem)}
+              ${alignClass}
             `}
           >
             <p className="font-medium text-lg text-white/90">
               {getName(mensagem.origem, userType, participante)}
             </p>
 
-            {hasFile && (
-              isImg ? (
+            {hasFile &&
+              (isImg ? (
                 <img
                   src={mensagem.fileUrl}
                   alt="Arquivo da mensagem"
@@ -52,8 +56,7 @@ export default function RenderedMessages({ mensagens, participante, userType }: 
                   <Download size={22} />
                   <span className="text-base">Arquivo Enviado</span>
                 </a>
-              )
-            )}
+              ))}
 
             <p className="text-base text-white/85">{mensagem.mensagem}</p>
           </div>

@@ -4,11 +4,12 @@ import axios from "axios";
 import Carregamento from '@/src/components/elements/carregamento/carregamento';
 import { useUIStore } from "@/src/components/store/modalstore";
 import { useRouter } from "next/navigation";
-import type { Empresa} from "@/src/components/types/bdtypes";
+import type { Empresa } from "@/src/components/types/bdtypes";
 import VoltarIcon from "@/src/components/elements/voltar/page";
 import Button from "@/src/components/elements/buttons/button"; // Adjust the import path if needed
 import ComapanyTabs from "./companytabs";
 import ErrorCard from "@/src/components/elements/errorcard/errorcard";
+import { Mail, Phone } from "lucide-react";
 
 type Props = {
     readonly empresaId: string; // Adjust the type if vagaId is not a string
@@ -58,6 +59,17 @@ export default function EmpresasInfoPage({ empresaId }: Props) {
         }
     };
 
+    const handleTelefone = () => {
+        if (empresa?.telefone) {
+            openModal("Abrindo Telefone");
+            window.location.href = `tel:${empresa.telefone}`;
+            setTimeout(() => closeModal(), 1200);
+        } else {
+            openModal("Telefone da empresa não disponível.");
+            setTimeout(() => closeModal(), 1200);
+        }
+    };
+
     let content;
     if (loading) {
         content = <Carregamento />;
@@ -80,8 +92,9 @@ export default function EmpresasInfoPage({ empresaId }: Props) {
                         <p className="text-xl font-semibold text-color ">{empresa.area}</p>
 
                         <p className="text-lg text-color text-left whitespace-normal break-words line-clamp-3 w-3/5">{empresa.sobre}</p>
-                        <div className="flex">
-                            <Button type="button" label="Contatar" className="background-blue" onClick={handleContact} />
+                        <div className="flex gap-4 pt-2 ">
+                            <Button type="button" label={<><Mail size={24} /> Email</>} className="background-blue" onClick={handleContact} />
+                            <Button type="button" label={<><Phone size={24} /> Telefone</>} className="bg-[#5B21B6]" onClick={handleTelefone} />
                         </div>
                     </div>
 

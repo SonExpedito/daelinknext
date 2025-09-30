@@ -7,19 +7,31 @@ export async function POST(req: Request) {
   try {
     const { processoid } = await req.json();
 
-    const docRef = await addDoc(collection(db, "Documentos"), {
-      processoid,
-      nome: "",
-      formacao: "",
-      experiencia: "",
-      createdAt: new Date(),
-    });
+    if (!processoid) {
+      return NextResponse.json(
+        { error: "processoid é obrigatório." },
+        { status: 400 }
+      );
+    }
 
-    // Retorna exatamente no formato do seu type Documento
+    // cria documento na subcoleção correta
+    const docRef = await addDoc(
+      collection(db, "Processos", processoid, "documento"),
+      {
+        arquivos: [],
+        objetivo: "",
+        experiencia: "",
+        status: "Criado",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      }
+    );
+
+    // Retorna no formato esperado pelo seu type Documento
     return NextResponse.json({
       id: docRef.id,
-      nome: "",
-      formacao: "",
+      arquivos: [],
+      objetivo: "",
       experiencia: "",
     });
   } catch (error: any) {

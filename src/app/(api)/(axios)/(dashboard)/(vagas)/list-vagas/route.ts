@@ -6,7 +6,6 @@ import type { Vaga } from "@/src/components/types/bdtypes";
 export async function POST(req: Request) {
     try {
         const { empresaId } = await req.json();
-
         if (!empresaId) {
             return NextResponse.json({ message: "empresaId é obrigatório." }, { status: 400 });
         }

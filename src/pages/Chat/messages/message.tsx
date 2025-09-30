@@ -126,15 +126,13 @@ export default function MessageContainer({ participante, chat }: MessageContaine
     };
 
     return (
-        <div className="w-full h-full flex flex-col items-center overflow-x-hidden pt-14 px-2 gap-8">
+        <div className="w-full h-full flex flex-col items-center overflow-hidden pt-14 px-2 gap-6">
             <div
                 ref={scrollContainerRef}
                 onScroll={handleScroll}
-                className="w-full h-[80%] flex flex-col gap-6 p-4 px-12
-                overflow-y-auto overflow-x-hidden
-                scroll-smooth
-                rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-inner
-                custom-scrollbar transition relative"
+                className="w-full flex-1 flex flex-col gap-6 p-4 px-12 overflow-y-auto overflow-x-hidden overscroll-contain
+             rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-inner
+             custom-scrollbar transition relative messages-scroll"
             >
                 {loading ? <Carregamento /> : (
                     <RenderedMessages

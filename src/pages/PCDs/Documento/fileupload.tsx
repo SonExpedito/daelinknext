@@ -53,7 +53,7 @@ export default function MultiFileUpload({ onChange, existingFiles = [] }: Readon
       <label
         htmlFor="multi-file"
         className={`bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg 
-          text-white font-medium py-3 px-6 rounded-2xl flex items-center gap-2 justify-center 
+          text-color font-medium py-3 px-6 rounded-2xl flex items-center gap-2 justify-center 
           hover:bg-white/20 transition duration-300
           ${newFiles.length + keptFiles.length < 3 ? "cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
       >
@@ -68,13 +68,13 @@ export default function MultiFileUpload({ onChange, existingFiles = [] }: Readon
         <div
           key={url}
           className="flex items-center justify-between px-4 py-2 rounded-2xl 
-            bg-white/10 backdrop-blur-lg border border-white/20 shadow-md"
+            bg-white/10 backdrop-blur-lg border border-white/20 shadow-md hover-size cursor-pointer"
         >
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-blue-300 hover:text-blue-400 truncate max-w-[220px]"
+            className="text-sm text-color truncate max-w-[220px]"
           >
             Documento {index + 1}
           </a>

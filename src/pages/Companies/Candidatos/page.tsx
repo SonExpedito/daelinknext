@@ -112,8 +112,7 @@ export default function CandidatosPage() {
         <Carregamento />
       ) : (
         <div
-          className={`w-full pb-8 ${
-            filteredPcds.length > 0
+          className={`w-full pb-8 ${filteredPcds.length > 0
               ? "min-h-screen grid grid-cols-3 justify-items-center content-start gap-y-12"
               : "h-[30rem] flex items-start justify-center"}`}
         >

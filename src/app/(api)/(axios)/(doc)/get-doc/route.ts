@@ -16,16 +16,23 @@ export async function POST(req: Request) {
     const documentosRef = collection(db, "Processos", processoid, "documento");
     const documentosSnap = await getDocs(documentosRef);
 
-    const documentos = documentosSnap.docs.map(d => ({
-      id: d.id,
-      ...d.data(),
-    }));
+    const documentos = documentosSnap.docs.map(d => {
+      const data = d.data();
+      return {
+        id: d.id,
+        nome: data.nome || "",
+        experiencia: data.experiencia || "",
+        objetivo: data.objetivo || "",
+        arquivos: data.arquivos || [],   // 🔑 garantir consistência com o type
+        status: data.status || "Criado",
+      };
+    });
 
     return NextResponse.json(
       {
         documentos,
         quantidade: documentos.length,
-        primeiroId: documentos[0]?.id || null
+        primeiroId: documentos[0]?.id || null,
       },
       { status: 200 }
     );

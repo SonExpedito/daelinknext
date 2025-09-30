@@ -79,18 +79,18 @@ export default function ProcessosPage() {
     }
 
 
-    function getSituacaoClass(situacao?: string) {
+    const getSituacaoClass = (situacao?: string) => {
         switch (situacao) {
-            case "Dispensado":
-                return "bg-gray-400";
             case "Pendente":
-                return "background-blue";
-            case "Concluído":
+                return "bg-gray-500";
+            case "Encerrado":
+                return "bg-red-400";
+            case "Aprovado":
                 return "background-green";
             default:
-                return "bg-gray-200";
+                return "bg-gray-500"; // fallback
         }
-    }
+    };
 
 
     return (
@@ -111,19 +111,12 @@ export default function ProcessosPage() {
                 >
                     {filteredProcessos.length > 0 ? (
                         filteredProcessos.map((item) => (
-                            <div
+                            <button
                                 key={item.processo.id}
-                                tabIndex={0}
-                                role="button"
+                                type="button"
                                 onClick={() => ProcessosInfo(item.processo.id)}
-                                onKeyDown={(e) => {
-                                    if (e.key === "Enter" || e.key === " ") {
-                                        // ação acessível
-                                        ProcessosInfo(item.processo.id);
-                                    }
-                                }}
                                 className="flex flex-col h-72 w-80 card-border
-                                items-center justify-center cursor-pointer hover-size overflow-hidden gap-4"
+                                items-center justify-center cursor-pointer hover-size overflow-hidden gap-4 custom-button-style"
                             >
 
                                 <div className=" h-3/5 flex items-center justify-center
@@ -134,10 +127,10 @@ export default function ProcessosPage() {
 
 
                                 <div className='flex flex-col items-center justify-center gap-2'>
-                                    <p className="text-color font-bold text-xl capitalize">{item.processo.nome|| "Vaga não encontrada"}</p>
+                                    <p className="text-color font-bold text-xl capitalize">{item.processo.nome || "Vaga não encontrada"}</p>
                                     <h2 className={`text-[#F5F5F5] text-xl font-bold px-4 py-1 rounded-full ${getSituacaoClass(item.processo.situacao)}`}>{item.processo.situacao || "Situação não encontrada"}</h2>
                                 </div>
-                            </div>
+                            </button>
                         ))
                     ) : (
                         <ErrorCard label="Nenhum processo encontrado." />
