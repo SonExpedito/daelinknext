@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import type { Processo, Vaga, Chat } from "@/src/components/types/bdtypes";
+import type { Processo, Vaga } from "@/src/components/types/bdtypes";
 import { useUIStore } from '@/src/components/store/modalstore';
 import Carregamento from '@/src/components/elements/carregamento/carregamento';
 import SearchBar from '@/src/components/elements/searchbar/searchbar';
@@ -57,27 +57,9 @@ export default function ProcessosPanelPage({ vagaid }: Props) {
 
         const getProcessos = async () => {
             try {
-                const response = await axios.post<{ processos: any[] }>("/list-processo", { vagaId: vagaid });
-                const processos = response.data.processos;
-
-                const processosComChat = await Promise.all(
-                    processos.map(async (processo) => {
-                        if (!processo.id) return { ...processo, chat: null };
-                        try {
-                            const chatRes = await axios.post<{ empty: boolean; data: Chat | null }>("/get-chat", {
-                                processoId: processo.id.trim()
-                            });
-                            const chat = chatRes.data.empty || !chatRes.data.data ? null : chatRes.data.data;
-                            return { ...processo, chat };
-                        } catch (err) {
-                            console.error("Erro ao buscar chat:", err);
-                            return { ...processo, chat: null };
-                        }
-                    })
-                );
-
-                setProcessos(processosComChat);
-                setFilteredProcessos(processosComChat);
+                const response = await axios.post<{ processos: Processo[] }>("/list-processo", { vagaId: vagaid });
+                setProcessos(response.data.processos);
+                setFilteredProcessos(response.data.processos);
             } catch (error) {
                 openModalUI("Erro ao buscar Processos.");
                 setTimeout(() => closeModalUI(), 1200);
@@ -89,7 +71,7 @@ export default function ProcessosPanelPage({ vagaid }: Props) {
 
         const getVaga = async () => {
             try {
-                const response = await axios.post<{ vaga: any }>("/list-datavaga", { vagaId: vagaid });
+                const response = await axios.post<{ vaga: Vaga }>("/list-datavaga", { vagaId: vagaid });
                 setVaga(response.data.vaga);
             } catch (error) {
                 openModalUI("Erro ao buscar Vaga.");

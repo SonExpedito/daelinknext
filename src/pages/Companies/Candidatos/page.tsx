@@ -85,11 +85,14 @@ export default function CandidatosPage() {
   };
 
   const toggleMagic = () => {
+    
     if (magicMode) {
       setMagicMode(false);
       handleSearch(searchTerm);
     } else {
       // Ativando: guarda lista atual p/ se quiser restaurar e dispara a recomendação
+      console.log("Ativando Modo Mágico");
+      console.log(originalPcds)
       setOriginalPcds(filteredPcds);
       setMagicMode(true);
       handleSearch(searchTerm);

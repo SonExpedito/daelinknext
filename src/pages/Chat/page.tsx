@@ -27,12 +27,7 @@ export default function ChatPage({ chatId }: Props) {
 
     const router = useRouter();
 
-    useEffect(() => {
-        // Desabilita scroll do body enquanto o chat estiver montado
-        const previousOverflow = document.body.style.overflow;
-        document.body.style.overflow = 'hidden';
-        return () => { document.body.style.overflow = previousOverflow; };
-    }, []);
+
 
     useEffect(() => {
         if (!chatId?.trim()) {
@@ -119,9 +114,10 @@ export default function ChatPage({ chatId }: Props) {
                     </button>
 
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <div className="h-48 flex items-center justify-center rounded-3xl p-1 border 
-                        border-white/30 bg-white/10 backdrop-blur-xl shadow-lg hover:bg-white/20 transition duration-300">
-                            <img src={participante?.imageUrl || "/errors/profileimg.png"} alt={participante?.name || "Sem Foto"} className="h-full object-cover rounded-3xl" />
+                        <div className={`flex items-center justify-center rounded-3xl p-1 border 
+                        border-white/30 bg-white/10 backdrop-blur-xl shadow-lg hover:bg-white/20 transition duration-300 
+                        ${('perfilvertical' in (participante ?? {}) && (participante as PCD).perfilvertical ? 'w-48 h-60' : 'h-48 ')}`}>
+                            <img src={participante?.imageUrl || "/errors/profileimg.png"} alt={participante?.name || "Sem Foto"} className="h-full w-full object-cover rounded-3xl" />
                         </div>
                         <h1 className="text-color font-bold text-2xl">{participante?.name || "Sem Nome"} </h1>
                     </div>
@@ -146,7 +142,7 @@ export default function ChatPage({ chatId }: Props) {
     }
 
     return (
-        <div className="w-full h-screen overflow-hidden flex justify-center items-center">{/* scroll global bloqueado via effect */}
+        <div className="w-full h-screen overflow-hidden flex justify-center items-center pb-20">{/* scroll global bloqueado via effect */}
             {content}
         </div>
     );
