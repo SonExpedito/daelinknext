@@ -1,8 +1,9 @@
 'use client'
 
-import { Search, AlignJustify } from "lucide-react";
+import { Search, AlignJustify, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useUserStore } from "@/src/components/store/userstore";
 
 export default function Navbar() {
@@ -10,6 +11,8 @@ export default function Navbar() {
     const userProfile = useUserStore((state) => state.userProfile);
     const userType = useUserStore((state) => state.userType);
     const logout = useUserStore((state) => state.logout);
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     async function LogoutProfile() {
         await logout();
@@ -39,7 +42,7 @@ export default function Navbar() {
     const dropdownLinks = [
         { href: "/perfil", label: "Perfil" },
         { href: "/configuracoes", label: "Configurações" },
-    ]
+    ];
 
     let currentLinks;
     if (userType === "PCD") {
@@ -51,15 +54,16 @@ export default function Navbar() {
     }
 
     return (
-        <div className="w-full h-20 background-primary px-12 sticky top-0 z-50">
-            <div className="h-full w-full flex relative justify-center items-center text-color ">
+        <div className="w-full h-20 background-primary  sticky top-0 z-50">
+            <div className="h-full w-full flex relative justify-between items-center text-color px-6 md:px-12 ">
 
-                <Link href={logoLink} className="absolute left-0 flex h-full items-center">
+                {/* Logo */}
+                <Link href={logoLink} className="flex h-full items-center">
                     <img src="/logo.png" alt="Logo" className="flex object-contain h-2/4" />
                 </Link>
 
-                {/* Links */}
-                <div className="h-full items-center flex justify-center gap-4 text-background text-color">
+                {/* Links Desktop */}
+                <div className="hidden md:flex h-full items-center justify-center gap-6 text-background text-color">
                     {currentLinks.map(link => (
                         <Link key={link.href} href={link.href} className="text-color text-hover">
                             {link.label}
@@ -67,17 +71,17 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Perfil */}
-                <div className="flex gap-4 h-full w-auto justify-center items-center absolute right-0">
+                {/* Perfil + Search */}
+                <div className="flex gap-4 h-full w-auto justify-center items-center">
                     <button className="cursor-pointer">
                         <Search className="text-color text-hover" />
                     </button>
 
                     {userProfile ? (
-                        <div className="relative group">
+                        <div className="relative group hidden md:block">
                             <button
                                 className="flex items-center justify-center rounded-full p-1 border border-blue-400/70 backdrop-blur-md 
-        bg-blue-400/60 hover:bg-blue-400/80 transition duration-300"
+                                bg-blue-400/60 hover:bg-blue-400/80 transition duration-300"
                             >
                                 <img
                                     src={
@@ -91,9 +95,9 @@ export default function Navbar() {
 
                             <div
                                 className="absolute top-12 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col items-center gap-2
-        rounded-2xl p-4 shadow-lg border border-white/20
-        bg-white/10 backdrop-blur-xl backdrop-saturate-150
-        hover:bg-white/20 transition duration-300"
+                                rounded-2xl p-4 shadow-lg border border-white/20
+                                bg-white/10 backdrop-blur-xl backdrop-saturate-150
+                                hover:bg-white/20 transition duration-300"
                             >
                                 {dropdownLinks.map((link) => (
                                     <Link key={link.href} href={link.href} className="text-color text-hover">
@@ -109,13 +113,66 @@ export default function Navbar() {
                                 </button>
                             </div>
                         </div>
-
                     ) : (
-                        <Link href="/login" className="primary-color text-hover font-bold  text-lg ">
+                        <Link href="/login" className="hidden md:block primary-color text-hover font-bold text-lg">
                             Login
                         </Link>
                     )}
+
+                    {/* Botão Menu Mobile */}
+                    <button
+                        className="md:hidden cursor-pointer"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                    >
+                        {menuOpen ? <X className="text-color" /> : <AlignJustify className="text-color" />}
+                    </button>
                 </div>
+
+                {/* Menu Mobile Dropdown */}
+                {menuOpen && (
+                    <div className="absolute top-20 left-0 w-full flex flex-col items-center gap-4 py-6 
+                    bg-background text-color shadow-md border-t border-white/20 md:hidden animate-fade-in">
+                        {currentLinks.map(link => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className="text-color text-hover"
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+
+                        {userProfile ? (
+                            <>
+                                {dropdownLinks.map((link) => (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className="text-color text-hover"
+                                        onClick={() => setMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                ))}
+                                <button
+                                    className="text-color text-hover cursor-pointer"
+                                    onClick={() => { LogoutProfile(); setMenuOpen(false); }}
+                                >
+                                    Logout
+                                </button>
+                            </>
+                        ) : (
+                            <Link
+                                href="/login"
+                                className="primary-color text-hover font-bold text-lg"
+                                onClick={() => setMenuOpen(false)}
+                            >
+                                Login
+                            </Link>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     )

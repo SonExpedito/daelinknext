@@ -72,7 +72,7 @@ export default function EmpresasPage() {
                 <div
                     className={`w-full pb-2
                         ${filteredEmpresas.length > 0
-                            ? "min-h-screen grid grid-cols-3 justify-items-center content-start gap-y-12"
+                            ? "min-h-screen grid grid-cols-3 justify-items-center content-start gap-y-12 pb-20"
                             : "h-[30rem] flex items-start justify-center"}`}
                 >
                     {filteredEmpresas.length > 0 ? (
@@ -86,7 +86,7 @@ export default function EmpresasPage() {
                             >
 
                                 <img src={empresa.imageProfile || "/errors/bannererror.png"} alt={empresa.name || "Empresa não informada"}
-                                    className="object-contain h-[70%] rounded-3xl bannershadow" />
+                                    className="object-cover h-[70%] w-80 rounded-3xl bannershadow" />
 
                                 <div className='flex flex-col items-center justify-center'>
                                     <p className="text-color font-medium text-lg ">{empresa.area}</p>

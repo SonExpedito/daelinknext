@@ -113,8 +113,8 @@ export default function CandidatoInfoPage({ pcdId }: Readonly<Props>) {
                     </div>
                 </div>
 
-                <div className="w-full min-h-[38vh] flex items-center justify-center px-12">
-                    <div className="w-1/3 flex flex-col items-center justify-center gap-2 pr-6">
+                <div className="w-full min-h-[38vh] flex items-center justify-center">
+                    <div className="w-1/3 flex flex-col items-start justify-center gap-2  px-4">
                         <h1 className="text-color text-2xl font-bold self-start secondary-color">
                             {pcd.trabalho}
                         </h1>

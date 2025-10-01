@@ -157,7 +157,7 @@ export default function VagaPanelPage() {
                                     <div className="h-full w-[48%] flex items-center justify-center ">
                                         <img
                                             src={vaga.img || "/errors/bannererror.png"}
-                                            className={`object-contain h-[85%] rounded-3xl ${closed ? 'opacity-60 grayscale' : ''}`}
+                                            className={`object-cover h-[85%] w-64 rounded-3xl${closed ? 'opacity-60 grayscale' : ''}`}
                                             alt={vaga.vaga || "VAGA não informada"}
                                         />
                                     </div>

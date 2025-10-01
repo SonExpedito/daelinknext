@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Vaga, Processo } from "@/src/components/types/bdtypes";
+import { useUserStore } from "@/src/components/store/userstore";
 import AnalyticsHeader from "./components/header";
 import AnalyticsChart from "./components/chart";
 import AnalyticsTable from "./components/table";
-import { useUserStore } from "@/src/components/store/userstore";
+import Carregamento from '@/src/components/elements/carregamento/carregamento';
 import axios from "axios";
 
 export default function AnalyticsPage() {
@@ -35,7 +36,7 @@ export default function AnalyticsPage() {
     fetchAnalytics();
   }, [userProfile?.id]);
 
-  if (loading) return <p className="text-center">Carregando estatísticas...</p>;
+  if (loading) return <Carregamento />;
 
   return (
     <div className="p-6 space-y-6">
