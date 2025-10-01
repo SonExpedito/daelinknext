@@ -62,6 +62,17 @@ body {
   transition: --background 0.4s ease, color 0.4s ease;
 }
 
+.liquid-glass {
+  @apply rounded-2xl shadow-lg backdrop-blur-md border;
+  background: rgba(255, 255, 255, 0.15); /* claro */
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .liquid-glass {
+  background: rgba(20, 20, 20, 0.3); /* escuro */
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 /* ==========================
    EFEITOS HOVER / TRANSFORM
 ========================== */
