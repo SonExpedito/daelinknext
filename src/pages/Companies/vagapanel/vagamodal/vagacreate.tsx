@@ -121,7 +121,7 @@ export default function VagaCreateModal({
       // Fecha modal de criação/edição logo após salvar
       onClose();
       // força revalidação de rota (caso existam server components) e eventual recarrego
-      try { router.refresh(); } catch {}
+      try { router.refresh(); } catch { }
     } catch (err) {
       console.error("Erro ao salvar vaga:", err);
       openModal("Erro ao salvar.");
@@ -134,10 +134,17 @@ export default function VagaCreateModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-[60] bg-black/40 backdrop-blur-sm">
-      <motion.div
-        className="relative w-full max-w-3xl rounded-2xl p-6 shadow-xl border border-white/30 background-primary"
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      data-role="modal"
+      aria-modal="true"
+      aria-labelledby="vaga-create-modal-title"
+      className="fixed inset-0 flex items-center justify-center z-[60] bg-black/40 backdrop-blur-sm"
+    >
+      <div className="relative w-full max-w-3xl rounded-2xl p-6 shadow-xl border border-white/30 background-primary">
         <h2 className="mb-4 text-xl font-bold text-color">
           {vaga?.id ? "Editar Vaga" : "Criar Nova Vaga"}
         </h2>
@@ -240,7 +247,7 @@ export default function VagaCreateModal({
             </div>
           </div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }

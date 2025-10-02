@@ -51,18 +51,21 @@ export default function VagaViewModal({ vaga, isOpen, onClose, onUpdated, onEdit
 
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center z-[60] bg-black/40 backdrop-blur-sm">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.18, ease: 'easeOut' }}
-          className="relative w-full max-w-3xl rounded-2xl p-6 shadow-xl border border-white/30 background-primary"
-        >
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+        data-role="modal"
+        aria-modal="true"
+        aria-labelledby="vaga-view-modal-title"
+        className="fixed inset-0 flex items-center justify-center z-[60] bg-black/40 backdrop-blur-sm"
+      >
+        <div className="relative w-full max-w-3xl rounded-2xl p-6 shadow-xl border border-white/30 background-primary">
           <div className="flex items-center justify-center gap-12  border-b border-white/20 pb-3 relative">
-              <img src={vaga.img || "/errors/bannererror.png"} alt={vaga.vaga || "VAGA não informada"} className="object-cover h-24 w-40 rounded-2xl" />
+            <img src={vaga.img || "/errors/bannererror.png"} alt={vaga.vaga || "VAGA não informada"} className="object-cover h-24 w-40 rounded-2xl" />
 
-            <h2 className="text-2xl font-bold text-color">{vaga.vaga}</h2>
+            <h2 id="vaga-view-modal-title" className="text-2xl font-bold text-color">{vaga.vaga}</h2>
             <button onClick={onClose} className="text-color transition hover:text-white absolute right-4 cursor-pointer" aria-label="Fechar modal">✕</button>
           </div>
           <div className="mt-5 grid gap-6 md:grid-cols-2">
@@ -90,8 +93,8 @@ export default function VagaViewModal({ vaga, isOpen, onClose, onUpdated, onEdit
             />
 
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
       {/* O modal de edição agora é controlado pelo componente pai (page.tsx) */}
     </>

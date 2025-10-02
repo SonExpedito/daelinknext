@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import type { Documento } from "@/src/components/types/bdtypes";
-import {Download } from "lucide-react";
+import { Download } from "lucide-react";
 
 interface Props {
     processoid: string;
@@ -85,14 +85,18 @@ export default function DocumentosModal({ processoid, isOpen, onClose }: Readonl
     }
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-            <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                className="w-[32rem] max-h-[80vh] overflow-y-auto rounded-2xl background-primary p-6 flex flex-col gap-6 relative"
-            >
-                <h2 className="text-2xl font-bold secondary-color text-center">Documentos</h2>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+            data-role="modal"
+            aria-modal="true"
+            aria-labelledby="documentos-modal-title"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+        >
+            <div className="w-[32rem] max-h-[80vh] overflow-y-auto rounded-2xl background-primary p-6 flex flex-col gap-6 relative">
+                <h2 id="documentos-modal-title" className="text-2xl font-bold secondary-color text-center">Documentos</h2>
 
                 {content}
 
@@ -103,7 +107,7 @@ export default function DocumentosModal({ processoid, isOpen, onClose }: Readonl
                 >
                     ✕
                 </button>
-            </motion.div>
-        </div>
+            </div>
+        </motion.div>
     );
 }

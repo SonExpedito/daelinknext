@@ -48,22 +48,22 @@ export default function AdicionarVagaModal({ empresaId, pcdId, onClose }: Props)
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-[60] bg-black/40 backdrop-blur-sm">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.9 }}
-        transition={{ duration: 0.18, ease: "easeOut" }}
-        className="relative w-full max-w-2xl rounded-2xl p-6 shadow-xl border border-white/30"
-        style={{
-          background: "rgba(255, 255, 255, 0.15)",
-          backdropFilter: "blur(20px) saturate(150%)",
-          WebkitBackdropFilter: "blur(20px) saturate(150%)",
-        }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose?.(); }}
+      data-role="modal"
+      aria-modal="true"
+      aria-labelledby="adicionar-vaga-modal-title"
+      className="fixed inset-0 flex items-center justify-center z-[60] bg-black/40 backdrop-blur-sm"
+    >
+      <div
+        className="relative w-full max-w-2xl rounded-2xl p-6 shadow-xl border border-white/30 bg-white/15 backdrop-blur-2xl saturate-150"
       >
         {/* Cabeçalho */}
         <div className="flex items-center justify-between border-b border-white/20 pb-3 relative">
-          <h2 className="text-xl font-semibold text-white">Selecionar vaga</h2>
+          <h2 id="adicionar-vaga-modal-title" className="text-xl font-semibold text-white">Selecionar vaga</h2>
           <button
             onClick={onClose}
             className="text-color transition hover:text-white absolute right-0"
@@ -118,7 +118,7 @@ export default function AdicionarVagaModal({ empresaId, pcdId, onClose }: Props)
         <div className="mt-6 flex justify-end">
           <Button type="button" label="Cancelar" className="bg-gray-400" onClick={onClose} />
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }

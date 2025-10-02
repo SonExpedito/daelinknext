@@ -142,13 +142,17 @@ export default function PcdModal({ processo, isOpen, onClose }: Readonly<Props>)
 
   return (
     <>
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.8, opacity: 0 }}
-          className="w-[32rem] rounded-2xl background-primary p-6 flex flex-col gap-6 relative"
-        >
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+        data-role="modal"
+        aria-modal="true"
+        aria-labelledby="pcd-modal-title"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+      >
+        <div className="w-[32rem] rounded-2xl background-primary p-6 flex flex-col gap-6 relative">
           <img
             src={processo.pcd?.imageUrl || "/errors/profileimg.png"}
             alt={`Foto de ${processo.pcd?.name}`}
@@ -156,7 +160,7 @@ export default function PcdModal({ processo, isOpen, onClose }: Readonly<Props>)
           />
 
           <div className="text-center flex flex-col items-center gap-2">
-            <h2 className="text-2xl font-bold secondary-color">{processo.pcd?.name}</h2>
+            <h2 id="pcd-modal-title" className="text-2xl font-bold secondary-color">{processo.pcd?.name}</h2>
             <p className="text-color text-lg">{processo.pcd?.email}</p>
             <p className="text-xl text-gray-400">{processo.pcd?.trabalho}</p>
 
@@ -198,8 +202,8 @@ export default function PcdModal({ processo, isOpen, onClose }: Readonly<Props>)
           >
             ✕
           </button>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
       <DocumentosModal
         processoid={processo.processo.id}

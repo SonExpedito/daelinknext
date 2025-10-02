@@ -2,6 +2,7 @@
 
 import ToggleSwitch from "@/src/components/elements/switchToggle/switch";
 import { useTheme } from "@/src/components/hooks/useTheme";
+import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -51,7 +52,16 @@ export default function ThemeModal({ isOpen, onClose }: Readonly<ThemeModalProps
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      data-role="modal"
+      aria-modal="true"
+      aria-labelledby="theme-modal-title"
+      className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
+    >
       <div className="background-primary p-6 rounded-2xl w-[90%] max-w-md shadow-xl relative">
         {/* Fechar */}
         <button
@@ -61,7 +71,7 @@ export default function ThemeModal({ isOpen, onClose }: Readonly<ThemeModalProps
           <X size={22} />
         </button>
 
-        <h2 className="text-2xl font-bold mb-6 text-color">Aparência</h2>
+        <h2 id="theme-modal-title" className="text-2xl font-bold mb-6 text-color">Aparência</h2>
 
         {/* Toggle Tema */}
         <div className="flex items-center justify-between mb-6">
@@ -119,6 +129,6 @@ export default function ThemeModal({ isOpen, onClose }: Readonly<ThemeModalProps
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -15,15 +15,19 @@ const SituacaoModal: FC<Props> = ({ isOpen, onClose, onConfirm }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
-        className="w-80 rounded-2xl background-primary p-6 flex flex-col gap-6 relative"
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      data-role="modal"
+      aria-modal="true"
+      aria-labelledby="situacao-modal-title"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+    >
+      <div className="w-80 rounded-2xl background-primary p-6 flex flex-col gap-6 relative">
         {/* Título */}
-        <h2 className="text-2xl font-bold secondary-color text-center">Alterar Situação</h2>
+        <h2 id="situacao-modal-title" className="text-2xl font-bold secondary-color text-center">Alterar Situação</h2>
 
         {/* Botões de ação */}
         <div className="flex justify-around gap-4">
@@ -47,8 +51,8 @@ const SituacaoModal: FC<Props> = ({ isOpen, onClose, onConfirm }) => {
         >
           ✕
         </button>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 

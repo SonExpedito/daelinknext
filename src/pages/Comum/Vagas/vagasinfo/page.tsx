@@ -1,179 +1,177 @@
 'use client'
-
-import { Search, AlignJustify, X } from "lucide-react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Carregamento from '@/src/components/elements/carregamento/carregamento';
+import { useUIStore } from "@/src/components/store/modalstore";
 import { useUserStore } from "@/src/components/store/userstore";
+import { useRouter } from "next/navigation";
+import VoltarIcon from "@/src/components/elements/voltar/page";
+import ErrorCard from "@/src/components/elements/errorcard/errorcard";
 
-export default function Navbar() {
-    const router = useRouter();
-    const userProfile = useUserStore((state) => state.userProfile);
-    const userType = useUserStore((state) => state.userType);
-    const logout = useUserStore((state) => state.logout);
+import type { Vaga } from "@/src/components/types/bdtypes";
+import Button from "@/src/components/elements/buttons/button";
 
-    const [menuOpen, setMenuOpen] = useState(false);
+type Props = {
+  vagaId: string;
+};
 
-    async function LogoutProfile() {
-        await logout();
-        router.refresh();
+export default function VagasinfoPage({ vagaId }: Readonly<Props>) {
+  const [vaga, setVaga] = useState<Vaga | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [jaInscrito, setJaInscrito] = useState(false);
+  const userProfile = useUserStore((state) => state.userProfile);
+  const userType = useUserStore((state) => state.userType);
+  const openModal = useUIStore((state) => state.openModal);
+  const closeModal = useUIStore((state) => state.closeModal);
+  const router = useRouter();
+
+  // 🔹 Buscar a vaga
+  useEffect(() => {
+    if (!vagaId) {
+      setLoading(false);
+      openModal("Vaga não encontrada.");
+      router.replace("/vagas");
+      setTimeout(() => closeModal(), 1200);
+      return;
     }
 
-    const navLinks = {
-        generic: [
-            { href: "/empresas", label: "Empresas" },
-            { href: "/vagas", label: "Vagas" },
-            { href: "/sobre", label: "Sobre" },
-        ],
-        PCD: [
-            { href: "/vagas", label: "Vagas" },
-            { href: "/empresas", label: "Empresas" },
-            { href: "/processos", label: "Processos" },
-        ],
-        Empresa: [
-            { href: "/analytics", label: "Analytics" },
-            { href: "/candidatos", label: "Candidatos" },
-            { href: "/sobre", label: "Sobre" },
-        ],
+    setLoading(true);
+    axios.post<Vaga>("/get-vaga", { vagaId })
+      .then((res) => {
+        if (!res.data.empresa) {
+          openModal("Empresa não encontrada.");
+          router.replace("/vagas");
+          setTimeout(() => closeModal(), 1200);
+        }
+        setVaga(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        openModal(err.response?.data?.message || "Erro ao buscar vaga.");
+        router.replace("/vagas");
+        setTimeout(() => closeModal(), 1200);
+        setLoading(false);
+      });
+  }, [vagaId, router, openModal, closeModal]);
+
+  // 🔹 Verificar se já existe processo para este PCD na vaga
+  useEffect(() => {
+    if (!vagaId || !userProfile?.id || userType !== "PCD") return; // só verifica se for PCD
+
+    const verificar = async () => {
+      try {
+        const res = await axios.post<{ exists: boolean }>("/verificar-processo", {
+          vagaId,
+          pcdId: userProfile.id,
+        });
+
+        if (res.data?.exists) {
+          setJaInscrito(true);
+        }
+      } catch (err) {
+        console.error("Erro ao verificar candidatura", err);
+      }
     };
 
-    const logoLink = userType === "Empresa" ? "/dashboard" : "/";
+    verificar();
+  }, [vagaId, userProfile?.id, userType]);
 
-    const dropdownLinks = [
-        { href: "/perfil", label: "Perfil" },
-        { href: "/configuracoes", label: "Configurações" },
-    ];
+  const dados = [
+    { label: 'Salario', value: `R$${vaga?.salario}` },
+    { label: 'Tipo', value: vaga?.tipo },
+    { label: 'Endereço', value: vaga?.local },
+  ];
 
-    let currentLinks;
-    if (userType === "PCD") {
-        currentLinks = navLinks.PCD;
-    } else if (userType === "Empresa") {
-        currentLinks = navLinks.Empresa;
-    } else {
-        currentLinks = navLinks.generic;
+  const getStatusVaga = (situacao?: string) => {
+    switch (situacao) {
+      case "Aberta":
+        return "background-blue";
+      case "Fechada":
+        return "bg-red-400";
+    }
+  };
+
+  // 🔹 Candidatar-se
+  const candidatarvaga = async () => {
+    const empresaId = vaga?.empresaId;
+    const pcdId = userProfile?.id;
+    const nome = vaga?.vaga;
+
+    if (!vagaId || !empresaId || !pcdId) {
+      openModal("Não foi possível se candidatar. Dados incompletos.");
+      setTimeout(() => closeModal(), 1500);
+      return;
     }
 
-    return (
-        <div className="w-full h-20 background-primary px-6 md:px-12 sticky top-0 z-50">
-            <div className="h-full w-full flex relative items-center text-color">
+    try {
+      openModal("Enviando candidatura...");
 
-                {/* Logo (esquerda absoluta) */}
-                <Link href={logoLink} className="absolute left-0 flex h-full items-center">
-                    <img src="/logo.png" alt="Logo" className="flex object-contain h-2/4" />
-                </Link>
+      const res = await axios.post<{ message?: string }>("/candidatar-vaga", {
+        vagaId,
+        empresaId,
+        pcdId,
+        nome,
+      });
 
-                {/* Links centralizados */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 h-full items-center justify-center gap-6 text-background text-color">
-                    {currentLinks.map(link => (
-                        <Link key={link.href} href={link.href} className="text-color text-hover">
-                            {link.label}
-                        </Link>
-                    ))}
-                </div>
+      closeModal();
+      openModal(res.data?.message || "Candidatura registrada com sucesso!");
+      setJaInscrito(true);
+      setTimeout(() => closeModal(), 2000);
 
-                {/* Perfil + Search (direita absoluta) */}
-                <div className="absolute right-0 flex gap-4 h-full w-auto justify-center items-center">
-                    <button className="cursor-pointer">
-                        <Search className="text-color text-hover" />
-                    </button>
+    } catch (err: any) {
+      closeModal();
+      openModal(
+        err.response?.data?.message || "Erro ao registrar candidatura."
+      );
+      setTimeout(() => closeModal(), 2000);
+    }
+  };
 
-                    {userProfile ? (
-                        <div className="relative group hidden md:block">
-                            <button
-                                className="flex items-center justify-center rounded-full p-1 border border-blue-400/70 backdrop-blur-md 
-                                bg-blue-400/60 hover:bg-blue-400/80 transition duration-300"
-                            >
-                                <img
-                                    src={
-                                        userProfile?.imageUrl ||
-                                        "https://images2.minutemediacdn.com/image/upload/c_crop,w_4000,h_2250,x_0,y_9/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_en_international_web/01jczr9sq67ky36mtztb.jpg"
-                                    }
-                                    alt="User"
-                                    className="rounded-full cursor-pointer object-cover h-10 w-10"
-                                />
-                            </button>
-
-                            <div
-                                className="absolute top-12 left-1/2 -translate-x-1/2 hidden group-hover:flex flex-col items-center gap-2
-                                rounded-2xl p-4 shadow-lg border border-white/20
-                                bg-white/10 backdrop-blur-xl backdrop-saturate-150
-                                hover:bg-white/20 transition duration-300"
-                            >
-                                {dropdownLinks.map((link) => (
-                                    <Link key={link.href} href={link.href} className="text-color text-hover">
-                                        {link.label}
-                                    </Link>
-                                ))}
-
-                                <button
-                                    className="text-color text-hover cursor-pointer"
-                                    onClick={LogoutProfile}
-                                >
-                                    Logout
-                                </button>
-                            </div>
-                        </div>
-                    ) : (
-                        <Link href="/login" className="hidden md:block primary-color text-hover font-bold text-lg">
-                            Login
-                        </Link>
-                    )}
-
-                    {/* Botão Menu Mobile */}
-                    <button
-                        className="md:hidden cursor-pointer"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        {menuOpen ? <X className="text-color" /> : <AlignJustify className="text-color" />}
-                    </button>
-                </div>
-
-                {/* Menu Mobile Dropdown */}
-                {menuOpen && (
-                    <div className="absolute top-20 left-0 w-full flex flex-col items-center gap-4 py-6 
-                    bg-background text-color shadow-md border-t border-white/20 md:hidden animate-fade-in">
-                        {currentLinks.map(link => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="text-color text-hover"
-                                onClick={() => setMenuOpen(false)}
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
-
-                        {userProfile ? (
-                            <>
-                                {dropdownLinks.map((link) => (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
-                                        className="text-color text-hover"
-                                        onClick={() => setMenuOpen(false)}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                ))}
-                                <button
-                                    className="text-color text-hover cursor-pointer"
-                                    onClick={() => { LogoutProfile(); setMenuOpen(false); }}
-                                >
-                                    Logout
-                                </button>
-                            </>
-                        ) : (
-                            <Link
-                                href="/login"
-                                className="primary-color text-hover font-bold text-lg"
-                                onClick={() => setMenuOpen(false)}
-                            >
-                                Login
-                            </Link>
-                        )}
-                    </div>
-                )}
-            </div>
+  let content;
+  if (loading) {
+    content = <Carregamento />;
+  } else if (vaga?.empresa) {
+    content = (
+      <div className="h-[82vh] w-full flex items-center justify-center gap-8 py-12">
+        <div className="h-full w-[60%] flex flex-col items-center justify-center gap-4 pl-2">
+          <img src={vaga.img || vaga.empresa?.imageProfile || "/errors/bannererror.png"} alt={vaga.empresa.name}
+            className="w-[60%] h-68 object-cover rounded-3xl" />
+          <h1 className="text-4xl font-bold text-color">{vaga.vaga}</h1>
+          <p className="text-color text-lg">{vaga.area}</p>
+          <p className={`text-xl font-bold p-1 px-3 rounded-full text-white ${getStatusVaga(vaga.status)}`}>{vaga.status}</p>
+          <p className="text-color font-normal text-lg capitalize">{vaga.detalhes}</p>
         </div>
-    )
+
+        <div className="h-full w-[40%] flex flex-col items-center justify-center gap-8 pl-2">
+          <p className={`text-2xl font-bold p-1 px-3 rounded-full text-white bg-[#5B21B6]`}>Outros Detalhes</p>
+          <div className="flex flex-col gap-4 self-start">
+            {dados.map((item) => (
+              <p key={item.label} className="text-color font-normal text-lg capitalize">
+                <span className="font-bold">{item.label}:</span> {item.value}
+              </p>
+            ))}
+          </div>
+
+          {/* 🔹 Só mostra o botão se o usuário for PCD */}
+          {userType === "PCD" && (
+            <Button
+              label={jaInscrito ? "Já inscrito" : "Candidatar-se"}
+              onClick={candidatarvaga}
+              disabled={jaInscrito}
+              className="background-green"
+            />
+          )}
+        </div>
+      </div>
+    );
+  } else {
+    content = <ErrorCard label="Empresa não encontrada." />;
+  }
+
+  return (
+    <>
+      <VoltarIcon />
+      {content}
+    </>
+  );
 }
