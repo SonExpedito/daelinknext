@@ -20,13 +20,14 @@ export default function SearchModal({ isOpen, onClose, userType }: Readonly<Sear
     const router = useRouter();
 
     async function handleSearch(query: string) {
-        if (!query) return;
+        const trimmedQuery = query.trim();
+        if (!trimmedQuery) return; // não busca se estiver vazio ou só espaços
 
         setLoading(true);
         try {
             const res = await axios.get("/search", {
                 params: {
-                    query,
+                    query: trimmedQuery,
                     userType,
                     userId: userProfile?.id || ""
                 }
