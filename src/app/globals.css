@@ -7,7 +7,7 @@
   --background: #ffffff;
   --foreground: #1C1C1C;
   --primary: #2469F5;
-  --secundary: #07BEB8;
+  --secondary: #07BEB8;
   --text-primary: #1C1C1C;
   --font-sans: var(--font-inter);
 
@@ -123,7 +123,7 @@ body {
 }
 
 .secondary-color {
-  color: var(--secundary);
+  color: var(--secondary);
 }
 
 .text-black {
@@ -154,7 +154,7 @@ body {
 }
 
 .background-green {
-  background-color: var(--secundary);
+  background-color: var(--secondary);
 }
 
 /* ==========================

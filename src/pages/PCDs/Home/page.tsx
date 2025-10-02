@@ -27,7 +27,7 @@ export default function HomePCD() {
                         <div className='flex gap-2'>
                             <img src="./link.png" alt="link Icon" className='w-8 h-8 object-cover' />
                             <h1 className='text-3xl font-bold text-color uppercase'>Continue.
-                                <span className='primary-color'>Transforme.</span> Caminhe.
+                                <p className='primary-color'>Transforme.</p> Caminhe.
                             </h1>
                         </div>
 

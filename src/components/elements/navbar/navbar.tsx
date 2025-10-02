@@ -41,7 +41,7 @@ export default function Navbar() {
 
     const dropdownLinks = [
         { href: "/perfil", label: "Perfil" },
-        { href: "/configuracoes", label: "Configurações" },
+        { href: "/config", label: "Configurações" },
     ];
 
     let currentLinks;
@@ -80,8 +80,8 @@ export default function Navbar() {
                     {userProfile ? (
                         <div className="relative group hidden md:block">
                             <button
-                                className="flex items-center justify-center rounded-full p-1 border border-blue-400/70 backdrop-blur-md 
-                                bg-blue-400/60 hover:bg-blue-400/80 transition duration-300"
+                                className="flex items-center justify-center rounded-full p-1 border border-background-blue backdrop-blur-md 
+                                background-blue hover:background-blue/80 transition duration-300"
                             >
                                 <img
                                     src={

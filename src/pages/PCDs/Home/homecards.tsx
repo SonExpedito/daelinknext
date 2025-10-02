@@ -57,7 +57,7 @@ export default function HomeCards() {
                         <div className='h-2/3 w-full flex items-center justify-center'>
                             <div className='h-full w-1/2 flex flex-col gap-4 items-center justify-center pb-8'>
                                 <p className='pl-8 text-white text-lg font-medium'>Encontre oportunidades que desafiam padrões, conecte-se com ideias inteligentes e faça parte das mudanças que impactam cidades e pessoas.</p>
-                                <Button label="IBM" onClick={() => { router.push(`/empresas/ibm`) }} type="button" />
+                                <Button label="IBM" onClick={() => { router.push(`/empresas/ibm`) }} type="button" className='bg-[#1C1C1C]'/>
                             </div>
 
                             <div className='h-full w-1/2 flex items-center justify-center '>
