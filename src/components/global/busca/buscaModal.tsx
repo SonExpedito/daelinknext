@@ -85,7 +85,10 @@ export default function SearchModal({ isOpen, onClose, userType }: Readonly<Sear
                                 let href = "/";
                                 if (item._collection === "Empresa") href = `/empresas/${item.id}`;
                                 else if (item._collection === "Vagas") href = `/vagas/${item.id}`;
-                                else if (item._collection === "Processos") href = `/processos/${item.id}`;
+                                else if (item._collection === "Processos") {
+                                    if (userType === "PCD") href = `/processos/${item.id}`;
+                                    else if (userType === "Empresa") href = `/processospanel/${item.vagaId}`;
+                                }
                                 else if (item._collection === "PCD") href = `/pcd/${item.id}`;
 
                                 return (

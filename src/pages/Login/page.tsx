@@ -136,15 +136,6 @@ export default function LoginPage() {
                     >
                         Não Possui uma conta? Cadastre-se
                     </Link>
-
-                    <div className="w-full flex justify-center items-center gap-4 mt-2">
-                        <button className="background-primary h-12 flex items-center justify-center py-2 px-4 rounded-2xl cursor-pointer hover-size">
-                            <img src="./icons/appleicon.png" alt="LoginApple" className="object-contain h-11/12" />
-                        </button>
-                        <button className="background-primary h-12 flex items-center justify-center py-2 px-4 rounded-2xl cursor-pointer hover-size">
-                            <img src="./icons/googleicon.png" alt="LoginGooggle" className="object-contain h-11/12" />
-                        </button>
-                    </div>
                 </div>
             </div>
     );

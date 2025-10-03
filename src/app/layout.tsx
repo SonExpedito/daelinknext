@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import UserInitializer from "@/src/components/store/UserInitializer";
-import ClientWrapper from "@/src/components/provider/ClientWrapper";
 import ThemeInitializer from "@/src/components/provider/ThemeInitializer";
 import Modal from "@/src/components/elements/modal/modal";
 import "./globals.css";
+import UserGate from "../components/gate/UserGate";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,8 +28,9 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased overflow-x-hidden`}>
         <Modal />
-        <UserInitializer />
-        <ClientWrapper>{children}</ClientWrapper>
+        <UserGate>
+          {children}
+        </UserGate>
       </body>
     </html>
   );
