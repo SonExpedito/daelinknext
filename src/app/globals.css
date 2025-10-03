@@ -64,13 +64,35 @@ body {
 
 .liquid-glass {
   @apply rounded-2xl shadow-lg backdrop-blur-md border;
-  background: rgba(255, 255, 255, 0.15); /* claro */
+  background: rgba(255, 255, 255, 0.15);
+  /* claro */
   border-color: rgba(255, 255, 255, 0.2);
 }
 
 .dark .liquid-glass {
-  background: rgba(20, 20, 20, 0.3); /* escuro */
+  background: rgba(20, 20, 20, 0.3);
+  /* escuro */
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes liquidGlass {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(20%, -20%) rotate(180deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+.animate-liquidGlass {
+  animation: liquidGlass 15s infinite linear;
+  opacity: 0.35;
+  filter: blur(45px);
 }
 
 /* ==========================
@@ -157,9 +179,27 @@ body {
   background-color: var(--secondary);
 }
 
+.bg-white-primary-mockup {
+  /* Camada 1: brilho amarelado vindo do canto inferior esquerdo */
+  background-image:
+    radial-gradient(120% 120% at 18% 82%,
+      color-mix(in srgb, var(--background) 70%, var(--primary) 30%) 0%,
+      color-mix(in srgb, var(--background) 82%, var(--primary) 18%) 40%,
+      color-mix(in srgb, var(--background) 90%, var(--primary) 10%) 60%,
+      transparent 75%),
+    /* Camada 2: transição geral vertical bem suave */
+    linear-gradient(180deg,
+      var(--background) 0%,
+      color-mix(in srgb, var(--background) 96%, var(--primary) 4%) 38%,
+      color-mix(in srgb, var(--background) 90%, var(--primary) 10%) 70%,
+      color-mix(in srgb, var(--background) 82%, var(--primary) 18%) 100%);
+  background-color: var(--background);
+}
+
 /* ==========================
    SCROLL / COMPORTAMENTO
 ========================== */
 .messages-scroll {
-  scroll-behavior: smooth; /* ✅ apenas este container */
+  scroll-behavior: smooth;
+  /* ✅ apenas este container */
 }

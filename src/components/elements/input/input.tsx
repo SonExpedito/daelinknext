@@ -24,19 +24,25 @@ type InputProps = BaseProps &
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, error, className = '', value, onChange, wrapperClass = 'w-full', ...rest }, ref) => (
-    <div className={`${wrapperClass} flex flex-col gap-2 text-color`}>
-      {label && <label className="text-lg font-medium">{label}</label>}
+    <div className={`${wrapperClass} flex flex-col items-center gap-2 text-color`}>
+      {label && (
+        <label className="text-lg font-medium w-[80%] text-left">
+          {label}
+        </label>
+      )}
       <input
         ref={ref}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`w-full input-background rounded-2xl p-3 text-color placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 transition ${className}`}
+        className={`input-background rounded-2xl p-3 text-color 
+          focus:outline-none focus:ring-2 focus:ring-blue-400 transition ${className}`}
         {...rest}
       />
       {error && <span className="text-red-400 text-xs mt-1">{error}</span>}
     </div>
   )
 );
+
 Input.displayName = 'Input';
 
 /* -------------------- Textarea AutoResize -------------------- */

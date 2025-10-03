@@ -4,15 +4,15 @@ import { ReactNode, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useUserStore } from "../store/userstore";
 import { useSafeRedirect } from "@/src/components/hooks/useSafeRedirect";
-import Loading from "@/src/components/elements/loadingScreen/loadingscreen";
 import { useUIStore } from "../store/modalstore";
+import Loading from "@/src/components/elements/loadingScreen/loadingscreen";
 
 const protectedRoutes = {
   PCD: ["/documento", "/processos", "/chat"],
   Empresa: ["/analytics", "/candidatos", "/dashboard", "/chat", "/processospanel", "/vagaspanel"],
 };
 
-const authRoutes = ["/login", "/register"];
+const authRoutes = ["/login", "/cadastro"];
 
 export default function UserGate({ children }: { readonly children: ReactNode }) {
   const pathname = usePathname();
@@ -61,5 +61,6 @@ export default function UserGate({ children }: { readonly children: ReactNode })
 
   if (loading || !initialized) return <Loading isLoading={true} />;
 
-  return <>{children}</>;
+  return <>
+    {children}</>;
 }

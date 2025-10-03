@@ -95,7 +95,7 @@ export default function SearchModal({ isOpen, onClose, userType }: Readonly<Sear
                                     <button
                                         key={item.id || item.nome || item.titulo || JSON.stringify(item)}
                                         onClick={() => router.push(href)}
-                                        className="flex items-center justify-between p-3 rounded-xl border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 transition w-full"
+                                        className="flex items-center hover-size cursor-pointer justify-between p-3 rounded-xl border border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 transition w-full"
                                     >
                                         <div className="flex flex-col text-left">
                                             <span className="font-semibold">{item.nome || item.titulo}</span>

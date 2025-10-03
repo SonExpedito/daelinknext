@@ -133,7 +133,8 @@ export default function DocumentoPage({ processoid }: Readonly<Props>) {
               readOnly
               placeholder="Email para contato"
               onChange={() => { }}
-              wrapperClass="w-3/4"
+              className="w-3/4"
+              wrapperClass="w-full items-start"
             />
 
             <div className="flex flex-col gap-2">

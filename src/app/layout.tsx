@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ThemeInitializer from "@/src/components/provider/ThemeInitializer";
 import Modal from "@/src/components/elements/modal/modal";
-import "./globals.css";
 import UserGate from "../components/gate/UserGate";
+import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
