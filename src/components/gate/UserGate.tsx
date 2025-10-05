@@ -8,10 +8,11 @@ import { useUIStore } from "../store/modalstore";
 import Loading from "@/src/components/elements/loadingScreen/loadingscreen";
 
 const protectedRoutes = {
-  PCD: ["/documento", "/processos", "/chat"],
-  Empresa: ["/analytics", "/candidatos", "/dashboard", "/chat", "/processospanel", "/vagaspanel"],
+  PCD: ["/documento", "/processos"],
+  Empresa: ["/analytics", "/candidatos", "/dashboard", "/processospanel", "/vagaspanel"],
 };
 
+const chatRoutes = ["/chat"]; // acessível por ambos
 const authRoutes = ["/login", "/cadastro"];
 
 export default function UserGate({ children }: { readonly children: ReactNode }) {
@@ -39,28 +40,34 @@ export default function UserGate({ children }: { readonly children: ReactNode })
     if (!loading && initialized && pathname) {
       const isPCDRoute = matchRoute(protectedRoutes.PCD);
       const isEmpresaRoute = matchRoute(protectedRoutes.Empresa);
+      const isChatRoute = matchRoute(chatRoutes);
       const isAuthRoute = authRoutes.includes(pathname);
 
-      if (!userType && (isPCDRoute || isEmpresaRoute)) {
+      // Usuário não logado tenta acessar rota protegida
+      if (!userType && (isPCDRoute || isEmpresaRoute || isChatRoute)) {
         showModalMessage("Acesso restrito. Faça login para continuar.");
         redirect("/login");
         return;
       }
 
+      // Usuário logado tenta acessar login/cadastro
       if (userType && isAuthRoute) {
         showModalMessage("Você já está autenticado, caso queira apenas faça Logout.");
-        redirect(userType === "PCD" ? "/documento" : "/dashboard");
+        redirect(userType === "PCD" ? "/processos" : "/dashboard");
         return;
       }
 
-      if ((isEmpresaRoute && userType !== "Empresa") || (isPCDRoute && userType !== "PCD")) {
+      // Verificação por tipo de rota (excluindo chat)
+      if ((isPCDRoute && userType !== "PCD") || (isEmpresaRoute && userType !== "Empresa")) {
         redirect("/login");
+        return;
       }
+
+      // Chat é acessível por ambos, então não precisa de verificação extra
     }
   }, [pathname, userType, loading, initialized, redirect]);
 
   if (loading || !initialized) return <Loading isLoading={true} />;
 
-  return <>
-    {children}</>;
+  return <>{children}</>;
 }

@@ -12,7 +12,7 @@ type BaseProps = {
   label?: string;
   error?: string;
   className?: string;
-  wrapperClass?: string; // 🟢 em vez de "size"
+  wrapperClass?: string;
 };
 
 /* -------------------- Input -------------------- */
@@ -26,9 +26,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ label, error, className = '', value, onChange, wrapperClass = 'w-full', ...rest }, ref) => (
     <div className={`${wrapperClass} flex flex-col items-center gap-2 text-color`}>
       {label && (
-        <label className="text-lg font-medium w-[80%] text-left">
-          {label}
-        </label>
+        <label className="text-lg font-medium w-[80%] text-left">{label}</label>
       )}
       <input
         ref={ref}
@@ -36,13 +34,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         onChange={(e) => onChange(e.target.value)}
         className={`input-background rounded-2xl p-3 text-color 
           focus:outline-none focus:ring-2 focus:ring-blue-400 transition ${className}`}
-        {...rest}
+        {...rest} // 🔹 required, type, etc. passam agora corretamente
       />
       {error && <span className="text-red-400 text-xs mt-1">{error}</span>}
     </div>
   )
 );
-
 Input.displayName = 'Input';
 
 /* -------------------- Textarea AutoResize -------------------- */
@@ -55,7 +52,7 @@ type TextareaProps = BaseProps &
 export type TextareaAutoResizeRef = HTMLTextAreaElement | null;
 
 export const TextareaAutoResize = forwardRef<TextareaAutoResizeRef, TextareaProps>(
-  ({ value, onChange, className = '', label, error, wrapperClass = 'w-full', ...rest }, ref) => {
+  ({ value, onChange, className = '', label, error, wrapperClass = 'w-full', placeholder, ...rest }, ref) => {
     const taRef = useRef<HTMLTextAreaElement>(null);
     useImperativeHandle(ref, () => taRef.current!);
 
@@ -71,14 +68,16 @@ export const TextareaAutoResize = forwardRef<TextareaAutoResizeRef, TextareaProp
     }, [value]);
 
     return (
-      <div className={`${wrapperClass} flex flex-col gap-2 text-color`}>
-        {label && <label className="text-lg font-medium">{label}</label>}
+      <div className={`${wrapperClass} flex flex-col items-center gap-2 text-color`}>
+        {label && <label className="text-lg font-medium w-[80%] text-left">{label}</label>}
         <textarea
           ref={taRef}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className={`w-full input-background rounded-2xl p-3 mt-1 text-color placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400 transition ${className}`}
-          {...rest}
+          placeholder={placeholder} // 🔹 Suporte a placeholder
+          className={`w-full input-background rounded-2xl p-3 mt-1 text-color placeholder-white/60 
+            focus:outline-none focus:ring-2 focus:ring-blue-400 transition ${className}`}
+          {...rest} // 🔹 required, disabled, etc.
         />
         {error && <span className="text-red-400 text-xs mt-1">{error}</span>}
       </div>
@@ -88,22 +87,23 @@ export const TextareaAutoResize = forwardRef<TextareaAutoResizeRef, TextareaProp
 TextareaAutoResize.displayName = 'TextareaAutoResize';
 
 /* -------------------- Select -------------------- */
-type SelectProps = BaseProps & {
-  value: string;
-  onChange: (v: string) => void;
-  children: React.ReactNode;
-};
+type SelectProps = BaseProps &
+  React.SelectHTMLAttributes<HTMLSelectElement> & {
+    value: string;
+    onChange: (v: string) => void;
+    children: React.ReactNode;
+  };
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ({ label, error, className = '', value, onChange, children, wrapperClass = 'w-full', ...rest }, ref) => (
-    <div className={`${wrapperClass} flex flex-col gap-2 text-color`}>
-      {label && <label className="text-lg font-medium">{label}</label>}
+    <div className={`${wrapperClass} flex flex-col items-center gap-2 text-color`}>
+      {label && <label className="text-lg font-medium w-[80%] text-left">{label}</label>}
       <select
         ref={ref}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`w-full input-background rounded-2xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 transition ${className}`}
-        {...rest}
+        className={`input-background rounded-2xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 transition ${className}`}
+        {...rest} // 🔹 required, disabled, etc.
       >
         {children}
       </select>
@@ -111,4 +111,5 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     </div>
   )
 );
+
 Select.displayName = 'Select';

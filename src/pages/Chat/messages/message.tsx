@@ -131,7 +131,7 @@ export default function MessageContainer({ participante, chat }: MessageContaine
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center overflow-hidden pt-14 px-2 gap-6">
+    <div className="w-full h-full flex flex-col items-center overflow-hidden pt-2 px-2 gap-6">
       <div
         ref={scrollContainerRef}
         onScroll={handleScroll}
@@ -167,7 +167,7 @@ export default function MessageContainer({ participante, chat }: MessageContaine
       <div className="w-full max-w-3xl flex relative">
         {selectedFile && (
           <div className="w-full max-w-3xl flex items-center justify-between gap-3 px-4 py-3 bottom-20
-              rounded-2xl border border-white/30 bg-white/10 backdrop-blur-xl shadow-lg absolute"
+              rounded-2xl border border-white/30 bg-gray-200 backdrop-blur-xl shadow-lg absolute"
           >
             <div className="flex items-center gap-3">
               {isImage(selectedFile.name) ? (
@@ -205,8 +205,8 @@ export default function MessageContainer({ participante, chat }: MessageContaine
           onSubmit={handleSubmit}
           className="w-full max-w-3xl flex items-center px-4 py-3 gap-3
            rounded-2xl border border-white/30
-           bg-white/10 backdrop-blur-xl shadow-lg
-           hover:bg-white/20 transition duration-300"
+           bg-gray-300 backdrop-blur-xl shadow-lg
+           hover:bg-gray-200 transition duration-300"
         >
           <input
             type="text"

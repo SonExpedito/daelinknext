@@ -144,6 +144,7 @@ export default function DocumentoPage({ processoid }: Readonly<Props>) {
                 onChange={setObjetivo}
                 placeholder="Digite seu objetivo na Vaga"
                 rows={3}
+                required
                 wrapperClass="w-3/4"
               />
             </div>
