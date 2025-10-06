@@ -3,14 +3,12 @@
 import { useState } from "react";
 import { TextareaAutoResize } from "@/src/components/elements/input/input";
 import { IMaskInput } from "react-imask";
-import { Eye, EyeOff, Download, Trash2 } from "lucide-react";
+import { Eye, EyeOff} from "lucide-react";
 
 type CredenciaisEtapaProps = {
   data: {
     password: string;
     confirmPassword: string;
-    cnpj: string;
-    telefone: string;
     cep: string;
     endereco: string;
     descricao: string;
@@ -39,53 +37,41 @@ export default function CredenciaisEtapa({ data, setData }: Readonly<Credenciais
     <div className="w-full h-full flex flex-col items-center justify-center gap-6">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Sobre imagem */}
-        <div className="!w-full flex flex-col items-center gap-2 text-color col-span-2">
-          {!data.sobreimg ? (
-            <label
-              htmlFor="sobreimg"
-              className="bg-white/80 backdrop-blur-lg border border-white/20 shadow-md 
-                 text-color font-medium py-3 px-6 rounded-2xl flex items-center gap-2 justify-center 
-                 hover:bg-white/20 transition duration-300 cursor-pointer mt-2 w-[80%] text-center"
-            >
-              {/* Você pode adicionar um ícone, ex: <FilePlus size={20} /> */}
-              Enviar Imagem Sobre
+        <div className="w-full flex flex-col items-center justify-center col-span-2">
+          {previewSobreImg ? (
+            <label className="relative cursor-pointer group h-fit w-fit">
+              <img
+                src={previewSobreImg}
+                alt="Imagem Sobre"
+                className="w-[32rem] h-58 object-cover rounded-3xl shadow-lg transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 rounded-3xl transition-all duration-300">
+                <span className="font-medium text-base">Alterar imagem</span>
+              </div>
+              <input
+                id="sobreimg"
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={(e) => handleSobreImgChange(e.target.files?.[0] || null)}
+              />
             </label>
           ) : (
-            <div
-              className="flex items-center justify-between w-[80%] px-4 py-2 rounded-2xl gap-4
-                 bg-white/80 backdrop-blur-lg border border-white/20 shadow-md hover:scale-[1.02] 
-                 transition-transform mt-2"
+            <label
+              htmlFor="sobreimg"
+              className="cursor-pointer w-[32rem] h-58 flex items-center justify-center border-2 border-dashed border-white/30 
+      rounded-3xl bg-white/10 backdrop-blur-lg text-white/70 hover:bg-white/20 hover:text-white transition duration-300"
             >
-              <p className="text-sm text-color truncate">
-                {data.sobreimg.name}
-              </p>
-              <div className="flex gap-3">
-                <a
-                  href={previewSobreImg || ""}
-                  download={data.sobreimg.name}
-                  className="text-green-300 hover:text-green-400"
-                  aria-label="Baixar arquivo"
-                >
-                  {/* Ícone de download */}
-                  <Download size={18} />
-                </a>
-                <button
-                  onClick={() => handleSobreImgChange(null)}
-                  className="text-red-300 hover:text-red-400 transition"
-                  aria-label="Remover arquivo"
-                >
-                  <Trash2 size={18} />
-                </button>
-              </div>
-            </div>
+              <span className="font-medium">Enviar imagem sobre</span>
+              <input
+                id="sobreimg"
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={(e) => handleSobreImgChange(e.target.files?.[0] || null)}
+              />
+            </label>
           )}
-          <input
-            id="sobreimg"
-            type="file"
-            accept="image/*"
-            className="hidden"
-            onChange={(e) => handleSobreImgChange(e.target.files?.[0] || null)}
-          />
         </div>
 
 
@@ -162,31 +148,7 @@ export default function CredenciaisEtapa({ data, setData }: Readonly<Credenciais
           />
         </div>
 
-        {/* CNPJ */}
-        <div className="!w-full flex flex-col items-center gap-2 text-color">
-          <label htmlFor="cnpj" className="text-lg font-medium w-[80%] text-left">CNPJ *</label>
-          <IMaskInput
-            id="cnpj"
-            mask="00.000.000/0000-00"
-            value={data.cnpj}
-            onAccept={(value: any) => setData((prev: any) => ({ ...prev, cnpj: value }))}
-            placeholder="00.000.000/0000-00"
-            className="!bg-white/70 !w-[80%] mx-auto rounded-2xl p-3 text-color focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-          />
-        </div>
-
-        {/* Telefone */}
-        <div className="!w-full flex flex-col items-center gap-2 text-color">
-          <label htmlFor="telefone" className="text-lg font-medium w-[80%] text-left">Telefone *</label>
-          <IMaskInput
-            id="telefone"
-            mask="(00) 00000-0000"
-            value={data.telefone}
-            onAccept={(value: any) => setData((prev: any) => ({ ...prev, telefone: value }))}
-            placeholder="(11) 99999-9999"
-            className="!bg-white/70 !w-[80%] mx-auto rounded-2xl p-3 text-color focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-          />
-        </div>
+        
 
         {/* CEP */}
         <div className="!w-full flex flex-col items-center gap-2 text-color">

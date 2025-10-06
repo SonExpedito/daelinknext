@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Input } from "@/src/components/elements/input/input";
+import { IMaskInput } from "react-imask";
 import RamosAutoComplete from "@/src/components/form/RamosEmpresas/ramoautocomplete";
 
 type PerfilEtapaProps = {
@@ -10,6 +11,8 @@ type PerfilEtapaProps = {
         area?: string;
         sobre?: string;
         email?: string;
+        cnpj: string;
+        telefone: string;
         imageUrl?: File | null;       // logo
         imageProfile?: File | null;   // banner
     };
@@ -45,7 +48,7 @@ export default function PerfilEtapa({ data, setData }: Readonly<PerfilEtapaProps
     return (
         <div className="w-full h-full flex flex-col items-center justify-center gap-6 relative">
             {/* Banner e logo */}
-            <div className="h-fit w-fit flex items-center justify-center relative mb-8">
+            <div className="h-fit w-fit flex items-center justify-center relative ">
                 <label className="relative cursor-pointer group">
                     <img
                         src={previewBanner}
@@ -86,7 +89,7 @@ export default function PerfilEtapa({ data, setData }: Readonly<PerfilEtapaProps
 
 
                 {/* Área */}
-                <RamosAutoComplete data={data} setData={setData} bgClassName="!bg-white/70"/>
+                <RamosAutoComplete data={data} setData={setData} bgClassName="!bg-white/70" />
 
                 <Input
                     label="Sobre a empresa"
@@ -103,6 +106,32 @@ export default function PerfilEtapa({ data, setData }: Readonly<PerfilEtapaProps
                     value={data.email || ""}
                     onChange={(v) => setData((prev: any) => ({ ...prev, email: v }))}
                 />
+
+                {/* CNPJ */}
+                <div className="!w-full flex flex-col items-center gap-2 text-color">
+                    <label htmlFor="cnpj" className="text-lg font-medium w-[80%] text-left">CNPJ *</label>
+                    <IMaskInput
+                        id="cnpj"
+                        mask="00.000.000/0000-00"
+                        value={data.cnpj}
+                        onAccept={(value: any) => setData((prev: any) => ({ ...prev, cnpj: value }))}
+                        placeholder="00.000.000/0000-00"
+                        className="!bg-white/70 !w-[80%] mx-auto rounded-2xl p-3 text-color focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    />
+                </div>
+
+                {/* Telefone */}
+                <div className="!w-full flex flex-col items-center gap-2 text-color">
+                    <label htmlFor="telefone" className="text-lg font-medium w-[80%] text-left">Telefone *</label>
+                    <IMaskInput
+                        id="telefone"
+                        mask="(00) 00000-0000"
+                        value={data.telefone}
+                        onAccept={(value: any) => setData((prev: any) => ({ ...prev, telefone: value }))}
+                        placeholder="(11) 99999-9999"
+                        className="!bg-white/70 !w-[80%] mx-auto rounded-2xl p-3 text-color focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    />
+                </div>
             </div>
         </div>
     );

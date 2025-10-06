@@ -133,6 +133,26 @@ export default function EmpresaCadastroPage() {
       return false;
     }
 
+        if (isEmpty(formData.cnpj)) {
+      openModal("CNPJ é obrigatório.");
+      return false;
+    }
+
+    if (!validarCNPJ(formData.cnpj)) {
+      openModal("CNPJ inválido.");
+      return false;
+    }
+
+    if (isEmpty(formData.telefone)) {
+      openModal("Telefone é obrigatório.");
+      return false;
+    }
+
+    if (formData.telefone.replace(/\D/g, "").length < 10) {
+      openModal("Informe um telefone válido.");
+      return false;
+    }
+
     return true;
   };
 
@@ -154,26 +174,6 @@ export default function EmpresaCadastroPage() {
 
     if (formData.password !== formData.confirmPassword) {
       openModal("As senhas não coincidem.");
-      return false;
-    }
-
-    if (isEmpty(formData.cnpj)) {
-      openModal("CNPJ é obrigatório.");
-      return false;
-    }
-
-    if (!validarCNPJ(formData.cnpj)) {
-      openModal("CNPJ inválido.");
-      return false;
-    }
-
-    if (isEmpty(formData.telefone)) {
-      openModal("Telefone é obrigatório.");
-      return false;
-    }
-
-    if (formData.telefone.replace(/\D/g, "").length < 10) {
-      openModal("Informe um telefone válido.");
       return false;
     }
 
