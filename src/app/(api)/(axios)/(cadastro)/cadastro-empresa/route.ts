@@ -13,47 +13,44 @@ async function uploadFile(file: File, path: string) {
   return await getDownloadURL(storageRef);
 }
 
-// 🔹 Rota POST — Cadastro de PCD
+// 🔹 Rota POST — Cadastro de Empresa
 export async function POST(req: Request) {
   try {
     const formData = await req.formData();
     const uid = formData.get("uid") as string | null;
-    const cpf = formData.get("cpf") as string | null;
+    const cnpj = formData.get("cnpj") as string | null;
     const telefone = formData.get("telefone") as string | null;
 
     // 🧩 Validações básicas
-    if (!uid) {
-      return NextResponse.json({ error: "UID é obrigatório." }, { status: 400 });
-    }
-    if (!cpf) {
-      return NextResponse.json({ error: "CPF é obrigatório." }, { status: 400 });
-    }
+    if (!uid) return NextResponse.json({ error: "UID é obrigatório." }, { status: 400 });
+    if (!cnpj) return NextResponse.json({ error: "CNPJ é obrigatório." }, { status: 400 });
+    if (!telefone) return NextResponse.json({ error: "Telefone é obrigatório." }, { status: 400 });
 
-    // 🔹 Verificar duplicidade de CPF
-    const q = query(collection(db, "PCD"), where("cpf", "==", cpf));
+    // 🔹 Verificar duplicidade de CNPJ
+    const q = query(collection(db, "Empresa"), where("cnpj", "==", cnpj));
     const snapshot = await getDocs(q);
     if (!snapshot.empty) {
-      return NextResponse.json({ error: "CPF já cadastrado." }, { status: 400 });
+      return NextResponse.json({ error: "CNPJ já cadastrado." }, { status: 400 });
     }
 
     // 🔹 Obter arquivos enviados
-    const imageProfileFile = formData.get("imageProfile") as File | null;
-    const imageUrlFile = formData.get("imageUrl") as File | null;
-    const laudoFile = formData.get("laudomedico") as File | null;
+    const imageProfileFile = formData.get("imageProfile") as File | null; // banner
+    const imageUrlFile = formData.get("imageUrl") as File | null; // logo
+    const sobreimgFile = formData.get("sobreimg") as File | null; // sobre imagem
 
     // 🔹 URLs dos arquivos (se existirem)
     let imageProfile: string | null = null;
     let imageUrl: string | null = null;
-    let laudoUrl: string | null = null;
+    let sobreimg: string | null = null;
 
     if (imageProfileFile) {
-      imageProfile = await uploadFile(imageProfileFile, `pcd/${uid}/profile-${Date.now()}`);
+      imageProfile = await uploadFile(imageProfileFile, `empresas/${uid}/banner-${Date.now()}`);
     }
     if (imageUrlFile) {
-      imageUrl = await uploadFile(imageUrlFile, `pcd/${uid}/extra-${Date.now()}`);
+      imageUrl = await uploadFile(imageUrlFile, `empresas/${uid}/logo-${Date.now()}`);
     }
-    if (laudoFile) {
-      laudoUrl = await uploadFile(laudoFile, `pcd/${uid}/laudo-${Date.now()}`);
+    if (sobreimgFile) {
+      sobreimg = await uploadFile(sobreimgFile, `empresas/${uid}/sobre-${Date.now()}`);
     }
 
     // 🔹 Coleta dos demais campos do formulário
@@ -61,7 +58,7 @@ export async function POST(req: Request) {
     formData.forEach((value, key) => {
       if (
         key !== "uid" &&
-        key !== "cpf" &&
+        key !== "cnpj" &&
         key !== "telefone" &&
         !(value instanceof File)
       ) {
@@ -69,21 +66,20 @@ export async function POST(req: Request) {
       }
     });
 
-    // 🔹 Cria ou substitui documento com ID = UID
-    await setDoc(doc(db, "PCD", uid), {
+    await setDoc(doc(db, "Empresa", uid), {
       uid,
-      cpf,
+      cnpj,
       telefone,
       ...rest,
       imageProfile,
       imageUrl,
-      laudoUrl,
+      sobreimg,
       createdAt: new Date(),
     });
 
-    return NextResponse.json({ message: "Cadastro realizado com sucesso!" }, { status: 201 });
+    return NextResponse.json({ message: "Cadastro da empresa realizado com sucesso!" }, { status: 201 });
   } catch (error: any) {
-    console.error("Erro no cadastro PCD:", error);
+    console.error("Erro no cadastro da empresa:", error);
     return NextResponse.json({ error: "Erro interno no servidor." }, { status: 500 });
   }
 }

@@ -1,0 +1,5358 @@
+[
+  {
+    "cod": "0111-3/01",
+    "desc": "Produção de arroz"
+  },
+  {
+    "cod": "0111-3/02",
+    "desc": "Produção de milho"
+  },
+  {
+    "cod": "0111-3/03",
+    "desc": "Produção de trigo"
+  },
+  {
+    "cod": "0111-3/99",
+    "desc": "Produção de outros cereais diversos"
+  },
+  {
+    "cod": "0112-1/01",
+    "desc": "Produção de algodão herbáceo"
+  },
+  {
+    "cod": "0112-1/02",
+    "desc": "Produção de juta"
+  },
+  {
+    "cod": "0112-1/99",
+    "desc": "Produção de outras fibras de lavoura temporária diversas"
+  },
+  {
+    "cod": "0113-0/00",
+    "desc": "Produção de cana-de-açúcar"
+  },
+  {
+    "cod": "0114-8/00",
+    "desc": "Produção de fumo"
+  },
+  {
+    "cod": "0115-6/00",
+    "desc": "Produção de soja"
+  },
+  {
+    "cod": "0116-4/01",
+    "desc": "Produção de amendoim"
+  },
+  {
+    "cod": "0116-4/02",
+    "desc": "Produção de girassol"
+  },
+  {
+    "cod": "0116-4/03",
+    "desc": "Produção de mamona"
+  },
+  {
+    "cod": "0116-4/99",
+    "desc": "Produção de outras oleaginosas de lavoura temporária diversas"
+  },
+  {
+    "cod": "0119-9/01",
+    "desc": "Produção de abacaxi"
+  },
+  {
+    "cod": "0119-9/02",
+    "desc": "Produção de alho"
+  },
+  {
+    "cod": "0119-9/03",
+    "desc": "Produção de batata-inglesa"
+  },
+  {
+    "cod": "0119-9/04",
+    "desc": "Produção de cebola"
+  },
+  {
+    "cod": "0119-9/05",
+    "desc": "Produção de feijão"
+  },
+  {
+    "cod": "0119-9/06",
+    "desc": "Produção de mandioca"
+  },
+  {
+    "cod": "0119-9/07",
+    "desc": "Produção de melão"
+  },
+  {
+    "cod": "0119-9/08",
+    "desc": "Produção de melancia"
+  },
+  {
+    "cod": "0119-9/09",
+    "desc": "Produção de tomate rasteiro"
+  },
+  {
+    "cod": "0119-9/99",
+    "desc": "Produção de outras plantas de lavoura temporária diversas"
+  },
+  {
+    "cod": "0121-1/01",
+    "desc": "Horticultura, menos morango"
+  },
+  {
+    "cod": "0121-1/02",
+    "desc": "Produção de morango"
+  },
+  {
+    "cod": "0122-9/00",
+    "desc": "Produção de flores e plantas ornamentais"
+  },
+  {
+    "cod": "0131-8/00",
+    "desc": "Produção de laranja"
+  },
+  {
+    "cod": "0132-6/00",
+    "desc": "Produção de uva"
+  },
+  {
+    "cod": "0133-4/01",
+    "desc": "Produção de açaí"
+  },
+  {
+    "cod": "0133-4/02",
+    "desc": "Produção de banana"
+  },
+  {
+    "cod": "0133-4/03",
+    "desc": "Produção de caju"
+  },
+  {
+    "cod": "0133-4/04",
+    "desc": "Produção de cítricos, menos laranja"
+  },
+  {
+    "cod": "0133-4/05",
+    "desc": "Produção de coco-da-baía"
+  },
+  {
+    "cod": "0133-4/06",
+    "desc": "Produção de guaraná"
+  },
+  {
+    "cod": "0133-4/07",
+    "desc": "Produção de maçã"
+  },
+  {
+    "cod": "0133-4/08",
+    "desc": "Produção de mamão"
+  },
+  {
+    "cod": "0133-4/09",
+    "desc": "Produção de maracujá"
+  },
+  {
+    "cod": "0133-4/10",
+    "desc": "Produção de manga"
+  },
+  {
+    "cod": "0133-4/11",
+    "desc": "Produção de pêssego"
+  },
+  {
+    "cod": "0133-4/99",
+    "desc": "Produção de frutas de lavoura permanente diversas"
+  },
+  {
+    "cod": "0134-2/00",
+    "desc": "Produção de café"
+  },
+  {
+    "cod": "0135-1/00",
+    "desc": "Produção de cacau"
+  },
+  {
+    "cod": "0139-3/01",
+    "desc": "Produção de chá-da-índia"
+  },
+  {
+    "cod": "0139-3/02",
+    "desc": "Produção de erva-mate"
+  },
+  {
+    "cod": "0139-3/03",
+    "desc": "Produção de pimenta-do-reino"
+  },
+  {
+    "cod": "0139-3/04",
+    "desc": "Produção de plantas para condimento, menos pimenta-do-reino"
+  },
+  {
+    "cod": "0139-3/05",
+    "desc": "Produção de dendê"
+  },
+  {
+    "cod": "0139-3/06",
+    "desc": "Produção de seringueira"
+  },
+  {
+    "cod": "0139-3/99",
+    "desc": "Produção de outras plantas de lavoura permanente diversas"
+  },
+  {
+    "cod": "0141-5/01",
+    "desc": "Produção de sementes certificadas, menos de forrageiras para pasto"
+  },
+  {
+    "cod": "0141-5/02",
+    "desc": "Produção de sementes certificadas de forrageiras para formação de pasto"
+  },
+  {
+    "cod": "0142-3/00",
+    "desc": "Produção de mudas e outras formas de propagação vegetal, certificadas"
+  },
+  {
+    "cod": "0151-2/01",
+    "desc": "Pecuária de bovinos para corte"
+  },
+  {
+    "cod": "0151-2/02",
+    "desc": "Pecuária de bovinos para leite"
+  },
+  {
+    "cod": "0151-2/03",
+    "desc": "Pecuária de bovinos, menos para corte e leite"
+  },
+  {
+    "cod": "0152-1/01",
+    "desc": "Pecuária de bufalinos"
+  },
+  {
+    "cod": "0152-1/02",
+    "desc": "Pecuária de equinos"
+  },
+  {
+    "cod": "0152-1/03",
+    "desc": "Pecuária de asininos e muares"
+  },
+  {
+    "cod": "0153-9/01",
+    "desc": "Pecuária de caprinos"
+  },
+  {
+    "cod": "0153-9/02",
+    "desc": "Pecuária de ovinos, inclusive para produção de lã"
+  },
+  {
+    "cod": "0154-7/00",
+    "desc": "Pecuária de suínos"
+  },
+  {
+    "cod": "0155-5/01",
+    "desc": "Pecuária de frangos para corte"
+  },
+  {
+    "cod": "0155-5/02",
+    "desc": "Produção de pintos de um dia"
+  },
+  {
+    "cod": "0155-5/03",
+    "desc": "Pecuária de outros galináceos, menos para corte"
+  },
+  {
+    "cod": "0155-5/04",
+    "desc": "Pecuária de aves, menos galináceos"
+  },
+  {
+    "cod": "0155-5/05",
+    "desc": "Produção de ovos"
+  },
+  {
+    "cod": "0159-8/01",
+    "desc": "Apicultura"
+  },
+  {
+    "cod": "0159-8/02",
+    "desc": "Pecuária de animais de estimação"
+  },
+  {
+    "cod": "0159-8/03",
+    "desc": "Pecuária de escargô"
+  },
+  {
+    "cod": "0159-8/04",
+    "desc": "Pecuária de bicho-da-seda"
+  },
+  {
+    "cod": "0159-8/99",
+    "desc": "Pecuária de outros animais diversos"
+  },
+  {
+    "cod": "0161-0/01",
+    "desc": "Serviços de pulverização e controle de pragas agrícolas"
+  },
+  {
+    "cod": "0161-0/02",
+    "desc": "Serviços de poda de árvores para lavouras"
+  },
+  {
+    "cod": "0161-0/03",
+    "desc": "Serviços de preparação de terreno, cultivo e colheita"
+  },
+  {
+    "cod": "0161-0/99",
+    "desc": "Serviços de apoio à agricultura diversas"
+  },
+  {
+    "cod": "0162-8/01",
+    "desc": "Serviços de inseminação artificial em animais"
+  },
+  {
+    "cod": "0162-8/02",
+    "desc": "Serviços de tosquiamento de ovinos"
+  },
+  {
+    "cod": "0162-8/03",
+    "desc": "Serviços de manejo de animais"
+  },
+  {
+    "cod": "0162-8/99",
+    "desc": "Serviços de apoio à pecuária diversas"
+  },
+  {
+    "cod": "0163-6/00",
+    "desc": "Serviços de pós-colheita"
+  },
+  {
+    "cod": "0170-9/00",
+    "desc": "Caça e serviços relacionados"
+  },
+  {
+    "cod": "0210-1/01",
+    "desc": "Produção de eucalipto"
+  },
+  {
+    "cod": "0210-1/02",
+    "desc": "Produção de acácia-negra"
+  },
+  {
+    "cod": "0210-1/03",
+    "desc": "Produção de pinus"
+  },
+  {
+    "cod": "0210-1/04",
+    "desc": "Produção de teca"
+  },
+  {
+    "cod": "0210-1/05",
+    "desc": "Produção de espécies madeireiras, menos eucalipto, acácia-negra, pinus e teca"
+  },
+  {
+    "cod": "0210-1/06",
+    "desc": "Produção de mudas em viveiros florestais"
+  },
+  {
+    "cod": "0210-1/07",
+    "desc": "Mineração de madeira em florestas plantadas"
+  },
+  {
+    "cod": "0210-1/08",
+    "desc": "Produção de carvão vegetal - florestas plantadas"
+  },
+  {
+    "cod": "0210-1/09",
+    "desc": "Produção de casca de acácia-negra - florestas plantadas"
+  },
+  {
+    "cod": "0210-1/99",
+    "desc": "Produção de produtos não madeireiros diversos em florestas plantadas"
+  },
+  {
+    "cod": "0220-9/01",
+    "desc": "Mineração de madeira em florestas nativas"
+  },
+  {
+    "cod": "0220-9/02",
+    "desc": "Produção de carvão vegetal - florestas nativas"
+  },
+  {
+    "cod": "0220-9/03",
+    "desc": "Coleta de castanha-do-pará em florestas nativas"
+  },
+  {
+    "cod": "0220-9/04",
+    "desc": "Coleta de látex em florestas nativas"
+  },
+  {
+    "cod": "0220-9/05",
+    "desc": "Coleta de palmito em florestas nativas"
+  },
+  {
+    "cod": "0220-9/06",
+    "desc": "Conservação de florestas nativas"
+  },
+  {
+    "cod": "0220-9/99",
+    "desc": "Coleta de produtos não madeireiros diversos em florestas nativas"
+  },
+  {
+    "cod": "0230-6/00",
+    "desc": "Serviços de apoio à produção florestal"
+  },
+  {
+    "cod": "0311-6/01",
+    "desc": "Pesca de peixes em água salgada"
+  },
+  {
+    "cod": "0311-6/02",
+    "desc": "Pesca de crustáceos e moluscos em água salgada"
+  },
+  {
+    "cod": "0311-6/03",
+    "desc": "Coleta de outros produtos marinhos"
+  },
+  {
+    "cod": "0311-6/04",
+    "desc": "Serviços de apoio à pesca em água salgada"
+  },
+  {
+    "cod": "0312-4/01",
+    "desc": "Pesca de peixes em água doce"
+  },
+  {
+    "cod": "0312-4/02",
+    "desc": "Pesca de crustáceos e moluscos em água doce"
+  },
+  {
+    "cod": "0312-4/03",
+    "desc": "Coleta de outros produtos aquáticos de água doce"
+  },
+  {
+    "cod": "0312-4/04",
+    "desc": "Serviços de apoio à pesca em água doce"
+  },
+  {
+    "cod": "0321-3/01",
+    "desc": "Pecuária de peixes em água salgada e salobra"
+  },
+  {
+    "cod": "0321-3/02",
+    "desc": "Pecuária de camarões em água salgada e salobra"
+  },
+  {
+    "cod": "0321-3/03",
+    "desc": "Pecuária de ostras e mexilhões em água salgada e salobra"
+  },
+  {
+    "cod": "0321-3/04",
+    "desc": "Pecuária de peixes ornamentais em água salgada e salobra"
+  },
+  {
+    "cod": "0321-3/05",
+    "desc": "Serviços de apoio à aquicultura em água salgada e salobra"
+  },
+  {
+    "cod": "0321-3/99",
+    "desc": "Cultivos e semicultivos da aquicultura em água salgada e salobra diversos"
+  },
+  {
+    "cod": "0322-1/01",
+    "desc": "Pecuária de peixes em água doce"
+  },
+  {
+    "cod": "0322-1/02",
+    "desc": "Pecuária de camarões em água doce"
+  },
+  {
+    "cod": "0322-1/03",
+    "desc": "Pecuária de ostras e mexilhões em água doce"
+  },
+  {
+    "cod": "0322-1/04",
+    "desc": "Pecuária de peixes ornamentais em água doce"
+  },
+  {
+    "cod": "0322-1/05",
+    "desc": "Ranicultura"
+  },
+  {
+    "cod": "0322-1/06",
+    "desc": "Pecuária de jacaré"
+  },
+  {
+    "cod": "0322-1/07",
+    "desc": "Serviços de apoio à aquicultura em água doce"
+  },
+  {
+    "cod": "0322-1/99",
+    "desc": "Cultivos e semicultivos da aquicultura em água doce diversos"
+  },
+  {
+    "cod": "0500-3/01",
+    "desc": "Mineração de carvão mineral"
+  },
+  {
+    "cod": "0500-3/02",
+    "desc": "Processamento de carvão mineral"
+  },
+  {
+    "cod": "0600-0/01",
+    "desc": "Mineração de petróleo e gás natural"
+  },
+  {
+    "cod": "0600-0/02",
+    "desc": "Extração e beneficiamento de xisto"
+  },
+  {
+    "cod": "0600-0/03",
+    "desc": "Extração e beneficiamento de areias betuminosas"
+  },
+  {
+    "cod": "0710-3/01",
+    "desc": "Mineração de minério de ferro"
+  },
+  {
+    "cod": "0710-3/02",
+    "desc": "Pelotização, sinterização e outros beneficiamentos de minério de ferro"
+  },
+  {
+    "cod": "0721-9/01",
+    "desc": "Mineração de minério de alumínio"
+  },
+  {
+    "cod": "0721-9/02",
+    "desc": "Processamento de minério de alumínio"
+  },
+  {
+    "cod": "0722-7/01",
+    "desc": "Mineração de minério de estanho"
+  },
+  {
+    "cod": "0722-7/02",
+    "desc": "Processamento de minério de estanho"
+  },
+  {
+    "cod": "0723-5/01",
+    "desc": "Mineração de minério de manganês"
+  },
+  {
+    "cod": "0723-5/02",
+    "desc": "Processamento de minério de manganês"
+  },
+  {
+    "cod": "0724-3/01",
+    "desc": "Mineração de minério de metais preciosos"
+  },
+  {
+    "cod": "0724-3/02",
+    "desc": "Processamento de minério de metais preciosos"
+  },
+  {
+    "cod": "0725-1/00",
+    "desc": "Mineração de minerais radioativos"
+  },
+  {
+    "cod": "0729-4/01",
+    "desc": "Mineração de minérios de nióbio e titânio"
+  },
+  {
+    "cod": "0729-4/02",
+    "desc": "Mineração de minério de tungstênio"
+  },
+  {
+    "cod": "0729-4/03",
+    "desc": "Mineração de minério de níquel"
+  },
+  {
+    "cod": "0729-4/04",
+    "desc": "Mineração de minérios de cobre, chumbo, zinco e outros minerais metálicos não ferrosos diversos"
+  },
+  {
+    "cod": "0729-4/05",
+    "desc": "Processamento de minérios de cobre, chumbo, zinco e outros minerais metálicos não ferrosos diversos"
+  },
+  {
+    "cod": "0810-0/01",
+    "desc": "Mineração de ardósia e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/02",
+    "desc": "Mineração de granito e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/03",
+    "desc": "Mineração de mármore e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/04",
+    "desc": "Mineração de calcário e dolomita e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/05",
+    "desc": "Mineração de gesso e caulim"
+  },
+  {
+    "cod": "0810-0/06",
+    "desc": "Mineração de areia, cascalho ou pedregulho e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/07",
+    "desc": "Mineração de argila e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/08",
+    "desc": "Mineração de saibro e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/09",
+    "desc": "Mineração de basalto e beneficiamento associado"
+  },
+  {
+    "cod": "0810-0/10",
+    "desc": "Processamento de gesso e caulim associado à extração"
+  },
+  {
+    "cod": "0810-0/99",
+    "desc": "Extração e britamento de pedras e outros materiais para construção e beneficiamento associado"
+  },
+  {
+    "cod": "0891-6/00",
+    "desc": "Mineração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos"
+  },
+  {
+    "cod": "0892-4/01",
+    "desc": "Mineração de sal marinho"
+  },
+  {
+    "cod": "0892-4/02",
+    "desc": "Mineração de sal-gema"
+  },
+  {
+    "cod": "0892-4/03",
+    "desc": "Refino e outros tratamentos do sal"
+  },
+  {
+    "cod": "0893-2/00",
+    "desc": "Mineração de gemas (pedras preciosas e semipreciosas)"
+  },
+  {
+    "cod": "0899-1/01",
+    "desc": "Mineração de grafita"
+  },
+  {
+    "cod": "0899-1/02",
+    "desc": "Mineração de quartzo"
+  },
+  {
+    "cod": "0899-1/03",
+    "desc": "Mineração de amianto"
+  },
+  {
+    "cod": "0899-1/99",
+    "desc": "Mineração de outros minerais não metálicos diversos"
+  },
+  {
+    "cod": "0910-6/00",
+    "desc": "Serviços de apoio à extração de petróleo e gás natural"
+  },
+  {
+    "cod": "0990-4/01",
+    "desc": "Serviços de apoio à extração de minério de ferro"
+  },
+  {
+    "cod": "0990-4/02",
+    "desc": "Serviços de apoio à extração de minerais metálicos não ferrosos"
+  },
+  {
+    "cod": "0990-4/03",
+    "desc": "Serviços de apoio à extração de minerais não metálicos"
+  },
+  {
+    "cod": "1011-2/01",
+    "desc": "Frigorífico - abate de bovinos"
+  },
+  {
+    "cod": "1011-2/02",
+    "desc": "Frigorífico - abate de equinos"
+  },
+  {
+    "cod": "1011-2/03",
+    "desc": "Frigorífico - abate de ovinos e caprinos"
+  },
+  {
+    "cod": "1011-2/04",
+    "desc": "Frigorífico - abate de bufalinos"
+  },
+  {
+    "cod": "1011-2/05",
+    "desc": "Matadouro - abate de reses por contrato, menos abate de suínos"
+  },
+  {
+    "cod": "1012-1/01",
+    "desc": "Abate de aves"
+  },
+  {
+    "cod": "1012-1/02",
+    "desc": "Abate de pequenos animais"
+  },
+  {
+    "cod": "1012-1/03",
+    "desc": "Frigorífico - abate de suínos"
+  },
+  {
+    "cod": "1012-1/04",
+    "desc": "Matadouro - abate de suínos por contrato"
+  },
+  {
+    "cod": "1013-9/01",
+    "desc": "Produção de produtos de carne"
+  },
+  {
+    "cod": "1013-9/02",
+    "desc": "Processamento de subprodutos do abate"
+  },
+  {
+    "cod": "1020-1/01",
+    "desc": "Preservação de peixes, crustáceos e moluscos"
+  },
+  {
+    "cod": "1020-1/02",
+    "desc": "Produção de conservas de peixes, crustáceos e moluscos"
+  },
+  {
+    "cod": "1031-7/00",
+    "desc": "Produção de conservas de frutas"
+  },
+  {
+    "cod": "1032-5/01",
+    "desc": "Produção de conservas de palmito"
+  },
+  {
+    "cod": "1032-5/99",
+    "desc": "Produção de conservas de legumes e outros vegetais, menos palmito"
+  },
+  {
+    "cod": "1033-3/01",
+    "desc": "Produção de sucos concentrados de frutas, hortaliças e legumes"
+  },
+  {
+    "cod": "1033-3/02",
+    "desc": "Produção de sucos de frutas, hortaliças e legumes, menos concentrados"
+  },
+  {
+    "cod": "1041-4/00",
+    "desc": "Produção de óleos vegetais em bruto, menos óleo de milho"
+  },
+  {
+    "cod": "1042-2/00",
+    "desc": "Produção de óleos vegetais refinados, menos óleo de milho"
+  },
+  {
+    "cod": "1043-1/00",
+    "desc": "Produção de margarina e outras gorduras vegetais e de óleos não comestíveis de animais"
+  },
+  {
+    "cod": "1051-1/00",
+    "desc": "Preparação do leite"
+  },
+  {
+    "cod": "1052-0/00",
+    "desc": "Produção de laticínios"
+  },
+  {
+    "cod": "1053-8/00",
+    "desc": "Produção de sorvetes e outros gelados comestíveis"
+  },
+  {
+    "cod": "1061-9/01",
+    "desc": "Processamento de arroz"
+  },
+  {
+    "cod": "1061-9/02",
+    "desc": "Produção de produtos do arroz"
+  },
+  {
+    "cod": "1062-7/00",
+    "desc": "Moagem de trigo e fabricação de derivados"
+  },
+  {
+    "cod": "1063-5/00",
+    "desc": "Produção de farinha de mandioca e derivados"
+  },
+  {
+    "cod": "1064-3/00",
+    "desc": "Produção de farinha de milho e derivados, menos óleos de milho"
+  },
+  {
+    "cod": "1065-1/01",
+    "desc": "Produção de amidos e féculas de vegetais"
+  },
+  {
+    "cod": "1065-1/02",
+    "desc": "Produção de óleo de milho em bruto"
+  },
+  {
+    "cod": "1065-1/03",
+    "desc": "Produção de óleo de milho refinado"
+  },
+  {
+    "cod": "1066-0/00",
+    "desc": "Produção de alimentos para animais"
+  },
+  {
+    "cod": "1069-4/00",
+    "desc": "Moagem e fabricação de produtos de origem vegetal diversos"
+  },
+  {
+    "cod": "1071-6/00",
+    "desc": "Produção de açúcar em bruto"
+  },
+  {
+    "cod": "1072-4/01",
+    "desc": "Produção de açúcar de cana refinado"
+  },
+  {
+    "cod": "1072-4/02",
+    "desc": "Produção de açúcar de cereais (dextrose) e de beterraba"
+  },
+  {
+    "cod": "1081-3/01",
+    "desc": "Processamento de café"
+  },
+  {
+    "cod": "1081-3/02",
+    "desc": "Torrefação e moagem de café"
+  },
+  {
+    "cod": "1082-1/00",
+    "desc": "Produção de produtos à base de café"
+  },
+  {
+    "cod": "1091-1/01",
+    "desc": "Produção de produtos de panificação industrial"
+  },
+  {
+    "cod": "1091-1/02",
+    "desc": "Produção de produtos de padaria e confeitaria com predominância de produção própria"
+  },
+  {
+    "cod": "1092-9/00",
+    "desc": "Produção de biscoitos e bolachas"
+  },
+  {
+    "cod": "1093-7/01",
+    "desc": "Produção de produtos derivados do cacau e de chocolates"
+  },
+  {
+    "cod": "1093-7/02",
+    "desc": "Produção de frutas cristalizadas, balas e semelhantes"
+  },
+  {
+    "cod": "1094-5/00",
+    "desc": "Produção de massas alimentícias"
+  },
+  {
+    "cod": "1095-3/00",
+    "desc": "Produção de especiarias, molhos, temperos e condimentos"
+  },
+  {
+    "cod": "1096-1/00",
+    "desc": "Produção de alimentos e pratos prontos"
+  },
+  {
+    "cod": "1099-6/01",
+    "desc": "Produção de vinagres"
+  },
+  {
+    "cod": "1099-6/02",
+    "desc": "Produção de pós-alimentícios"
+  },
+  {
+    "cod": "1099-6/03",
+    "desc": "Produção de fermentos e leveduras"
+  },
+  {
+    "cod": "1099-6/04",
+    "desc": "Produção de gelo comum"
+  },
+  {
+    "cod": "1099-6/05",
+    "desc": "Produção de produtos para infusão (chá, mate, etc.)"
+  },
+  {
+    "cod": "1099-6/06",
+    "desc": "Produção de adoçantes naturais e artificiais"
+  },
+  {
+    "cod": "1099-6/07",
+    "desc": "Produção de alimentos dietéticos e complementos alimentares"
+  },
+  {
+    "cod": "1099-6/99",
+    "desc": "Produção de outros produtos alimentícios diversos"
+  },
+  {
+    "cod": "1111-9/01",
+    "desc": "Produção de aguardente de cana-de-açúcar"
+  },
+  {
+    "cod": "1111-9/02",
+    "desc": "Produção de outras aguardentes e bebidas destiladas"
+  },
+  {
+    "cod": "1112-7/00",
+    "desc": "Produção de vinho"
+  },
+  {
+    "cod": "1113-5/01",
+    "desc": "Produção de malte, inclusive malte uísque"
+  },
+  {
+    "cod": "1113-5/02",
+    "desc": "Produção de cervejas e chopes"
+  },
+  {
+    "cod": "1121-6/00",
+    "desc": "Produção de águas envasadas"
+  },
+  {
+    "cod": "1122-4/01",
+    "desc": "Produção de refrigerantes"
+  },
+  {
+    "cod": "1122-4/02",
+    "desc": "Produção de chá mate e outros chás prontos para consumo"
+  },
+  {
+    "cod": "1122-4/03",
+    "desc": "Produção de refrescos, xaropes e pós para refrescos, menos refrescos de frutas"
+  },
+  {
+    "cod": "1122-4/04",
+    "desc": "Produção de bebidas isotônicas"
+  },
+  {
+    "cod": "1122-4/99",
+    "desc": "Produção de outras bebidas não alcoólicas diversas"
+  },
+  {
+    "cod": "1210-7/00",
+    "desc": "Processamento industrial do fumo"
+  },
+  {
+    "cod": "1220-4/01",
+    "desc": "Produção de cigarros"
+  },
+  {
+    "cod": "1220-4/02",
+    "desc": "Produção de cigarrilhas e charutos"
+  },
+  {
+    "cod": "1220-4/03",
+    "desc": "Produção de filtros para cigarros"
+  },
+  {
+    "cod": "1220-4/99",
+    "desc": "Produção de outros produtos do fumo, menos cigarros, cigarrilhas e charutos"
+  },
+  {
+    "cod": "1311-1/00",
+    "desc": "Preparação e fiação de fibras de algodão"
+  },
+  {
+    "cod": "1312-0/00",
+    "desc": "Preparação e fiação de fibras têxteis naturais, menos algodão"
+  },
+  {
+    "cod": "1313-8/00",
+    "desc": "Fiação de fibras artificiais e sintéticas"
+  },
+  {
+    "cod": "1314-6/00",
+    "desc": "Produção de linhas para costurar e bordar"
+  },
+  {
+    "cod": "1321-9/00",
+    "desc": "Tecelagem de fios de algodão"
+  },
+  {
+    "cod": "1322-7/00",
+    "desc": "Tecelagem de fios de fibras têxteis naturais, menos algodão"
+  },
+  {
+    "cod": "1323-5/00",
+    "desc": "Tecelagem de fios de fibras artificiais e sintéticas"
+  },
+  {
+    "cod": "1330-8/00",
+    "desc": "Produção de tecidos de malha"
+  },
+  {
+    "cod": "1340-5/01",
+    "desc": "Estamparia e texturização em fios, tecidos, artefatos têxteis e peças do vestuário"
+  },
+  {
+    "cod": "1340-5/02",
+    "desc": "Alvejamento, tingimento e torção em fios, tecidos, artefatos têxteis e peças do vestuário"
+  },
+  {
+    "cod": "1340-5/99",
+    "desc": "Outros serviços de acabamento em fios, tecidos, artefatos têxteis e peças do vestuário"
+  },
+  {
+    "cod": "1351-1/00",
+    "desc": "Produção de artefatos têxteis para uso doméstico"
+  },
+  {
+    "cod": "1352-9/00",
+    "desc": "Produção de artefatos de tapeçaria"
+  },
+  {
+    "cod": "1353-7/00",
+    "desc": "Produção de artefatos de cordoaria"
+  },
+  {
+    "cod": "1354-5/00",
+    "desc": "Produção de tecidos especiais, inclusive artefatos"
+  },
+  {
+    "cod": "1359-6/00",
+    "desc": "Produção de outros produtos têxteis diversos"
+  },
+  {
+    "cod": "1411-8/01",
+    "desc": "Produção de roupas íntimas"
+  },
+  {
+    "cod": "1411-8/02",
+    "desc": "Facção de roupas íntimas"
+  },
+  {
+    "cod": "1412-6/01",
+    "desc": "Produção de peças do vestuário, menos roupas íntimas e as confeccionadas sob medida"
+  },
+  {
+    "cod": "1412-6/02",
+    "desc": "Confecção, sob medida, de peças do vestuário, menos roupas íntimas"
+  },
+  {
+    "cod": "1412-6/03",
+    "desc": "Facção de peças do vestuário, menos roupas íntimas"
+  },
+  {
+    "cod": "1413-4/01",
+    "desc": "Produção de roupas profissionais, menos sob medida"
+  },
+  {
+    "cod": "1413-4/02",
+    "desc": "Confecção, sob medida, de roupas profissionais"
+  },
+  {
+    "cod": "1413-4/03",
+    "desc": "Facção de roupas profissionais"
+  },
+  {
+    "cod": "1414-2/00",
+    "desc": "Produção de acessórios do vestuário, menos para segurança e proteção"
+  },
+  {
+    "cod": "1421-5/00",
+    "desc": "Produção de meias"
+  },
+  {
+    "cod": "1422-3/00",
+    "desc": "Produção de artigos do vestuário, produzidos em malharias e tricotagens, menos meias"
+  },
+  {
+    "cod": "1510-6/00",
+    "desc": "Curtimento e outras preparações de couro"
+  },
+  {
+    "cod": "1521-1/00",
+    "desc": "Produção de artigos para viagem, bolsas e semelhantes de qualquer material"
+  },
+  {
+    "cod": "1529-7/00",
+    "desc": "Produção de artefatos de couro diversos"
+  },
+  {
+    "cod": "1531-9/01",
+    "desc": "Produção de calçados de couro"
+  },
+  {
+    "cod": "1531-9/02",
+    "desc": "Acabamento de calçados de couro por contrato"
+  },
+  {
+    "cod": "1532-7/00",
+    "desc": "Produção de tênis de qualquer material"
+  },
+  {
+    "cod": "1533-5/00",
+    "desc": "Produção de calçados de material sintético"
+  },
+  {
+    "cod": "1539-4/00",
+    "desc": "Produção de calçados de materiais diversos"
+  },
+  {
+    "cod": "1540-8/00",
+    "desc": "Produção de partes para calçados, de qualquer material"
+  },
+  {
+    "cod": "1610-2/01",
+    "desc": "Atividade não especificada"
+  },
+  {
+    "cod": "1610-2/02",
+    "desc": "Atividade não especificada"
+  },
+  {
+    "cod": "1610-2/03",
+    "desc": "Serrarias com desdobramento de madeira em bruto"
+  },
+  {
+    "cod": "1610-2/04",
+    "desc": "Serrarias sem desdobramento de madeira em bruto - Resseragem"
+  },
+  {
+    "cod": "1610-2/05",
+    "desc": "Serviços de tratamento de madeira realizado por contrato"
+  },
+  {
+    "cod": "1621-8/00",
+    "desc": "Produção de madeira laminada e de chapas de madeira compensada, prensada e aglomerada"
+  },
+  {
+    "cod": "1622-6/01",
+    "desc": "Produção de casas de madeira pré-fabricadas"
+  },
+  {
+    "cod": "1622-6/02",
+    "desc": "Produção de esquadrias de madeira e de peças de madeira para instalações industriais e comerciais"
+  },
+  {
+    "cod": "1622-6/99",
+    "desc": "Produção de outros artigos de carpintaria para construção"
+  },
+  {
+    "cod": "1623-4/00",
+    "desc": "Produção de artefatos de tanoaria e de embalagens de madeira"
+  },
+  {
+    "cod": "1629-3/01",
+    "desc": "Produção de artefatos diversos de madeira, menos móveis"
+  },
+  {
+    "cod": "1629-3/02",
+    "desc": "Produção de artefatos diversos de cortiça, bambu, palha, vime e outros materiais trançados, menos móveis"
+  },
+  {
+    "cod": "1710-9/00",
+    "desc": "Produção de celulose e outras pastas para a fabricação de papel"
+  },
+  {
+    "cod": "1721-4/00",
+    "desc": "Produção de papel"
+  },
+  {
+    "cod": "1722-2/00",
+    "desc": "Produção de cartolina e papel-cartão"
+  },
+  {
+    "cod": "1731-1/00",
+    "desc": "Produção de embalagens de papel"
+  },
+  {
+    "cod": "1732-0/00",
+    "desc": "Produção de embalagens de cartolina e papel-cartão"
+  },
+  {
+    "cod": "1733-8/00",
+    "desc": "Produção de chapas e de embalagens de papelão ondulado"
+  },
+  {
+    "cod": "1741-9/01",
+    "desc": "Produção de formulários contínuos"
+  },
+  {
+    "cod": "1741-9/02",
+    "desc": "Produção de produtos de papel, cartolina, papel-cartão e papelão ondulado para uso comercial e de escritório"
+  },
+  {
+    "cod": "1742-7/01",
+    "desc": "Produção de fraldas descartáveis"
+  },
+  {
+    "cod": "1742-7/02",
+    "desc": "Produção de absorventes higiênicos"
+  },
+  {
+    "cod": "1742-7/99",
+    "desc": "Produção de produtos de papel para uso doméstico e higiênico-sanitário diversos"
+  },
+  {
+    "cod": "1749-4/00",
+    "desc": "Produção de produtos de pastas celulósicas, papel, cartolina, papel-cartão e papelão ondulado diversos"
+  },
+  {
+    "cod": "1811-3/01",
+    "desc": "Impressão de jornais"
+  },
+  {
+    "cod": "1811-3/02",
+    "desc": "Impressão de livros, revistas e outras publicações periódicas"
+  },
+  {
+    "cod": "1812-1/00",
+    "desc": "Impressão de material de segurança"
+  },
+  {
+    "cod": "1813-0/01",
+    "desc": "Impressão de material para uso publicitário"
+  },
+  {
+    "cod": "1813-0/99",
+    "desc": "Impressão de material para outros usos"
+  },
+  {
+    "cod": "1821-1/00",
+    "desc": "Serviços de pré-impressão"
+  },
+  {
+    "cod": "1822-9/01",
+    "desc": "Serviços de encadernação e plastificação"
+  },
+  {
+    "cod": "1822-9/99",
+    "desc": "Serviços de acabamentos gráficos, menos encadernação e plastificação"
+  },
+  {
+    "cod": "1830-0/01",
+    "desc": "Reprodução de som em qualquer suporte"
+  },
+  {
+    "cod": "1830-0/02",
+    "desc": "Reprodução de vídeo em qualquer suporte"
+  },
+  {
+    "cod": "1830-0/03",
+    "desc": "Reprodução de software em qualquer suporte"
+  },
+  {
+    "cod": "1910-1/00",
+    "desc": "Coquerias"
+  },
+  {
+    "cod": "1921-7/00",
+    "desc": "Produção de produtos do refino de petróleo"
+  },
+  {
+    "cod": "1922-5/01",
+    "desc": "Formulação de combustíveis"
+  },
+  {
+    "cod": "1922-5/02",
+    "desc": "Rerrefino de óleos lubrificantes"
+  },
+  {
+    "cod": "1922-5/99",
+    "desc": "Produção de outros produtos derivados do petróleo, menos produtos do refino"
+  },
+  {
+    "cod": "1931-4/00",
+    "desc": "Produção de álcool"
+  },
+  {
+    "cod": "1932-2/00",
+    "desc": "Produção de biocombustíveis, menos álcool"
+  },
+  {
+    "cod": "2011-8/00",
+    "desc": "Produção de cloro e álcalis"
+  },
+  {
+    "cod": "2012-6/00",
+    "desc": "Produção de intermediários para fertilizantes"
+  },
+  {
+    "cod": "2013-4/01",
+    "desc": "Produção de adubos e fertilizantes organo-minerais"
+  },
+  {
+    "cod": "2013-4/02",
+    "desc": "Produção de adubos e fertilizantes, menos organo-minerais"
+  },
+  {
+    "cod": "2014-2/00",
+    "desc": "Produção de gases industriais"
+  },
+  {
+    "cod": "2019-3/01",
+    "desc": "Elaboração de combustíveis nucleares"
+  },
+  {
+    "cod": "2019-3/99",
+    "desc": "Produção de outros produtos químicos inorgânicos diversos"
+  },
+  {
+    "cod": "2021-5/00",
+    "desc": "Produção de produtos petroquímicos básicos"
+  },
+  {
+    "cod": "2022-3/00",
+    "desc": "Produção de intermediários para plastificantes, resinas e fibras"
+  },
+  {
+    "cod": "2029-1/00",
+    "desc": "Produção de produtos químicos orgânicos diversos"
+  },
+  {
+    "cod": "2031-2/00",
+    "desc": "Produção de resinas termoplásticas"
+  },
+  {
+    "cod": "2032-1/00",
+    "desc": "Produção de resinas termofixas"
+  },
+  {
+    "cod": "2033-9/00",
+    "desc": "Produção de elastômeros"
+  },
+  {
+    "cod": "2040-1/00",
+    "desc": "Produção de fibras artificiais e sintéticas"
+  },
+  {
+    "cod": "2051-7/00",
+    "desc": "Produção de defensivos agrícolas"
+  },
+  {
+    "cod": "2052-5/00",
+    "desc": "Produção de desinfestantes domissanitários"
+  },
+  {
+    "cod": "2061-4/00",
+    "desc": "Produção de sabões e detergentes sintéticos"
+  },
+  {
+    "cod": "2062-2/00",
+    "desc": "Produção de produtos de limpeza e polimento"
+  },
+  {
+    "cod": "2063-1/00",
+    "desc": "Produção de cosméticos, produtos de perfumaria e de higiene pessoal"
+  },
+  {
+    "cod": "2071-1/00",
+    "desc": "Produção de tintas, vernizes, esmaltes e lacas"
+  },
+  {
+    "cod": "2072-0/00",
+    "desc": "Produção de tintas de impressão"
+  },
+  {
+    "cod": "2073-8/00",
+    "desc": "Produção de impermeabilizantes, solventes e produtos afins"
+  },
+  {
+    "cod": "2091-6/00",
+    "desc": "Produção de adesivos e selantes"
+  },
+  {
+    "cod": "2092-4/01",
+    "desc": "Produção de pólvoras, explosivos e detonantes"
+  },
+  {
+    "cod": "2092-4/02",
+    "desc": "Produção de artigos pirotécnicos"
+  },
+  {
+    "cod": "2092-4/03",
+    "desc": "Produção de fósforos de segurança"
+  },
+  {
+    "cod": "2093-2/00",
+    "desc": "Produção de aditivos de uso industrial"
+  },
+  {
+    "cod": "2094-1/00",
+    "desc": "Produção de catalisadores"
+  },
+  {
+    "cod": "2099-1/01",
+    "desc": "Produção de chapas, filmes, papéis e outros materiais e produtos químicos para fotografia"
+  },
+  {
+    "cod": "2099-1/99",
+    "desc": "Produção de outros produtos químicos diversos"
+  },
+  {
+    "cod": "2110-6/00",
+    "desc": "Produção de produtos farmoquímicos"
+  },
+  {
+    "cod": "2121-1/01",
+    "desc": "Produção de medicamentos alopáticos para uso humano"
+  },
+  {
+    "cod": "2121-1/02",
+    "desc": "Produção de medicamentos homeopáticos para uso humano"
+  },
+  {
+    "cod": "2121-1/03",
+    "desc": "Produção de medicamentos fitoterápicos para uso humano"
+  },
+  {
+    "cod": "2122-0/00",
+    "desc": "Produção de medicamentos para uso veterinário"
+  },
+  {
+    "cod": "2123-8/00",
+    "desc": "Produção de preparações farmacêuticas"
+  },
+  {
+    "cod": "2211-1/00",
+    "desc": "Produção de pneumáticos e de câmaras-de-ar"
+  },
+  {
+    "cod": "2212-9/00",
+    "desc": "Reforma de pneumáticos usados"
+  },
+  {
+    "cod": "2219-6/00",
+    "desc": "Produção de artefatos de borracha diversos"
+  },
+  {
+    "cod": "2221-8/00",
+    "desc": "Produção de laminados planos e tubulares de material plástico"
+  },
+  {
+    "cod": "2222-6/00",
+    "desc": "Produção de embalagens de material plástico"
+  },
+  {
+    "cod": "2223-4/00",
+    "desc": "Produção de tubos e acessórios de material plástico para uso na construção"
+  },
+  {
+    "cod": "2229-3/01",
+    "desc": "Produção de artefatos de material plástico para uso pessoal e doméstico"
+  },
+  {
+    "cod": "2229-3/02",
+    "desc": "Produção de artefatos de material plástico para usos industriais"
+  },
+  {
+    "cod": "2229-3/03",
+    "desc": "Produção de artefatos de material plástico para uso na construção, menos tubos e acessórios"
+  },
+  {
+    "cod": "2229-3/99",
+    "desc": "Produção de artefatos de material plástico para outros usos diversos"
+  },
+  {
+    "cod": "2311-7/00",
+    "desc": "Produção de vidro plano e de segurança"
+  },
+  {
+    "cod": "2312-5/00",
+    "desc": "Produção de embalagens de vidro"
+  },
+  {
+    "cod": "2319-2/00",
+    "desc": "Produção de artigos de vidro"
+  },
+  {
+    "cod": "2320-6/00",
+    "desc": "Produção de cimento"
+  },
+  {
+    "cod": "2330-3/01",
+    "desc": "Produção de estruturas pré-moldadas de concreto armado, em série e sob encomenda"
+  },
+  {
+    "cod": "2330-3/02",
+    "desc": "Produção de artefatos de cimento para uso na construção"
+  },
+  {
+    "cod": "2330-3/03",
+    "desc": "Produção de artefatos de fibrocimento para uso na construção"
+  },
+  {
+    "cod": "2330-3/04",
+    "desc": "Produção de casas pré-moldadas de concreto"
+  },
+  {
+    "cod": "2330-3/05",
+    "desc": "Processamento de massa de concreto e argamassa para construção"
+  },
+  {
+    "cod": "2330-3/99",
+    "desc": "Produção de outros artefatos e produtos de concreto, cimento, fibrocimento, gesso e materiais semelhantes"
+  },
+  {
+    "cod": "2341-9/00",
+    "desc": "Produção de produtos cerâmicos refratários"
+  },
+  {
+    "cod": "2342-7/01",
+    "desc": "Produção de azulejos e pisos"
+  },
+  {
+    "cod": "2342-7/02",
+    "desc": "Produção de artefatos de cerâmica e barro cozido para uso na construção, menos azulejos e pisos"
+  },
+  {
+    "cod": "2349-4/01",
+    "desc": "Produção de material sanitário de cerâmica"
+  },
+  {
+    "cod": "2349-4/99",
+    "desc": "Produção de produtos cerâmicos não refratários diversos"
+  },
+  {
+    "cod": "2391-5/01",
+    "desc": "Britamento de pedras, menos associado à extração"
+  },
+  {
+    "cod": "2391-5/02",
+    "desc": "Aparelhamento de pedras para construção, menos associado à extração"
+  },
+  {
+    "cod": "2391-5/03",
+    "desc": "Aparelhamento de placas e execução de trabalhos em mármore, granito, ardósia e outras pedras"
+  },
+  {
+    "cod": "2392-3/00",
+    "desc": "Produção de cal e gesso"
+  },
+  {
+    "cod": "2399-1/01",
+    "desc": "Decoração, lapidação, gravação, vitrificação e outros trabalhos em cerâmica, louça, vidro e cristal"
+  },
+  {
+    "cod": "2399-1/02",
+    "desc": "Produção de abrasivos"
+  },
+  {
+    "cod": "2399-1/99",
+    "desc": "Produção de outros produtos de minerais não metálicos diversos"
+  },
+  {
+    "cod": "2411-3/00",
+    "desc": "Produção de ferro-gusa"
+  },
+  {
+    "cod": "2412-1/00",
+    "desc": "Produção de ferroligas"
+  },
+  {
+    "cod": "2421-1/00",
+    "desc": "Produção de semiacabados de aço"
+  },
+  {
+    "cod": "2422-9/01",
+    "desc": "Produção de laminados planos de aço ao carbono, revestidos ou não"
+  },
+  {
+    "cod": "2422-9/02",
+    "desc": "Produção de laminados planos de aços especiais"
+  },
+  {
+    "cod": "2423-7/01",
+    "desc": "Produção de tubos de aço sem costura"
+  },
+  {
+    "cod": "2423-7/02",
+    "desc": "Produção de laminados longos de aço, menos tubos"
+  },
+  {
+    "cod": "2424-5/01",
+    "desc": "Produção de arames de aço"
+  },
+  {
+    "cod": "2424-5/02",
+    "desc": "Produção de relaminados, trefilados e perfilados de aço, menos arames"
+  },
+  {
+    "cod": "2431-8/00",
+    "desc": "Produção de tubos de aço com costura"
+  },
+  {
+    "cod": "2439-3/00",
+    "desc": "Produção de outros tubos de ferro e aço"
+  },
+  {
+    "cod": "2441-5/01",
+    "desc": "Produção de alumínio e suas ligas em formas primárias"
+  },
+  {
+    "cod": "2441-5/02",
+    "desc": "Produção de laminados de alumínio"
+  },
+  {
+    "cod": "2442-3/00",
+    "desc": "Metalurgia dos metais preciosos"
+  },
+  {
+    "cod": "2443-1/00",
+    "desc": "Metalurgia do cobre"
+  },
+  {
+    "cod": "2449-1/01",
+    "desc": "Produção de zinco em formas primárias"
+  },
+  {
+    "cod": "2449-1/02",
+    "desc": "Produção de laminados de zinco"
+  },
+  {
+    "cod": "2449-1/03",
+    "desc": "Produção de ânodos para galvanoplastia"
+  },
+  {
+    "cod": "2449-1/99",
+    "desc": "Metalurgia de outros metais não ferrosos e suas ligas diversos"
+  },
+  {
+    "cod": "2451-2/00",
+    "desc": "Fundição de ferro e aço"
+  },
+  {
+    "cod": "2452-1/00",
+    "desc": "Fundição de metais não ferrosos e suas ligas"
+  },
+  {
+    "cod": "2511-0/00",
+    "desc": "Produção de estruturas metálicas"
+  },
+  {
+    "cod": "2512-8/00",
+    "desc": "Produção de esquadrias de metal"
+  },
+  {
+    "cod": "2513-6/00",
+    "desc": "Produção de obras de caldeiraria pesada"
+  },
+  {
+    "cod": "2521-7/00",
+    "desc": "Produção de tanques, reservatórios metálicos e caldeiras para aquecimento central"
+  },
+  {
+    "cod": "2522-5/00",
+    "desc": "Produção de caldeiras geradoras de vapor, menos para aquecimento central e para veículos"
+  },
+  {
+    "cod": "2531-4/01",
+    "desc": "Produção de forjados de aço"
+  },
+  {
+    "cod": "2531-4/02",
+    "desc": "Produção de forjados de metais não ferrosos e suas ligas"
+  },
+  {
+    "cod": "2532-2/01",
+    "desc": "Produção de artefatos estampados de metal"
+  },
+  {
+    "cod": "2532-2/02",
+    "desc": "Metalurgia do pó"
+  },
+  {
+    "cod": "2539-0/01",
+    "desc": "Serviços de usinagem, tornearia e solda"
+  },
+  {
+    "cod": "2539-0/02",
+    "desc": "Serviços de tratamento e revestimento em metais"
+  },
+  {
+    "cod": "2541-1/00",
+    "desc": "Produção de artigos de cutelaria"
+  },
+  {
+    "cod": "2542-0/00",
+    "desc": "Produção de artigos de serralheria, menos esquadrias"
+  },
+  {
+    "cod": "2543-8/00",
+    "desc": "Produção de ferramentas"
+  },
+  {
+    "cod": "2550-1/01",
+    "desc": "Produção de equipamento bélico pesado, menos veículos militares de combate"
+  },
+  {
+    "cod": "2550-1/02",
+    "desc": "Produção de armas de fogo, outras armas e munições"
+  },
+  {
+    "cod": "2591-8/00",
+    "desc": "Produção de embalagens metálicas"
+  },
+  {
+    "cod": "2592-6/01",
+    "desc": "Produção de produtos de trefilados de metal padronizados"
+  },
+  {
+    "cod": "2592-6/02",
+    "desc": "Produção de produtos de trefilados de metal, menos padronizados"
+  },
+  {
+    "cod": "2593-4/00",
+    "desc": "Produção de artigos de metal para uso doméstico e pessoal"
+  },
+  {
+    "cod": "2599-3/01",
+    "desc": "Serviços de confecção de armações metálicas para a construção"
+  },
+  {
+    "cod": "2599-3/02",
+    "desc": "Serviços de corte e dobra de metais"
+  },
+  {
+    "cod": "2599-3/99",
+    "desc": "Produção de outros produtos de metal diversos"
+  },
+  {
+    "cod": "2610-8/00",
+    "desc": "Produção de componentes eletrônicos"
+  },
+  {
+    "cod": "2621-3/00",
+    "desc": "Produção de equipamentos de informática"
+  },
+  {
+    "cod": "2622-1/00",
+    "desc": "Produção de periféricos para equipamentos de informática"
+  },
+  {
+    "cod": "2631-1/00",
+    "desc": "Produção de equipamentos transmissores de comunicação, peças e acessórios"
+  },
+  {
+    "cod": "2632-9/00",
+    "desc": "Produção de aparelhos telefônicos e de outros equipamentos de comunicação, peças e acessórios"
+  },
+  {
+    "cod": "2640-0/00",
+    "desc": "Produção de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo"
+  },
+  {
+    "cod": "2651-5/00",
+    "desc": "Produção de aparelhos e equipamentos de medida, teste e controle"
+  },
+  {
+    "cod": "2652-3/00",
+    "desc": "Produção de cronômetros e relógios"
+  },
+  {
+    "cod": "2660-4/00",
+    "desc": "Produção de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação"
+  },
+  {
+    "cod": "2670-1/01",
+    "desc": "Produção de equipamentos e instrumentos ópticos, peças e acessórios"
+  },
+  {
+    "cod": "2670-1/02",
+    "desc": "Produção de aparelhos fotográficos e cinematográficos, peças e acessórios"
+  },
+  {
+    "cod": "2680-9/00",
+    "desc": "Produção de mídias virgens, magnéticas e ópticas"
+  },
+  {
+    "cod": "2710-4/01",
+    "desc": "Produção de geradores de corrente contínua e alternada, peças e acessórios"
+  },
+  {
+    "cod": "2710-4/02",
+    "desc": "Produção de transformadores, indutores, conversores, sincronizadores e semelhantes, peças e acessórios"
+  },
+  {
+    "cod": "2710-4/03",
+    "desc": "Produção de motores elétricos, peças e acessórios"
+  },
+  {
+    "cod": "2721-0/00",
+    "desc": "Produção de pilhas, baterias e acumuladores elétricos, menos para veículos automotores"
+  },
+  {
+    "cod": "2722-8/01",
+    "desc": "Produção de baterias e acumuladores para veículos automotores"
+  },
+  {
+    "cod": "2722-8/02",
+    "desc": "Recondicionamento de baterias e acumuladores para veículos automotores"
+  },
+  {
+    "cod": "2731-7/00",
+    "desc": "Produção de aparelhos e equipamentos para distribuição e controle de energia elétrica"
+  },
+  {
+    "cod": "2732-5/00",
+    "desc": "Produção de material elétrico para instalações em circuito de consumo"
+  },
+  {
+    "cod": "2733-3/00",
+    "desc": "Produção de fios, cabos e condutores elétricos isolados"
+  },
+  {
+    "cod": "2740-6/01",
+    "desc": "Produção de lâmpadas"
+  },
+  {
+    "cod": "2740-6/02",
+    "desc": "Produção de luminárias e outros equipamentos de iluminação"
+  },
+  {
+    "cod": "2751-1/00",
+    "desc": "Produção de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico, peças e acessórios"
+  },
+  {
+    "cod": "2759-7/01",
+    "desc": "Produção de aparelhos elétricos de uso pessoal, peças e acessórios"
+  },
+  {
+    "cod": "2759-7/99",
+    "desc": "Produção de outros aparelhos eletrodomésticos diversos, peças e acessórios"
+  },
+  {
+    "cod": "2790-2/01",
+    "desc": "Produção de eletrodos, contatos e outros artigos de carvão e grafita para uso elétrico, eletroímãs e isoladores"
+  },
+  {
+    "cod": "2790-2/02",
+    "desc": "Produção de equipamentos para sinalização e alarme"
+  },
+  {
+    "cod": "2790-2/99",
+    "desc": "Produção de outros equipamentos e aparelhos elétricos diversos"
+  },
+  {
+    "cod": "2811-9/00",
+    "desc": "Produção de motores e turbinas, peças e acessórios, menos para aviões e veículos rodoviários"
+  },
+  {
+    "cod": "2812-7/00",
+    "desc": "Produção de equipamentos hidráulicos e pneumáticos, peças e acessórios, menos válvulas"
+  },
+  {
+    "cod": "2813-5/00",
+    "desc": "Produção de válvulas, registros e dispositivos semelhantes, peças e acessórios"
+  },
+  {
+    "cod": "2814-3/01",
+    "desc": "Produção de compressores para uso industrial, peças e acessórios"
+  },
+  {
+    "cod": "2814-3/02",
+    "desc": "Produção de compressores para uso não industrial, peças e acessórios"
+  },
+  {
+    "cod": "2815-1/01",
+    "desc": "Produção de rolamentos para fins industriais"
+  },
+  {
+    "cod": "2815-1/02",
+    "desc": "Produção de equipamentos de transmissão para fins industriais, menos rolamentos"
+  },
+  {
+    "cod": "2821-6/01",
+    "desc": "Produção de fornos industriais, aparelhos e equipamentos não elétricos para instalações térmicas, peças e acessórios"
+  },
+  {
+    "cod": "2821-6/02",
+    "desc": "Produção de estufas e fornos elétricos para fins industriais, peças e acessórios"
+  },
+  {
+    "cod": "2822-4/01",
+    "desc": "Produção de máquinas, equipamentos e aparelhos para transporte e elevação de pessoas, peças e acessórios"
+  },
+  {
+    "cod": "2822-4/02",
+    "desc": "Produção de máquinas, equipamentos e aparelhos para transporte e elevação de cargas, peças e acessórios"
+  },
+  {
+    "cod": "2823-2/00",
+    "desc": "Produção de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial, peças e acessórios"
+  },
+  {
+    "cod": "2824-1/01",
+    "desc": "Produção de aparelhos e equipamentos de ar condicionado para uso industrial"
+  },
+  {
+    "cod": "2824-1/02",
+    "desc": "Produção de aparelhos e equipamentos de ar condicionado para uso não industrial"
+  },
+  {
+    "cod": "2825-9/00",
+    "desc": "Produção de máquinas e equipamentos para saneamento básico e ambiental, peças e acessórios"
+  },
+  {
+    "cod": "2829-1/01",
+    "desc": "Produção de máquinas de escrever, calcular e outros equipamentos não eletrônicos para escritório, peças e acessórios"
+  },
+  {
+    "cod": "2829-1/99",
+    "desc": "Produção de outras máquinas e equipamentos de uso geral diversos, peças e acessórios"
+  },
+  {
+    "cod": "2831-3/00",
+    "desc": "Produção de tratores agrícolas, peças e acessórios"
+  },
+  {
+    "cod": "2832-1/00",
+    "desc": "Produção de equipamentos para irrigação agrícola, peças e acessórios"
+  },
+  {
+    "cod": "2833-0/00",
+    "desc": "Produção de máquinas e equipamentos para a agricultura e pecuária, peças e acessórios, menos para irrigação"
+  },
+  {
+    "cod": "2840-2/00",
+    "desc": "Produção de máquinas-ferramenta, peças e acessórios"
+  },
+  {
+    "cod": "2851-8/00",
+    "desc": "Produção de máquinas e equipamentos para a prospecção e extração de petróleo, peças e acessórios"
+  },
+  {
+    "cod": "2852-6/00",
+    "desc": "Produção de outras máquinas e equipamentos para uso na extração mineral, peças e acessórios, menos na extração de petróleo"
+  },
+  {
+    "cod": "2853-4/00",
+    "desc": "Produção de tratores, peças e acessórios, menos agrícolas"
+  },
+  {
+    "cod": "2854-2/00",
+    "desc": "Produção de máquinas e equipamentos para terraplenagem, pavimentação e construção, peças e acessórios, menos tratores"
+  },
+  {
+    "cod": "2861-5/00",
+    "desc": "Produção de máquinas para a indústria metalúrgica, peças e acessórios, menos máquinas-ferramenta"
+  },
+  {
+    "cod": "2862-3/00",
+    "desc": "Produção de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo, peças e acessórios"
+  },
+  {
+    "cod": "2863-1/00",
+    "desc": "Produção de máquinas e equipamentos para a indústria têxtil, peças e acessórios"
+  },
+  {
+    "cod": "2864-0/00",
+    "desc": "Produção de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados, peças e acessórios"
+  },
+  {
+    "cod": "2865-8/00",
+    "desc": "Produção de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos, peças e acessórios"
+  },
+  {
+    "cod": "2866-6/00",
+    "desc": "Produção de máquinas e equipamentos para a indústria do plástico, peças e acessórios"
+  },
+  {
+    "cod": "2869-1/00",
+    "desc": "Produção de máquinas e equipamentos para uso industrial específico diversos, peças e acessórios"
+  },
+  {
+    "cod": "2910-7/01",
+    "desc": "Produção de automóveis, camionetas e utilitários"
+  },
+  {
+    "cod": "2910-7/02",
+    "desc": "Produção de chassis com motor para automóveis, camionetas e utilitários"
+  },
+  {
+    "cod": "2910-7/03",
+    "desc": "Produção de motores para automóveis, camionetas e utilitários"
+  },
+  {
+    "cod": "2920-4/01",
+    "desc": "Produção de caminhões e ônibus"
+  },
+  {
+    "cod": "2920-4/02",
+    "desc": "Produção de motores para caminhões e ônibus"
+  },
+  {
+    "cod": "2930-1/01",
+    "desc": "Produção de cabines, carrocerias e reboques para caminhões"
+  },
+  {
+    "cod": "2930-1/02",
+    "desc": "Produção de carrocerias para ônibus"
+  },
+  {
+    "cod": "2930-1/03",
+    "desc": "Produção de cabines, carrocerias e reboques para outros veículos automotores, menos caminhões e ônibus"
+  },
+  {
+    "cod": "2941-7/00",
+    "desc": "Produção de peças e acessórios para o sistema motor de veículos automotores"
+  },
+  {
+    "cod": "2942-5/00",
+    "desc": "Produção de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores"
+  },
+  {
+    "cod": "2943-3/00",
+    "desc": "Produção de peças e acessórios para o sistema de freios de veículos automotores"
+  },
+  {
+    "cod": "2944-1/00",
+    "desc": "Produção de peças e acessórios para o sistema de direção e suspensão de veículos automotores"
+  },
+  {
+    "cod": "2945-0/00",
+    "desc": "Produção de material elétrico e eletrônico para veículos automotores, menos baterias"
+  },
+  {
+    "cod": "2949-2/01",
+    "desc": "Produção de bancos e estofados para veículos automotores"
+  },
+  {
+    "cod": "2949-2/99",
+    "desc": "Produção de outras peças e acessórios para veículos automotores diversas"
+  },
+  {
+    "cod": "2950-6/00",
+    "desc": "Recondicionamento e recuperação de motores para veículos automotores"
+  },
+  {
+    "cod": "3011-3/01",
+    "desc": "Construção de embarcações de grande porte"
+  },
+  {
+    "cod": "3011-3/02",
+    "desc": "Construção de embarcações para uso comercial e para usos especiais, menos de grande porte"
+  },
+  {
+    "cod": "3012-1/00",
+    "desc": "Construção de embarcações para esporte e lazer"
+  },
+  {
+    "cod": "3031-8/00",
+    "desc": "Produção de locomotivas, vagões e outros materiais rodantes"
+  },
+  {
+    "cod": "3032-6/00",
+    "desc": "Produção de peças e acessórios para veículos ferroviários"
+  },
+  {
+    "cod": "3041-5/00",
+    "desc": "Produção de aeronaves"
+  },
+  {
+    "cod": "3042-3/00",
+    "desc": "Produção de turbinas, motores e outros componentes e peças para aeronaves"
+  },
+  {
+    "cod": "3050-4/00",
+    "desc": "Produção de veículos militares de combate"
+  },
+  {
+    "cod": "3091-1/01",
+    "desc": "Produção de motocicletas"
+  },
+  {
+    "cod": "3091-1/02",
+    "desc": "Produção de peças e acessórios para motocicletas"
+  },
+  {
+    "cod": "3092-0/00",
+    "desc": "Produção de bicicletas e triciclos não motorizados, peças e acessórios"
+  },
+  {
+    "cod": "3099-7/00",
+    "desc": "Produção de equipamentos de transporte diversos"
+  },
+  {
+    "cod": "3101-2/00",
+    "desc": "Produção de móveis com predominância de madeira"
+  },
+  {
+    "cod": "3102-1/00",
+    "desc": "Produção de móveis com predominância de metal"
+  },
+  {
+    "cod": "3103-9/00",
+    "desc": "Produção de móveis de outros materiais, menos madeira e metal"
+  },
+  {
+    "cod": "3104-7/00",
+    "desc": "Produção de colchões"
+  },
+  {
+    "cod": "3211-6/01",
+    "desc": "Lapidação de gemas"
+  },
+  {
+    "cod": "3211-6/02",
+    "desc": "Produção de artefatos de joalheria e ourivesaria"
+  },
+  {
+    "cod": "3211-6/03",
+    "desc": "Cunhagem de moedas e medalhas"
+  },
+  {
+    "cod": "3212-4/00",
+    "desc": "Produção de bijuterias e artefatos semelhantes"
+  },
+  {
+    "cod": "3220-5/00",
+    "desc": "Produção de instrumentos musicais, peças e acessórios"
+  },
+  {
+    "cod": "3230-2/00",
+    "desc": "Produção de artefatos para pesca e esporte"
+  },
+  {
+    "cod": "3240-0/01",
+    "desc": "Produção de jogos eletrônicos"
+  },
+  {
+    "cod": "3240-0/02",
+    "desc": "Produção de mesas de bilhar, de sinuca e acessórios não associada à locação"
+  },
+  {
+    "cod": "3240-0/03",
+    "desc": "Produção de mesas de bilhar, de sinuca e acessórios associada à locação"
+  },
+  {
+    "cod": "3240-0/99",
+    "desc": "Produção de outros brinquedos e jogos recreativos diversos"
+  },
+  {
+    "cod": "3250-7/01",
+    "desc": "Produção de instrumentos não eletrônicos e utensílios para uso médico, cirúrgico, odontológico e de laboratório"
+  },
+  {
+    "cod": "3250-7/02",
+    "desc": "Produção de mobiliário para uso médico, cirúrgico, odontológico e de laboratório"
+  },
+  {
+    "cod": "3250-7/03",
+    "desc": "Produção de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral sob encomenda"
+  },
+  {
+    "cod": "3250-7/04",
+    "desc": "Produção de aparelhos e utensílios para correção de defeitos físicos e aparelhos ortopédicos em geral, menos sob encomenda"
+  },
+  {
+    "cod": "3250-7/05",
+    "desc": "Produção de materiais para medicina e odontologia"
+  },
+  {
+    "cod": "3250-7/06",
+    "desc": "Serviços de prótese dentária"
+  },
+  {
+    "cod": "3250-7/07",
+    "desc": "Produção de artigos ópticos"
+  },
+  {
+    "cod": "3250-7/09",
+    "desc": "Serviços de laboratório óptico"
+  },
+  {
+    "cod": "3291-4/00",
+    "desc": "Produção de escovas, pincéis e vassouras"
+  },
+  {
+    "cod": "3292-2/01",
+    "desc": "Produção de roupas de proteção e segurança e resistentes a fogo"
+  },
+  {
+    "cod": "3292-2/02",
+    "desc": "Produção de equipamentos e acessórios para segurança pessoal e profissional"
+  },
+  {
+    "cod": "3299-0/01",
+    "desc": "Produção de guarda-chuvas e similares"
+  },
+  {
+    "cod": "3299-0/02",
+    "desc": "Produção de canetas, lápis e outros artigos para escritório"
+  },
+  {
+    "cod": "3299-0/03",
+    "desc": "Produção de letras, letreiros e placas de qualquer material, menos luminosos"
+  },
+  {
+    "cod": "3299-0/04",
+    "desc": "Produção de painéis e letreiros luminosos"
+  },
+  {
+    "cod": "3299-0/05",
+    "desc": "Produção de aviamentos para costura"
+  },
+  {
+    "cod": "3299-0/06",
+    "desc": "Produção de velas, inclusive decorativas"
+  },
+  {
+    "cod": "3299-0/99",
+    "desc": "Produção de produtos diversos diversos"
+  },
+  {
+    "cod": "3311-2/00",
+    "desc": "Manutenção de tanques, reservatórios metálicos e caldeiras, menos para veículos"
+  },
+  {
+    "cod": "3312-1/02",
+    "desc": "Manutenção de aparelhos e instrumentos de medida, teste e controle"
+  },
+  {
+    "cod": "3312-1/03",
+    "desc": "Manutenção de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação"
+  },
+  {
+    "cod": "3312-1/04",
+    "desc": "Manutenção de equipamentos e instrumentos ópticos"
+  },
+  {
+    "cod": "3313-9/01",
+    "desc": "Manutenção de geradores, transformadores e motores elétricos"
+  },
+  {
+    "cod": "3313-9/02",
+    "desc": "Manutenção de baterias e acumuladores elétricos, menos para veículos"
+  },
+  {
+    "cod": "3313-9/99",
+    "desc": "Manutenção de máquinas, aparelhos e materiais elétricos diversos"
+  },
+  {
+    "cod": "3314-7/01",
+    "desc": "Manutenção de máquinas motrizes não elétricas"
+  },
+  {
+    "cod": "3314-7/02",
+    "desc": "Manutenção de equipamentos hidráulicos e pneumáticos, menos válvulas"
+  },
+  {
+    "cod": "3314-7/03",
+    "desc": "Manutenção de válvulas industriais"
+  },
+  {
+    "cod": "3314-7/04",
+    "desc": "Manutenção de compressores"
+  },
+  {
+    "cod": "3314-7/05",
+    "desc": "Manutenção de equipamentos de transmissão para fins industriais"
+  },
+  {
+    "cod": "3314-7/06",
+    "desc": "Manutenção de máquinas, aparelhos e equipamentos para instalações térmicas"
+  },
+  {
+    "cod": "3314-7/07",
+    "desc": "Manutenção de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial"
+  },
+  {
+    "cod": "3314-7/08",
+    "desc": "Manutenção de máquinas, equipamentos e aparelhos para transporte e elevação de cargas"
+  },
+  {
+    "cod": "3314-7/09",
+    "desc": "Manutenção de máquinas de escrever, calcular e de outros equipamentos não eletrônicos para escritório"
+  },
+  {
+    "cod": "3314-7/10",
+    "desc": "Manutenção de máquinas e equipamentos para uso geral diversos"
+  },
+  {
+    "cod": "3314-7/11",
+    "desc": "Manutenção de máquinas e equipamentos para agricultura e pecuária"
+  },
+  {
+    "cod": "3314-7/12",
+    "desc": "Manutenção de tratores agrícolas"
+  },
+  {
+    "cod": "3314-7/13",
+    "desc": "Manutenção de máquinas-ferramenta"
+  },
+  {
+    "cod": "3314-7/14",
+    "desc": "Manutenção de máquinas e equipamentos para a prospecção e extração de petróleo"
+  },
+  {
+    "cod": "3314-7/15",
+    "desc": "Manutenção de máquinas e equipamentos para uso na extração mineral, menos na extração de petróleo"
+  },
+  {
+    "cod": "3314-7/16",
+    "desc": "Manutenção de tratores, menos agrícolas"
+  },
+  {
+    "cod": "3314-7/17",
+    "desc": "Manutenção de máquinas e equipamentos de terraplenagem, pavimentação e construção, menos tratores"
+  },
+  {
+    "cod": "3314-7/18",
+    "desc": "Manutenção de máquinas para a indústria metalúrgica, menos máquinas-ferramenta"
+  },
+  {
+    "cod": "3314-7/19",
+    "desc": "Manutenção de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo"
+  },
+  {
+    "cod": "3314-7/20",
+    "desc": "Manutenção de máquinas e equipamentos para a indústria têxtil, do vestuário, do couro e calçados"
+  },
+  {
+    "cod": "3314-7/21",
+    "desc": "Manutenção de máquinas e aparelhos para a indústria de celulose, papel e papelão e artefatos"
+  },
+  {
+    "cod": "3314-7/22",
+    "desc": "Manutenção de máquinas e aparelhos para a indústria do plástico"
+  },
+  {
+    "cod": "3314-7/99",
+    "desc": "Manutenção de outras máquinas e equipamentos para usos industriais diversos"
+  },
+  {
+    "cod": "3315-5/00",
+    "desc": "Manutenção de veículos ferroviários"
+  },
+  {
+    "cod": "3316-3/01",
+    "desc": "Manutenção de aeronaves, menos a manutenção na pista"
+  },
+  {
+    "cod": "3316-3/02",
+    "desc": "Manutenção de aeronaves na pista"
+  },
+  {
+    "cod": "3317-1/01",
+    "desc": "Manutenção de embarcações e estruturas flutuantes"
+  },
+  {
+    "cod": "3317-1/02",
+    "desc": "Manutenção de embarcações para esporte e lazer"
+  },
+  {
+    "cod": "3319-8/00",
+    "desc": "Manutenção de equipamentos e produtos diversos"
+  },
+  {
+    "cod": "3321-0/00",
+    "desc": "Instalação de máquinas e equipamentos industriais"
+  },
+  {
+    "cod": "3329-5/01",
+    "desc": "Serviços de montagem de móveis de qualquer material"
+  },
+  {
+    "cod": "3329-5/99",
+    "desc": "Instalação de outros equipamentos diversos"
+  },
+  {
+    "cod": "3511-5/01",
+    "desc": "Geração de energia elétrica"
+  },
+  {
+    "cod": "3511-5/02",
+    "desc": "Serviços de coordenação e controle da operação da geração e transmissão de energia elétrica"
+  },
+  {
+    "cod": "3512-3/00",
+    "desc": "Transmissão de energia elétrica"
+  },
+  {
+    "cod": "3513-1/00",
+    "desc": "Atacado de energia elétrica"
+  },
+  {
+    "cod": "3514-0/00",
+    "desc": "Distribuição de energia elétrica"
+  },
+  {
+    "cod": "3520-4/01",
+    "desc": "Produção de gás; processamento de gás natural"
+  },
+  {
+    "cod": "3520-4/02",
+    "desc": "Distribuição de combustíveis gasosos por redes urbanas"
+  },
+  {
+    "cod": "3530-1/00",
+    "desc": "Produção e distribuição de vapor, água quente e ar condicionado"
+  },
+  {
+    "cod": "3600-6/01",
+    "desc": "Captação, tratamento e distribuição de água"
+  },
+  {
+    "cod": "3600-6/02",
+    "desc": "Distribuição de água por caminhões"
+  },
+  {
+    "cod": "3701-1/00",
+    "desc": "Gestão de redes de esgoto"
+  },
+  {
+    "cod": "3702-9/00",
+    "desc": "Atividades relacionadas a esgoto, menos a gestão de redes"
+  },
+  {
+    "cod": "3811-4/00",
+    "desc": "Coleta de resíduos não perigosos"
+  },
+  {
+    "cod": "3812-2/00",
+    "desc": "Coleta de resíduos perigosos"
+  },
+  {
+    "cod": "3821-1/00",
+    "desc": "Tratamento e disposição de resíduos não perigosos"
+  },
+  {
+    "cod": "3822-0/00",
+    "desc": "Tratamento e disposição de resíduos perigosos"
+  },
+  {
+    "cod": "3831-9/01",
+    "desc": "Recuperação de sucatas de alumínio"
+  },
+  {
+    "cod": "3831-9/99",
+    "desc": "Recuperação de materiais metálicos, menos alumínio"
+  },
+  {
+    "cod": "3832-7/00",
+    "desc": "Recuperação de materiais plásticos"
+  },
+  {
+    "cod": "3839-4/01",
+    "desc": "Usinas de compostagem"
+  },
+  {
+    "cod": "3839-4/99",
+    "desc": "Recuperação de materiais diversos"
+  },
+  {
+    "cod": "3900-5/00",
+    "desc": "Descontaminação e outros serviços de gestão de resíduos"
+  },
+  {
+    "cod": "4110-7/00",
+    "desc": "Incorporação de empreendimentos imobiliários"
+  },
+  {
+    "cod": "4120-4/00",
+    "desc": "Construção de edifícios"
+  },
+  {
+    "cod": "4211-1/01",
+    "desc": "Construção de rodovias e ferrovias"
+  },
+  {
+    "cod": "4211-1/02",
+    "desc": "Pintura para sinalização em pistas rodoviárias e aeroportos"
+  },
+  {
+    "cod": "4212-0/00",
+    "desc": "Construção de obras de arte especiais"
+  },
+  {
+    "cod": "4213-8/00",
+    "desc": "Obras de urbanização - ruas, praças e calçadas"
+  },
+  {
+    "cod": "4221-9/01",
+    "desc": "Construção de barragens e represas para geração de energia elétrica"
+  },
+  {
+    "cod": "4221-9/02",
+    "desc": "Construção de estações e redes de distribuição de energia elétrica"
+  },
+  {
+    "cod": "4221-9/03",
+    "desc": "Manutenção de redes de distribuição de energia elétrica"
+  },
+  {
+    "cod": "4221-9/04",
+    "desc": "Construção de estações e redes de telecomunicações"
+  },
+  {
+    "cod": "4221-9/05",
+    "desc": "Manutenção de estações e redes de telecomunicações"
+  },
+  {
+    "cod": "4222-7/01",
+    "desc": "Construção de redes de abastecimento de água, coleta de esgoto e construções correlatas, menos obras de irrigação"
+  },
+  {
+    "cod": "4222-7/02",
+    "desc": "Obras de irrigação"
+  },
+  {
+    "cod": "4223-5/00",
+    "desc": "Construção de redes de transportes por dutos, menos para água e esgoto"
+  },
+  {
+    "cod": "4291-0/00",
+    "desc": "Obras portuárias, marítimas e fluviais"
+  },
+  {
+    "cod": "4292-8/01",
+    "desc": "Montagem de estruturas metálicas"
+  },
+  {
+    "cod": "4292-8/02",
+    "desc": "Obras de montagem industrial"
+  },
+  {
+    "cod": "4299-5/01",
+    "desc": "Construção de instalações esportivas e recreativas"
+  },
+  {
+    "cod": "4299-5/99",
+    "desc": "Outras obras de engenharia civil diversas"
+  },
+  {
+    "cod": "4311-8/01",
+    "desc": "Demolição de edifícios e outras estruturas"
+  },
+  {
+    "cod": "4311-8/02",
+    "desc": "Processamento de canteiro e limpeza de terreno"
+  },
+  {
+    "cod": "4312-6/00",
+    "desc": "Perfurações e sondagens"
+  },
+  {
+    "cod": "4313-4/00",
+    "desc": "Obras de terraplenagem"
+  },
+  {
+    "cod": "4319-3/00",
+    "desc": "Serviços de preparação do terreno diversos"
+  },
+  {
+    "cod": "4321-5/00",
+    "desc": "Instalação e manutenção elétrica"
+  },
+  {
+    "cod": "4322-3/01",
+    "desc": "Instalações hidráulicas, sanitárias e de gás"
+  },
+  {
+    "cod": "4322-3/02",
+    "desc": "Instalação e manutenção de sistemas centrais de ar condicionado, de ventilação e refrigeração"
+  },
+  {
+    "cod": "4322-3/03",
+    "desc": "Instalações de sistema de prevenção contra incêndio"
+  },
+  {
+    "cod": "4329-1/01",
+    "desc": "Instalação de painéis publicitários"
+  },
+  {
+    "cod": "4329-1/02",
+    "desc": "Instalação de equipamentos para orientação à navegação marítima, fluvial e lacustre"
+  },
+  {
+    "cod": "4329-1/03",
+    "desc": "Instalação, manutenção e reparação de elevadores, escadas e esteiras rolantes"
+  },
+  {
+    "cod": "4329-1/04",
+    "desc": "Montagem e instalação de sistemas e equipamentos de iluminação e sinalização em vias públicas, portos e aeroportos"
+  },
+  {
+    "cod": "4329-1/05",
+    "desc": "Tratamentos térmicos, acústicos ou de vibração"
+  },
+  {
+    "cod": "4329-1/99",
+    "desc": "Outras obras de instalações em construções diversas"
+  },
+  {
+    "cod": "4330-4/01",
+    "desc": "Impermeabilização em obras de engenharia civil"
+  },
+  {
+    "cod": "4330-4/02",
+    "desc": "Instalação de portas, janelas, tetos, divisórias e armários embutidos de qualquer material"
+  },
+  {
+    "cod": "4330-4/03",
+    "desc": "Obras de acabamento em gesso e estuque"
+  },
+  {
+    "cod": "4330-4/04",
+    "desc": "Serviços de pintura de edifícios em geral"
+  },
+  {
+    "cod": "4330-4/05",
+    "desc": "Aplicação de revestimentos e de resinas em interiores e exteriores"
+  },
+  {
+    "cod": "4330-4/99",
+    "desc": "Outras obras de acabamento da construção"
+  },
+  {
+    "cod": "4391-6/00",
+    "desc": "Obras de fundações"
+  },
+  {
+    "cod": "4399-1/01",
+    "desc": "Administração de obras"
+  },
+  {
+    "cod": "4399-1/02",
+    "desc": "Montagem e desmontagem de andaimes e outras estruturas temporárias"
+  },
+  {
+    "cod": "4399-1/03",
+    "desc": "Obras de alvenaria"
+  },
+  {
+    "cod": "4399-1/04",
+    "desc": "Serviços de operação e fornecimento de equipamentos para transporte e elevação de cargas e pessoas para uso em obras"
+  },
+  {
+    "cod": "4399-1/05",
+    "desc": "Perfuração e construção de poços de água"
+  },
+  {
+    "cod": "4399-1/99",
+    "desc": "Serviços especializados para construção diversos"
+  },
+  {
+    "cod": "4511-1/01",
+    "desc": "Comércio a varejo de automóveis, camionetas e utilitários novos"
+  },
+  {
+    "cod": "4511-1/02",
+    "desc": "Comércio a varejo de automóveis, camionetas e utilitários usados"
+  },
+  {
+    "cod": "4511-1/03",
+    "desc": "Comércio por atacado de automóveis, camionetas e utilitários novos e usados"
+  },
+  {
+    "cod": "4511-1/04",
+    "desc": "Comércio por atacado de caminhões novos e usados"
+  },
+  {
+    "cod": "4511-1/05",
+    "desc": "Comércio por atacado de reboques e semireboques novos e usados"
+  },
+  {
+    "cod": "4511-1/06",
+    "desc": "Comércio por atacado de ônibus e micro-ônibus novos e usados"
+  },
+  {
+    "cod": "4512-9/01",
+    "desc": "Representantes comerciais e agentes do comércio de veículos automotores"
+  },
+  {
+    "cod": "4512-9/02",
+    "desc": "Comércio sob consignação de veículos automotores"
+  },
+  {
+    "cod": "4520-0/01",
+    "desc": "Serviços de manutenção e reparação mecânica de veículos automotores"
+  },
+  {
+    "cod": "4520-0/02",
+    "desc": "Serviços de lanternagem ou funilaria e pintura de veículos automotores"
+  },
+  {
+    "cod": "4520-0/03",
+    "desc": "Serviços de manutenção e reparação elétrica de veículos automotores"
+  },
+  {
+    "cod": "4520-0/04",
+    "desc": "Serviços de alinhamento e balanceamento de veículos automotores"
+  },
+  {
+    "cod": "4520-0/05",
+    "desc": "Serviços de lavagem, lubrificação e polimento de veículos automotores"
+  },
+  {
+    "cod": "4520-0/06",
+    "desc": "Serviços de borracharia para veículos automotores"
+  },
+  {
+    "cod": "4520-0/07",
+    "desc": "Serviços de instalação, manutenção e reparação de acessórios para veículos automotores"
+  },
+  {
+    "cod": "4520-0/08",
+    "desc": "Serviços de capotaria"
+  },
+  {
+    "cod": "4530-7/01",
+    "desc": "Comércio por atacado de peças e acessórios novos para veículos automotores"
+  },
+  {
+    "cod": "4530-7/02",
+    "desc": "Comércio por atacado de pneumáticos e câmaras-de-ar"
+  },
+  {
+    "cod": "4530-7/03",
+    "desc": "Comércio a varejo de peças e acessórios novos para veículos automotores"
+  },
+  {
+    "cod": "4530-7/04",
+    "desc": "Comércio a varejo de peças e acessórios usados para veículos automotores"
+  },
+  {
+    "cod": "4530-7/05",
+    "desc": "Comércio a varejo de pneumáticos e câmaras-de-ar"
+  },
+  {
+    "cod": "4530-7/06",
+    "desc": "Representantes comerciais e agentes do comércio de peças e acessórios novos e usados para veículos automotores"
+  },
+  {
+    "cod": "4541-2/01",
+    "desc": "Comércio por atacado de motocicletas e motonetas"
+  },
+  {
+    "cod": "4541-2/02",
+    "desc": "Comércio por atacado de peças e acessórios para motocicletas e motonetas"
+  },
+  {
+    "cod": "4541-2/03",
+    "desc": "Comércio a varejo de motocicletas e motonetas novas"
+  },
+  {
+    "cod": "4541-2/04",
+    "desc": "Comércio a varejo de motocicletas e motonetas usadas"
+  },
+  {
+    "cod": "4541-2/05",
+    "desc": "Atividade não especificada"
+  },
+  {
+    "cod": "4541-2/06",
+    "desc": "Comércio a varejo de peças e acessórios novos para motocicletas e motonetas"
+  },
+  {
+    "cod": "4541-2/07",
+    "desc": "Comércio a varejo de peças e acessórios usados para motocicletas e motonetas"
+  },
+  {
+    "cod": "4542-1/01",
+    "desc": "Representantes comerciais e agentes do comércio de motocicletas e motonetas, peças e acessórios"
+  },
+  {
+    "cod": "4542-1/02",
+    "desc": "Comércio sob consignação de motocicletas e motonetas"
+  },
+  {
+    "cod": "4543-9/00",
+    "desc": "Manutenção de motocicletas e motonetas"
+  },
+  {
+    "cod": "4611-7/00",
+    "desc": "Representantes comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos"
+  },
+  {
+    "cod": "4612-5/00",
+    "desc": "Representantes comerciais e agentes do comércio de combustíveis, minerais, produtos siderúrgicos e químicos"
+  },
+  {
+    "cod": "4613-3/00",
+    "desc": "Representantes comerciais e agentes do comércio de madeira, material de construção e ferragens"
+  },
+  {
+    "cod": "4614-1/00",
+    "desc": "Representantes comerciais e agentes do comércio de máquinas, equipamentos, embarcações e aeronaves"
+  },
+  {
+    "cod": "4615-0/00",
+    "desc": "Representantes comerciais e agentes do comércio de eletrodomésticos, móveis e artigos de uso doméstico"
+  },
+  {
+    "cod": "4616-8/00",
+    "desc": "Representantes comerciais e agentes do comércio de têxteis, vestuário, calçados e artigos de viagem"
+  },
+  {
+    "cod": "4617-6/00",
+    "desc": "Representantes comerciais e agentes do comércio de produtos alimentícios, bebidas e fumo"
+  },
+  {
+    "cod": "4618-4/01",
+    "desc": "Representantes comerciais e agentes do comércio de medicamentos, cosméticos e produtos de perfumaria"
+  },
+  {
+    "cod": "4618-4/02",
+    "desc": "Representantes comerciais e agentes do comércio de instrumentos e materiais odonto-médico-hospitalares"
+  },
+  {
+    "cod": "4618-4/03",
+    "desc": "Representantes comerciais e agentes do comércio de jornais, revistas e outras publicações"
+  },
+  {
+    "cod": "4618-4/99",
+    "desc": "Outros representantes comerciais e agentes do comércio especializado em produtos diversos"
+  },
+  {
+    "cod": "4619-2/00",
+    "desc": "Representantes comerciais e agentes do comércio de mercadorias em geral não especializado"
+  },
+  {
+    "cod": "4621-4/00",
+    "desc": "Atacado de café em grão"
+  },
+  {
+    "cod": "4622-2/00",
+    "desc": "Atacado de soja"
+  },
+  {
+    "cod": "4623-1/01",
+    "desc": "Atacado de animais vivos"
+  },
+  {
+    "cod": "4623-1/02",
+    "desc": "Atacado de couros, lãs, peles e outros subprodutos não comestíveis de origem animal"
+  },
+  {
+    "cod": "4623-1/03",
+    "desc": "Atacado de algodão"
+  },
+  {
+    "cod": "4623-1/04",
+    "desc": "Atacado de fumo em folha não beneficiado"
+  },
+  {
+    "cod": "4623-1/05",
+    "desc": "Atacado de cacau"
+  },
+  {
+    "cod": "4623-1/06",
+    "desc": "Atacado de sementes, flores, plantas e gramas"
+  },
+  {
+    "cod": "4623-1/07",
+    "desc": "Atacado de sisal"
+  },
+  {
+    "cod": "4623-1/08",
+    "desc": "Atacado de matérias-primas agrícolas com atividade de fracionamento e acondicionamento associada"
+  },
+  {
+    "cod": "4623-1/09",
+    "desc": "Atacado de alimentos para animais"
+  },
+  {
+    "cod": "4623-1/99",
+    "desc": "Atacado de matérias-primas agrícolas diversas"
+  },
+  {
+    "cod": "4631-1/00",
+    "desc": "Atacado de leite e laticínios"
+  },
+  {
+    "cod": "4632-0/01",
+    "desc": "Atacado de cereais e leguminosas beneficiados"
+  },
+  {
+    "cod": "4632-0/02",
+    "desc": "Atacado de farinhas, amidos e féculas"
+  },
+  {
+    "cod": "4632-0/03",
+    "desc": "Atacado de cereais e leguminosas beneficiados, farinhas, amidos e féculas, com atividade de fracionamento e acondicionamento associada"
+  },
+  {
+    "cod": "4633-8/01",
+    "desc": "Atacado de frutas, verduras, raízes, tubérculos, hortaliças e legumes frescos"
+  },
+  {
+    "cod": "4633-8/02",
+    "desc": "Atacado de aves vivas e ovos"
+  },
+  {
+    "cod": "4633-8/03",
+    "desc": "Atacado de coelhos e outros pequenos animais vivos para alimentação"
+  },
+  {
+    "cod": "4634-6/01",
+    "desc": "Atacado de carnes bovinas e suínas e derivados"
+  },
+  {
+    "cod": "4634-6/02",
+    "desc": "Atacado de aves abatidas e derivados"
+  },
+  {
+    "cod": "4634-6/03",
+    "desc": "Atacado de pescados e frutos do mar"
+  },
+  {
+    "cod": "4634-6/99",
+    "desc": "Atacado de carnes e derivados de outros animais"
+  },
+  {
+    "cod": "4635-4/01",
+    "desc": "Atacado de água mineral"
+  },
+  {
+    "cod": "4635-4/02",
+    "desc": "Atacado de cerveja, chope e refrigerante"
+  },
+  {
+    "cod": "4635-4/03",
+    "desc": "Atacado de bebidas com atividade de fracionamento e acondicionamento associada"
+  },
+  {
+    "cod": "4635-4/99",
+    "desc": "Atacado de bebidas diversas"
+  },
+  {
+    "cod": "4636-2/01",
+    "desc": "Atacado de fumo beneficiado"
+  },
+  {
+    "cod": "4636-2/02",
+    "desc": "Atacado de cigarros, cigarrilhas e charutos"
+  },
+  {
+    "cod": "4637-1/01",
+    "desc": "Atacado de café torrado, moído e solúvel"
+  },
+  {
+    "cod": "4637-1/02",
+    "desc": "Atacado de açúcar"
+  },
+  {
+    "cod": "4637-1/03",
+    "desc": "Atacado de óleos e gorduras"
+  },
+  {
+    "cod": "4637-1/04",
+    "desc": "Atacado de pães, bolos, biscoitos e similares"
+  },
+  {
+    "cod": "4637-1/05",
+    "desc": "Atacado de massas alimentícias"
+  },
+  {
+    "cod": "4637-1/06",
+    "desc": "Atacado de sorvetes"
+  },
+  {
+    "cod": "4637-1/07",
+    "desc": "Atacado de chocolates, confeitos, balas, bombons e semelhantes"
+  },
+  {
+    "cod": "4637-1/99",
+    "desc": "Comércio atacadista especializado em outros produtos alimentícios diversos"
+  },
+  {
+    "cod": "4639-7/01",
+    "desc": "Atacado de produtos alimentícios em geral"
+  },
+  {
+    "cod": "4639-7/02",
+    "desc": "Atacado de produtos alimentícios em geral, com atividade de fracionamento e acondicionamento associada"
+  },
+  {
+    "cod": "4641-9/01",
+    "desc": "Atacado de tecidos"
+  },
+  {
+    "cod": "4641-9/02",
+    "desc": "Atacado de artigos de cama, mesa e banho"
+  },
+  {
+    "cod": "4641-9/03",
+    "desc": "Atacado de artigos de armarinho"
+  },
+  {
+    "cod": "4642-7/01",
+    "desc": "Atacado de artigos do vestuário e acessórios, menos profissionais e de segurança"
+  },
+  {
+    "cod": "4642-7/02",
+    "desc": "Atacado de roupas e acessórios para uso profissional e de segurança do trabalho"
+  },
+  {
+    "cod": "4643-5/01",
+    "desc": "Atacado de calçados"
+  },
+  {
+    "cod": "4643-5/02",
+    "desc": "Atacado de bolsas, malas e artigos de viagem"
+  },
+  {
+    "cod": "4644-3/01",
+    "desc": "Atacado de medicamentos e drogas de uso humano"
+  },
+  {
+    "cod": "4644-3/02",
+    "desc": "Atacado de medicamentos e drogas de uso veterinário"
+  },
+  {
+    "cod": "4645-1/01",
+    "desc": "Atacado de instrumentos e materiais para uso médico, cirúrgico, hospitalar e de laboratórios"
+  },
+  {
+    "cod": "4645-1/02",
+    "desc": "Atacado de próteses e artigos de ortopedia"
+  },
+  {
+    "cod": "4645-1/03",
+    "desc": "Atacado de produtos odontológicos"
+  },
+  {
+    "cod": "4646-0/01",
+    "desc": "Atacado de cosméticos e produtos de perfumaria"
+  },
+  {
+    "cod": "4646-0/02",
+    "desc": "Atacado de produtos de higiene pessoal"
+  },
+  {
+    "cod": "4647-8/01",
+    "desc": "Atacado de artigos de escritório e de papelaria"
+  },
+  {
+    "cod": "4647-8/02",
+    "desc": "Atacado de livros, jornais e outras publicações"
+  },
+  {
+    "cod": "4649-4/01",
+    "desc": "Atacado de equipamentos elétricos de uso pessoal e doméstico"
+  },
+  {
+    "cod": "4649-4/02",
+    "desc": "Atacado de aparelhos eletrônicos de uso pessoal e doméstico"
+  },
+  {
+    "cod": "4649-4/03",
+    "desc": "Atacado de bicicletas, triciclos e outros veículos recreativos"
+  },
+  {
+    "cod": "4649-4/04",
+    "desc": "Atacado de móveis e artigos de colchoaria"
+  },
+  {
+    "cod": "4649-4/05",
+    "desc": "Atacado de artigos de tapeçaria; persianas e cortinas"
+  },
+  {
+    "cod": "4649-4/06",
+    "desc": "Atacado de lustres, luminárias e abajures"
+  },
+  {
+    "cod": "4649-4/07",
+    "desc": "Atacado de filmes, CDs, DVDs, fitas e discos"
+  },
+  {
+    "cod": "4649-4/08",
+    "desc": "Atacado de produtos de higiene, limpeza e conservação domiciliar"
+  },
+  {
+    "cod": "4649-4/09",
+    "desc": "Atacado de produtos de higiene, limpeza e conservação domiciliar, com atividade de fracionamento e acondicionamento associada"
+  },
+  {
+    "cod": "4649-4/10",
+    "desc": "Atacado de jóias, relógios e bijuterias, inclusive pedras preciosas e semipreciosas lapidadas"
+  },
+  {
+    "cod": "4649-4/99",
+    "desc": "Atacado de outros equipamentos e artigos de uso pessoal e doméstico diversos"
+  },
+  {
+    "cod": "4651-6/01",
+    "desc": "Atacado de equipamentos de informática"
+  },
+  {
+    "cod": "4651-6/02",
+    "desc": "Atacado de suprimentos para informática"
+  },
+  {
+    "cod": "4652-4/00",
+    "desc": "Atacado de componentes eletrônicos e equipamentos de telefonia e comunicação"
+  },
+  {
+    "cod": "4661-3/00",
+    "desc": "Atacado de máquinas, aparelhos e equipamentos para uso agropecuário; partes e peças"
+  },
+  {
+    "cod": "4662-1/00",
+    "desc": "Atacado de máquinas, equipamentos para terraplenagem, mineração e construção; partes e peças"
+  },
+  {
+    "cod": "4663-0/00",
+    "desc": "Atacado de máquinas e equipamentos para uso industrial; partes e peças"
+  },
+  {
+    "cod": "4664-8/00",
+    "desc": "Atacado de máquinas, aparelhos e equipamentos para uso odonto-médico-hospitalar; partes e peças"
+  },
+  {
+    "cod": "4665-6/00",
+    "desc": "Atacado de máquinas e equipamentos para uso comercial; partes e peças"
+  },
+  {
+    "cod": "4669-9/01",
+    "desc": "Atacado de bombas e compressores; partes e peças"
+  },
+  {
+    "cod": "4669-9/99",
+    "desc": "Atacado de outras máquinas e equipamentos diversos; partes e peças"
+  },
+  {
+    "cod": "4671-1/00",
+    "desc": "Atacado de madeira e produtos derivados"
+  },
+  {
+    "cod": "4672-9/00",
+    "desc": "Atacado de ferragens e ferramentas"
+  },
+  {
+    "cod": "4673-7/00",
+    "desc": "Atacado de material elétrico"
+  },
+  {
+    "cod": "4674-5/00",
+    "desc": "Atacado de cimento"
+  },
+  {
+    "cod": "4679-6/01",
+    "desc": "Atacado de tintas, vernizes e similares"
+  },
+  {
+    "cod": "4679-6/02",
+    "desc": "Atacado de mármores e granitos"
+  },
+  {
+    "cod": "4679-6/03",
+    "desc": "Atacado de vidros, espelhos e vitrais"
+  },
+  {
+    "cod": "4679-6/04",
+    "desc": "Comércio atacadista especializado de materiais de construção diversos"
+  },
+  {
+    "cod": "4679-6/99",
+    "desc": "Atacado de materiais de construção em geral"
+  },
+  {
+    "cod": "4681-8/01",
+    "desc": "Atacado de álcool carburante, biodiesel, gasolina e demais derivados de petróleo, menos lubrificantes, não realizado por transportador retalhista (TRR)"
+  },
+  {
+    "cod": "4681-8/02",
+    "desc": "Atacado de combustíveis realizado por transportador retalhista (TRR)"
+  },
+  {
+    "cod": "4681-8/03",
+    "desc": "Atacado de combustíveis de origem vegetal, menos álcool carburante"
+  },
+  {
+    "cod": "4681-8/04",
+    "desc": "Atacado de combustíveis de origem mineral em bruto"
+  },
+  {
+    "cod": "4681-8/05",
+    "desc": "Atacado de lubrificantes"
+  },
+  {
+    "cod": "4682-6/00",
+    "desc": "Atacado de gás liquefeito de petróleo (GLP)"
+  },
+  {
+    "cod": "4683-4/00",
+    "desc": "Atacado de defensivos agrícolas, adubos, fertilizantes e corretivos do solo"
+  },
+  {
+    "cod": "4684-2/01",
+    "desc": "Atacado de resinas e elastômeros"
+  },
+  {
+    "cod": "4684-2/02",
+    "desc": "Atacado de solventes"
+  },
+  {
+    "cod": "4684-2/99",
+    "desc": "Atacado de outros produtos químicos e petroquímicos diversos"
+  },
+  {
+    "cod": "4685-1/00",
+    "desc": "Atacado de produtos siderúrgicos e metalúrgicos, menos para construção"
+  },
+  {
+    "cod": "4686-9/01",
+    "desc": "Atacado de papel e papelão em bruto"
+  },
+  {
+    "cod": "4686-9/02",
+    "desc": "Atacado de embalagens"
+  },
+  {
+    "cod": "4687-7/01",
+    "desc": "Atacado de resíduos de papel e papelão"
+  },
+  {
+    "cod": "4687-7/02",
+    "desc": "Atacado de resíduos e sucatas não metálicos, menos de papel e papelão"
+  },
+  {
+    "cod": "4687-7/03",
+    "desc": "Atacado de resíduos e sucatas metálicos"
+  },
+  {
+    "cod": "4689-3/01",
+    "desc": "Atacado de produtos da extração mineral, menos combustíveis"
+  },
+  {
+    "cod": "4689-3/02",
+    "desc": "Atacado de fios e fibras beneficiados"
+  },
+  {
+    "cod": "4689-3/99",
+    "desc": "Comércio atacadista especializado em outros produtos intermediários diversos"
+  },
+  {
+    "cod": "4691-5/00",
+    "desc": "Atacado de mercadorias em geral, com predominância de produtos alimentícios"
+  },
+  {
+    "cod": "4692-3/00",
+    "desc": "Atacado de mercadorias em geral, com predominância de insumos agropecuários"
+  },
+  {
+    "cod": "4693-1/00",
+    "desc": "Atacado de mercadorias em geral, sem predominância de alimentos ou de insumos agropecuários"
+  },
+  {
+    "cod": "4711-3/01",
+    "desc": "Varejo de mercadorias em geral, com predominância de produtos alimentícios - hipermercados"
+  },
+  {
+    "cod": "4711-3/02",
+    "desc": "Varejo de mercadorias em geral, com predominância de produtos alimentícios - supermercados"
+  },
+  {
+    "cod": "4712-1/00",
+    "desc": "Varejo de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns"
+  },
+  {
+    "cod": "4713-0/01",
+    "desc": "Atividade não especificada"
+  },
+  {
+    "cod": "4713-0/02",
+    "desc": "Lojas de variedades, menos lojas de departamentos ou magazines"
+  },
+  {
+    "cod": "4713-0/03",
+    "desc": "Atividade não especificada"
+  },
+  {
+    "cod": "4713-0/04",
+    "desc": "Lojas de departamentos ou magazines, menos lojas francas (Duty free)"
+  },
+  {
+    "cod": "4713-0/05",
+    "desc": "Lojas francas (Duty Free) de aeroportos, portos e em fronteiras terrestres"
+  },
+  {
+    "cod": "4721-1/02",
+    "desc": "Padaria e confeitaria com predominância de revenda"
+  },
+  {
+    "cod": "4721-1/03",
+    "desc": "Varejo de laticínios e frios"
+  },
+  {
+    "cod": "4721-1/04",
+    "desc": "Varejo de doces, balas, bombons e semelhantes"
+  },
+  {
+    "cod": "4722-9/01",
+    "desc": "Varejo de carnes - açougues"
+  },
+  {
+    "cod": "4722-9/02",
+    "desc": "Peixaria"
+  },
+  {
+    "cod": "4723-7/00",
+    "desc": "Varejo de bebidas"
+  },
+  {
+    "cod": "4724-5/00",
+    "desc": "Varejo de hortifrutigranjeiros"
+  },
+  {
+    "cod": "4729-6/01",
+    "desc": "Tabacaria"
+  },
+  {
+    "cod": "4729-6/02",
+    "desc": "Varejo de mercadorias em lojas de conveniência"
+  },
+  {
+    "cod": "4729-6/99",
+    "desc": "Varejo de produtos alimentícios em geral ou especializado em produtos alimentícios diversos"
+  },
+  {
+    "cod": "4731-8/00",
+    "desc": "Varejo de combustíveis para veículos automotores"
+  },
+  {
+    "cod": "4732-6/00",
+    "desc": "Varejo de lubrificantes"
+  },
+  {
+    "cod": "4741-5/00",
+    "desc": "Varejo de tintas e materiais para pintura"
+  },
+  {
+    "cod": "4742-3/00",
+    "desc": "Varejo de material elétrico"
+  },
+  {
+    "cod": "4743-1/00",
+    "desc": "Varejo de vidros"
+  },
+  {
+    "cod": "4744-0/01",
+    "desc": "Varejo de ferragens e ferramentas"
+  },
+  {
+    "cod": "4744-0/02",
+    "desc": "Varejo de madeira e artefatos"
+  },
+  {
+    "cod": "4744-0/03",
+    "desc": "Varejo de materiais hidráulicos"
+  },
+  {
+    "cod": "4744-0/04",
+    "desc": "Varejo de cal, areia, pedra britada, tijolos e telhas"
+  },
+  {
+    "cod": "4744-0/05",
+    "desc": "Varejo de materiais de construção diversos"
+  },
+  {
+    "cod": "4744-0/06",
+    "desc": "Varejo de pedras para revestimento"
+  },
+  {
+    "cod": "4744-0/99",
+    "desc": "Varejo de materiais de construção em geral"
+  },
+  {
+    "cod": "4751-2/01",
+    "desc": "Comércio varejista especializado de equipamentos e suprimentos de informática"
+  },
+  {
+    "cod": "4751-2/02",
+    "desc": "Recarga de cartuchos para equipamentos de informática"
+  },
+  {
+    "cod": "4752-1/00",
+    "desc": "Comércio varejista especializado de equipamentos de telefonia e comunicação"
+  },
+  {
+    "cod": "4753-9/00",
+    "desc": "Comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo"
+  },
+  {
+    "cod": "4754-7/01",
+    "desc": "Varejo de móveis"
+  },
+  {
+    "cod": "4754-7/02",
+    "desc": "Varejo de artigos de colchoaria"
+  },
+  {
+    "cod": "4754-7/03",
+    "desc": "Varejo de artigos de iluminação"
+  },
+  {
+    "cod": "4755-5/01",
+    "desc": "Varejo de tecidos"
+  },
+  {
+    "cod": "4755-5/02",
+    "desc": "Comercio varejista de artigos de armarinho"
+  },
+  {
+    "cod": "4755-5/03",
+    "desc": "Comercio varejista de artigos de cama, mesa e banho"
+  },
+  {
+    "cod": "4756-3/00",
+    "desc": "Comércio varejista especializado de instrumentos musicais e acessórios"
+  },
+  {
+    "cod": "4757-1/00",
+    "desc": "Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônicos para uso doméstico, menos informática e comunicação"
+  },
+  {
+    "cod": "4759-8/01",
+    "desc": "Varejo de artigos de tapeçaria, cortinas e persianas"
+  },
+  {
+    "cod": "4759-8/99",
+    "desc": "Varejo de outros artigos de uso doméstico diversos"
+  },
+  {
+    "cod": "4761-0/01",
+    "desc": "Varejo de livros"
+  },
+  {
+    "cod": "4761-0/02",
+    "desc": "Varejo de jornais e revistas"
+  },
+  {
+    "cod": "4761-0/03",
+    "desc": "Varejo de artigos de papelaria"
+  },
+  {
+    "cod": "4762-8/00",
+    "desc": "Varejo de discos, CDs, DVDs e fitas"
+  },
+  {
+    "cod": "4763-6/01",
+    "desc": "Varejo de brinquedos e artigos recreativos"
+  },
+  {
+    "cod": "4763-6/02",
+    "desc": "Varejo de artigos esportivos"
+  },
+  {
+    "cod": "4763-6/03",
+    "desc": "Varejo de bicicletas e triciclos; peças e acessórios"
+  },
+  {
+    "cod": "4763-6/04",
+    "desc": "Varejo de artigos de caça, pesca e camping"
+  },
+  {
+    "cod": "4763-6/05",
+    "desc": "Varejo de embarcações e outros veículos recreativos; peças e acessórios"
+  },
+  {
+    "cod": "4771-7/01",
+    "desc": "Varejo de produtos farmacêuticos, sem manipulação de fórmulas"
+  },
+  {
+    "cod": "4771-7/02",
+    "desc": "Varejo de produtos farmacêuticos, com manipulação de fórmulas"
+  },
+  {
+    "cod": "4771-7/03",
+    "desc": "Varejo de produtos farmacêuticos homeopáticos"
+  },
+  {
+    "cod": "4771-7/04",
+    "desc": "Varejo de medicamentos veterinários"
+  },
+  {
+    "cod": "4772-5/00",
+    "desc": "Varejo de cosméticos, produtos de perfumaria e de higiene pessoal"
+  },
+  {
+    "cod": "4773-3/00",
+    "desc": "Varejo de artigos médicos e ortopédicos"
+  },
+  {
+    "cod": "4774-1/00",
+    "desc": "Varejo de artigos de óptica"
+  },
+  {
+    "cod": "4781-4/00",
+    "desc": "Varejo de artigos do vestuário e acessórios"
+  },
+  {
+    "cod": "4782-2/01",
+    "desc": "Varejo de calçados"
+  },
+  {
+    "cod": "4782-2/02",
+    "desc": "Varejo de artigos de viagem"
+  },
+  {
+    "cod": "4783-1/01",
+    "desc": "Varejo de artigos de joalheria"
+  },
+  {
+    "cod": "4783-1/02",
+    "desc": "Varejo de artigos de relojoaria"
+  },
+  {
+    "cod": "4784-9/00",
+    "desc": "Varejo de gás liqüefeito de petróleo (GLP)"
+  },
+  {
+    "cod": "4785-7/01",
+    "desc": "Varejo de antiguidades"
+  },
+  {
+    "cod": "4785-7/99",
+    "desc": "Varejo de outros artigos usados"
+  },
+  {
+    "cod": "4789-0/01",
+    "desc": "Varejo de suvenires, bijuterias e artesanatos"
+  },
+  {
+    "cod": "4789-0/02",
+    "desc": "Varejo de plantas e flores naturais"
+  },
+  {
+    "cod": "4789-0/03",
+    "desc": "Varejo de objetos de arte"
+  },
+  {
+    "cod": "4789-0/04",
+    "desc": "Varejo de animais vivos e de artigos e alimentos para animais de estimação"
+  },
+  {
+    "cod": "4789-0/05",
+    "desc": "Varejo de produtos saneantes domissanitários"
+  },
+  {
+    "cod": "4789-0/06",
+    "desc": "Varejo de fogos de artifício e artigos pirotécnicos"
+  },
+  {
+    "cod": "4789-0/07",
+    "desc": "Varejo de equipamentos para escritório"
+  },
+  {
+    "cod": "4789-0/08",
+    "desc": "Varejo de artigos fotográficos e para filmagem"
+  },
+  {
+    "cod": "4789-0/09",
+    "desc": "Varejo de armas e munições"
+  },
+  {
+    "cod": "4789-0/99",
+    "desc": "Varejo de outros produtos diversos"
+  },
+  {
+    "cod": "4911-6/00",
+    "desc": "Transporte ferroviário de carga"
+  },
+  {
+    "cod": "4912-4/01",
+    "desc": "Transporte ferroviário de passageiros intermunicipal e interestadual"
+  },
+  {
+    "cod": "4912-4/02",
+    "desc": "Transporte ferroviário de passageiros municipal e em região metropolitana"
+  },
+  {
+    "cod": "4912-4/03",
+    "desc": "Transporte metroviário"
+  },
+  {
+    "cod": "4921-3/01",
+    "desc": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, municipal"
+  },
+  {
+    "cod": "4921-3/02",
+    "desc": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, intermunicipal em região metropolitana"
+  },
+  {
+    "cod": "4922-1/01",
+    "desc": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, intermunicipal, menos em região metropolitana"
+  },
+  {
+    "cod": "4922-1/02",
+    "desc": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, interestadual"
+  },
+  {
+    "cod": "4922-1/03",
+    "desc": "Transporte rodoviário coletivo de passageiros, com itinerário fixo, internacional"
+  },
+  {
+    "cod": "4923-0/01",
+    "desc": "Serviços de táxi"
+  },
+  {
+    "cod": "4923-0/02",
+    "desc": "Serviços de transporte de passageiros - locação de automóveis com motorista"
+  },
+  {
+    "cod": "4924-8/00",
+    "desc": "Transporte escolar"
+  },
+  {
+    "cod": "4929-9/01",
+    "desc": "Transporte rodoviário coletivo de passageiros, sob regime de fretamento, municipal"
+  },
+  {
+    "cod": "4929-9/02",
+    "desc": "Transporte rodoviário coletivo de passageiros, sob regime de fretamento, intermunicipal, interestadual e internacional"
+  },
+  {
+    "cod": "4929-9/03",
+    "desc": "Organização de excursões em veículos rodoviários próprios, municipal"
+  },
+  {
+    "cod": "4929-9/04",
+    "desc": "Organização de excursões em veículos rodoviários próprios, intermunicipal, interestadual e internacional"
+  },
+  {
+    "cod": "4929-9/99",
+    "desc": "Outros transportes rodoviários de passageiros diversos"
+  },
+  {
+    "cod": "4930-2/01",
+    "desc": "Transporte rodoviário de carga, menos produtos perigosos e mudanças, municipal"
+  },
+  {
+    "cod": "4930-2/02",
+    "desc": "Transporte rodoviário de carga, menos produtos perigosos e mudanças, intermunicipal, interestadual e internacional"
+  },
+  {
+    "cod": "4930-2/03",
+    "desc": "Transporte rodoviário de produtos perigosos"
+  },
+  {
+    "cod": "4930-2/04",
+    "desc": "Transporte rodoviário de mudanças"
+  },
+  {
+    "cod": "4940-0/00",
+    "desc": "Transporte dutoviário"
+  },
+  {
+    "cod": "4950-7/00",
+    "desc": "Trens turísticos, teleféricos e similares"
+  },
+  {
+    "cod": "5011-4/01",
+    "desc": "Transporte marítimo de cabotagem - Carga"
+  },
+  {
+    "cod": "5011-4/02",
+    "desc": "Transporte marítimo de cabotagem - Passageiros"
+  },
+  {
+    "cod": "5012-2/01",
+    "desc": "Transporte marítimo de longo curso - Carga"
+  },
+  {
+    "cod": "5012-2/02",
+    "desc": "Transporte marítimo de longo curso - Passageiros"
+  },
+  {
+    "cod": "5021-1/01",
+    "desc": "Transporte por navegação interior de carga, municipal, menos travessia"
+  },
+  {
+    "cod": "5021-1/02",
+    "desc": "Transporte por navegação interior de carga, intermunicipal, interestadual e internacional, menos travessia"
+  },
+  {
+    "cod": "5022-0/01",
+    "desc": "Transporte por navegação interior de passageiros em linhas regulares, municipal, menos travessia"
+  },
+  {
+    "cod": "5022-0/02",
+    "desc": "Transporte por navegação interior de passageiros em linhas regulares, intermunicipal, interestadual e internacional, menos travessia"
+  },
+  {
+    "cod": "5030-1/01",
+    "desc": "Navegação de apoio marítimo"
+  },
+  {
+    "cod": "5030-1/02",
+    "desc": "Navegação de apoio portuário"
+  },
+  {
+    "cod": "5030-1/03",
+    "desc": "Serviços de rebocadores e empurradores"
+  },
+  {
+    "cod": "5091-2/01",
+    "desc": "Transporte por navegação de travessia, municipal"
+  },
+  {
+    "cod": "5091-2/02",
+    "desc": "Transporte por navegação de travessia, intermunicipal, interestadual e internacional"
+  },
+  {
+    "cod": "5099-8/01",
+    "desc": "Transporte aquaviário para passeios turísticos"
+  },
+  {
+    "cod": "5099-8/99",
+    "desc": "Outros transportes aquaviários diversos"
+  },
+  {
+    "cod": "5111-1/00",
+    "desc": "Transporte aéreo de passageiros regular"
+  },
+  {
+    "cod": "5112-9/01",
+    "desc": "Serviços de táxi aéreo e locação de aeronaves com tripulação"
+  },
+  {
+    "cod": "5112-9/99",
+    "desc": "Outros serviços de transporte aéreo de passageiros não regular"
+  },
+  {
+    "cod": "5120-0/00",
+    "desc": "Transporte aéreo de carga"
+  },
+  {
+    "cod": "5130-7/00",
+    "desc": "Transporte espacial"
+  },
+  {
+    "cod": "5211-7/01",
+    "desc": "Armazéns gerais - emissão de warrant"
+  },
+  {
+    "cod": "5211-7/02",
+    "desc": "Guarda-móveis"
+  },
+  {
+    "cod": "5211-7/99",
+    "desc": "Depósitos de mercadorias para terceiros, menos armazéns gerais e guarda-móveis"
+  },
+  {
+    "cod": "5212-5/00",
+    "desc": "Carga e descarga"
+  },
+  {
+    "cod": "5221-4/00",
+    "desc": "Concessionárias de rodovias, pontes, túneis e serviços relacionados"
+  },
+  {
+    "cod": "5222-2/00",
+    "desc": "Terminais rodoviários e ferroviários"
+  },
+  {
+    "cod": "5223-1/00",
+    "desc": "Estacionamento de veículos"
+  },
+  {
+    "cod": "5229-0/01",
+    "desc": "Serviços de apoio ao transporte por táxi, inclusive centrais de chamada"
+  },
+  {
+    "cod": "5229-0/02",
+    "desc": "Serviços de reboque de veículos"
+  },
+  {
+    "cod": "5229-0/99",
+    "desc": "Outras atividades auxiliares dos transportes terrestres diversas"
+  },
+  {
+    "cod": "5231-1/01",
+    "desc": "Administração da infraestrutura portuária"
+  },
+  {
+    "cod": "5231-1/02",
+    "desc": "Atividades do Operador Portuário"
+  },
+  {
+    "cod": "5231-1/03",
+    "desc": "Gestão de terminais aquaviários"
+  },
+  {
+    "cod": "5232-0/00",
+    "desc": "Serviços de agenciamento marítimo"
+  },
+  {
+    "cod": "5239-7/01",
+    "desc": "Serviços de praticagem"
+  },
+  {
+    "cod": "5239-7/99",
+    "desc": "Atividades auxiliares dos transportes aquaviários diversas"
+  },
+  {
+    "cod": "5240-1/01",
+    "desc": "Operação dos aeroportos e campos de aterrissagem"
+  },
+  {
+    "cod": "5240-1/99",
+    "desc": "Atividades auxiliares dos transportes aéreos, menos operação dos aeroportos e campos de aterrissagem"
+  },
+  {
+    "cod": "5250-8/01",
+    "desc": "Comissaria de despachos"
+  },
+  {
+    "cod": "5250-8/02",
+    "desc": "Serviços de despachantes aduaneiros"
+  },
+  {
+    "cod": "5250-8/03",
+    "desc": "Agenciamento de cargas, menos para o transporte marítimo"
+  },
+  {
+    "cod": "5250-8/04",
+    "desc": "Organização logística do transporte de carga"
+  },
+  {
+    "cod": "5250-8/05",
+    "desc": "Operador de transporte multimodal - OTM"
+  },
+  {
+    "cod": "5310-5/01",
+    "desc": "Atividades do Correio Nacional"
+  },
+  {
+    "cod": "5310-5/02",
+    "desc": "Serviços de franqueadas e permissionárias do Correio Nacional"
+  },
+  {
+    "cod": "5320-2/01",
+    "desc": "Serviços de malote não realizados pelo Correio Nacional"
+  },
+  {
+    "cod": "5320-2/02",
+    "desc": "Serviços de entrega rápida"
+  },
+  {
+    "cod": "5510-8/01",
+    "desc": "Hotéis"
+  },
+  {
+    "cod": "5510-8/02",
+    "desc": "Apart-hotéis"
+  },
+  {
+    "cod": "5510-8/03",
+    "desc": "Motéis"
+  },
+  {
+    "cod": "5590-6/01",
+    "desc": "Albergues, menos assistenciais"
+  },
+  {
+    "cod": "5590-6/02",
+    "desc": "Campings"
+  },
+  {
+    "cod": "5590-6/03",
+    "desc": "Pensões (alojamento)"
+  },
+  {
+    "cod": "5590-6/99",
+    "desc": "Outros alojamentos diversos"
+  },
+  {
+    "cod": "5611-2/01",
+    "desc": "Restaurantes e similares"
+  },
+  {
+    "cod": "5611-2/02",
+    "desc": "Atividade não especificada"
+  },
+  {
+    "cod": "5611-2/03",
+    "desc": "Lanchonetes, casas de chá, de sucos e similares"
+  },
+  {
+    "cod": "5611-2/04",
+    "desc": "Bares e outros estabelecimentos especializados em servir bebidas, sem entretenimento"
+  },
+  {
+    "cod": "5611-2/05",
+    "desc": "Bares e outros estabelecimentos especializados em servir bebidas, com entretenimento"
+  },
+  {
+    "cod": "5612-1/00",
+    "desc": "Serviços ambulantes de alimentação"
+  },
+  {
+    "cod": "5620-1/01",
+    "desc": "Fornecimento de alimentos preparados preponderantemente para empresas"
+  },
+  {
+    "cod": "5620-1/02",
+    "desc": "Serviços de alimentação para eventos e recepções - bufê"
+  },
+  {
+    "cod": "5620-1/03",
+    "desc": "Cantinas - serviços de alimentação privativos"
+  },
+  {
+    "cod": "5620-1/04",
+    "desc": "Fornecimento de alimentos preparados preponderantemente para consumo domiciliar"
+  },
+  {
+    "cod": "5811-5/00",
+    "desc": "Edição de livros"
+  },
+  {
+    "cod": "5812-3/01",
+    "desc": "Edição de jornais diários"
+  },
+  {
+    "cod": "5812-3/02",
+    "desc": "Edição de jornais não diários"
+  },
+  {
+    "cod": "5813-1/00",
+    "desc": "Edição de revistas"
+  },
+  {
+    "cod": "5819-1/00",
+    "desc": "Edição de cadastros, listas e outros produtos gráficos"
+  },
+  {
+    "cod": "5821-2/00",
+    "desc": "Edição integrada à impressão de livros"
+  },
+  {
+    "cod": "5822-1/01",
+    "desc": "Edição integrada à impressão de jornais diários"
+  },
+  {
+    "cod": "5822-1/02",
+    "desc": "Edição integrada à impressão de jornais não diários"
+  },
+  {
+    "cod": "5823-9/00",
+    "desc": "Edição integrada à impressão de revistas"
+  },
+  {
+    "cod": "5829-8/00",
+    "desc": "Edição integrada à impressão de cadastros, listas e outros produtos gráficos"
+  },
+  {
+    "cod": "5911-1/01",
+    "desc": "Estúdios cinematográficos"
+  },
+  {
+    "cod": "5911-1/02",
+    "desc": "Produção de filmes para publicidade"
+  },
+  {
+    "cod": "5911-1/99",
+    "desc": "Serviços de produção cinematográfica, de vídeos e de programas de televisão diversas"
+  },
+  {
+    "cod": "5912-0/01",
+    "desc": "Serviços de dublagem"
+  },
+  {
+    "cod": "5912-0/02",
+    "desc": "Serviços de mixagem sonora em produção audiovisual"
+  },
+  {
+    "cod": "5912-0/99",
+    "desc": "Serviços de pós-produção cinematográfica, de vídeos e de programas de televisão diversas"
+  },
+  {
+    "cod": "5913-8/00",
+    "desc": "Distribuição cinematográfica, de vídeo e de programas de televisão"
+  },
+  {
+    "cod": "5914-6/00",
+    "desc": "Serviços de exibição cinematográfica"
+  },
+  {
+    "cod": "5920-1/00",
+    "desc": "Serviços de gravação de som e de edição de música"
+  },
+  {
+    "cod": "6010-1/00",
+    "desc": "Serviços de rádio"
+  },
+  {
+    "cod": "6021-7/00",
+    "desc": "Serviços de televisão aberta"
+  },
+  {
+    "cod": "6022-5/01",
+    "desc": "Programadoras"
+  },
+  {
+    "cod": "6022-5/02",
+    "desc": "Atividades relacionadas à televisão por assinatura, menos programadoras"
+  },
+  {
+    "cod": "6110-8/01",
+    "desc": "Serviços de telefonia fixa comutada - STFC"
+  },
+  {
+    "cod": "6110-8/02",
+    "desc": "Serviços de redes de transporte de telecomunicações - SRTT"
+  },
+  {
+    "cod": "6110-8/03",
+    "desc": "Serviços de comunicação multimídia - SCM"
+  },
+  {
+    "cod": "6110-8/99",
+    "desc": "Serviços de telecomunicações por fio diversos"
+  },
+  {
+    "cod": "6120-5/01",
+    "desc": "Telefonia móvel celular"
+  },
+  {
+    "cod": "6120-5/02",
+    "desc": "Serviço móvel especializado - SME"
+  },
+  {
+    "cod": "6120-5/99",
+    "desc": "Serviços de telecomunicações sem fio diversos"
+  },
+  {
+    "cod": "6130-2/00",
+    "desc": "Telecomunicações por satélite"
+  },
+  {
+    "cod": "6141-8/00",
+    "desc": "Operadoras de televisão por assinatura por cabo"
+  },
+  {
+    "cod": "6142-6/00",
+    "desc": "Operadoras de televisão por assinatura por micro-ondas"
+  },
+  {
+    "cod": "6143-4/00",
+    "desc": "Operadoras de televisão por assinatura por satélite"
+  },
+  {
+    "cod": "6190-6/01",
+    "desc": "Provedores de acesso às redes de comunicações"
+  },
+  {
+    "cod": "6190-6/02",
+    "desc": "Provedores de voz sobre protocolo Internet - VOIP"
+  },
+  {
+    "cod": "6190-6/99",
+    "desc": "Outras atividades de telecomunicações diversas"
+  },
+  {
+    "cod": "6201-5/01",
+    "desc": "Desenvolvimento de programas de computador sob encomenda"
+  },
+  {
+    "cod": "6201-5/02",
+    "desc": "Web design"
+  },
+  {
+    "cod": "6202-3/00",
+    "desc": "Desenvolvimento e licenciamento de programas de computador customizáveis"
+  },
+  {
+    "cod": "6203-1/00",
+    "desc": "Desenvolvimento e licenciamento de programas de computador não customizáveis"
+  },
+  {
+    "cod": "6204-0/00",
+    "desc": "Consultoria em tecnologia da informação"
+  },
+  {
+    "cod": "6209-1/00",
+    "desc": "Suporte técnico, manutenção e outros serviços em tecnologia da informação"
+  },
+  {
+    "cod": "6311-9/00",
+    "desc": "Tratamento de dados, provedores de serviços de aplicação e serviços de hospedagem na Internet"
+  },
+  {
+    "cod": "6319-4/00",
+    "desc": "Portais, provedores de conteúdo e outros serviços de informação na Internet"
+  },
+  {
+    "cod": "6391-7/00",
+    "desc": "Agências de notícias"
+  },
+  {
+    "cod": "6399-2/00",
+    "desc": "Outras atividades de prestação de serviços de informação diversas"
+  },
+  {
+    "cod": "6410-7/00",
+    "desc": "Banco Central"
+  },
+  {
+    "cod": "6421-2/00",
+    "desc": "Bancos comerciais"
+  },
+  {
+    "cod": "6422-1/00",
+    "desc": "Bancos múltiplos, com carteira comercial"
+  },
+  {
+    "cod": "6423-9/00",
+    "desc": "Caixas econômicas"
+  },
+  {
+    "cod": "6424-7/01",
+    "desc": "Bancos cooperativos"
+  },
+  {
+    "cod": "6424-7/02",
+    "desc": "Cooperativas centrais de crédito"
+  },
+  {
+    "cod": "6424-7/03",
+    "desc": "Cooperativas de crédito mútuo"
+  },
+  {
+    "cod": "6424-7/04",
+    "desc": "Cooperativas de crédito rural"
+  },
+  {
+    "cod": "6431-0/00",
+    "desc": "Bancos múltiplos, sem carteira comercial"
+  },
+  {
+    "cod": "6432-8/00",
+    "desc": "Bancos de investimento"
+  },
+  {
+    "cod": "6433-6/00",
+    "desc": "Bancos de desenvolvimento"
+  },
+  {
+    "cod": "6434-4/00",
+    "desc": "Agências de fomento"
+  },
+  {
+    "cod": "6435-2/01",
+    "desc": "Sociedades de crédito imobiliário"
+  },
+  {
+    "cod": "6435-2/02",
+    "desc": "Associações de poupança e empréstimo"
+  },
+  {
+    "cod": "6435-2/03",
+    "desc": "Companhias hipotecárias"
+  },
+  {
+    "cod": "6436-1/00",
+    "desc": "Sociedades de crédito, financiamento e investimento - financeiras"
+  },
+  {
+    "cod": "6437-9/00",
+    "desc": "Sociedades de crédito ao microempreendedor"
+  },
+  {
+    "cod": "6438-7/01",
+    "desc": "Bancos de câmbio"
+  },
+  {
+    "cod": "6438-7/02",
+    "desc": "Atividade não especificada"
+  },
+  {
+    "cod": "6438-7/99",
+    "desc": "Outras instituições de intermediação não monetária diversas"
+  },
+  {
+    "cod": "6440-9/00",
+    "desc": "Arrendamento mercantil"
+  },
+  {
+    "cod": "6450-6/00",
+    "desc": "Sociedades de capitalização"
+  },
+  {
+    "cod": "6461-1/00",
+    "desc": "Holdings de instituições financeiras"
+  },
+  {
+    "cod": "6462-0/00",
+    "desc": "Holdings de instituições não financeiras"
+  },
+  {
+    "cod": "6463-8/00",
+    "desc": "Outras sociedades de participação, menos holdings"
+  },
+  {
+    "cod": "6470-1/01",
+    "desc": "Fundos de investimento, menos previdenciários e imobiliários"
+  },
+  {
+    "cod": "6470-1/02",
+    "desc": "Fundos de investimento previdenciários"
+  },
+  {
+    "cod": "6470-1/03",
+    "desc": "Fundos de investimento imobiliários"
+  },
+  {
+    "cod": "6491-3/00",
+    "desc": "Sociedades de fomento mercantil - factoring"
+  },
+  {
+    "cod": "6492-1/00",
+    "desc": "Securitização de créditos"
+  },
+  {
+    "cod": "6493-0/00",
+    "desc": "Administração de consórcios para aquisição de bens e direitos"
+  },
+  {
+    "cod": "6499-9/01",
+    "desc": "Clubes de investimento"
+  },
+  {
+    "cod": "6499-9/02",
+    "desc": "Sociedades de investimento"
+  },
+  {
+    "cod": "6499-9/03",
+    "desc": "Fundo garantidor de crédito"
+  },
+  {
+    "cod": "6499-9/04",
+    "desc": "Caixas de financiamento de corporações"
+  },
+  {
+    "cod": "6499-9/05",
+    "desc": "Concessão de crédito pelas OSCIP"
+  },
+  {
+    "cod": "6499-9/99",
+    "desc": "Outras atividades de serviços financeiros diversas"
+  },
+  {
+    "cod": "6511-1/01",
+    "desc": "Sociedade seguradora de seguros vida"
+  },
+  {
+    "cod": "6511-1/02",
+    "desc": "Planos de auxílio-funeral"
+  },
+  {
+    "cod": "6512-0/00",
+    "desc": "Sociedade seguradora de seguros não vida"
+  },
+  {
+    "cod": "6520-1/00",
+    "desc": "Sociedade seguradora de seguros-saúde"
+  },
+  {
+    "cod": "6530-8/00",
+    "desc": "Resseguros"
+  },
+  {
+    "cod": "6541-3/00",
+    "desc": "Previdência complementar fechada"
+  },
+  {
+    "cod": "6542-1/00",
+    "desc": "Previdência complementar aberta"
+  },
+  {
+    "cod": "6550-2/00",
+    "desc": "Planos de saúde"
+  },
+  {
+    "cod": "6611-8/01",
+    "desc": "Bolsa de valores"
+  },
+  {
+    "cod": "6611-8/02",
+    "desc": "Bolsa de mercadorias"
+  },
+  {
+    "cod": "6611-8/03",
+    "desc": "Bolsa de mercadorias e futuros"
+  },
+  {
+    "cod": "6611-8/04",
+    "desc": "Administração de mercados de balcão organizados"
+  },
+  {
+    "cod": "6612-6/01",
+    "desc": "Corretoras de títulos e valores mobiliários"
+  },
+  {
+    "cod": "6612-6/02",
+    "desc": "Distribuidoras de títulos e valores mobiliários"
+  },
+  {
+    "cod": "6612-6/03",
+    "desc": "Corretoras de câmbio"
+  },
+  {
+    "cod": "6612-6/04",
+    "desc": "Corretoras de contratos de mercadorias"
+  },
+  {
+    "cod": "6612-6/05",
+    "desc": "Agentes de investimentos em aplicações financeiras"
+  },
+  {
+    "cod": "6613-4/00",
+    "desc": "Administração de cartões de crédito"
+  },
+  {
+    "cod": "6619-3/01",
+    "desc": "Serviços de liquidação e custódia"
+  },
+  {
+    "cod": "6619-3/02",
+    "desc": "Correspondentes de instituições financeiras"
+  },
+  {
+    "cod": "6619-3/03",
+    "desc": "Representações de bancos estrangeiros"
+  },
+  {
+    "cod": "6619-3/04",
+    "desc": "Caixas eletrônicos"
+  },
+  {
+    "cod": "6619-3/05",
+    "desc": "Operadoras de cartões de débito"
+  },
+  {
+    "cod": "6619-3/99",
+    "desc": "Outras atividades auxiliares dos serviços financeiros diversas"
+  },
+  {
+    "cod": "6621-5/01",
+    "desc": "Peritos e avaliadores de seguros"
+  },
+  {
+    "cod": "6621-5/02",
+    "desc": "Auditoria e consultoria atuarial"
+  },
+  {
+    "cod": "6622-3/00",
+    "desc": "Corretores e agentes de seguros, de planos de previdência complementar e de saúde"
+  },
+  {
+    "cod": "6629-1/00",
+    "desc": "Atividades auxiliares dos seguros, da previdência complementar e dos planos de saúde diversas"
+  },
+  {
+    "cod": "6630-4/00",
+    "desc": "Serviços de administração de fundos por contrato ou comissão"
+  },
+  {
+    "cod": "6810-2/01",
+    "desc": "Compra e venda de imóveis próprios"
+  },
+  {
+    "cod": "6810-2/02",
+    "desc": "Aluguel de imóveis próprios"
+  },
+  {
+    "cod": "6810-2/03",
+    "desc": "Loteamento de imóveis próprios"
+  },
+  {
+    "cod": "6821-8/01",
+    "desc": "Corretagem na compra e venda e avaliação de imóveis"
+  },
+  {
+    "cod": "6821-8/02",
+    "desc": "Corretagem no aluguel de imóveis"
+  },
+  {
+    "cod": "6822-6/00",
+    "desc": "Gestão e administração da propriedade imobiliária"
+  },
+  {
+    "cod": "6911-7/01",
+    "desc": "Serviços advocatícios"
+  },
+  {
+    "cod": "6911-7/02",
+    "desc": "Atividades auxiliares da justiça"
+  },
+  {
+    "cod": "6911-7/03",
+    "desc": "Agente de propriedade industrial"
+  },
+  {
+    "cod": "6912-5/00",
+    "desc": "Cartórios"
+  },
+  {
+    "cod": "6920-6/01",
+    "desc": "Serviços de contabilidade"
+  },
+  {
+    "cod": "6920-6/02",
+    "desc": "Serviços de consultoria e auditoria contábil e tributária"
+  },
+  {
+    "cod": "7020-4/00",
+    "desc": "Serviços de consultoria em gestão empresarial, menos consultoria técnica específica"
+  },
+  {
+    "cod": "7111-1/00",
+    "desc": "Serviços de arquitetura"
+  },
+  {
+    "cod": "7112-0/00",
+    "desc": "Serviços de engenharia"
+  },
+  {
+    "cod": "7119-7/01",
+    "desc": "Serviços de cartografia, topografia e geodésia"
+  },
+  {
+    "cod": "7119-7/02",
+    "desc": "Serviços de estudos geológicos"
+  },
+  {
+    "cod": "7119-7/03",
+    "desc": "Serviços de desenho técnico relacionados à arquitetura e engenharia"
+  },
+  {
+    "cod": "7119-7/04",
+    "desc": "Serviços de perícia técnica relacionados à segurança do trabalho"
+  },
+  {
+    "cod": "7119-7/99",
+    "desc": "Atividades técnicas relacionadas à engenharia e arquitetura diversas"
+  },
+  {
+    "cod": "7120-1/00",
+    "desc": "Testes e análises técnicas"
+  },
+  {
+    "cod": "7210-0/00",
+    "desc": "Pesquisa e desenvolvimento experimental em ciências físicas e naturais"
+  },
+  {
+    "cod": "7220-7/00",
+    "desc": "Pesquisa e desenvolvimento experimental em ciências sociais e humanas"
+  },
+  {
+    "cod": "7311-4/00",
+    "desc": "Agências de publicidade"
+  },
+  {
+    "cod": "7312-2/00",
+    "desc": "Agenciamento de espaços para publicidade, menos em veículos de comunicação"
+  },
+  {
+    "cod": "7319-0/01",
+    "desc": "Pecuária de estandes para feiras e exposições"
+  },
+  {
+    "cod": "7319-0/02",
+    "desc": "Promoção de vendas"
+  },
+  {
+    "cod": "7319-0/03",
+    "desc": "Marketing direto"
+  },
+  {
+    "cod": "7319-0/04",
+    "desc": "Consultoria em publicidade"
+  },
+  {
+    "cod": "7319-0/99",
+    "desc": "Outras atividades de publicidade diversas"
+  },
+  {
+    "cod": "7320-3/00",
+    "desc": "Pesquisas de mercado e de opinião pública"
+  },
+  {
+    "cod": "7410-2/03",
+    "desc": "Design de produto"
+  },
+  {
+    "cod": "7410-2/99",
+    "desc": "Serviços de design diversas"
+  },
+  {
+    "cod": "7410-2/02",
+    "desc": "Design de interiores"
+  },
+  {
+    "cod": "7420-0/01",
+    "desc": "Serviços de produção de fotografias, menos aérea e submarina"
+  },
+  {
+    "cod": "7420-0/02",
+    "desc": "Serviços de produção de fotografias aéreas e submarinas"
+  },
+  {
+    "cod": "7420-0/03",
+    "desc": "Laboratórios fotográficos"
+  },
+  {
+    "cod": "7420-0/04",
+    "desc": "Filmagem de festas e eventos"
+  },
+  {
+    "cod": "7420-0/05",
+    "desc": "Serviços de microfilmagem"
+  },
+  {
+    "cod": "7490-1/01",
+    "desc": "Serviços de tradução, interpretação e similares"
+  },
+  {
+    "cod": "7490-1/02",
+    "desc": "Escafandria e mergulho"
+  },
+  {
+    "cod": "7490-1/03",
+    "desc": "Serviços de agronomia e de consultoria às atividades agrícolas e pecuárias"
+  },
+  {
+    "cod": "7490-1/04",
+    "desc": "Serviços de intermediação e agenciamento de serviços e negócios em geral, menos imobiliários"
+  },
+  {
+    "cod": "7490-1/05",
+    "desc": "Agenciamento de profissionais para atividades esportivas, culturais e artísticas"
+  },
+  {
+    "cod": "7490-1/99",
+    "desc": "Outras atividades profissionais, científicas e técnicas diversas"
+  },
+  {
+    "cod": "7500-1/00",
+    "desc": "Atividades veterinárias"
+  },
+  {
+    "cod": "7711-0/00",
+    "desc": "Locação de automóveis sem condutor"
+  },
+  {
+    "cod": "7719-5/01",
+    "desc": "Locação de embarcações sem tripulação, menos para fins recreativos"
+  },
+  {
+    "cod": "7719-5/02",
+    "desc": "Locação de aeronaves sem tripulação"
+  },
+  {
+    "cod": "7719-5/99",
+    "desc": "Locação de outros meios de transporte diversos, sem condutor"
+  },
+  {
+    "cod": "7721-7/00",
+    "desc": "Aluguel de equipamentos recreativos e esportivos"
+  },
+  {
+    "cod": "7722-5/00",
+    "desc": "Aluguel de fitas de vídeo, DVDs e similares"
+  },
+  {
+    "cod": "7723-3/00",
+    "desc": "Aluguel de objetos do vestuário, jóias e acessórios"
+  },
+  {
+    "cod": "7729-2/01",
+    "desc": "Aluguel de aparelhos de jogos eletrônicos"
+  },
+  {
+    "cod": "7729-2/02",
+    "desc": "Aluguel de móveis, utensílios e aparelhos de uso doméstico e pessoal; instrumentos musicais"
+  },
+  {
+    "cod": "7729-2/03",
+    "desc": "Aluguel de material médico"
+  },
+  {
+    "cod": "7729-2/99",
+    "desc": "Aluguel de outros objetos pessoais e domésticos diversos"
+  },
+  {
+    "cod": "7731-4/00",
+    "desc": "Aluguel de máquinas e equipamentos agrícolas sem operador"
+  },
+  {
+    "cod": "7732-2/01",
+    "desc": "Aluguel de máquinas e equipamentos para construção sem operador, menos andaimes"
+  },
+  {
+    "cod": "7732-2/02",
+    "desc": "Aluguel de andaimes"
+  },
+  {
+    "cod": "7733-1/00",
+    "desc": "Aluguel de máquinas e equipamentos para escritório"
+  },
+  {
+    "cod": "7739-0/01",
+    "desc": "Aluguel de máquinas e equipamentos para extração de minérios e petróleo, sem operador"
+  },
+  {
+    "cod": "7739-0/02",
+    "desc": "Aluguel de equipamentos científicos, médicos e hospitalares, sem operador"
+  },
+  {
+    "cod": "7739-0/03",
+    "desc": "Aluguel de palcos, coberturas e outras estruturas de uso temporário, menos andaimes"
+  },
+  {
+    "cod": "7739-0/99",
+    "desc": "Aluguel de outras máquinas e equipamentos comerciais e industriais diversos, sem operador"
+  },
+  {
+    "cod": "7740-3/00",
+    "desc": "Gestão de ativos intangíveis não financeiros"
+  },
+  {
+    "cod": "7810-8/00",
+    "desc": "Seleção e agenciamento de mão de obra"
+  },
+  {
+    "cod": "7820-5/00",
+    "desc": "Locação de mão de obra temporária"
+  },
+  {
+    "cod": "7830-2/00",
+    "desc": "Fornecimento e gestão de recursos humanos para terceiros"
+  },
+  {
+    "cod": "7911-2/00",
+    "desc": "Agências de viagens"
+  },
+  {
+    "cod": "7912-1/00",
+    "desc": "Operadores turísticos"
+  },
+  {
+    "cod": "7990-2/00",
+    "desc": "Serviços de reservas e outros serviços de turismo diversos"
+  },
+  {
+    "cod": "8011-1/01",
+    "desc": "Serviços de vigilância e segurança privada"
+  },
+  {
+    "cod": "8011-1/02",
+    "desc": "Serviços de adestramento de cães de guarda"
+  },
+  {
+    "cod": "8012-9/00",
+    "desc": "Serviços de transporte de valores"
+  },
+  {
+    "cod": "8020-0/01",
+    "desc": "Serviços de monitoramento de sistemas de segurança eletrônico"
+  },
+  {
+    "cod": "8020-0/02",
+    "desc": "Outras atividades de serviços de segurança"
+  },
+  {
+    "cod": "8030-7/00",
+    "desc": "Serviços de investigação particular"
+  },
+  {
+    "cod": "8111-7/00",
+    "desc": "Serviços combinados para apoio a edifícios, menos condomínios prediais"
+  },
+  {
+    "cod": "8112-5/00",
+    "desc": "Condomínios prediais"
+  },
+  {
+    "cod": "8121-4/00",
+    "desc": "Limpeza em prédios e em domicílios"
+  },
+  {
+    "cod": "8122-2/00",
+    "desc": "Imunização e controle de pragas urbanas"
+  },
+  {
+    "cod": "8129-0/00",
+    "desc": "Serviços de limpeza diversas"
+  },
+  {
+    "cod": "8130-3/00",
+    "desc": "Atividades paisagísticas"
+  },
+  {
+    "cod": "8211-3/00",
+    "desc": "Serviços combinados de escritório e apoio administrativo"
+  },
+  {
+    "cod": "8219-9/01",
+    "desc": "Fotocópias"
+  },
+  {
+    "cod": "8219-9/99",
+    "desc": "Processamento de documentos e serviços especializados de apoio administrativo diversos"
+  },
+  {
+    "cod": "8220-2/00",
+    "desc": "Serviços de teleatendimento"
+  },
+  {
+    "cod": "8230-0/01",
+    "desc": "Serviços de organização de feiras, congressos, exposições e festas"
+  },
+  {
+    "cod": "8230-0/02",
+    "desc": "Casas de festas e eventos"
+  },
+  {
+    "cod": "8291-1/00",
+    "desc": "Serviços de cobrança e informações cadastrais"
+  },
+  {
+    "cod": "8292-0/00",
+    "desc": "Envasamento e empacotamento por contrato"
+  },
+  {
+    "cod": "8299-7/01",
+    "desc": "Medição de consumo de energia elétrica, gás e água"
+  },
+  {
+    "cod": "8299-7/02",
+    "desc": "Emissão de vales-alimentação, vales-transporte e similares"
+  },
+  {
+    "cod": "8299-7/03",
+    "desc": "Serviços de gravação de carimbos, menos confecção"
+  },
+  {
+    "cod": "8299-7/04",
+    "desc": "Leiloeiros independentes"
+  },
+  {
+    "cod": "8299-7/05",
+    "desc": "Serviços de levantamento de fundos por contrato"
+  },
+  {
+    "cod": "8299-7/06",
+    "desc": "Casas lotéricas"
+  },
+  {
+    "cod": "8299-7/07",
+    "desc": "Salas de acesso à Internet"
+  },
+  {
+    "cod": "8299-7/99",
+    "desc": "Outras atividades de serviços prestados principalmente às empresas diversas"
+  },
+  {
+    "cod": "8411-6/00",
+    "desc": "Administração pública em geral"
+  },
+  {
+    "cod": "8412-4/00",
+    "desc": "Regulação das atividades de saúde, educação, serviços culturais e outros serviços sociais"
+  },
+  {
+    "cod": "8413-2/00",
+    "desc": "Regulação das atividades econômicas"
+  },
+  {
+    "cod": "8421-3/00",
+    "desc": "Relações exteriores"
+  },
+  {
+    "cod": "8422-1/00",
+    "desc": "Defesa"
+  },
+  {
+    "cod": "8423-0/00",
+    "desc": "Justiça"
+  },
+  {
+    "cod": "8424-8/00",
+    "desc": "Segurança e ordem pública"
+  },
+  {
+    "cod": "8425-6/00",
+    "desc": "Defesa Civil"
+  },
+  {
+    "cod": "8430-2/00",
+    "desc": "Seguridade social obrigatória"
+  },
+  {
+    "cod": "8511-2/00",
+    "desc": "Educação infantil - creche"
+  },
+  {
+    "cod": "8512-1/00",
+    "desc": "Educação infantil - pré-escola"
+  },
+  {
+    "cod": "8513-9/00",
+    "desc": "Ensino fundamental"
+  },
+  {
+    "cod": "8520-1/00",
+    "desc": "Ensino médio"
+  },
+  {
+    "cod": "8531-7/00",
+    "desc": "Educação superior - graduação"
+  },
+  {
+    "cod": "8532-5/00",
+    "desc": "Educação superior - graduação e pós-graduação"
+  },
+  {
+    "cod": "8533-3/00",
+    "desc": "Educação superior - pós-graduação e extensão"
+  },
+  {
+    "cod": "8541-4/00",
+    "desc": "Educação profissional de nível técnico"
+  },
+  {
+    "cod": "8542-2/00",
+    "desc": "Educação profissional de nível tecnológico"
+  },
+  {
+    "cod": "8550-3/01",
+    "desc": "Administração de caixas escolares"
+  },
+  {
+    "cod": "8550-3/02",
+    "desc": "Serviços de apoio à educação, menos caixas escolares"
+  },
+  {
+    "cod": "8591-1/00",
+    "desc": "Ensino de esportes"
+  },
+  {
+    "cod": "8592-9/01",
+    "desc": "Ensino de dança"
+  },
+  {
+    "cod": "8592-9/02",
+    "desc": "Ensino de artes cênicas, menos dança"
+  },
+  {
+    "cod": "8592-9/03",
+    "desc": "Ensino de música"
+  },
+  {
+    "cod": "8592-9/99",
+    "desc": "Ensino de arte e cultura não especificado anteriormente"
+  },
+  {
+    "cod": "8593-7/00",
+    "desc": "Ensino de idiomas"
+  },
+  {
+    "cod": "8599-6/01",
+    "desc": "Formação de condutores"
+  },
+  {
+    "cod": "8599-6/02",
+    "desc": "Cursos de pilotagem"
+  },
+  {
+    "cod": "8599-6/03",
+    "desc": "Treinamento em informática"
+  },
+  {
+    "cod": "8599-6/04",
+    "desc": "Treinamento em desenvolvimento profissional e gerencial"
+  },
+  {
+    "cod": "8599-6/05",
+    "desc": "Cursos preparatórios para concursos"
+  },
+  {
+    "cod": "8599-6/99",
+    "desc": "Outras atividades de ensino diversas"
+  },
+  {
+    "cod": "8610-1/01",
+    "desc": "Serviços de atendimento hospitalar, menos pronto-socorro e unidades para atendimento a urgências"
+  },
+  {
+    "cod": "8610-1/02",
+    "desc": "Serviços de atendimento em pronto-socorro e unidades hospitalares para atendimento a urgências"
+  },
+  {
+    "cod": "8621-6/01",
+    "desc": "UTI móvel"
+  },
+  {
+    "cod": "8621-6/02",
+    "desc": "Serviços móveis de atendimento a urgências, menos por UTI móvel"
+  },
+  {
+    "cod": "8622-4/00",
+    "desc": "Serviços de remoção de pacientes, menos os serviços móveis de atendimento a urgências"
+  },
+  {
+    "cod": "8630-5/01",
+    "desc": "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos"
+  },
+  {
+    "cod": "8630-5/02",
+    "desc": "Atividade médica ambulatorial com recursos para realização de exames complementares"
+  },
+  {
+    "cod": "8630-5/03",
+    "desc": "Atividade médica ambulatorial restrita a consultas"
+  },
+  {
+    "cod": "8630-5/04",
+    "desc": "Atividade odontológica"
+  },
+  {
+    "cod": "8630-5/06",
+    "desc": "Serviços de vacinação e imunização humana"
+  },
+  {
+    "cod": "8630-5/07",
+    "desc": "Serviços de reprodução humana assistida"
+  },
+  {
+    "cod": "8630-5/99",
+    "desc": "Serviços de atenção ambulatorial diversas"
+  },
+  {
+    "cod": "8640-2/01",
+    "desc": "Laboratórios de anatomia patológica e citológica"
+  },
+  {
+    "cod": "8640-2/02",
+    "desc": "Laboratórios clínicos"
+  },
+  {
+    "cod": "8640-2/03",
+    "desc": "Serviços de diálise e nefrologia"
+  },
+  {
+    "cod": "8640-2/04",
+    "desc": "Serviços de tomografia"
+  },
+  {
+    "cod": "8640-2/05",
+    "desc": "Serviços de diagnóstico por imagem com uso de radiação ionizante, menos tomografia"
+  },
+  {
+    "cod": "8640-2/06",
+    "desc": "Serviços de ressonância magnética"
+  },
+  {
+    "cod": "8640-2/07",
+    "desc": "Serviços de diagnóstico por imagem sem uso de radiação ionizante, menos ressonância magnética"
+  },
+  {
+    "cod": "8640-2/08",
+    "desc": "Serviços de diagnóstico por registro gráfico - ECG, EEG e outros exames análogos"
+  },
+  {
+    "cod": "8640-2/09",
+    "desc": "Serviços de diagnóstico por métodos ópticos - endoscopia e outros exames análogos"
+  },
+  {
+    "cod": "8640-2/10",
+    "desc": "Serviços de quimioterapia"
+  },
+  {
+    "cod": "8640-2/11",
+    "desc": "Serviços de radioterapia"
+  },
+  {
+    "cod": "8640-2/12",
+    "desc": "Serviços de hemoterapia"
+  },
+  {
+    "cod": "8640-2/13",
+    "desc": "Serviços de litotripsia"
+  },
+  {
+    "cod": "8640-2/14",
+    "desc": "Serviços de bancos de células e tecidos humanos"
+  },
+  {
+    "cod": "8640-2/99",
+    "desc": "Serviços de serviços de complementação diagnóstica e terapêutica diversas"
+  },
+  {
+    "cod": "8650-0/01",
+    "desc": "Serviços de enfermagem"
+  },
+  {
+    "cod": "8650-0/02",
+    "desc": "Serviços de profissionais da nutrição"
+  },
+  {
+    "cod": "8650-0/03",
+    "desc": "Serviços de psicologia e psicanálise"
+  },
+  {
+    "cod": "8650-0/04",
+    "desc": "Serviços de fisioterapia"
+  },
+  {
+    "cod": "8650-0/05",
+    "desc": "Serviços de terapia ocupacional"
+  },
+  {
+    "cod": "8650-0/06",
+    "desc": "Serviços de fonoaudiologia"
+  },
+  {
+    "cod": "8650-0/07",
+    "desc": "Serviços de terapia de nutrição enteral e parenteral"
+  },
+  {
+    "cod": "8650-0/99",
+    "desc": "Serviços de profissionais da área de saúde diversas"
+  },
+  {
+    "cod": "8660-7/00",
+    "desc": "Serviços de apoio à gestão de saúde"
+  },
+  {
+    "cod": "8690-9/01",
+    "desc": "Serviços de práticas integrativas e complementares em saúde humana"
+  },
+  {
+    "cod": "8690-9/02",
+    "desc": "Serviços de bancos de leite humano"
+  },
+  {
+    "cod": "8690-9/03",
+    "desc": "Serviços de acupuntura"
+  },
+  {
+    "cod": "8690-9/04",
+    "desc": "Serviços de podologia"
+  },
+  {
+    "cod": "8690-9/99",
+    "desc": "Outras atividades de atenção à saúde humana diversas"
+  },
+  {
+    "cod": "8711-5/01",
+    "desc": "Clínicas e residências geriátricas"
+  },
+  {
+    "cod": "8711-5/02",
+    "desc": "Instituições de longa permanência para idosos"
+  },
+  {
+    "cod": "8711-5/03",
+    "desc": "Serviços de assistência a deficientes físicos, imunodeprimidos e convalescentes"
+  },
+  {
+    "cod": "8711-5/04",
+    "desc": "Centros de apoio a pacientes com câncer e com AIDS"
+  },
+  {
+    "cod": "8711-5/05",
+    "desc": "Condomínios residenciais para idosos"
+  },
+  {
+    "cod": "8712-3/00",
+    "desc": "Serviços de fornecimento de infraestrutura de apoio e assistência a paciente no domicílio"
+  },
+  {
+    "cod": "8720-4/01",
+    "desc": "Serviços de centros de assistência psicossocial"
+  },
+  {
+    "cod": "8720-4/99",
+    "desc": "Serviços de assistência psicossocial e à saúde a portadores de distúrbios psíquicos, deficiência mental e dependência química e grupos similares diversas"
+  },
+  {
+    "cod": "8730-1/01",
+    "desc": "Orfanatos"
+  },
+  {
+    "cod": "8730-1/02",
+    "desc": "Albergues assistenciais"
+  },
+  {
+    "cod": "8730-1/99",
+    "desc": "Serviços de assistência social prestadas em residências coletivas e particulares diversas"
+  },
+  {
+    "cod": "8800-6/00",
+    "desc": "Serviços de assistência social sem alojamento"
+  },
+  {
+    "cod": "9001-9/01",
+    "desc": "Produção teatral"
+  },
+  {
+    "cod": "9001-9/02",
+    "desc": "Produção musical"
+  },
+  {
+    "cod": "9001-9/03",
+    "desc": "Produção de espetáculos de dança"
+  },
+  {
+    "cod": "9001-9/04",
+    "desc": "Produção de espetáculos circenses, de marionetes e similares"
+  },
+  {
+    "cod": "9001-9/05",
+    "desc": "Produção de espetáculos de rodeios, vaquejadas e similares"
+  },
+  {
+    "cod": "9001-9/06",
+    "desc": "Serviços de sonorização e de iluminação"
+  },
+  {
+    "cod": "9001-9/99",
+    "desc": "Artes cênicas, espetáculos e atividades complementares diversas"
+  },
+  {
+    "cod": "9002-7/01",
+    "desc": "Serviços de artistas plásticos, jornalistas independentes e escritores"
+  },
+  {
+    "cod": "9002-7/02",
+    "desc": "Restauração de obras de arte"
+  },
+  {
+    "cod": "9003-5/00",
+    "desc": "Gestão de espaços para artes cênicas, espetáculos e outras atividades artísticas"
+  },
+  {
+    "cod": "9101-5/00",
+    "desc": "Serviços de bibliotecas e arquivos"
+  },
+  {
+    "cod": "9102-3/01",
+    "desc": "Serviços de museus e de exploração de lugares e prédios históricos e atrações similares"
+  },
+  {
+    "cod": "9102-3/02",
+    "desc": "Restauração e conservação de lugares e prédios históricos"
+  },
+  {
+    "cod": "9103-1/00",
+    "desc": "Serviços de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental"
+  },
+  {
+    "cod": "9200-3/01",
+    "desc": "Casas de bingo"
+  },
+  {
+    "cod": "9200-3/02",
+    "desc": "Exploração de apostas em corridas de cavalos"
+  },
+  {
+    "cod": "9200-3/99",
+    "desc": "Exploração de jogos de azar e apostas diversos"
+  },
+  {
+    "cod": "9311-5/00",
+    "desc": "Gestão de instalações de esportes"
+  },
+  {
+    "cod": "9312-3/00",
+    "desc": "Clubes sociais, esportivos e similares"
+  },
+  {
+    "cod": "9313-1/00",
+    "desc": "Serviços de condicionamento físico"
+  },
+  {
+    "cod": "9319-1/01",
+    "desc": "Produção e promoção de eventos esportivos"
+  },
+  {
+    "cod": "9319-1/99",
+    "desc": "Outras atividades esportivas diversas"
+  },
+  {
+    "cod": "9321-2/00",
+    "desc": "Parques de diversão e parques temáticos"
+  },
+  {
+    "cod": "9329-8/01",
+    "desc": "Discotecas, danceterias, salões de dança e similares"
+  },
+  {
+    "cod": "9329-8/02",
+    "desc": "Exploração de boliches"
+  },
+  {
+    "cod": "9329-8/03",
+    "desc": "Exploração de jogos de sinuca, bilhar e similares"
+  },
+  {
+    "cod": "9329-8/04",
+    "desc": "Exploração de jogos eletrônicos recreativos"
+  },
+  {
+    "cod": "9329-8/99",
+    "desc": "Outras atividades de recreação e lazer diversas"
+  },
+  {
+    "cod": "9411-1/00",
+    "desc": "Serviços de organizações associativas patronais e empresariais"
+  },
+  {
+    "cod": "9412-0/01",
+    "desc": "Serviços de fiscalização profissional"
+  },
+  {
+    "cod": "9412-0/99",
+    "desc": "Outras atividades associativas profissionais"
+  },
+  {
+    "cod": "9420-1/00",
+    "desc": "Serviços de organizações sindicais"
+  },
+  {
+    "cod": "9430-8/00",
+    "desc": "Serviços de associações de defesa de direitos sociais"
+  },
+  {
+    "cod": "9491-0/00",
+    "desc": "Serviços de organizações religiosas ou filosóficas"
+  },
+  {
+    "cod": "9492-8/00",
+    "desc": "Serviços de organizações políticas"
+  },
+  {
+    "cod": "9493-6/00",
+    "desc": "Serviços de organizações associativas ligadas à cultura e à arte"
+  },
+  {
+    "cod": "9499-5/00",
+    "desc": "Atividades associativas diversas"
+  },
+  {
+    "cod": "9511-8/00",
+    "desc": "Reparação e manutenção de computadores e de equipamentos periféricos"
+  },
+  {
+    "cod": "9512-6/00",
+    "desc": "Reparação e manutenção de equipamentos de comunicação"
+  },
+  {
+    "cod": "9521-5/00",
+    "desc": "Reparação e manutenção de equipamentos eletroeletrônicos de uso pessoal e doméstico"
+  },
+  {
+    "cod": "9529-1/01",
+    "desc": "Reparação de calçados, bolsas e artigos de viagem"
+  },
+  {
+    "cod": "9529-1/02",
+    "desc": "Chaveiros"
+  },
+  {
+    "cod": "9529-1/03",
+    "desc": "Reparação de relógios"
+  },
+  {
+    "cod": "9529-1/04",
+    "desc": "Reparação de bicicletas, triciclos e outros veículos não motorizados"
+  },
+  {
+    "cod": "9529-1/05",
+    "desc": "Reparação de artigos do mobiliário"
+  },
+  {
+    "cod": "9529-1/06",
+    "desc": "Reparação de jóias"
+  },
+  {
+    "cod": "9529-1/99",
+    "desc": "Reparação e manutenção de outros objetos e equipamentos pessoais e domésticos diversos"
+  },
+  {
+    "cod": "9601-7/01",
+    "desc": "Lavanderias"
+  },
+  {
+    "cod": "9601-7/02",
+    "desc": "Tinturarias"
+  },
+  {
+    "cod": "9601-7/03",
+    "desc": "Toalheiros"
+  },
+  {
+    "cod": "9602-5/01",
+    "desc": "Cabeleireiros, manicure e pedicure"
+  },
+  {
+    "cod": "9602-5/02",
+    "desc": "Serviços de estética e outros serviços de cuidados com a beleza"
+  },
+  {
+    "cod": "9603-3/01",
+    "desc": "Gestão e manutenção de cemitérios"
+  },
+  {
+    "cod": "9603-3/02",
+    "desc": "Serviços de cremação"
+  },
+  {
+    "cod": "9603-3/03",
+    "desc": "Serviços de sepultamento"
+  },
+  {
+    "cod": "9603-3/04",
+    "desc": "Serviços de funerárias"
+  },
+  {
+    "cod": "9603-3/05",
+    "desc": "Serviços de somatoconservação"
+  },
+  {
+    "cod": "9603-3/99",
+    "desc": "Atividades funerárias e serviços relacionados diversos"
+  },
+  {
+    "cod": "9609-2/02",
+    "desc": "Agências matrimoniais"
+  },
+  {
+    "cod": "9609-2/07",
+    "desc": "Alojamento de animais domésticos"
+  },
+  {
+    "cod": "9609-2/08",
+    "desc": "Higiene e embelezamento de animais domésticos"
+  },
+  {
+    "cod": "9609-2/04",
+    "desc": "Exploração de máquinas de serviços pessoais acionadas por moeda"
+  },
+  {
+    "cod": "9609-2/05",
+    "desc": "Serviços de sauna e banhos"
+  },
+  {
+    "cod": "9609-2/06",
+    "desc": "Serviços de tatuagem e colocação de piercing"
+  },
+  {
+    "cod": "9609-2/99",
+    "desc": "Outras atividades de serviços pessoais diversas"
+  },
+  {
+    "cod": "9700-5/00",
+    "desc": "Serviços domésticos"
+  },
+  {
+    "cod": "9900-8/00",
+    "desc": "Organismos internacionais e outras instituições extraterritoriais"
+  }
+]

@@ -102,7 +102,7 @@ export default function CandidatoInfoPage({ pcdId }: Readonly<Props>) {
                             <img
                                 src={pcd.imageUrl}
                                 alt={pcd.name}
-                                className="h-full object-cover rounded-3xl"
+                                className="h-full w-full object-cover rounded-3xl"
                             />
                         </div>
                     </div>
@@ -121,12 +121,13 @@ export default function CandidatoInfoPage({ pcdId }: Readonly<Props>) {
                         <p className="text-base max-w-[40rem] text-color">{pcd.descrição}</p>
                     </div>
 
-                    <div className="w-1/3 flex flex-col items-start justify-center gap-2 text-base">
+                    <div className="w-1/3 flex flex-col items-start justify-center gap-4 text-base">
                         <p className="text-color">
                             Idade: {idade}{" "}
                             <span className="text-color opacity-50">({dataFormatada})</span>
                         </p>
                         <p className="text-color">E-mail: {pcd.email}</p>
+                        <p className="text-color">Gênero: {pcd.genero}</p>
                         <p className="text-color">Telefone: {pcd.telefone}</p>
                         <p className="text-color">Deficiência: {pcd.deficiencia}</p>
                     </div>

@@ -65,14 +65,14 @@ export default function CadastroPage() {
                     border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
                         onClick={() => router.push('/cadastro/pcd')}>
                         <PersonStandingIcon size={48} />
-                        <p className="text-lg">Registrar-se como Candidato</p>
+                        <p className="text-lg font-bold">Registre-se como Candidato</p>
                     </button>
 
                     <button className="w-1/2 flex items-center justify-center gap-4 py-3  rounded-3xl border hover-size cursor-pointer
                     border-white/20 bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
                         onClick={() => router.push('/cadastro/empresa')}>
                         <Building size={48} />
-                        <p className="text-lg">Registrar-se como Empresa</p>
+                        <p className="text-lg font-bold">Registre-se como Empresa</p>
                     </button>
 
                 </div>

@@ -77,7 +77,7 @@ export default function EmpresasInfoPage({ empresaId }: Props) {
         content = (
             <>
                 <div className="w-full h-[45vh] flex items-center justify-center py-2">
-                    <img src={empresa.imageProfile} alt={empresa.name} className="w-[85%] h-full object-cover rounded-3xl" />
+                    <img src={empresa.imageProfile} alt={empresa.name} className="w-[85%] h-full object-cover object-center rounded-3xl" />
                 </div>
                 <div className="w-full min-h-[30vh] h-auto flex relative items-center pl-36 pb-8">
 

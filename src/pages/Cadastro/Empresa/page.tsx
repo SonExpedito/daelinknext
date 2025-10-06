@@ -4,45 +4,82 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useUIStore } from "@/src/components/store/modalstore";
-import { ChevronLeft, UserRoundPen, IdCardIcon } from "lucide-react";
+import { ChevronLeft, Building2, IdCardIcon } from "lucide-react";
 import { useUserStore } from "@/src/components/store/userstore";
 import axios from "axios";
 
 import PerfilEtapa from "./etapas/perfil";
-import CredenciaisEtapa from "./etapas/credencial";
+import CredenciaisEtapa from "./etapas/credenciais";
 import Button from "@/src/components/elements/buttons/button";
 
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  getAuth,
+} from "firebase/auth";
 
-// Validação de CPF
-function validarCPF(cpf: string): boolean {
-  cpf = cpf.replace(/[^\d]+/g, "");
-  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+export type Empresa = {
+  id?: string;
+  name?: string;
+  cnpj?: string;
+  area?: string;
+  descricao?: string;
+  sobre?: string;
+  sobreimg?: File | null;
 
-  let soma = 0, resto;
-  for (let i = 1; i <= 9; i++) soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
-  resto = (soma * 10) % 11;
-  if (resto === 10 || resto === 11) resto = 0;
-  if (resto !== parseInt(cpf.substring(9, 10))) return false;
+  email?: string;
+  telefone?: string;
+  cep?: string;
 
+  imageUrl?: File | null; // logo
+  imageProfile?: File | null; // banner
+};
+
+// 🔹 Validação simples de CNPJ
+function validarCNPJ(cnpj: string): boolean {
+  cnpj = cnpj.replace(/[^\d]+/g, "");
+  if (cnpj.length !== 14) return false;
+
+  if (/^(\d)\1+$/.test(cnpj)) return false;
+
+  let tamanho = cnpj.length - 2;
+  let numeros = cnpj.substring(0, tamanho);
+  let digitos = cnpj.substring(tamanho);
+  let soma = 0;
+  let pos = tamanho - 7;
+  for (let i = tamanho; i >= 1; i--) {
+    soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
+    if (pos < 2) pos = 9;
+  }
+  let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+  if (resultado !== parseInt(digitos.charAt(0))) return false;
+
+  tamanho = tamanho + 1;
+  numeros = cnpj.substring(0, tamanho);
   soma = 0;
-  for (let i = 1; i <= 10; i++) soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
-  resto = (soma * 10) % 11;
-  if (resto === 10 || resto === 11) resto = 0;
-  if (resto !== parseInt(cpf.substring(10, 11))) return false;
+  pos = tamanho - 7;
+  for (let i = tamanho; i >= 1; i--) {
+    soma += parseInt(numeros.charAt(tamanho - i)) * pos--;
+    if (pos < 2) pos = 9;
+  }
+  resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+  if (resultado !== parseInt(digitos.charAt(1))) return false;
 
   return true;
 }
 
-export default function CadastroPCDPage() {
+export default function EmpresaCadastroPage() {
   const router = useRouter();
   const openModal = useUIStore((state) => state.openModal);
   const closeModal = useUIStore((state) => state.closeModal);
   const setLoading = useUserStore((state) => state.setLoading);
 
+  const cadastroEmpresaImgs = [
+    "/cadastro/empresa1.jpg",
+    "/cadastro/empresa2.jpg",
+    "/cadastro/empresa3.jpg",
+  ];
 
-
-  const cadastroPCD = ["/cadastro/pcd1.jpg", "/cadastro/pcd2.jpg", "/cadastro/pcd3.jpg"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [etapa, setEtapa] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,22 +87,18 @@ export default function CadastroPCDPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    genero: "",
-    dataNasc: "",
+    area: "",
     sobre: "",
-    deficiencia: "",
+    descricao: "",
+    cnpj: "",
+    telefone: "",
+    endereco: "",
+    cep: "",
+    sobreimg: null as File | null,
 
     password: "",
     confirmPassword: "",
 
-    cpf: "",
-    telefone: "",
-    trabalho: "",
-    descrição: "",
-
-    perfilvertical: false,
-    empresapick: false,
-    laudomedico: null as File | null,
     imageProfile: null as File | null,
     imageUrl: null as File | null,
   });
@@ -75,7 +108,7 @@ export default function CadastroPCDPage() {
 
   const validatePerfilEtapa = () => {
     if (isEmpty(formData.name)) {
-      openModal("Nome é obrigatório.");
+      openModal("Nome da empresa é obrigatório.");
       return false;
     }
 
@@ -90,23 +123,13 @@ export default function CadastroPCDPage() {
       return false;
     }
 
+    if (isEmpty(formData.area)) {
+      openModal("Área de atuação é obrigatória.");
+      return false;
+    }
+
     if (isEmpty(formData.sobre)) {
-      openModal("Sobre é obrigatório.");
-      return false;
-    }
-
-    if (isEmpty(formData.deficiencia)) {
-      openModal("Selecione uma deficiência.");
-      return false;
-    }
-
-    if (isEmpty(formData.genero)) {
-      openModal("Selecione um gênero.");
-      return false;
-    }
-
-    if (isEmpty(formData.dataNasc)) {
-      openModal("Data de nascimento é obrigatória.");
+      openModal("Campo 'Sobre' é obrigatório.");
       return false;
     }
 
@@ -134,13 +157,13 @@ export default function CadastroPCDPage() {
       return false;
     }
 
-    if (isEmpty(formData.cpf)) {
-      openModal("CPF é obrigatório.");
+    if (isEmpty(formData.cnpj)) {
+      openModal("CNPJ é obrigatório.");
       return false;
     }
 
-    if (!validarCPF(formData.cpf)) {
-      openModal("CPF inválido.");
+    if (!validarCNPJ(formData.cnpj)) {
+      openModal("CNPJ inválido.");
       return false;
     }
 
@@ -154,8 +177,8 @@ export default function CadastroPCDPage() {
       return false;
     }
 
-    if (isEmpty(formData.descrição)) {
-      openModal("Descrição é obrigatória.");
+    if (isEmpty(formData.cep)) {
+      openModal("CEP é obrigatório.");
       return false;
     }
 
@@ -164,7 +187,7 @@ export default function CadastroPCDPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % cadastroPCD.length);
+      setCurrentIndex((prev) => (prev + 1) % cadastroEmpresaImgs.length);
     }, 10000);
     return () => clearInterval(interval);
   }, []);
@@ -172,17 +195,6 @@ export default function CadastroPCDPage() {
   const handleNextEtapa = () => {
     if (validatePerfilEtapa()) {
       setEtapa((prev) => prev + 1);
-    }
-  };
-
-  const renderEtapa = () => {
-    switch (etapa) {
-      case 0:
-        return <PerfilEtapa data={formData} setData={setFormData} />;
-      case 1:
-        return <CredenciaisEtapa data={formData} setData={setFormData} />;
-      default:
-        return null;
     }
   };
 
@@ -209,44 +221,52 @@ export default function CadastroPCDPage() {
         return;
       }
 
-      // 🔹 1. Autentica ou cria o usuário
+      // 🔹 1. Cria ou autentica usuário
       const auth = getAuth();
       try {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
         uid = userCredential.user.uid;
       } catch (e: any) {
         if (e?.code === "auth/email-already-in-use") {
-          const userCredential = await signInWithEmailAndPassword(auth, email, password);
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
           uid = userCredential.user.uid;
         } else {
           throw e;
         }
       }
 
-      // 🔹 2. Gera o token e cria session cookie
+      // 🔹 2. Token e sessão
       const token = await auth.currentUser?.getIdToken();
       if (token) {
         await axios.post("/session", { token }, { withCredentials: true });
       }
 
-      // 🔹 3. Monta o form data com UID
+      // 🔹 3. FormData com UID
       const data = new FormData();
       Object.entries(formData).forEach(([key, value]) => {
-        if (key === "password" || key === "confirmPassword") return; // não envia senhas
+        if (key === "password" || key === "confirmPassword") return;
         if (value !== null) data.append(key, value as any);
       });
       data.append("uid", uid);
 
-      // 🔹 4. Envia o cadastro PCD
-      const res = await axios.post<{ message?: string }>("/cadastro-pcd", data, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      // 🔹 4. Envia cadastro empresa
+      const res = await axios.post<{ message?: string }>(
+        "/cadastro-empresa",
+        data,
+        { headers: { "Content-Type": "multipart/form-data" } }
+      );
 
-      // 🔹 5. Feedback e redirecionamento
       openModal(res.data.message || "Cadastro realizado com sucesso!");
-      router.replace("/");
+      router.replace("/perfil");
       setTimeout(() => router.refresh(), 1500);
-
     } catch (err: any) {
       console.error("Erro no cadastro:", err);
       openModal(err.response?.data?.error || "Erro no cadastro.");
@@ -255,6 +275,17 @@ export default function CadastroPCDPage() {
       setLoading(false);
       setIsSubmitting(false);
       window.location.reload();
+    }
+  };
+
+  const renderEtapa = () => {
+    switch (etapa) {
+      case 0:
+        return <PerfilEtapa data={formData} setData={setFormData} />;
+      case 1:
+        return <CredenciaisEtapa data={formData} setData={setFormData} />;
+      default:
+        return null;
     }
   };
 
@@ -267,7 +298,6 @@ export default function CadastroPCDPage() {
           className="bg-gray-500"
         />
       )}
-
       {etapa < 1 ? (
         <Button
           label="Próximo"
@@ -286,17 +316,20 @@ export default function CadastroPCDPage() {
   );
 
   const tituloEtapa = [
-    { label: "PERFIL", icon: <UserRoundPen size={42} /> },
+    { label: "PERFIL", icon: <Building2 size={42} /> },
     { label: "CREDENCIAIS", icon: <IdCardIcon size={46} /> },
   ];
 
   return (
-    <motion.div data-theme="light" className="w-screen h-screen flex items-center justify-center overflow-hidden bg-white-primary-mockup">
+    <motion.div
+      data-theme="light"
+      className="w-screen h-screen flex items-center justify-center overflow-hidden bg-white-primary-mockup"
+    >
       <div className="h-full w-[60%] flex flex-col items-center justify-center gap-4">
         {/* Botão voltar */}
         <button
           onClick={router.back}
-          className="flex items-center gap-2 cursor-pointer self-start ml-8 font-bold text-white background-green pr-4 py-1 rounded-full border border-white/30 shadow-md backdrop-blur-xl backdrop-saturate-150 hover:scale-105 hover:opacity-90 transition-all"
+          className="flex items-center gap-2 cursor-pointer self-start ml-8 font-bold text-white background-green pr-4 py-1 rounded-full border border-white/30 shadow-md backdrop-blur-xl hover:scale-105 hover:opacity-90 transition-all"
         >
           <ChevronLeft size={28} />
           <p className="text-lg">Voltar</p>
@@ -307,21 +340,20 @@ export default function CadastroPCDPage() {
           {tituloEtapa[etapa].label} {tituloEtapa[etapa].icon}
         </h1>
 
-        {/* Conteúdo da etapa */}
+        {/* Conteúdo */}
         <div className="w-full h-[70%] flex flex-col items-center justify-center gap-6">
           {renderEtapa()}
           {renderBotoes()}
         </div>
       </div>
 
-      {/* Imagem */}
+      {/* Imagem lateral */}
       <div className="h-full w-[40%] relative z-10 p-2">
         <motion.div
           className="h-full w-full flex flex-col gap-8 items-center justify-center rounded-3xl overflow-hidden px-4 relative"
           style={{
             background: "rgba(255, 255, 255, 0.15)",
             backdropFilter: "blur(20px) saturate(150%)",
-            WebkitBackdropFilter: "blur(20px) saturate(150%)",
           }}
         >
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -330,19 +362,21 @@ export default function CadastroPCDPage() {
 
           <div className="absolute inset-0 z-0">
             <img
-              src={cadastroPCD[currentIndex]}
+              src={cadastroEmpresaImgs[currentIndex]}
               alt="reflexo"
               className="w-full h-full object-cover object-center opacity-30 blur-xl scale-110 transition-opacity duration-1000 ease-in-out"
             />
           </div>
 
           <div className="relative w-3/4 h-4/5 flex items-center justify-center">
-            {cadastroPCD.map((img, index) => (
+            {cadastroEmpresaImgs.map((img, index) => (
               <img
                 key={img}
                 src={img}
                 alt=""
-                className={`absolute inset-0 w-full h-full object-cover rounded-3xl transition-opacity duration-1000 ease-in-out ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+                className={`absolute inset-0 w-full h-full object-cover rounded-3xl transition-opacity duration-1000 ease-in-out ${
+                  index === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
               />
             ))}
           </div>

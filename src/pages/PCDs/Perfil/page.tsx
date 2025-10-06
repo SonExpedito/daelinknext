@@ -26,16 +26,15 @@ export default function PerfilPCD() {
 
         <div className="flex flex-col items-center justify-center relative">
           <div
-            className={`${
-              userProfile.perfilvertical ? "w-60 h-[21.6rem] mb-68 " : "h-60 w-60 mb-40"
-            } flex items-center justify-center absolute 
+            className={`${userProfile.perfilvertical ? "w-60 h-[21.6rem] mb-68 " : "h-60 w-60 mb-40"
+              } flex items-center justify-center absolute 
             rounded-3xl p-1 border border-white/30 bg-white/10 backdrop-blur-xl shadow-lg
             hover:bg-white/20 transition duration-300`}
           >
             <img
               src={userProfile.imageUrl || "/errors/usererror.png"}
               alt={userProfile.name || ""}
-              className="h-full object-cover rounded-3xl"
+              className="h-full w-full object-cover rounded-3xl"
             />
           </div>
         </div>
@@ -58,12 +57,13 @@ export default function PerfilPCD() {
           </p>
         </div>
 
-        <div className="w-1/3 flex flex-col items-start justify-center gap-2 text-base">
+        <div className="w-1/3 flex flex-col items-start justify-center gap-4 text-base">
           <p className="text-color">
             Idade: {idade}{" "}
             <span className="text-color opacity-50">({dataFormatada})</span>
           </p>
           <p className="text-color">E-mail: {userProfile.email}</p>
+          <p className="text-color">Gênero: {userProfile.genero}</p>
           <p className="text-color">Telefone: {userProfile.telefone}</p>
           <p className="text-color">Deficiência: {userProfile.deficiencia}</p>
         </div>
@@ -83,7 +83,7 @@ export default function PerfilPCD() {
       </div>
 
       {isEditing && (
-        <EditarPerfilModal user={userProfile} isOpen={isEditing}  onClose={() => setIsEditing(false)} />
+        <EditarPerfilModal user={userProfile} isOpen={isEditing} onClose={() => setIsEditing(false)} />
       )}
     </>
   );

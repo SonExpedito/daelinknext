@@ -21,7 +21,6 @@ export default function Perfil() {
         <>
             <Navbar />
             {paginaatual}
-            <Footer />
         </>
 
     )
