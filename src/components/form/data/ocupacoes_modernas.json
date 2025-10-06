@@ -265,7 +265,7 @@
   },
   {
     "cbo": "121010",
-    "descricao": "Diretor geral de empresa e organizações (exceto de interesse público)"
+    "descricao": "Diretor geral de empresa e organizações"
   },
   {
     "cbo": "122105",
@@ -293,7 +293,7 @@
   },
   {
     "cbo": "122405",
-    "descricao": "Diretor de operações comerciais (comércio atacadista e varejista)"
+    "descricao": "Diretor de operações comerciais"
   },
   {
     "cbo": "122505",
@@ -349,7 +349,7 @@
   },
   {
     "cbo": "122730",
-    "descricao": "Diretor de crédito (exceto crédito imobiliário)"
+    "descricao": "Diretor de crédito"
   },
   {
     "cbo": "122735",
@@ -413,7 +413,7 @@
   },
   {
     "cbo": "123705",
-    "descricao": "Diretor de pesquisa e desenvolvimento (p&d)"
+    "descricao": "Diretor de pesquisa e desenvolvimento"
   },
   {
     "cbo": "123805",
@@ -541,7 +541,7 @@
   },
   {
     "cbo": "141615",
-    "descricao": "Gerente de logística (armazenagem e distribuição)"
+    "descricao": "Gerente de logística"
   },
   {
     "cbo": "141705",
@@ -577,7 +577,7 @@
   },
   {
     "cbo": "141810",
-    "descricao": "Gerente de empresa aérea e empresa de serviços auxiliares ao transporte aéreo (esata) em aeroportos"
+    "descricao": "Gerente de empresa aérea e empresa de serviços auxiliares ao transporte aéreo em aeroportos"
   },
   {
     "cbo": "141815",
@@ -593,7 +593,7 @@
   },
   {
     "cbo": "141830",
-    "descricao": "Gerente de segurança operacional (aviação civil)"
+    "descricao": "Gerente de segurança operacional"
   },
   {
     "cbo": "142105",
@@ -621,7 +621,7 @@
   },
   {
     "cbo": "142135",
-    "descricao": "Oficial de proteção de dados pessoais (dpo)"
+    "descricao": "Oficial de proteção de dados pessoais"
   },
   {
     "cbo": "142140",
@@ -721,7 +721,7 @@
   },
   {
     "cbo": "142605",
-    "descricao": "Gerente de pesquisa e desenvolvimento (p&d)"
+    "descricao": "Gerente de pesquisa e desenvolvimento"
   },
   {
     "cbo": "142610",
@@ -829,7 +829,7 @@
   },
   {
     "cbo": "203210",
-    "descricao": "Pesquisador de engenharia e tecnologia (outras áreas da engenharia)"
+    "descricao": "Pesquisador de engenharia e tecnologia"
   },
   {
     "cbo": "203215",
@@ -929,7 +929,7 @@
   },
   {
     "cbo": "211210",
-    "descricao": "Estatístico (estatística aplicada)"
+    "descricao": "Estatístico"
   },
   {
     "cbo": "211215",
@@ -997,59 +997,59 @@
   },
   {
     "cbo": "213110",
-    "descricao": "Físico (acústica)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213115",
-    "descricao": "Físico (atômica e molecular)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213120",
-    "descricao": "Físico (cosmologia)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213125",
-    "descricao": "Físico (estatística e matemática)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213130",
-    "descricao": "Físico (fluidos)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213135",
-    "descricao": "Físico (instrumentação)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213140",
-    "descricao": "Físico (matéria condensada)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213145",
-    "descricao": "Físico (materiais)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213150",
-    "descricao": "Físico (medicina)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213155",
-    "descricao": "Físico (nuclear e reatores)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213160",
-    "descricao": "Físico (óptica)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213165",
-    "descricao": "Físico (partículas e campos)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213170",
-    "descricao": "Físico (plasma)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213175",
-    "descricao": "Físico (térmica)"
+    "descricao": "Físico"
   },
   {
     "cbo": "213205",
@@ -1145,55 +1145,55 @@
   },
   {
     "cbo": "214210",
-    "descricao": "Engenheiro civil (aeroportos)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214215",
-    "descricao": "Engenheiro civil (edificações)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214220",
-    "descricao": "Engenheiro civil (estruturas metálicas)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214225",
-    "descricao": "Engenheiro civil (ferrovias e metrovias)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214230",
-    "descricao": "Engenheiro civil (geotécnia)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214235",
-    "descricao": "Engenheiro civil (hidrologia)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214240",
-    "descricao": "Engenheiro civil (hidráulica)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214245",
-    "descricao": "Engenheiro civil (pontes e viadutos)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214250",
-    "descricao": "Engenheiro civil (portos e vias navegáveis)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214255",
-    "descricao": "Engenheiro civil (rodovias)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214260",
-    "descricao": "Engenheiro civil (saneamento)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214265",
-    "descricao": "Engenheiro civil (túneis)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214270",
-    "descricao": "Engenheiro civil (transportes e trânsito)"
+    "descricao": "Engenheiro civil"
   },
   {
     "cbo": "214280",
@@ -1269,7 +1269,7 @@
   },
   {
     "cbo": "214415",
-    "descricao": "Engenheiro mecânico (energia nuclear)"
+    "descricao": "Engenheiro mecânico"
   },
   {
     "cbo": "214420",
@@ -1293,23 +1293,23 @@
   },
   {
     "cbo": "214510",
-    "descricao": "Engenheiro químico (indústria química)"
+    "descricao": "Engenheiro químico"
   },
   {
     "cbo": "214515",
-    "descricao": "Engenheiro químico (mineração, metalurgia, siderurgia, cimenteira e cerâmica)"
+    "descricao": "Engenheiro químico"
   },
   {
     "cbo": "214520",
-    "descricao": "Engenheiro químico (papel e celulose)"
+    "descricao": "Engenheiro químico"
   },
   {
     "cbo": "214525",
-    "descricao": "Engenheiro químico (petróleo e borracha)"
+    "descricao": "Engenheiro químico"
   },
   {
     "cbo": "214530",
-    "descricao": "Engenheiro químico (utilidades e meio ambiente)"
+    "descricao": "Engenheiro químico"
   },
   {
     "cbo": "214535",
@@ -1337,31 +1337,31 @@
   },
   {
     "cbo": "214710",
-    "descricao": "Engenheiro de minas (beneficiamento)"
+    "descricao": "Engenheiro de minas"
   },
   {
     "cbo": "214715",
-    "descricao": "Engenheiro de minas (lavra a céu aberto)"
+    "descricao": "Engenheiro de minas"
   },
   {
     "cbo": "214720",
-    "descricao": "Engenheiro de minas (lavra subterrânea)"
+    "descricao": "Engenheiro de minas"
   },
   {
     "cbo": "214725",
-    "descricao": "Engenheiro de minas (pesquisa mineral)"
+    "descricao": "Engenheiro de minas"
   },
   {
     "cbo": "214730",
-    "descricao": "Engenheiro de minas (planejamento)"
+    "descricao": "Engenheiro de minas"
   },
   {
     "cbo": "214735",
-    "descricao": "Engenheiro de minas (processo)"
+    "descricao": "Engenheiro de minas"
   },
   {
     "cbo": "214740",
-    "descricao": "Engenheiro de minas (projeto)"
+    "descricao": "Engenheiro de minas"
   },
   {
     "cbo": "214745",
@@ -1825,7 +1825,7 @@
   },
   {
     "cbo": "224125",
-    "descricao": "Técnico de desporto individual e coletivo (exceto futebol)"
+    "descricao": "Técnico de desporto individual e coletivo"
   },
   {
     "cbo": "224130",
@@ -2117,19 +2117,19 @@
   },
   {
     "cbo": "231105",
-    "descricao": "Professor de nível superior na educação infantil (quatro a seis anos)"
+    "descricao": "Professor de nível superior na educação infantil"
   },
   {
     "cbo": "231110",
-    "descricao": "Professor de nível superior na educação infantil (zero a três anos)"
+    "descricao": "Professor de nível superior na educação infantil"
   },
   {
     "cbo": "231205",
-    "descricao": "Professor da  educação de jovens e adultos do ensino fundamental (primeira a quarta série)"
+    "descricao": "Professor da  educação de jovens e adultos do ensino fundamental"
   },
   {
     "cbo": "231210",
-    "descricao": "Professor de nível superior do ensino fundamental (primeira a quarta série)"
+    "descricao": "Professor de nível superior do ensino fundamental"
   },
   {
     "cbo": "231305",
@@ -2269,35 +2269,35 @@
   },
   {
     "cbo": "234105",
-    "descricao": "Professor de matemática aplicada (no ensino superior)"
+    "descricao": "Professor de matemática aplicada"
   },
   {
     "cbo": "234110",
-    "descricao": "Professor de matemática pura (no ensino superior)"
+    "descricao": "Professor de matemática pura"
   },
   {
     "cbo": "234115",
-    "descricao": "Professor de estatística (no ensino superior)"
+    "descricao": "Professor de estatística"
   },
   {
     "cbo": "234120",
-    "descricao": "Professor de computação (no ensino superior)"
+    "descricao": "Professor de computação"
   },
   {
     "cbo": "234125",
-    "descricao": "Professor de pesquisa operacional (no ensino superior)"
+    "descricao": "Professor de pesquisa operacional"
   },
   {
     "cbo": "234205",
-    "descricao": "Professor de física (ensino superior)"
+    "descricao": "Professor de física"
   },
   {
     "cbo": "234210",
-    "descricao": "Professor de química (ensino superior)"
+    "descricao": "Professor de química"
   },
   {
     "cbo": "234215",
-    "descricao": "Professor de astronomia (ensino superior)"
+    "descricao": "Professor de astronomia"
   },
   {
     "cbo": "234305",
@@ -2465,7 +2465,7 @@
   },
   {
     "cbo": "234689",
-    "descricao": "Professor de língua brasileira de sinais (libras)"
+    "descricao": "Professor de língua brasileira de sinais"
   },
   {
     "cbo": "234705",
@@ -2541,7 +2541,7 @@
   },
   {
     "cbo": "234910",
-    "descricao": "Professor de artes visuais no ensino superior (artes plásticas e multimídia)"
+    "descricao": "Professor de artes visuais no ensino superior"
   },
   {
     "cbo": "234915",
@@ -2613,23 +2613,23 @@
   },
   {
     "cbo": "241015",
-    "descricao": "Advogado (direito civil)"
+    "descricao": "Advogado"
   },
   {
     "cbo": "241020",
-    "descricao": "Advogado (direito público)"
+    "descricao": "Advogado"
   },
   {
     "cbo": "241025",
-    "descricao": "Advogado (direito penal)"
+    "descricao": "Advogado"
   },
   {
     "cbo": "241030",
-    "descricao": "Advogado (áreas especiais)"
+    "descricao": "Advogado"
   },
   {
     "cbo": "241035",
-    "descricao": "Advogado (direito do trabalho)"
+    "descricao": "Advogado"
   },
   {
     "cbo": "241040",
@@ -2869,7 +2869,7 @@
   },
   {
     "cbo": "252205",
-    "descricao": "Auditor (contadores e afins)"
+    "descricao": "Auditor"
   },
   {
     "cbo": "252210",
@@ -2881,7 +2881,7 @@
   },
   {
     "cbo": "252305",
-    "descricao": "Secretária(o) executiva(o)"
+    "descricao": "Secretária executiva"
   },
   {
     "cbo": "252310",
@@ -2909,11 +2909,11 @@
   },
   {
     "cbo": "252515",
-    "descricao": "Analista de cobrança (instituições financeiras)"
+    "descricao": "Analista de cobrança"
   },
   {
     "cbo": "252525",
-    "descricao": "Analista de crédito (instituições financeiras)"
+    "descricao": "Analista de crédito"
   },
   {
     "cbo": "252530",
@@ -2929,7 +2929,7 @@
   },
   {
     "cbo": "252545",
-    "descricao": "Analista financeiro (instituições financeiras)"
+    "descricao": "Analista financeiro"
   },
   {
     "cbo": "252550",
@@ -2941,7 +2941,7 @@
   },
   {
     "cbo": "252705",
-    "descricao": "Analista de pcp (programação e controle da produção)"
+    "descricao": "Analista de pcp"
   },
   {
     "cbo": "252710",
@@ -2969,11 +2969,11 @@
   },
   {
     "cbo": "253120",
-    "descricao": "Diretor de mídia (publicidade)"
+    "descricao": "Diretor de mídia"
   },
   {
     "cbo": "253125",
-    "descricao": "Diretor de arte (publicidade)"
+    "descricao": "Diretor de arte"
   },
   {
     "cbo": "253130",
@@ -2981,7 +2981,7 @@
   },
   {
     "cbo": "253135",
-    "descricao": "Diretor de contas (publicidade)"
+    "descricao": "Diretor de contas"
   },
   {
     "cbo": "253140",
@@ -2989,11 +2989,11 @@
   },
   {
     "cbo": "253205",
-    "descricao": "Gerente de captação (fundos e investimentos institucionais)"
+    "descricao": "Gerente de captação"
   },
   {
     "cbo": "253210",
-    "descricao": "Gerente de clientes especiais (private)"
+    "descricao": "Gerente de clientes especiais"
   },
   {
     "cbo": "253215",
@@ -3001,7 +3001,7 @@
   },
   {
     "cbo": "253220",
-    "descricao": "Gerente de grandes contas (corporate)"
+    "descricao": "Gerente de grandes contas"
   },
   {
     "cbo": "253225",
@@ -3061,7 +3061,7 @@
   },
   {
     "cbo": "261105",
-    "descricao": "Arquivista pesquisador (jornalismo)"
+    "descricao": "Arquivista pesquisador"
   },
   {
     "cbo": "261110",
@@ -3085,7 +3085,7 @@
   },
   {
     "cbo": "261135",
-    "descricao": "Repórter (exclusive rádio e televisão)"
+    "descricao": "Repórter"
   },
   {
     "cbo": "261140",
@@ -3101,7 +3101,7 @@
   },
   {
     "cbo": "261215",
-    "descricao": "Analista de informações (pesquisador de informações de rede)"
+    "descricao": "Analista de informações"
   },
   {
     "cbo": "261305",
@@ -3217,7 +3217,7 @@
   },
   {
     "cbo": "261910",
-    "descricao": "Assistente de direção (tv)"
+    "descricao": "Assistente de direção"
   },
   {
     "cbo": "262105",
@@ -3301,11 +3301,11 @@
   },
   {
     "cbo": "262405",
-    "descricao": "Artista (artes visuais)"
+    "descricao": "Artista"
   },
   {
     "cbo": "262410",
-    "descricao": "Desenhista industrial gráfico (designer gráfico)"
+    "descricao": "Desenhista industrial gráfico"
   },
   {
     "cbo": "262415",
@@ -3313,11 +3313,11 @@
   },
   {
     "cbo": "262420",
-    "descricao": "Desenhista industrial de produto (designer de produto)"
+    "descricao": "Desenhista industrial de produto"
   },
   {
     "cbo": "262425",
-    "descricao": "Desenhista industrial de produto de moda (designer de moda)"
+    "descricao": "Desenhista industrial de produto de moda"
   },
   {
     "cbo": "262505",
@@ -3353,7 +3353,7 @@
   },
   {
     "cbo": "262810",
-    "descricao": "Bailarino (exceto danças populares)"
+    "descricao": "Bailarino"
   },
   {
     "cbo": "262815",
@@ -3413,7 +3413,7 @@
   },
   {
     "cbo": "301110",
-    "descricao": "Técnico de laboratório de análises físico-químicas (materiais de construção)"
+    "descricao": "Técnico de laboratório de análises físico-químicas"
   },
   {
     "cbo": "301115",
@@ -3461,7 +3461,7 @@
   },
   {
     "cbo": "311515",
-    "descricao": "Técnico de utilidade (produção e distribuição de vapor, gases, óleos, combustíveis, energia)"
+    "descricao": "Técnico de utilidade"
   },
   {
     "cbo": "311520",
@@ -3473,7 +3473,7 @@
   },
   {
     "cbo": "311610",
-    "descricao": "Técnico têxtil (tratamentos químicos)"
+    "descricao": "Técnico têxtil"
   },
   {
     "cbo": "311615",
@@ -3501,7 +3501,7 @@
   },
   {
     "cbo": "311720",
-    "descricao": "Preparador de tintas (fábrica de tecidos)"
+    "descricao": "Preparador de tintas"
   },
   {
     "cbo": "311725",
@@ -3541,7 +3541,7 @@
   },
   {
     "cbo": "313110",
-    "descricao": "Eletrotécnico (produção de energia)"
+    "descricao": "Eletrotécnico"
   },
   {
     "cbo": "313115",
@@ -3565,7 +3565,7 @@
   },
   {
     "cbo": "313210",
-    "descricao": "Técnico de manutenção eletrônica (circuitos de máquinas com comando numérico)"
+    "descricao": "Técnico de manutenção eletrônica"
   },
   {
     "cbo": "313215",
@@ -3581,15 +3581,15 @@
   },
   {
     "cbo": "313310",
-    "descricao": "Técnico de rede (telecomunicações)"
+    "descricao": "Técnico de rede"
   },
   {
     "cbo": "313315",
-    "descricao": "Técnico de telecomunicações (telefonia)"
+    "descricao": "Técnico de telecomunicações"
   },
   {
     "cbo": "313320",
-    "descricao": "Técnico de transmissão (telecomunicações)"
+    "descricao": "Técnico de transmissão"
   },
   {
     "cbo": "313405",
@@ -3617,15 +3617,15 @@
   },
   {
     "cbo": "314115",
-    "descricao": "Técnico mecânico (calefação, ventilação e refrigeração)"
+    "descricao": "Técnico mecânico"
   },
   {
     "cbo": "314120",
-    "descricao": "Técnico mecânico (máquinas)"
+    "descricao": "Técnico mecânico"
   },
   {
     "cbo": "314125",
-    "descricao": "Técnico mecânico (motores)"
+    "descricao": "Técnico mecânico"
   },
   {
     "cbo": "314205",
@@ -3641,11 +3641,11 @@
   },
   {
     "cbo": "314310",
-    "descricao": "Técnico mecânico (aeronaves)"
+    "descricao": "Técnico mecânico"
   },
   {
     "cbo": "314315",
-    "descricao": "Técnico mecânico (embarcações)"
+    "descricao": "Técnico mecânico"
   },
   {
     "cbo": "314405",
@@ -3689,7 +3689,7 @@
   },
   {
     "cbo": "314725",
-    "descricao": "Técnico de redução na siderurgia (primeira fusão)"
+    "descricao": "Técnico de redução na siderurgia"
   },
   {
     "cbo": "314730",
@@ -3749,11 +3749,11 @@
   },
   {
     "cbo": "316310",
-    "descricao": "Técnico de mineração (óleo e petróleo)"
+    "descricao": "Técnico de mineração"
   },
   {
     "cbo": "316315",
-    "descricao": "Técnico em processamento mineral (exceto petróleo)"
+    "descricao": "Técnico em processamento mineral"
   },
   {
     "cbo": "316320",
@@ -3769,19 +3769,19 @@
   },
   {
     "cbo": "316335",
-    "descricao": "Desincrustador (poços de petróleo)"
+    "descricao": "Desincrustador"
   },
   {
     "cbo": "316340",
-    "descricao": "Cimentador (poços de petróleo)"
+    "descricao": "Cimentador"
   },
   {
     "cbo": "317105",
-    "descricao": "Desenvolvedor web (técnico)"
+    "descricao": "Desenvolvedor web"
   },
   {
     "cbo": "317110",
-    "descricao": "Desenvolvedor de sistemas de tecnologia da informação (técnico)"
+    "descricao": "Desenvolvedor de sistemas de tecnologia da informação"
   },
   {
     "cbo": "317115",
@@ -3813,19 +3813,19 @@
   },
   {
     "cbo": "318105",
-    "descricao": "Desenhista técnico (arquitetura)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318110",
-    "descricao": "Desenhista técnico (cartografia)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318115",
-    "descricao": "Desenhista técnico (construção civil)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318120",
-    "descricao": "Desenhista técnico (instalações hidrossanitárias)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318205",
@@ -3841,31 +3841,31 @@
   },
   {
     "cbo": "318305",
-    "descricao": "Desenhista técnico (eletricidade e eletrônica)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318310",
-    "descricao": "Desenhista técnico (calefação, ventilação e refrigeração)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318405",
-    "descricao": "Desenhista técnico (artes gráficas)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318410",
-    "descricao": "Desenhista técnico (ilustrações artísticas)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318415",
-    "descricao": "Desenhista técnico (ilustrações técnicas)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318420",
-    "descricao": "Desenhista técnico (indústria têxtil)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318425",
-    "descricao": "Desenhista técnico (mobiliário)"
+    "descricao": "Desenhista técnico"
   },
   {
     "cbo": "318430",
@@ -4021,7 +4021,7 @@
   },
   {
     "cbo": "322240",
-    "descricao": "Auxiliar de saúde (navegação marítima)"
+    "descricao": "Auxiliar de saúde"
   },
   {
     "cbo": "322245",
@@ -4217,11 +4217,11 @@
   },
   {
     "cbo": "341105",
-    "descricao": "Piloto comercial (exceto linhas aéreas)"
+    "descricao": "Piloto comercial"
   },
   {
     "cbo": "341110",
-    "descricao": "Piloto comercial de helicóptero (exceto linhas aéreas)"
+    "descricao": "Piloto comercial de helicóptero"
   },
   {
     "cbo": "341115",
@@ -4285,11 +4285,11 @@
   },
   {
     "cbo": "341320",
-    "descricao": "Condutor de máquinas (bombeador)"
+    "descricao": "Condutor de máquinas"
   },
   {
     "cbo": "341325",
-    "descricao": "Condutor de máquinas (mecânico)"
+    "descricao": "Condutor de máquinas"
   },
   {
     "cbo": "342105",
@@ -4325,11 +4325,11 @@
   },
   {
     "cbo": "342305",
-    "descricao": "Chefe de serviço de transporte rodoviário (passageiros e cargas)"
+    "descricao": "Chefe de serviço de transporte rodoviário"
   },
   {
     "cbo": "342310",
-    "descricao": "Inspetor de serviços de transportes rodoviários (passageiros e cargas)"
+    "descricao": "Inspetor de serviços de transportes rodoviários"
   },
   {
     "cbo": "342315",
@@ -4337,11 +4337,11 @@
   },
   {
     "cbo": "342405",
-    "descricao": "Agente de estação (ferrovia e metrô)"
+    "descricao": "Agente de estação"
   },
   {
     "cbo": "342410",
-    "descricao": "Operador de centro de controle (ferrovia e metrô)"
+    "descricao": "Operador de centro de controle"
   },
   {
     "cbo": "342505",
@@ -4353,7 +4353,7 @@
   },
   {
     "cbo": "342515",
-    "descricao": "Fiscal de aviação civil (fac)"
+    "descricao": "Fiscal de aviação civil"
   },
   {
     "cbo": "342530",
@@ -4381,7 +4381,7 @@
   },
   {
     "cbo": "342560",
-    "descricao": "Operador de rampa ( transporte aéreo)"
+    "descricao": "Operador de rampa"
   },
   {
     "cbo": "342605",
@@ -4397,11 +4397,11 @@
   },
   {
     "cbo": "351110",
-    "descricao": "Chefe de contabilidade (técnico)"
+    "descricao": "Chefe de contabilidade"
   },
   {
     "cbo": "351115",
-    "descricao": "Consultor contábil (técnico)"
+    "descricao": "Consultor contábil"
   },
   {
     "cbo": "351305",
@@ -4469,7 +4469,7 @@
   },
   {
     "cbo": "351705",
-    "descricao": "Analista de seguros (técnico)"
+    "descricao": "Analista de seguros"
   },
   {
     "cbo": "351710",
@@ -4709,7 +4709,7 @@
   },
   {
     "cbo": "372110",
-    "descricao": "Iluminador (televisão)"
+    "descricao": "Iluminador"
   },
   {
     "cbo": "372115",
@@ -4749,11 +4749,11 @@
   },
   {
     "cbo": "373225",
-    "descricao": "Supervisor de operações (mídias audiovisuais)"
+    "descricao": "Supervisor de operações"
   },
   {
     "cbo": "373230",
-    "descricao": "Supervisor técnico (mídias audiovisuais)"
+    "descricao": "Supervisor técnico"
   },
   {
     "cbo": "374105",
@@ -4789,7 +4789,7 @@
   },
   {
     "cbo": "374145",
-    "descricao": "Dj (disc jockey)"
+    "descricao": "Dj"
   },
   {
     "cbo": "374150",
@@ -4801,7 +4801,7 @@
   },
   {
     "cbo": "374205",
-    "descricao": "Cenotécnico (cinema, vídeo, televisão, teatro e espetáculos)"
+    "descricao": "Cenotécnico"
   },
   {
     "cbo": "374210",
@@ -4837,7 +4837,7 @@
   },
   {
     "cbo": "374425",
-    "descricao": "Diretor de imagens (tv)"
+    "descricao": "Diretor de imagens"
   },
   {
     "cbo": "375105",
@@ -4861,7 +4861,7 @@
   },
   {
     "cbo": "375130",
-    "descricao": "Profissional de organização (personal organizer)"
+    "descricao": "Profissional de organização"
   },
   {
     "cbo": "376105",
@@ -4881,7 +4881,7 @@
   },
   {
     "cbo": "376215",
-    "descricao": "Artista de circo (outros)"
+    "descricao": "Artista de circo"
   },
   {
     "cbo": "376220",
@@ -4889,7 +4889,7 @@
   },
   {
     "cbo": "376225",
-    "descricao": "Domador de animais (circense)"
+    "descricao": "Domador de animais"
   },
   {
     "cbo": "376230",
@@ -4953,7 +4953,7 @@
   },
   {
     "cbo": "377105",
-    "descricao": "Atleta profissional (outras modalidades)"
+    "descricao": "Atleta profissional"
   },
   {
     "cbo": "377110",
@@ -5053,7 +5053,7 @@
   },
   {
     "cbo": "391140",
-    "descricao": "Analista de manutenção (equipamentos aéreos)"
+    "descricao": "Analista de manutenção"
   },
   {
     "cbo": "391145",
@@ -5085,7 +5085,7 @@
   },
   {
     "cbo": "395105",
-    "descricao": "Técnico de apoio em pesquisa e desenvolvimento (exceto agropecuário e florestal)"
+    "descricao": "Técnico de apoio em pesquisa e desenvolvimento"
   },
   {
     "cbo": "395110",
@@ -5181,7 +5181,7 @@
   },
   {
     "cbo": "412115",
-    "descricao": "Operador de mensagens de telecomunicações (correios)"
+    "descricao": "Operador de mensagens de telecomunicações"
   },
   {
     "cbo": "412120",
@@ -5241,7 +5241,7 @@
   },
   {
     "cbo": "414120",
-    "descricao": "Conferente mercadoria (exceto carga e descarga)"
+    "descricao": "Conferente mercadoria"
   },
   {
     "cbo": "414125",
@@ -5285,7 +5285,7 @@
   },
   {
     "cbo": "415130",
-    "descricao": "Operador de máquina copiadora (exceto operador de gráfica rápida)"
+    "descricao": "Operador de máquina copiadora"
   },
   {
     "cbo": "415205",
@@ -5309,7 +5309,7 @@
   },
   {
     "cbo": "420105",
-    "descricao": "Supervisor de caixas e bilheteiros (exceto caixa de banco)"
+    "descricao": "Supervisor de caixas e bilheteiros"
   },
   {
     "cbo": "420110",
@@ -5337,7 +5337,7 @@
   },
   {
     "cbo": "421105",
-    "descricao": "Atendente comercial (agência postal)"
+    "descricao": "Atendente comercial"
   },
   {
     "cbo": "421110",
@@ -5357,11 +5357,11 @@
   },
   {
     "cbo": "421205",
-    "descricao": "Recebedor de apostas (loteria)"
+    "descricao": "Recebedor de apostas"
   },
   {
     "cbo": "421210",
-    "descricao": "Recebedor de apostas (turfe)"
+    "descricao": "Recebedor de apostas"
   },
   {
     "cbo": "421305",
@@ -5373,7 +5373,7 @@
   },
   {
     "cbo": "421315",
-    "descricao": "Localizador (cobrador)"
+    "descricao": "Localizador"
   },
   {
     "cbo": "422105",
@@ -5473,11 +5473,11 @@
   },
   {
     "cbo": "424205",
-    "descricao": "Coordenador de provas (concurso, avaliação, exame)"
+    "descricao": "Coordenador de provas"
   },
   {
     "cbo": "424210",
-    "descricao": "Aplicador de provas (concurso, avaliação,exame)"
+    "descricao": "Aplicador de provas"
   },
   {
     "cbo": "510105",
@@ -5525,23 +5525,23 @@
   },
   {
     "cbo": "511115",
-    "descricao": "Taifeiro (exceto militares)"
+    "descricao": "Taifeiro"
   },
   {
     "cbo": "511205",
-    "descricao": "Fiscal de transportes coletivos (exceto trem)"
+    "descricao": "Fiscal de transportes coletivos"
   },
   {
     "cbo": "511210",
-    "descricao": "Despachante de transportes coletivos (exceto trem)"
+    "descricao": "Despachante de transportes coletivos"
   },
   {
     "cbo": "511215",
-    "descricao": "Cobrador de transportes coletivos (exceto trem)"
+    "descricao": "Cobrador de transportes coletivos"
   },
   {
     "cbo": "511220",
-    "descricao": "Bilheteiro (estações de metrô, ferroviárias e assemelhadas)"
+    "descricao": "Bilheteiro"
   },
   {
     "cbo": "511405",
@@ -5757,7 +5757,7 @@
   },
   {
     "cbo": "515135",
-    "descricao": "Socorrista (exceto médicos e enfermeiros)"
+    "descricao": "Socorrista"
   },
   {
     "cbo": "515140",
@@ -5881,7 +5881,7 @@
   },
   {
     "cbo": "516335",
-    "descricao": "Conferente-expedidor de roupas (lavanderias)"
+    "descricao": "Conferente-expedidor de roupas"
   },
   {
     "cbo": "516340",
@@ -5909,7 +5909,7 @@
   },
   {
     "cbo": "516605",
-    "descricao": "Operador de forno (serviços funerários)"
+    "descricao": "Operador de forno"
   },
   {
     "cbo": "516610",
@@ -6017,7 +6017,7 @@
   },
   {
     "cbo": "517405",
-    "descricao": "Porteiro (hotel)"
+    "descricao": "Porteiro"
   },
   {
     "cbo": "517410",
@@ -6173,7 +6173,7 @@
   },
   {
     "cbo": "523125",
-    "descricao": "Estampador de placa de identificação veicular (epiv)"
+    "descricao": "Estampador de placa de identificação veicular"
   },
   {
     "cbo": "524105",
@@ -6185,7 +6185,7 @@
   },
   {
     "cbo": "524210",
-    "descricao": "Jornaleiro (em banca de jornal)"
+    "descricao": "Jornaleiro"
   },
   {
     "cbo": "524215",
@@ -6369,19 +6369,19 @@
   },
   {
     "cbo": "613110",
-    "descricao": "Criador de bovinos (corte)"
+    "descricao": "Criador de bovinos"
   },
   {
     "cbo": "613115",
-    "descricao": "Criador de bovinos (leite)"
+    "descricao": "Criador de bovinos"
   },
   {
     "cbo": "613120",
-    "descricao": "Criador de bubalinos (corte)"
+    "descricao": "Criador de bubalinos"
   },
   {
     "cbo": "613125",
-    "descricao": "Criador de bubalinos (leite)"
+    "descricao": "Criador de bubalinos"
   },
   {
     "cbo": "613130",
@@ -6441,7 +6441,7 @@
   },
   {
     "cbo": "622005",
-    "descricao": "Caseiro (agricultura)"
+    "descricao": "Caseiro"
   },
   {
     "cbo": "622010",
@@ -6485,19 +6485,19 @@
   },
   {
     "cbo": "622305",
-    "descricao": "Trabalhador na olericultura (frutos e sementes)"
+    "descricao": "Trabalhador na olericultura"
   },
   {
     "cbo": "622310",
-    "descricao": "Trabalhador na olericultura (legumes)"
+    "descricao": "Trabalhador na olericultura"
   },
   {
     "cbo": "622315",
-    "descricao": "Trabalhador na olericultura (raízes, bulbos e tubérculos)"
+    "descricao": "Trabalhador na olericultura"
   },
   {
     "cbo": "622320",
-    "descricao": "Trabalhador na olericultura (talos, folhas e flores)"
+    "descricao": "Trabalhador na olericultura"
   },
   {
     "cbo": "622405",
@@ -6617,23 +6617,23 @@
   },
   {
     "cbo": "623105",
-    "descricao": "Trabalhador da pecuária (asininos e muares)"
+    "descricao": "Trabalhador da pecuária"
   },
   {
     "cbo": "623110",
-    "descricao": "Trabalhador da pecuária (bovinos corte)"
+    "descricao": "Trabalhador da pecuária"
   },
   {
     "cbo": "623115",
-    "descricao": "Trabalhador da pecuária (bovinos leite)"
+    "descricao": "Trabalhador da pecuária"
   },
   {
     "cbo": "623120",
-    "descricao": "Trabalhador da pecuária (bubalinos)"
+    "descricao": "Trabalhador da pecuária"
   },
   {
     "cbo": "623125",
-    "descricao": "Trabalhador da pecuária (eqüinos)"
+    "descricao": "Trabalhador da pecuária"
   },
   {
     "cbo": "623205",
@@ -6761,7 +6761,7 @@
   },
   {
     "cbo": "631420",
-    "descricao": "Redeiro (pesca)"
+    "descricao": "Redeiro"
   },
   {
     "cbo": "632005",
@@ -6837,7 +6837,7 @@
   },
   {
     "cbo": "632340",
-    "descricao": "Trabalhador da exploração de malva (pãina)"
+    "descricao": "Trabalhador da exploração de malva"
   },
   {
     "cbo": "632345",
@@ -6937,11 +6937,11 @@
   },
   {
     "cbo": "643005",
-    "descricao": "Trabalhador na operação de sistema de irrigação localizada (microaspersão e gotejamento)"
+    "descricao": "Trabalhador na operação de sistema de irrigação localizada"
   },
   {
     "cbo": "643010",
-    "descricao": "Trabalhador na operação de sistema de irrigação por aspersão (pivô central)"
+    "descricao": "Trabalhador na operação de sistema de irrigação por aspersão"
   },
   {
     "cbo": "643015",
@@ -6949,7 +6949,7 @@
   },
   {
     "cbo": "643020",
-    "descricao": "Trabalhador na operação de sistemas de irrigação e aspersão (alto propelido)"
+    "descricao": "Trabalhador na operação de sistemas de irrigação e aspersão"
   },
   {
     "cbo": "643025",
@@ -6977,11 +6977,11 @@
   },
   {
     "cbo": "710205",
-    "descricao": "Mestre (construção civil)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "710210",
-    "descricao": "Mestre de linhas (ferrovias)"
+    "descricao": "Mestre de linhas"
   },
   {
     "cbo": "710215",
@@ -7021,7 +7021,7 @@
   },
   {
     "cbo": "711205",
-    "descricao": "Operador de caminhão (minas e pedreiras)"
+    "descricao": "Operador de caminhão"
   },
   {
     "cbo": "711210",
@@ -7029,15 +7029,15 @@
   },
   {
     "cbo": "711215",
-    "descricao": "Operador de máquina cortadora (minas e pedreiras)"
+    "descricao": "Operador de máquina cortadora"
   },
   {
     "cbo": "711220",
-    "descricao": "Operador de máquina de extração contínua (minas de carvão)"
+    "descricao": "Operador de máquina de extração contínua"
   },
   {
     "cbo": "711225",
-    "descricao": "Operador de máquina perfuradora (minas e pedreiras)"
+    "descricao": "Operador de máquina perfuradora"
   },
   {
     "cbo": "711230",
@@ -7045,7 +7045,7 @@
   },
   {
     "cbo": "711235",
-    "descricao": "Operador de motoniveladora (extração de minerais sólidos)"
+    "descricao": "Operador de motoniveladora"
   },
   {
     "cbo": "711240",
@@ -7053,7 +7053,7 @@
   },
   {
     "cbo": "711245",
-    "descricao": "Operador de trator (minas e pedreiras)"
+    "descricao": "Operador de trator"
   },
   {
     "cbo": "711305",
@@ -7065,19 +7065,19 @@
   },
   {
     "cbo": "711315",
-    "descricao": "Sondador (poços de petróleo e gás)"
+    "descricao": "Sondador"
   },
   {
     "cbo": "711320",
-    "descricao": "Sondador de poços (exceto de petróleo e gás)"
+    "descricao": "Sondador de poços"
   },
   {
     "cbo": "711325",
-    "descricao": "Plataformista (petróleo)"
+    "descricao": "Plataformista"
   },
   {
     "cbo": "711330",
-    "descricao": "Torrista (petróleo)"
+    "descricao": "Torrista"
   },
   {
     "cbo": "711405",
@@ -7085,7 +7085,7 @@
   },
   {
     "cbo": "711410",
-    "descricao": "Operador de salina (sal marinho)"
+    "descricao": "Operador de salina"
   },
   {
     "cbo": "712105",
@@ -7097,7 +7097,7 @@
   },
   {
     "cbo": "712115",
-    "descricao": "Operador de aparelho de precipitação (minas de ouro ou prata)"
+    "descricao": "Operador de aparelho de precipitação"
   },
   {
     "cbo": "712120",
@@ -7109,7 +7109,7 @@
   },
   {
     "cbo": "712130",
-    "descricao": "Operador de jig (minas)"
+    "descricao": "Operador de jig"
   },
   {
     "cbo": "712135",
@@ -7133,7 +7133,7 @@
   },
   {
     "cbo": "712225",
-    "descricao": "Torneiro (lavra de pedra)"
+    "descricao": "Torneiro"
   },
   {
     "cbo": "712230",
@@ -7169,7 +7169,7 @@
   },
   {
     "cbo": "715140",
-    "descricao": "Operador de pavimentadora (asfalto, concreto e materiais similares)"
+    "descricao": "Operador de pavimentadora"
   },
   {
     "cbo": "715145",
@@ -7185,15 +7185,15 @@
   },
   {
     "cbo": "715215",
-    "descricao": "Pedreiro (chaminés industriais)"
+    "descricao": "Pedreiro"
   },
   {
     "cbo": "715220",
-    "descricao": "Pedreiro (material refratário)"
+    "descricao": "Pedreiro"
   },
   {
     "cbo": "715225",
-    "descricao": "Pedreiro (mineração)"
+    "descricao": "Pedreiro"
   },
   {
     "cbo": "715230",
@@ -7233,15 +7233,15 @@
   },
   {
     "cbo": "715510",
-    "descricao": "Carpinteiro (esquadrias)"
+    "descricao": "Carpinteiro"
   },
   {
     "cbo": "715515",
-    "descricao": "Carpinteiro (cenários)"
+    "descricao": "Carpinteiro"
   },
   {
     "cbo": "715520",
-    "descricao": "Carpinteiro (mineração)"
+    "descricao": "Carpinteiro"
   },
   {
     "cbo": "715525",
@@ -7249,7 +7249,7 @@
   },
   {
     "cbo": "715530",
-    "descricao": "Carpinteiro (telhados)"
+    "descricao": "Carpinteiro"
   },
   {
     "cbo": "715535",
@@ -7257,19 +7257,19 @@
   },
   {
     "cbo": "715540",
-    "descricao": "Carpinteiro de obras civis de arte (pontes, túneis, barragens)"
+    "descricao": "Carpinteiro de obras civis de arte"
   },
   {
     "cbo": "715545",
-    "descricao": "Montador de andaimes (edificações)"
+    "descricao": "Montador de andaimes"
   },
   {
     "cbo": "715605",
-    "descricao": "Eletricista de instalações (cenários)"
+    "descricao": "Eletricista de instalações"
   },
   {
     "cbo": "715610",
-    "descricao": "Eletricista de instalações (edifícios)"
+    "descricao": "Eletricista de instalações"
   },
   {
     "cbo": "715615",
@@ -7277,7 +7277,7 @@
   },
   {
     "cbo": "715705",
-    "descricao": "Aplicador de asfalto impermeabilizante (coberturas)"
+    "descricao": "Aplicador de asfalto impermeabilizante"
   },
   {
     "cbo": "715710",
@@ -7285,7 +7285,7 @@
   },
   {
     "cbo": "715715",
-    "descricao": "Instalador de isolantes térmicos (refrigeração e climatização)"
+    "descricao": "Instalador de isolantes térmicos"
   },
   {
     "cbo": "715720",
@@ -7293,11 +7293,11 @@
   },
   {
     "cbo": "715725",
-    "descricao": "Instalador de material isolante, a mão (edificações)"
+    "descricao": "Instalador de material isolante, a mão"
   },
   {
     "cbo": "715730",
-    "descricao": "Instalador de material isolante, à máquina (edificações)"
+    "descricao": "Instalador de material isolante, à máquina"
   },
   {
     "cbo": "716105",
@@ -7309,19 +7309,19 @@
   },
   {
     "cbo": "716205",
-    "descricao": "Telhador (telhas de argila e materiais similares)"
+    "descricao": "Telhador"
   },
   {
     "cbo": "716210",
-    "descricao": "Telhador (telhas de cimento-amianto)"
+    "descricao": "Telhador"
   },
   {
     "cbo": "716215",
-    "descricao": "Telhador (telhas metálicas)"
+    "descricao": "Telhador"
   },
   {
     "cbo": "716220",
-    "descricao": "Telhador (telhas plásticas)"
+    "descricao": "Telhador"
   },
   {
     "cbo": "716305",
@@ -7329,11 +7329,11 @@
   },
   {
     "cbo": "716310",
-    "descricao": "Vidraceiro (edificações)"
+    "descricao": "Vidraceiro"
   },
   {
     "cbo": "716315",
-    "descricao": "Vidraceiro (vitrais)"
+    "descricao": "Vidraceiro"
   },
   {
     "cbo": "716405",
@@ -7357,7 +7357,7 @@
   },
   {
     "cbo": "716525",
-    "descricao": "Marmorista (construção)"
+    "descricao": "Marmorista"
   },
   {
     "cbo": "716530",
@@ -7381,7 +7381,7 @@
   },
   {
     "cbo": "716615",
-    "descricao": "Revestidor de interiores (papel, material plástico e emborrachados)"
+    "descricao": "Revestidor de interiores"
   },
   {
     "cbo": "717005",
@@ -7393,7 +7393,7 @@
   },
   {
     "cbo": "717015",
-    "descricao": "Poceiro (edificações)"
+    "descricao": "Poceiro"
   },
   {
     "cbo": "717020",
@@ -7405,7 +7405,7 @@
   },
   {
     "cbo": "720105",
-    "descricao": "Mestre (afiador de ferramentas)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "720110",
@@ -7429,7 +7429,7 @@
   },
   {
     "cbo": "720135",
-    "descricao": "Mestre de pintura (tratamento de superfícies)"
+    "descricao": "Mestre de pintura"
   },
   {
     "cbo": "720140",
@@ -7453,15 +7453,15 @@
   },
   {
     "cbo": "720205",
-    "descricao": "Mestre (construção naval)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "720210",
-    "descricao": "Mestre (indústria de automotores e material de transportes)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "720215",
-    "descricao": "Mestre (indústria de máquinas e outros equipamentos mecânicos)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "720220",
@@ -7477,7 +7477,7 @@
   },
   {
     "cbo": "721115",
-    "descricao": "Modelador de metais (fundição)"
+    "descricao": "Modelador de metais"
   },
   {
     "cbo": "721205",
@@ -7653,7 +7653,7 @@
   },
   {
     "cbo": "723225",
-    "descricao": "Metalizador (banho quente)"
+    "descricao": "Metalizador"
   },
   {
     "cbo": "723230",
@@ -7661,7 +7661,7 @@
   },
   {
     "cbo": "723235",
-    "descricao": "Operador de zincagem (processo eletrolítico)"
+    "descricao": "Operador de zincagem"
   },
   {
     "cbo": "723240",
@@ -7673,7 +7673,7 @@
   },
   {
     "cbo": "723310",
-    "descricao": "Pintor a pincel e rolo (exceto obras e estruturas metálicas)"
+    "descricao": "Pintor a pincel e rolo"
   },
   {
     "cbo": "723315",
@@ -7681,7 +7681,7 @@
   },
   {
     "cbo": "723320",
-    "descricao": "Pintor de veículos (fabricação)"
+    "descricao": "Pintor de veículos"
   },
   {
     "cbo": "723325",
@@ -7689,11 +7689,11 @@
   },
   {
     "cbo": "723330",
-    "descricao": "Pintor, a  pistola (exceto obras e estruturas metálicas)"
+    "descricao": "Pintor, a  pistola"
   },
   {
     "cbo": "724105",
-    "descricao": "Assentador de canalização (edificações)"
+    "descricao": "Assentador de canalização"
   },
   {
     "cbo": "724110",
@@ -7705,19 +7705,19 @@
   },
   {
     "cbo": "724120",
-    "descricao": "Instalador de tubulações (aeronaves)"
+    "descricao": "Instalador de tubulações"
   },
   {
     "cbo": "724125",
-    "descricao": "Instalador de tubulações (embarcações)"
+    "descricao": "Instalador de tubulações"
   },
   {
     "cbo": "724130",
-    "descricao": "Instalador de tubulações de gás combustível (produção e distribuição)"
+    "descricao": "Instalador de tubulações de gás combustível"
   },
   {
     "cbo": "724135",
-    "descricao": "Instalador de tubulações de vapor (produção e distribuição)"
+    "descricao": "Instalador de tubulações de vapor"
   },
   {
     "cbo": "724205",
@@ -7765,11 +7765,11 @@
   },
   {
     "cbo": "724405",
-    "descricao": "Caldeireiro (chapas de cobre)"
+    "descricao": "Caldeireiro"
   },
   {
     "cbo": "724410",
-    "descricao": "Caldeireiro (chapas de ferro e aço)"
+    "descricao": "Caldeireiro"
   },
   {
     "cbo": "724415",
@@ -7777,7 +7777,7 @@
   },
   {
     "cbo": "724420",
-    "descricao": "Chapeador de carrocerias metálicas (fabricação)"
+    "descricao": "Chapeador de carrocerias metálicas"
   },
   {
     "cbo": "724425",
@@ -7805,7 +7805,7 @@
   },
   {
     "cbo": "724515",
-    "descricao": "Prensista (operador de prensa)"
+    "descricao": "Prensista"
   },
   {
     "cbo": "724605",
@@ -7825,7 +7825,7 @@
   },
   {
     "cbo": "725015",
-    "descricao": "Ajustador mecânico (usinagem em bancada e em máquinas-ferramentas)"
+    "descricao": "Ajustador mecânico"
   },
   {
     "cbo": "725020",
@@ -7833,7 +7833,7 @@
   },
   {
     "cbo": "725025",
-    "descricao": "Ajustador naval (reparo e construção)"
+    "descricao": "Ajustador naval"
   },
   {
     "cbo": "725030",
@@ -7841,7 +7841,7 @@
   },
   {
     "cbo": "725105",
-    "descricao": "Montador de máquinas, motores e acessórios (montagem em série)"
+    "descricao": "Montador de máquinas, motores e acessórios"
   },
   {
     "cbo": "725205",
@@ -7861,7 +7861,7 @@
   },
   {
     "cbo": "725225",
-    "descricao": "Montador de máquinas-ferramentas (usinagem de metais)"
+    "descricao": "Montador de máquinas-ferramentas"
   },
   {
     "cbo": "725305",
@@ -7897,7 +7897,7 @@
   },
   {
     "cbo": "725505",
-    "descricao": "Montador de veículos (linha de montagem)"
+    "descricao": "Montador de veículos"
   },
   {
     "cbo": "725510",
@@ -7921,27 +7921,27 @@
   },
   {
     "cbo": "731105",
-    "descricao": "Montador de equipamentos eletrônicos (aparelhos médicos)"
+    "descricao": "Montador de equipamentos eletrônicos"
   },
   {
     "cbo": "731110",
-    "descricao": "Montador de equipamentos eletrônicos (computadores e equipamentos auxiliares)"
+    "descricao": "Montador de equipamentos eletrônicos"
   },
   {
     "cbo": "731115",
-    "descricao": "Montador de equipamentos elétricos (instrumentos de medição)"
+    "descricao": "Montador de equipamentos elétricos"
   },
   {
     "cbo": "731120",
-    "descricao": "Montador de equipamentos elétricos (aparelhos eletrodomésticos)"
+    "descricao": "Montador de equipamentos elétricos"
   },
   {
     "cbo": "731125",
-    "descricao": "Montador de equipamentos elétricos (centrais elétricas)"
+    "descricao": "Montador de equipamentos elétricos"
   },
   {
     "cbo": "731130",
-    "descricao": "Montador de equipamentos elétricos (motores e dínamos)"
+    "descricao": "Montador de equipamentos elétricos"
   },
   {
     "cbo": "731135",
@@ -7949,11 +7949,11 @@
   },
   {
     "cbo": "731140",
-    "descricao": "Montador de equipamentos eletrônicos (instalações de sinalização)"
+    "descricao": "Montador de equipamentos eletrônicos"
   },
   {
     "cbo": "731145",
-    "descricao": "Montador de equipamentos eletrônicos (máquinas industriais)"
+    "descricao": "Montador de equipamentos eletrônicos"
   },
   {
     "cbo": "731150",
@@ -7961,11 +7961,11 @@
   },
   {
     "cbo": "731155",
-    "descricao": "Montador de equipamentos elétricos (elevadores e equipamentos similares)"
+    "descricao": "Montador de equipamentos elétricos"
   },
   {
     "cbo": "731160",
-    "descricao": "Montador de equipamentos elétricos (transformadores)"
+    "descricao": "Montador de equipamentos elétricos"
   },
   {
     "cbo": "731165",
@@ -7977,15 +7977,15 @@
   },
   {
     "cbo": "731175",
-    "descricao": "Operador de linha de montagem (aparelhos elétricos)"
+    "descricao": "Operador de linha de montagem"
   },
   {
     "cbo": "731180",
-    "descricao": "Operador de linha de montagem (aparelhos eletrônicos)"
+    "descricao": "Operador de linha de montagem"
   },
   {
     "cbo": "731205",
-    "descricao": "Montador de equipamentos eletrônicos (estação de rádio, tv e equipamentos de radar)"
+    "descricao": "Montador de equipamentos eletrônicos"
   },
   {
     "cbo": "731305",
@@ -8017,7 +8017,7 @@
   },
   {
     "cbo": "732110",
-    "descricao": "Emendador de cabos elétricos e telefônicos (aéreos e subterrâneos)"
+    "descricao": "Emendador de cabos elétricos e telefônicos"
   },
   {
     "cbo": "732115",
@@ -8025,11 +8025,11 @@
   },
   {
     "cbo": "732120",
-    "descricao": "Instalador de linhas elétricas de alta e baixa - tensão (rede aérea e subterrânea)"
+    "descricao": "Instalador de linhas elétricas de alta e baixa - tensão"
   },
   {
     "cbo": "732125",
-    "descricao": "Instalador eletricista (tração de veículos)"
+    "descricao": "Instalador eletricista"
   },
   {
     "cbo": "732130",
@@ -8065,11 +8065,11 @@
   },
   {
     "cbo": "741120",
-    "descricao": "Relojoeiro (fabricação)"
+    "descricao": "Relojoeiro"
   },
   {
     "cbo": "741125",
-    "descricao": "Relojoeiro (reparação)"
+    "descricao": "Relojoeiro"
   },
   {
     "cbo": "742105",
@@ -8085,15 +8085,15 @@
   },
   {
     "cbo": "742120",
-    "descricao": "Confeccionador de instrumentos de percussão (pele, couro ou plástico)"
+    "descricao": "Confeccionador de instrumentos de percussão"
   },
   {
     "cbo": "742125",
-    "descricao": "Confeccionador de instrumentos de sopro (madeira)"
+    "descricao": "Confeccionador de instrumentos de sopro"
   },
   {
     "cbo": "742130",
-    "descricao": "Confeccionador de instrumentos de sopro (metal)"
+    "descricao": "Confeccionador de instrumentos de sopro"
   },
   {
     "cbo": "742135",
@@ -8109,11 +8109,11 @@
   },
   {
     "cbo": "750205",
-    "descricao": "Supervisor da indústria de minerais não metálicos (exceto os derivados de petróleo e carvão)"
+    "descricao": "Supervisor da indústria de minerais não metálicos"
   },
   {
     "cbo": "751005",
-    "descricao": "Engastador (jóias)"
+    "descricao": "Engastador"
   },
   {
     "cbo": "751010",
@@ -8121,11 +8121,11 @@
   },
   {
     "cbo": "751015",
-    "descricao": "Joalheiro (reparações)"
+    "descricao": "Joalheiro"
   },
   {
     "cbo": "751020",
-    "descricao": "Lapidador (jóias)"
+    "descricao": "Lapidador"
   },
   {
     "cbo": "751105",
@@ -8133,11 +8133,11 @@
   },
   {
     "cbo": "751110",
-    "descricao": "Fundidor (joalheria e ourivesaria)"
+    "descricao": "Fundidor"
   },
   {
     "cbo": "751115",
-    "descricao": "Gravador (joalheria e ourivesaria)"
+    "descricao": "Gravador"
   },
   {
     "cbo": "751120",
@@ -8149,15 +8149,15 @@
   },
   {
     "cbo": "751130",
-    "descricao": "Trefilador (joalheria e ourivesaria)"
+    "descricao": "Trefilador"
   },
   {
     "cbo": "752105",
-    "descricao": "Artesão modelador (vidros)"
+    "descricao": "Artesão modelador"
   },
   {
     "cbo": "752110",
-    "descricao": "Moldador (vidros)"
+    "descricao": "Moldador"
   },
   {
     "cbo": "752115",
@@ -8201,11 +8201,11 @@
   },
   {
     "cbo": "752310",
-    "descricao": "Ceramista (torno de pedal e motor)"
+    "descricao": "Ceramista"
   },
   {
     "cbo": "752315",
-    "descricao": "Ceramista (torno semi-automático)"
+    "descricao": "Ceramista"
   },
   {
     "cbo": "752320",
@@ -8245,23 +8245,23 @@
   },
   {
     "cbo": "760105",
-    "descricao": "Contramestre de acabamento (indústria têxtil)"
+    "descricao": "Contramestre de acabamento"
   },
   {
     "cbo": "760110",
-    "descricao": "Contramestre de fiação (indústria têxtil)"
+    "descricao": "Contramestre de fiação"
   },
   {
     "cbo": "760115",
-    "descricao": "Contramestre de malharia (indústria têxtil)"
+    "descricao": "Contramestre de malharia"
   },
   {
     "cbo": "760120",
-    "descricao": "Contramestre de tecelagem (indústria têxtil)"
+    "descricao": "Contramestre de tecelagem"
   },
   {
     "cbo": "760125",
-    "descricao": "Mestre (indústria têxtil e de confecções)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "760205",
@@ -8277,7 +8277,7 @@
   },
   {
     "cbo": "760405",
-    "descricao": "Supervisor  (indústria de calçados e artefatos de couro)"
+    "descricao": "Supervisor"
   },
   {
     "cbo": "760505",
@@ -8285,7 +8285,7 @@
   },
   {
     "cbo": "760605",
-    "descricao": "Supervisor das artes gráficas  (indústria editorial e gráfica)"
+    "descricao": "Supervisor das artes gráficas"
   },
   {
     "cbo": "761005",
@@ -8301,7 +8301,7 @@
   },
   {
     "cbo": "761205",
-    "descricao": "Operador de abertura (fiação)"
+    "descricao": "Operador de abertura"
   },
   {
     "cbo": "761210",
@@ -8337,7 +8337,7 @@
   },
   {
     "cbo": "761250",
-    "descricao": "Operador de passador (fiação)"
+    "descricao": "Operador de passador"
   },
   {
     "cbo": "761255",
@@ -8349,35 +8349,35 @@
   },
   {
     "cbo": "761303",
-    "descricao": "Tecelão (redes)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761306",
-    "descricao": "Tecelão (rendas e bordados)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761309",
-    "descricao": "Tecelão (tear automático)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761312",
-    "descricao": "Tecelão (tear jacquard)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761315",
-    "descricao": "Tecelão (tear mecânico de maquineta)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761318",
-    "descricao": "Tecelão (tear mecânico de xadrez)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761321",
-    "descricao": "Tecelão (tear mecânico liso)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761324",
-    "descricao": "Tecelão (tear mecânico, exceto jacquard)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "761327",
@@ -8385,11 +8385,11 @@
   },
   {
     "cbo": "761330",
-    "descricao": "Tecelão de malhas (máquina circular)"
+    "descricao": "Tecelão de malhas"
   },
   {
     "cbo": "761333",
-    "descricao": "Tecelão de malhas (máquina retilínea)"
+    "descricao": "Tecelão de malhas"
   },
   {
     "cbo": "761336",
@@ -8397,11 +8397,11 @@
   },
   {
     "cbo": "761339",
-    "descricao": "Tecelão de meias (máquina circular)"
+    "descricao": "Tecelão de meias"
   },
   {
     "cbo": "761342",
-    "descricao": "Tecelão de meias (máquina retilínea)"
+    "descricao": "Tecelão de meias"
   },
   {
     "cbo": "761345",
@@ -8437,7 +8437,7 @@
   },
   {
     "cbo": "761405",
-    "descricao": "Alvejador (tecidos)"
+    "descricao": "Alvejador"
   },
   {
     "cbo": "761410",
@@ -8445,7 +8445,7 @@
   },
   {
     "cbo": "761415",
-    "descricao": "Operador de calandras (tecidos)"
+    "descricao": "Operador de calandras"
   },
   {
     "cbo": "761420",
@@ -8465,11 +8465,11 @@
   },
   {
     "cbo": "761805",
-    "descricao": "Inspetor de estamparia (produção têxtil)"
+    "descricao": "Inspetor de estamparia"
   },
   {
     "cbo": "761810",
-    "descricao": "Revisor de fios (produção têxtil)"
+    "descricao": "Revisor de fios"
   },
   {
     "cbo": "761815",
@@ -8493,7 +8493,7 @@
   },
   {
     "cbo": "762115",
-    "descricao": "Estirador de couros e peles (preparação)"
+    "descricao": "Estirador de couros e peles"
   },
   {
     "cbo": "762120",
@@ -8505,7 +8505,7 @@
   },
   {
     "cbo": "762205",
-    "descricao": "Curtidor (couros e peles)"
+    "descricao": "Curtidor"
   },
   {
     "cbo": "762210",
@@ -8521,7 +8521,7 @@
   },
   {
     "cbo": "762305",
-    "descricao": "Estirador de couros e peles (acabamento)"
+    "descricao": "Estirador de couros e peles"
   },
   {
     "cbo": "762310",
@@ -8573,7 +8573,7 @@
   },
   {
     "cbo": "763105",
-    "descricao": "Auxiliar de corte (preparação da confecção de roupas)"
+    "descricao": "Auxiliar de corte"
   },
   {
     "cbo": "763110",
@@ -8629,7 +8629,7 @@
   },
   {
     "cbo": "764105",
-    "descricao": "Cortador de calçados, a  máquina (exceto solas e palmilhas)"
+    "descricao": "Cortador de calçados, a  máquina"
   },
   {
     "cbo": "764110",
@@ -8657,7 +8657,7 @@
   },
   {
     "cbo": "765005",
-    "descricao": "Confeccionador de artefatos de couro (exceto sapatos)"
+    "descricao": "Confeccionador de artefatos de couro"
   },
   {
     "cbo": "765010",
@@ -8669,7 +8669,7 @@
   },
   {
     "cbo": "765105",
-    "descricao": "Cortador de artefatos de couro (exceto roupas e calçados)"
+    "descricao": "Cortador de artefatos de couro"
   },
   {
     "cbo": "765110",
@@ -8677,7 +8677,7 @@
   },
   {
     "cbo": "765205",
-    "descricao": "Colchoeiro (confecção de colchões)"
+    "descricao": "Colchoeiro"
   },
   {
     "cbo": "765215",
@@ -8701,11 +8701,11 @@
   },
   {
     "cbo": "765310",
-    "descricao": "Costurador de artefatos de couro, a  máquina (exceto roupas e calçados)"
+    "descricao": "Costurador de artefatos de couro, a  máquina"
   },
   {
     "cbo": "765315",
-    "descricao": "Montador de artefatos de couro (exceto roupas e calçados)"
+    "descricao": "Montador de artefatos de couro"
   },
   {
     "cbo": "765405",
@@ -8717,7 +8717,7 @@
   },
   {
     "cbo": "766115",
-    "descricao": "Gravador de matriz para flexografia (clicherista)"
+    "descricao": "Gravador de matriz para flexografia"
   },
   {
     "cbo": "766120",
@@ -8725,11 +8725,11 @@
   },
   {
     "cbo": "766125",
-    "descricao": "Montador de fotolito (analógico e digital)"
+    "descricao": "Montador de fotolito"
   },
   {
     "cbo": "766130",
-    "descricao": "Gravador de matriz para rotogravura (eletromecânico e químico)"
+    "descricao": "Gravador de matriz para rotogravura"
   },
   {
     "cbo": "766135",
@@ -8741,7 +8741,7 @@
   },
   {
     "cbo": "766145",
-    "descricao": "Operador de sistemas de prova (analógico e digital)"
+    "descricao": "Operador de sistemas de prova"
   },
   {
     "cbo": "766150",
@@ -8753,7 +8753,7 @@
   },
   {
     "cbo": "766205",
-    "descricao": "Impressor (serigrafia)"
+    "descricao": "Impressor"
   },
   {
     "cbo": "766210",
@@ -8761,7 +8761,7 @@
   },
   {
     "cbo": "766215",
-    "descricao": "Impressor de ofsete (plano e rotativo)"
+    "descricao": "Impressor de ofsete"
   },
   {
     "cbo": "766220",
@@ -8793,7 +8793,7 @@
   },
   {
     "cbo": "766305",
-    "descricao": "Acabador de embalagens (flexíveis e cartotécnicas)"
+    "descricao": "Acabador de embalagens"
   },
   {
     "cbo": "766310",
@@ -8801,11 +8801,11 @@
   },
   {
     "cbo": "766315",
-    "descricao": "Operador de acabamento (indústria gráfica)"
+    "descricao": "Operador de acabamento"
   },
   {
     "cbo": "766320",
-    "descricao": "Operador de guilhotina (corte de papel)"
+    "descricao": "Operador de guilhotina"
   },
   {
     "cbo": "766325",
@@ -8825,11 +8825,11 @@
   },
   {
     "cbo": "766420",
-    "descricao": "Auxiliar de radiologia (revelação fotográfica)"
+    "descricao": "Auxiliar de radiologia"
   },
   {
     "cbo": "768105",
-    "descricao": "Tecelão (tear manual)"
+    "descricao": "Tecelão"
   },
   {
     "cbo": "768110",
@@ -8845,7 +8845,7 @@
   },
   {
     "cbo": "768125",
-    "descricao": "Chapeleiro (chapéus de palha)"
+    "descricao": "Chapeleiro"
   },
   {
     "cbo": "768130",
@@ -8865,15 +8865,15 @@
   },
   {
     "cbo": "768310",
-    "descricao": "Cortador de calçados, a  mão (exceto solas)"
+    "descricao": "Cortador de calçados, a  mão"
   },
   {
     "cbo": "768315",
-    "descricao": "Costurador de artefatos de couro, a  mão (exceto roupas e calçados)"
+    "descricao": "Costurador de artefatos de couro, a  mão"
   },
   {
     "cbo": "768320",
-    "descricao": "Sapateiro (calçados sob medida)"
+    "descricao": "Sapateiro"
   },
   {
     "cbo": "768325",
@@ -8905,7 +8905,7 @@
   },
   {
     "cbo": "768705",
-    "descricao": "Gravador, à mão (encadernação)"
+    "descricao": "Gravador, à mão"
   },
   {
     "cbo": "768710",
@@ -8913,7 +8913,7 @@
   },
   {
     "cbo": "770105",
-    "descricao": "Mestre (indústria de madeira e mobiliário)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "770110",
@@ -8965,15 +8965,15 @@
   },
   {
     "cbo": "773125",
-    "descricao": "Serrador de madeira (serra circular múltipla)"
+    "descricao": "Serrador de madeira"
   },
   {
     "cbo": "773130",
-    "descricao": "Serrador de madeira (serra de fita múltipla)"
+    "descricao": "Serrador de madeira"
   },
   {
     "cbo": "773205",
-    "descricao": "Operador de máquina intercaladora de placas (compensados)"
+    "descricao": "Operador de máquina intercaladora de placas"
   },
   {
     "cbo": "773210",
@@ -8993,15 +8993,15 @@
   },
   {
     "cbo": "773310",
-    "descricao": "Operador de entalhadeira (usinagem de madeira)"
+    "descricao": "Operador de entalhadeira"
   },
   {
     "cbo": "773315",
-    "descricao": "Operador de fresadora (usinagem de madeira)"
+    "descricao": "Operador de fresadora"
   },
   {
     "cbo": "773320",
-    "descricao": "Operador de lixadeira (usinagem de madeira)"
+    "descricao": "Operador de lixadeira"
   },
   {
     "cbo": "773325",
@@ -9009,7 +9009,7 @@
   },
   {
     "cbo": "773330",
-    "descricao": "Operador de molduradora (usinagem de madeira)"
+    "descricao": "Operador de molduradora"
   },
   {
     "cbo": "773335",
@@ -9017,15 +9017,15 @@
   },
   {
     "cbo": "773340",
-    "descricao": "Operador de serras (usinagem de madeira)"
+    "descricao": "Operador de serras"
   },
   {
     "cbo": "773345",
-    "descricao": "Operador de torno automático (usinagem de madeira)"
+    "descricao": "Operador de torno automático"
   },
   {
     "cbo": "773350",
-    "descricao": "Operador de tupia (usinagem de madeira)"
+    "descricao": "Operador de tupia"
   },
   {
     "cbo": "773355",
@@ -9037,11 +9037,11 @@
   },
   {
     "cbo": "773410",
-    "descricao": "Operador de máquina de cortina d´água (produção de móveis)"
+    "descricao": "Operador de máquina de cortina d´água"
   },
   {
     "cbo": "773415",
-    "descricao": "Operador de máquina de usinagem de madeira (produção em série)"
+    "descricao": "Operador de máquina de usinagem de madeira"
   },
   {
     "cbo": "773420",
@@ -9049,11 +9049,11 @@
   },
   {
     "cbo": "773505",
-    "descricao": "Operador de centro de usinagem de madeira (cnc)"
+    "descricao": "Operador de centro de usinagem de madeira"
   },
   {
     "cbo": "773510",
-    "descricao": "Operador de máquinas de usinar madeira (cnc)"
+    "descricao": "Operador de máquinas de usinar madeira"
   },
   {
     "cbo": "774105",
@@ -9081,11 +9081,11 @@
   },
   {
     "cbo": "776410",
-    "descricao": "Confeccionador de escovas, pincéis e produtos similares (a mão)"
+    "descricao": "Confeccionador de escovas, pincéis e produtos similares"
   },
   {
     "cbo": "776415",
-    "descricao": "Confeccionador de escovas, pincéis e produtos similares (a máquina)"
+    "descricao": "Confeccionador de escovas, pincéis e produtos similares"
   },
   {
     "cbo": "776420",
@@ -9101,15 +9101,15 @@
   },
   {
     "cbo": "777105",
-    "descricao": "Carpinteiro naval (construção de pequenas embarcações)"
+    "descricao": "Carpinteiro naval"
   },
   {
     "cbo": "777110",
-    "descricao": "Carpinteiro naval (embarcações)"
+    "descricao": "Carpinteiro naval"
   },
   {
     "cbo": "777115",
-    "descricao": "Carpinteiro naval (estaleiros)"
+    "descricao": "Carpinteiro naval"
   },
   {
     "cbo": "777205",
@@ -9141,7 +9141,7 @@
   },
   {
     "cbo": "781705",
-    "descricao": "Mergulhador profissional (raso e profundo)"
+    "descricao": "Mergulhador profissional"
   },
   {
     "cbo": "782105",
@@ -9149,7 +9149,7 @@
   },
   {
     "cbo": "782110",
-    "descricao": "Operador de guindaste (fixo)"
+    "descricao": "Operador de guindaste"
   },
   {
     "cbo": "782115",
@@ -9161,7 +9161,7 @@
   },
   {
     "cbo": "782125",
-    "descricao": "Operador de monta-cargas (construção civil)"
+    "descricao": "Operador de monta-cargas"
   },
   {
     "cbo": "782130",
@@ -9177,11 +9177,11 @@
   },
   {
     "cbo": "782145",
-    "descricao": "Sinaleiro (ponte-rolante)"
+    "descricao": "Sinaleiro"
   },
   {
     "cbo": "782205",
-    "descricao": "Guincheiro (construção civil)"
+    "descricao": "Guincheiro"
   },
   {
     "cbo": "782210",
@@ -9221,11 +9221,11 @@
   },
   {
     "cbo": "782505",
-    "descricao": "Caminhoneiro autônomo (rotas regionais e internacionais)"
+    "descricao": "Caminhoneiro autônomo"
   },
   {
     "cbo": "782510",
-    "descricao": "Motorista de caminhão (rotas regionais e internacionais)"
+    "descricao": "Motorista de caminhão"
   },
   {
     "cbo": "782515",
@@ -9253,11 +9253,11 @@
   },
   {
     "cbo": "782630",
-    "descricao": "Operador de teleférico (passageiros)"
+    "descricao": "Operador de teleférico"
   },
   {
     "cbo": "782705",
-    "descricao": "Marinheiro de convés (marítimo e fluviário)"
+    "descricao": "Marinheiro de convés"
   },
   {
     "cbo": "782710",
@@ -9265,11 +9265,11 @@
   },
   {
     "cbo": "782715",
-    "descricao": "Moço de convés (marítimo e fluviário)"
+    "descricao": "Moço de convés"
   },
   {
     "cbo": "782720",
-    "descricao": "Moço de máquinas (marítimo e fluviário)"
+    "descricao": "Moço de máquinas"
   },
   {
     "cbo": "782725",
@@ -9277,15 +9277,15 @@
   },
   {
     "cbo": "782730",
-    "descricao": "Marinheiro auxiliar de convés (marítimo e aquaviario)"
+    "descricao": "Marinheiro auxiliar de convés"
   },
   {
     "cbo": "782735",
-    "descricao": "Marinheiro auxiliar de máquinas (marítimo e aquaviário)"
+    "descricao": "Marinheiro auxiliar de máquinas"
   },
   {
     "cbo": "782805",
-    "descricao": "Condutor de veículos de tração animal (ruas e estradas)"
+    "descricao": "Condutor de veículos de tração animal"
   },
   {
     "cbo": "782810",
@@ -9309,15 +9309,15 @@
   },
   {
     "cbo": "783205",
-    "descricao": "Carregador (aeronaves)"
+    "descricao": "Carregador"
   },
   {
     "cbo": "783210",
-    "descricao": "Carregador (armazém)"
+    "descricao": "Carregador"
   },
   {
     "cbo": "783215",
-    "descricao": "Carregador (veículos de transportes terrestres)"
+    "descricao": "Carregador"
   },
   {
     "cbo": "783220",
@@ -9329,7 +9329,7 @@
   },
   {
     "cbo": "783230",
-    "descricao": "Bloqueiro (trabalhador portuário)"
+    "descricao": "Bloqueiro"
   },
   {
     "cbo": "783235",
@@ -9389,7 +9389,7 @@
   },
   {
     "cbo": "791135",
-    "descricao": "Artesão moveleiro (exceto reciclado)"
+    "descricao": "Artesão moveleiro"
   },
   {
     "cbo": "791140",
@@ -9413,7 +9413,7 @@
   },
   {
     "cbo": "810105",
-    "descricao": "Mestre (indústria petroquímica e carboquímica)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "810110",
@@ -9421,7 +9421,7 @@
   },
   {
     "cbo": "810205",
-    "descricao": "Mestre (indústria de borracha e plástico)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "810305",
@@ -9437,15 +9437,15 @@
   },
   {
     "cbo": "811105",
-    "descricao": "Moleiro (tratamentos químicos e afins)"
+    "descricao": "Moleiro"
   },
   {
     "cbo": "811110",
-    "descricao": "Operador de máquina misturadeira (tratamentos químicos e afins)"
+    "descricao": "Operador de máquina misturadeira"
   },
   {
     "cbo": "811115",
-    "descricao": "Operador de britadeira (tratamentos químicos e afins)"
+    "descricao": "Operador de britadeira"
   },
   {
     "cbo": "811120",
@@ -9461,7 +9461,7 @@
   },
   {
     "cbo": "811205",
-    "descricao": "Operador de calcinação (tratamento químico e afins)"
+    "descricao": "Operador de calcinação"
   },
   {
     "cbo": "811215",
@@ -9469,7 +9469,7 @@
   },
   {
     "cbo": "811305",
-    "descricao": "Operador de centrifugadora (tratamentos químicos e afins)"
+    "descricao": "Operador de centrifugadora"
   },
   {
     "cbo": "811310",
@@ -9477,23 +9477,23 @@
   },
   {
     "cbo": "811315",
-    "descricao": "Operador de filtro de secagem (mineração)"
+    "descricao": "Operador de filtro de secagem"
   },
   {
     "cbo": "811320",
-    "descricao": "Operador de filtro de tambor rotativo (tratamentos químicos e afins)"
+    "descricao": "Operador de filtro de tambor rotativo"
   },
   {
     "cbo": "811325",
-    "descricao": "Operador de filtro-esteira (mineração)"
+    "descricao": "Operador de filtro-esteira"
   },
   {
     "cbo": "811330",
-    "descricao": "Operador de filtro-prensa (tratamentos químicos e afins)"
+    "descricao": "Operador de filtro-prensa"
   },
   {
     "cbo": "811335",
-    "descricao": "Operador de filtros de parafina (tratamentos químicos e afins)"
+    "descricao": "Operador de filtros de parafina"
   },
   {
     "cbo": "811405",
@@ -9501,15 +9501,15 @@
   },
   {
     "cbo": "811410",
-    "descricao": "Destilador de produtos químicos (exceto petróleo)"
+    "descricao": "Destilador de produtos químicos"
   },
   {
     "cbo": "811415",
-    "descricao": "Operador de alambique de funcionamento contínuo (produtos químicos, exceto petróleo)"
+    "descricao": "Operador de alambique de funcionamento contínuo"
   },
   {
     "cbo": "811420",
-    "descricao": "Operador de aparelho de reação e conversão (produtos químicos, exceto petróleo)"
+    "descricao": "Operador de aparelho de reação e conversão"
   },
   {
     "cbo": "811425",
@@ -9521,7 +9521,7 @@
   },
   {
     "cbo": "811505",
-    "descricao": "Operador de painel de controle (refinação de petróleo)"
+    "descricao": "Operador de painel de controle"
   },
   {
     "cbo": "811510",
@@ -9545,7 +9545,7 @@
   },
   {
     "cbo": "811625",
-    "descricao": "Operador de exaustor (coqueria)"
+    "descricao": "Operador de exaustor"
   },
   {
     "cbo": "811630",
@@ -9561,11 +9561,11 @@
   },
   {
     "cbo": "811645",
-    "descricao": "Operador de refrigeração (coqueria)"
+    "descricao": "Operador de refrigeração"
   },
   {
     "cbo": "811650",
-    "descricao": "Operador de sistema de reversão (coqueria)"
+    "descricao": "Operador de sistema de reversão"
   },
   {
     "cbo": "811705",
@@ -9613,7 +9613,7 @@
   },
   {
     "cbo": "811810",
-    "descricao": "Drageador (medicamentos)"
+    "descricao": "Drageador"
   },
   {
     "cbo": "811815",
@@ -9621,7 +9621,7 @@
   },
   {
     "cbo": "811820",
-    "descricao": "Operador de máquina de fabricação de produtos de higiene e limpeza (sabão, sabonete, detergente, absorvente, fraldas cotonetes e outros)"
+    "descricao": "Operador de máquina de fabricação de produtos de higiene e limpeza"
   },
   {
     "cbo": "812105",
@@ -9633,27 +9633,27 @@
   },
   {
     "cbo": "813105",
-    "descricao": "Cilindrista (petroquímica e afins)"
+    "descricao": "Cilindrista"
   },
   {
     "cbo": "813110",
-    "descricao": "Operador de calandra (química, petroquímica e afins)"
+    "descricao": "Operador de calandra"
   },
   {
     "cbo": "813115",
-    "descricao": "Operador de extrusora (química, petroquímica e afins)"
+    "descricao": "Operador de extrusora"
   },
   {
     "cbo": "813120",
-    "descricao": "Operador de processo (química, petroquímica e afins)"
+    "descricao": "Operador de processo"
   },
   {
     "cbo": "813125",
-    "descricao": "Operador de produção (química, petroquímica e afins)"
+    "descricao": "Operador de produção"
   },
   {
     "cbo": "813130",
-    "descricao": "Técnico de operação (química, petroquímica e afins)"
+    "descricao": "Técnico de operação"
   },
   {
     "cbo": "818105",
@@ -9693,7 +9693,7 @@
   },
   {
     "cbo": "821105",
-    "descricao": "Operador de centro de controle ( sinterização)"
+    "descricao": "Operador de centro de controle"
   },
   {
     "cbo": "821110",
@@ -9701,19 +9701,19 @@
   },
   {
     "cbo": "821205",
-    "descricao": "Forneiro e operador (alto-forno)"
+    "descricao": "Forneiro e operador"
   },
   {
     "cbo": "821210",
-    "descricao": "Forneiro e operador (conversor a oxigênio)"
+    "descricao": "Forneiro e operador"
   },
   {
     "cbo": "821215",
-    "descricao": "Forneiro e operador (forno elétrico)"
+    "descricao": "Forneiro e operador"
   },
   {
     "cbo": "821220",
-    "descricao": "Forneiro e operador (refino de metais não-ferrosos)"
+    "descricao": "Forneiro e operador"
   },
   {
     "cbo": "821225",
@@ -9721,15 +9721,15 @@
   },
   {
     "cbo": "821230",
-    "descricao": "Operador de aciaria (basculamento de convertedor)"
+    "descricao": "Operador de aciaria"
   },
   {
     "cbo": "821235",
-    "descricao": "Operador de aciaria (dessulfuração de gusa)"
+    "descricao": "Operador de aciaria"
   },
   {
     "cbo": "821240",
-    "descricao": "Operador de aciaria (recebimento de gusa)"
+    "descricao": "Operador de aciaria"
   },
   {
     "cbo": "821245",
@@ -9773,7 +9773,7 @@
   },
   {
     "cbo": "821405",
-    "descricao": "Encarregado de acabamento de chapas e metais  (têmpera)"
+    "descricao": "Encarregado de acabamento de chapas e metais"
   },
   {
     "cbo": "821410",
@@ -9781,7 +9781,7 @@
   },
   {
     "cbo": "821415",
-    "descricao": "Marcador de produtos (siderúrgico e metalúrgico)"
+    "descricao": "Marcador de produtos"
   },
   {
     "cbo": "821420",
@@ -9789,7 +9789,7 @@
   },
   {
     "cbo": "821425",
-    "descricao": "Operador de cabine de laminação (fio-máquina)"
+    "descricao": "Operador de cabine de laminação"
   },
   {
     "cbo": "821430",
@@ -9821,7 +9821,7 @@
   },
   {
     "cbo": "822115",
-    "descricao": "Forneiro de fundição (forno de redução)"
+    "descricao": "Forneiro de fundição"
   },
   {
     "cbo": "822120",
@@ -9833,11 +9833,11 @@
   },
   {
     "cbo": "823105",
-    "descricao": "Preparador de massa (fabricação de abrasivos)"
+    "descricao": "Preparador de massa"
   },
   {
     "cbo": "823110",
-    "descricao": "Preparador de massa (fabricação de vidro)"
+    "descricao": "Preparador de massa"
   },
   {
     "cbo": "823115",
@@ -9849,7 +9849,7 @@
   },
   {
     "cbo": "823125",
-    "descricao": "Preparador de esmaltes (cerâmica)"
+    "descricao": "Preparador de esmaltes"
   },
   {
     "cbo": "823130",
@@ -9905,15 +9905,15 @@
   },
   {
     "cbo": "823315",
-    "descricao": "Forneiro (materiais de construção)"
+    "descricao": "Forneiro"
   },
   {
     "cbo": "823320",
-    "descricao": "Trabalhador da elaboração de pré-fabricados (cimento amianto)"
+    "descricao": "Trabalhador da elaboração de pré-fabricados"
   },
   {
     "cbo": "823325",
-    "descricao": "Trabalhador da elaboração de pré-fabricados (concreto armado)"
+    "descricao": "Trabalhador da elaboração de pré-fabricados"
   },
   {
     "cbo": "823330",
@@ -9921,15 +9921,15 @@
   },
   {
     "cbo": "828105",
-    "descricao": "Oleiro (fabricação de telhas)"
+    "descricao": "Oleiro"
   },
   {
     "cbo": "828110",
-    "descricao": "Oleiro (fabricação de tijolos)"
+    "descricao": "Oleiro"
   },
   {
     "cbo": "830105",
-    "descricao": "Mestre (indústria de celulose, papel e papelão)"
+    "descricao": "Mestre"
   },
   {
     "cbo": "831105",
@@ -9961,11 +9961,11 @@
   },
   {
     "cbo": "832115",
-    "descricao": "Operador de máquina de fabricar papel  (fase úmida)"
+    "descricao": "Operador de máquina de fabricar papel"
   },
   {
     "cbo": "832120",
-    "descricao": "Operador de máquina de fabricar papel (fase seca)"
+    "descricao": "Operador de máquina de fabricar papel"
   },
   {
     "cbo": "832125",
@@ -9997,7 +9997,7 @@
   },
   {
     "cbo": "833205",
-    "descricao": "Cartonageiro, a mão (caixas de papelão)"
+    "descricao": "Cartonageiro, a mão"
   },
   {
     "cbo": "840105",
@@ -10017,7 +10017,7 @@
   },
   {
     "cbo": "841105",
-    "descricao": "Moleiro de cereais (exceto arroz)"
+    "descricao": "Moleiro de cereais"
   },
   {
     "cbo": "841110",
@@ -10041,7 +10041,7 @@
   },
   {
     "cbo": "841310",
-    "descricao": "Operador de equipamentos de refinação de açúcar (processo contínuo)"
+    "descricao": "Operador de equipamentos de refinação de açúcar"
   },
   {
     "cbo": "841315",
@@ -10053,7 +10053,7 @@
   },
   {
     "cbo": "841408",
-    "descricao": "Cozinhador (conservação de alimentos)"
+    "descricao": "Cozinhador"
   },
   {
     "cbo": "841416",
@@ -10089,11 +10089,11 @@
   },
   {
     "cbo": "841460",
-    "descricao": "Operador de preparação de grãos vegetais (óleos e gorduras)"
+    "descricao": "Operador de preparação de grãos vegetais"
   },
   {
     "cbo": "841464",
-    "descricao": "Prensador de frutas (exceto oleaginosas)"
+    "descricao": "Prensador de frutas"
   },
   {
     "cbo": "841468",
@@ -10109,7 +10109,7 @@
   },
   {
     "cbo": "841484",
-    "descricao": "Trabalhador de preparação de pescados (limpeza)"
+    "descricao": "Trabalhador de preparação de pescados"
   },
   {
     "cbo": "841505",
@@ -10157,7 +10157,7 @@
   },
   {
     "cbo": "841725",
-    "descricao": "Malteiro (germinação)"
+    "descricao": "Malteiro"
   },
   {
     "cbo": "841730",
@@ -10177,7 +10177,7 @@
   },
   {
     "cbo": "841805",
-    "descricao": "Operador de forno (fabricação de pães, biscoitos e similares)"
+    "descricao": "Operador de forno"
   },
   {
     "cbo": "841810",
@@ -10205,7 +10205,7 @@
   },
   {
     "cbo": "842125",
-    "descricao": "Operador de máquina (fabricação de cigarros)"
+    "descricao": "Operador de máquina"
   },
   {
     "cbo": "842135",
@@ -10249,7 +10249,7 @@
   },
   {
     "cbo": "848115",
-    "descricao": "Salsicheiro (fabricação de lingüiça, salsicha e produtos similares)"
+    "descricao": "Salsicheiro"
   },
   {
     "cbo": "848205",
@@ -10273,7 +10273,7 @@
   },
   {
     "cbo": "848315",
-    "descricao": "Masseiro (massas alimentícias)"
+    "descricao": "Masseiro"
   },
   {
     "cbo": "848325",
@@ -10325,15 +10325,15 @@
   },
   {
     "cbo": "860105",
-    "descricao": "Supervisor de manutenção eletromecânica (utilidades)"
+    "descricao": "Supervisor de manutenção eletromecânica"
   },
   {
     "cbo": "860110",
-    "descricao": "Supervisor de operação de fluidos (distribuição, captação, tratamento de água, gases, vapor)"
+    "descricao": "Supervisor de operação de fluidos"
   },
   {
     "cbo": "860115",
-    "descricao": "Supervisor de operação elétrica (geração, transmissão e distribuição de energia elétrica)"
+    "descricao": "Supervisor de operação elétrica"
   },
   {
     "cbo": "861105",
@@ -10357,7 +10357,7 @@
   },
   {
     "cbo": "862105",
-    "descricao": "Foguista (locomotivas a vapor)"
+    "descricao": "Foguista"
   },
   {
     "cbo": "862110",
@@ -10385,7 +10385,7 @@
   },
   {
     "cbo": "862155",
-    "descricao": "Operador de utilidade (produção e distribuição de vapor, gás, óleo, combustível, energia, oxigênio)"
+    "descricao": "Operador de utilidade"
   },
   {
     "cbo": "862160",
@@ -10461,7 +10461,7 @@
   },
   {
     "cbo": "911105",
-    "descricao": "Mecânico de manutenção de bomba injetora (exceto de veículos automotores)"
+    "descricao": "Mecânico de manutenção de bomba injetora"
   },
   {
     "cbo": "911110",
@@ -10473,7 +10473,7 @@
   },
   {
     "cbo": "911120",
-    "descricao": "Mecânico de manutenção de motores diesel (exceto de veículos automotores)"
+    "descricao": "Mecânico de manutenção de motores diesel"
   },
   {
     "cbo": "911125",
@@ -10481,7 +10481,7 @@
   },
   {
     "cbo": "911130",
-    "descricao": "Mecânico de manutenção de turbinas (exceto de aeronaves)"
+    "descricao": "Mecânico de manutenção de turbinas"
   },
   {
     "cbo": "911135",
@@ -10501,7 +10501,7 @@
   },
   {
     "cbo": "911315",
-    "descricao": "Mecânico de manutenção de máquinas operatrizes (lavra de madeira)"
+    "descricao": "Mecânico de manutenção de máquinas operatrizes"
   },
   {
     "cbo": "911320",
@@ -10509,7 +10509,7 @@
   },
   {
     "cbo": "911325",
-    "descricao": "Mecânico de manutenção de máquinas-ferramentas (usinagem de metais)"
+    "descricao": "Mecânico de manutenção de máquinas-ferramentas"
   },
   {
     "cbo": "913105",
@@ -10537,7 +10537,7 @@
   },
   {
     "cbo": "914110",
-    "descricao": "Mecânico de manutenção de sistema hidráulico de aeronaves (serviços de pista e hangar)"
+    "descricao": "Mecânico de manutenção de sistema hidráulico de aeronaves"
   },
   {
     "cbo": "914205",
@@ -10565,7 +10565,7 @@
   },
   {
     "cbo": "914425",
-    "descricao": "Mecânico de veículos automotores a diesel (exceto tratores)"
+    "descricao": "Mecânico de veículos automotores a diesel"
   },
   {
     "cbo": "915105",
@@ -10581,7 +10581,7 @@
   },
   {
     "cbo": "915205",
-    "descricao": "Restaurador de instrumentos musicais (exceto cordas arcadas)"
+    "descricao": "Restaurador de instrumentos musicais"
   },
   {
     "cbo": "915210",
@@ -10589,7 +10589,7 @@
   },
   {
     "cbo": "915215",
-    "descricao": "Luthier (restauração de cordas arcadas)"
+    "descricao": "Luthier"
   },
   {
     "cbo": "915305",
@@ -10605,7 +10605,7 @@
   },
   {
     "cbo": "919110",
-    "descricao": "Lubrificador de veículos automotores (exceto embarcações)"
+    "descricao": "Lubrificador de veículos automotores"
   },
   {
     "cbo": "919115",
@@ -10665,15 +10665,15 @@
   },
   {
     "cbo": "953105",
-    "descricao": "Eletricista de instalações (aeronaves)"
+    "descricao": "Eletricista de instalações"
   },
   {
     "cbo": "953110",
-    "descricao": "Eletricista de instalações (embarcações)"
+    "descricao": "Eletricista de instalações"
   },
   {
     "cbo": "953115",
-    "descricao": "Eletricista de instalações (veículos automotores e máquinas operatrizes, exceto aeronaves e embarcações)"
+    "descricao": "Eletricista de instalações"
   },
   {
     "cbo": "954105",
@@ -10697,7 +10697,7 @@
   },
   {
     "cbo": "954205",
-    "descricao": "Reparador de aparelhos eletrodomésticos (exceto imagem e som)"
+    "descricao": "Reparador de aparelhos eletrodomésticos"
   },
   {
     "cbo": "954210",
@@ -10709,15 +10709,15 @@
   },
   {
     "cbo": "991105",
-    "descricao": "Conservador de via permanente (trilhos)"
+    "descricao": "Conservador de via permanente"
   },
   {
     "cbo": "991110",
-    "descricao": "Inspetor de via permanente (trilhos)"
+    "descricao": "Inspetor de via permanente"
   },
   {
     "cbo": "991115",
-    "descricao": "Operador de máquinas especiais em conservação de via permanente (trilhos)"
+    "descricao": "Operador de máquinas especiais em conservação de via permanente"
   },
   {
     "cbo": "991120",
@@ -10729,15 +10729,15 @@
   },
   {
     "cbo": "991305",
-    "descricao": "Funileiro de veículos (reparação)"
+    "descricao": "Funileiro de veículos"
   },
   {
     "cbo": "991310",
-    "descricao": "Montador de veículos (reparação)"
+    "descricao": "Montador de veículos"
   },
   {
     "cbo": "991315",
-    "descricao": "Pintor de veículos (reparação)"
+    "descricao": "Pintor de veículos"
   },
   {
     "cbo": "992105",
@@ -10757,11 +10757,11 @@
   },
   {
     "cbo": "992205",
-    "descricao": "Encarregado geral de operações de conservação de vias permanentes (exceto trilhos)"
+    "descricao": "Encarregado geral de operações de conservação de vias permanentes"
   },
   {
     "cbo": "992210",
-    "descricao": "Encarregado de equipe de conservação de vias permanentes (exceto trilhos)"
+    "descricao": "Encarregado de equipe de conservação de vias permanentes"
   },
   {
     "cbo": "992215",
@@ -10769,11 +10769,11 @@
   },
   {
     "cbo": "992220",
-    "descricao": "Pedreiro de conservação de vias permanentes (exceto trilhos)"
+    "descricao": "Pedreiro de conservação de vias permanentes"
   },
   {
     "cbo": "992225",
-    "descricao": "Auxiliar geral de conservação de vias permanentes (exceto trilhos)"
+    "descricao": "Auxiliar geral de conservação de vias permanentes"
   },
   {
     "cbo": "999901",

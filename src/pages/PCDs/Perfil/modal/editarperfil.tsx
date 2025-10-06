@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import axios from "axios";
 import { motion } from "framer-motion";
-import Button from "@/src/components/elements/buttons/button";
 import { Input, TextareaAutoResize, Select } from "@/src/components/elements/input/input";
-import ToggleSwitch from "@/src/components/elements/switchToggle/switch";
 import type { PCD } from "@/src/components/types/bdtypes";
 import { X } from "lucide-react";
 import { useUIStore } from "@/src/components/store/modalstore";
-import { useRouter } from "next/navigation";
+import CargoAutocomplete from "@/src/components/form/CargoAutoComplete/cargoautocomplete";
+import Button from "@/src/components/elements/buttons/button";
+import ToggleSwitch from "@/src/components/elements/switchToggle/switch";
+import axios from "axios";
 
 type EditarPerfilModalProps = {
     readonly user: PCD;
@@ -26,7 +26,6 @@ export default function EditarPerfilModal({ user, isOpen, onClose, onUpdated }: 
     const [previewBanner, setPreviewBanner] = useState<string>(user.imageProfile || "/placeholder-banner.png");
     const [loading, setLoading] = useState(false);
 
-    const router = useRouter();
 
     const openModal = useUIStore((s) => s.openModal);
     const closeModal = useUIStore((s) => s.closeModal);
@@ -105,7 +104,7 @@ export default function EditarPerfilModal({ user, isOpen, onClose, onUpdated }: 
             setTimeout(() => closeModal(), 1500);
         } finally {
             setLoading(false);
-            router.refresh();
+            window.location.reload();
         }
     };
 
@@ -191,7 +190,7 @@ export default function EditarPerfilModal({ user, isOpen, onClose, onUpdated }: 
                     <Input label="Nome" className="w-[80%]" value={formData.name ?? ""} onChange={(v) => handleChange("name", v)} />
                     <Input label="E-mail" type="email" className="w-[80%]" value={formData.email ?? ""} onChange={(v) => handleChange("email", v)} />
                     <Input label="Telefone" className="w-[80%]" value={formData.telefone ?? ""} onChange={(v) => handleChange("telefone", v)} />
-                    <Input label="Cargo / Trabalho" className="w-[80%]" value={formData.trabalho ?? ""} onChange={(v) => handleChange("trabalho", v)} />
+                    <CargoAutocomplete data={formData} setData={setFormData} bgClassName="input-background " />
 
                     <Select
                         label="Deficiência"
@@ -280,11 +279,22 @@ export default function EditarPerfilModal({ user, isOpen, onClose, onUpdated }: 
                             onChange={() => handleChange("empresapick", !formData.empresapick)}
                         />
 
-                        <span aria-hidden="true">i</span>
-                        <span className="absolute bottom-full mb-2 hidden w-64 bg-gray-800 text-white text-sm 
-                                 rounded-md p-2 text-center group-hover:block z-50">
-                            Empresas podem adicionar você diretamente a um processo caso esta opção esteja habilitada.
-                        </span>
+                        {/* 🔹 Tooltip do "i" */}
+                        <div className="relative group cursor-pointer">
+                            <span
+                                aria-hidden="true"
+                                className="flex items-center justify-center w-5 h-5 rounded-full border border-gray-400 text-gray-600 text-xs font-bold"
+                            >
+                                i
+                            </span>
+
+                            <span
+                                className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 hidden w-64 bg-gray-800 text-white text-sm 
+                 rounded-md p-2 text-center group-hover:block z-50"
+                            >
+                                Empresas podem adicionar você diretamente a um processo caso esta opção esteja habilitada.
+                            </span>
+                        </div>
                     </div>
                 </div>
 

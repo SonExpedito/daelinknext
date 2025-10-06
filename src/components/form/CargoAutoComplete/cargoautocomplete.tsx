@@ -1,14 +1,19 @@
 "use client";
 import { useState } from "react";
-import cbos from "../data/ocupacoes_modernas.json"; // seu arquivo JSON com cargos
+import cbos from "../data/ocupacoes_modernas.json";
 import { Input } from "@/src/components/elements/input/input";
 
 type CargoAutocompleteProps = {
   data: any;
   setData: React.Dispatch<React.SetStateAction<any>>;
+  bgClassName?: string; // 🔹 nova prop opcional para customizar o fundo
 };
 
-export default function CargoAutocomplete({ data, setData }: Readonly<CargoAutocompleteProps>) {
+export default function CargoAutocomplete({
+  data,
+  setData,
+  bgClassName = "bg-white/70", // valor padrão
+}: Readonly<CargoAutocompleteProps>) {
   const [filtradas, setFiltradas] = useState<string[]>([]);
 
   const handleChange = (valor: string) => {
@@ -19,7 +24,6 @@ export default function CargoAutocomplete({ data, setData }: Readonly<CargoAutoc
       return;
     }
 
-    // Ajusta conforme o formato do JSON
     const lista = Array.isArray(cbos) ? cbos : [];
     const match = lista
       .filter((item: any) =>
@@ -44,14 +48,19 @@ export default function CargoAutocomplete({ data, setData }: Readonly<CargoAutoc
         label="Digite seu Cargo"
         placeholder="Ex: Desenvolvedor de Software"
         type="text"
-        className="!bg-white/70 !w-[80%] mx-auto"
+        className={`!w-[80%] mx-auto ${bgClassName} capitalize`}
         value={data.trabalho}
         required
         onChange={handleChange}
       />
 
       {filtradas.length > 0 && (
-        <ul className="absolute top-[100%] mt-1 w-[80%] bg-white rounded-2xl shadow-lg z-20 border border-gray-200 overflow-hidden max-h-60 overflow-y-auto">
+        <ul
+          className={`absolute top-[100%] mt-1 w-[80%] ${bgClassName.replace(
+            "!bg-",
+            "bg-"
+          )} rounded-2xl shadow-lg z-20 border border-gray-200 overflow-hidden max-h-60 overflow-y-auto`}
+        >
           {filtradas.map((sugestao) => (
             <li key={sugestao}>
               <button

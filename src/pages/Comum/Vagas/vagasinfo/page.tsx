@@ -116,7 +116,10 @@ export default function VagasinfoPage({ vagaId }: Readonly<Props>) {
       closeModal();
       openModal(res.data?.message || "Candidatura registrada com sucesso!");
       setJaInscrito(true);
-      setTimeout(() => closeModal(), 2000);
+      setTimeout(() => {
+        closeModal();
+        router.push("/processos");
+      }, 1500);
 
     } catch (err: any) {
       closeModal();
