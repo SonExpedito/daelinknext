@@ -70,12 +70,110 @@ export default function CadastroPCDPage() {
     imageUrl: null as File | null,
   });
 
+  const isEmpty = (value?: string | null) =>
+    !value || (typeof value === "string" && value.trim().length === 0);
+
+  const validatePerfilEtapa = () => {
+    if (isEmpty(formData.name)) {
+      openModal("Nome é obrigatório.");
+      return false;
+    }
+
+    if (isEmpty(formData.email)) {
+      openModal("E-mail é obrigatório.");
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email.trim())) {
+      openModal("Informe um e-mail válido.");
+      return false;
+    }
+
+    if (isEmpty(formData.sobre)) {
+      openModal("Sobre é obrigatório.");
+      return false;
+    }
+
+    if (isEmpty(formData.deficiencia)) {
+      openModal("Selecione uma deficiência.");
+      return false;
+    }
+
+    if (isEmpty(formData.genero)) {
+      openModal("Selecione um gênero.");
+      return false;
+    }
+
+    if (isEmpty(formData.dataNasc)) {
+      openModal("Data de nascimento é obrigatória.");
+      return false;
+    }
+
+    return true;
+  };
+
+  const validateCredenciaisEtapa = () => {
+    if (isEmpty(formData.password)) {
+      openModal("Senha é obrigatória.");
+      return false;
+    }
+
+    if ((formData.password ?? "").length < 6) {
+      openModal("A senha deve ter pelo menos 6 caracteres.");
+      return false;
+    }
+
+    if (isEmpty(formData.confirmPassword)) {
+      openModal("Confirme sua senha.");
+      return false;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      openModal("As senhas não coincidem.");
+      return false;
+    }
+
+    if (isEmpty(formData.cpf)) {
+      openModal("CPF é obrigatório.");
+      return false;
+    }
+
+    if (!validarCPF(formData.cpf)) {
+      openModal("CPF inválido.");
+      return false;
+    }
+
+    if (isEmpty(formData.telefone)) {
+      openModal("Telefone é obrigatório.");
+      return false;
+    }
+
+    if (formData.telefone.replace(/\D/g, "").length < 10) {
+      openModal("Informe um telefone válido.");
+      return false;
+    }
+
+    if (isEmpty(formData.descrição)) {
+      openModal("Descrição é obrigatória.");
+      return false;
+    }
+
+    return true;
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % cadastroPCD.length);
     }, 10000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleNextEtapa = () => {
+    if (validatePerfilEtapa()) {
+      setEtapa((prev) => prev + 1);
+    }
+  };
 
   const renderEtapa = () => {
     switch (etapa) {
@@ -89,8 +187,10 @@ export default function CadastroPCDPage() {
   };
 
   const handleSubmit = async () => {
-    if (!validarCPF(formData.cpf)) {
-      openModal("CPF inválido.");
+    const isPerfilValid = validatePerfilEtapa();
+    const isCredenciaisValid = validateCredenciaisEtapa();
+
+    if (!isPerfilValid || !isCredenciaisValid) {
       return;
     }
 
@@ -98,8 +198,6 @@ export default function CadastroPCDPage() {
     setLoading(true);
 
     try {
-      openModal("Cadastrando...");
-
       const email = formData.email?.trim();
       const password = formData.password;
       let uid = "";
@@ -146,12 +244,13 @@ export default function CadastroPCDPage() {
 
       // 🔹 5. Feedback e redirecionamento
       openModal(res.data.message || "Cadastro realizado com sucesso!");
-      router.push("/");
-      setTimeout(() => closeModal(), 1500);
+      router.replace("/");
+      setTimeout(() => router.refresh(), 1500);
 
     } catch (err: any) {
       console.error("Erro no cadastro:", err);
       openModal(err.response?.data?.error || "Erro no cadastro.");
+      setTimeout(() => closeModal(), 1500);
     } finally {
       setLoading(false);
       setIsSubmitting(false);
@@ -171,7 +270,7 @@ export default function CadastroPCDPage() {
       {etapa < 1 ? (
         <Button
           label="Próximo"
-          onClick={() => setEtapa((prev) => prev + 1)}
+          onClick={handleNextEtapa}
           className="background-green"
         />
       ) : (

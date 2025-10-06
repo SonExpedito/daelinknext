@@ -19,6 +19,7 @@ export async function PATCH(req: Request) {
   }
 }
 
+// DESATIVAR usuário
 export async function DELETE(req: Request) {
   try {
     const { uid } = await req.json();
@@ -27,12 +28,12 @@ export async function DELETE(req: Request) {
       return NextResponse.json({ error: "UID não fornecido" }, { status: 400 });
     }
 
-    // Deleta usuário
-    await admin.auth().deleteUser(uid);
+    // Desativa usuário sem deletar
+    await admin.auth().updateUser(uid, { disabled: true });
 
-    return NextResponse.json({ message: "Conta deletada com sucesso!" });
+    return NextResponse.json({ message: "Conta desativada com sucesso!" });
   } catch (error) {
-    console.error("Erro ao deletar conta:", error);
-    return NextResponse.json({ error: "Erro ao deletar conta" }, { status: 500 });
+    console.error("Erro ao desativar conta:", error);
+    return NextResponse.json({ error: "Erro ao desativar conta" }, { status: 500 });
   }
 }

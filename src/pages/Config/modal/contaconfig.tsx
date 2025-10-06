@@ -57,25 +57,25 @@ export default function AccountModal({ isOpen, onClose }: Readonly<AccountModalP
         }
     };
 
-    // Deletar conta
-    const handleDeleteAccount = () => {
+    // Desativar conta
+    const handleDisableAccount = () => {
         if (!auth.currentUser) return;
         const uid = auth.currentUser.uid;
 
         openConfirmModal(
-            "Deseja realmente deletar sua conta? Esta ação é irreversível.",
+            "Deseja realmente desativar sua conta? Esta ação é reversível.",
             async () => {
                 try {
                     await axios.delete("/conta-auth", { params: { uid } });
-                    openModal("Conta deletada com sucesso!");
+                    openModal("Conta desativada com sucesso!");
                     onClose(); // fecha o modal principal
                     // aqui você pode deslogar/redirecionar
                 } catch (err: any) {
                     console.error(err);
-                    openModal(err.response?.data?.error || "Erro ao deletar conta");
+                    openModal(err.response?.data?.error || "Erro ao desativar conta");
                 }
             },
-            "Deletar",
+            "Desativar",
             "Cancelar"
         );
     };
@@ -169,19 +169,19 @@ export default function AccountModal({ isOpen, onClose }: Readonly<AccountModalP
                         />
                     </div>
 
-                    {/* Deletar Conta */}
+                    {/* Desativar Conta */}
                     <div className="mb-6 p-4 rounded-xl bg-white/10 backdrop-blur-md shadow-inner flex flex-col gap-3">
                         <div className="flex items-center gap-3">
-                            <Eraser size={24} className="text-red-400" />
-                            <span className="text-lg font-medium text-red-400">Deletar Conta</span>
+                            <Eraser size={24} className="text-yellow-400" />
+                            <span className="text-lg font-medium text-yellow-400">Desativar Conta</span>
                         </div>
                         <p className="text-white text-sm">
-                            Esta ação é irreversível. Todos os dados serão apagados permanentemente.
+                            Esta ação desativa sua conta. Você não poderá mais acessar até que seja reativada.
                         </p>
                         <Button
-                            onClick={handleDeleteAccount}
-                            className="bg-red-400"
-                            label="Deletar Conta"
+                            onClick={handleDisableAccount}
+                            className="bg-yellow-400"
+                            label="Desativar Conta"
                         />
                     </div>
                 </motion.div>

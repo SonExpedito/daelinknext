@@ -14,6 +14,7 @@ const protectedRoutes = {
 
 const chatRoutes = ["/chat"]; // acessível por ambos
 const authRoutes = ["/login", "/cadastro"];
+const profileRoutes = ["/perfil"];
 
 export default function UserGate({ children }: { readonly children: ReactNode }) {
   const pathname = usePathname();
@@ -41,10 +42,11 @@ export default function UserGate({ children }: { readonly children: ReactNode })
       const isPCDRoute = matchRoute(protectedRoutes.PCD);
       const isEmpresaRoute = matchRoute(protectedRoutes.Empresa);
       const isChatRoute = matchRoute(chatRoutes);
+      const isProfile = matchRoute(profileRoutes);
       const isAuthRoute = authRoutes.includes(pathname);
 
       // Usuário não logado tenta acessar rota protegida
-      if (!userType && (isPCDRoute || isEmpresaRoute || isChatRoute)) {
+      if (!userType && (isPCDRoute || isEmpresaRoute || isChatRoute || isProfile)) {
         showModalMessage("Acesso restrito. Faça login para continuar.");
         redirect("/login");
         return;

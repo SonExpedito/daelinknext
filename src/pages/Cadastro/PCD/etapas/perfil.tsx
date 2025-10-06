@@ -156,6 +156,9 @@ export default function PerfilEtapa({ data, setData }: Readonly<PerfilEtapaProps
                     required
                     onChange={(v) => setData((prev: any) => ({ ...prev, deficiencia: v }))}
                 >
+                    <option className="text-black" value="" disabled>
+                        Selecione uma opção
+                    </option>
                     <option className="text-black" value="Visual">
                         Visual
                     </option>
@@ -186,6 +189,9 @@ export default function PerfilEtapa({ data, setData }: Readonly<PerfilEtapaProps
                     required
                     onChange={(v) => setData((prev: any) => ({ ...prev, genero: v }))}
                 >
+                    <option className="text-black" value="" disabled>
+                        Selecione uma opção
+                    </option>
                     <option className="text-black" value="Masculino">
                         Masculino
                     </option>

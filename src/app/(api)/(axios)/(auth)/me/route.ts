@@ -45,7 +45,7 @@ async function findUserProfile(db: any, uid: string, email?: string) {
 }
 
 export async function GET() {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const sessionCookie = cookieStore.get("session")?.value;
 
   console.log("Cookie:", sessionCookie);
