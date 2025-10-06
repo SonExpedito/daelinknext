@@ -71,49 +71,62 @@ export default function EditarPerfilEmpresa({
     reader.readAsDataURL(file);
   };
 
-  const handleSave = async () => {
-    try {
-      setLoading(true);
-      const data = new FormData();
-      data.append("uid", formData.id || "");
+  const buildFormData = (src: Empresa) => {
+    const data = new FormData();
+    data.append("uid", src.id || "");
 
-      Object.entries(formData).forEach(([key, value]) => {
-        if (["imageProfile", "imageUrl", "sobreimg", "id"].includes(key)) return;
-        if (value !== undefined && value !== null && typeof value !== "object") {
-          data.append(key, String(value));
-        }
-      });
-
-      if (imageUrlFile) data.append("imageUrl", imageUrlFile);
-      if (imageProfileFile) data.append("imageProfile", imageProfileFile);
-      if (sobreimgFile) data.append("sobreimg", sobreimgFile);
-
-      const res = await axios.put<{ imageProfile?: string; imageUrl?: string; sobreimg?: string }>("/editar-empresa", data, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
-
-      if (res.status === 200) {
-        const { imageProfile, imageUrl, sobreimg } = res.data || {};
-        const updatedData: Partial<Empresa> = {
-          ...formData,
-          ...(imageProfile ? { imageProfile } : {}),
-          ...(imageUrl ? { imageUrl } : {}),
-          ...(sobreimg ? { sobreimg } : {}),
-        };
-
-        setFormData((prev) => ({ ...prev, ...updatedData }));
-        if (imageProfile) setPreviewBanner(imageProfile);
-        if (imageUrl) setPreviewProfile(imageUrl);
-        if (sobreimg) setPreviewSobre(sobreimg);
-
-        openModal("Perfil atualizado com sucesso!");
-        setTimeout(() => closeModal(), 1200);
-        onUpdated?.(updatedData);
-        onClose();
-      } else {
-        openModal("Erro ao atualizar perfil.");
-        setTimeout(() => closeModal(), 1200);
+    const ignored = new Set(["imageProfile", "imageUrl", "sobreimg", "id"]);
+    Object.entries(src as Record<string, unknown>).forEach(([key, value]) => {
+      if (ignored.has(key)) return;
+      if (value !== undefined && value !== null && typeof value !== "object") {
+        data.append(key, String(value));
       }
+    });
+
+    if (imageUrlFile) data.append("imageUrl", imageUrlFile);
+    if (imageProfileFile) data.append("imageProfile", imageProfileFile);
+    if (sobreimgFile) data.append("sobreimg", sobreimgFile);
+
+    return data;
+  };
+
+  type UpdateResponse = { imageProfile?: string; imageUrl?: string; sobreimg?: string };
+
+  const putEmpresa = async (data: FormData): Promise<UpdateResponse> => {
+    const res = await axios.put<UpdateResponse>("/editar-empresa", data, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+    if (res.status !== 200) throw new Error("Erro ao atualizar perfil.");
+    return res.data || {};
+  };
+
+  const applyUpdates = (payload: UpdateResponse) => {
+    const { imageProfile, imageUrl, sobreimg } = payload;
+
+    const updatedData: Partial<Empresa> = {
+      ...formData,
+      ...(imageProfile ? { imageProfile } : {}),
+      ...(imageUrl ? { imageUrl } : {}),
+      ...(sobreimg ? { sobreimg } : {}),
+    };
+
+    setFormData((prev) => ({ ...prev, ...updatedData }));
+    if (imageProfile) setPreviewBanner(imageProfile);
+    if (imageUrl) setPreviewProfile(imageUrl);
+    if (sobreimg) setPreviewSobre(sobreimg);
+
+    openModal("Perfil atualizado com sucesso!");
+    setTimeout(() => closeModal(), 1200);
+    onUpdated?.(updatedData);
+    onClose();
+  };
+
+  const handleSave = async () => {
+    setLoading(true);
+    try {
+      const data = buildFormData(formData);
+      const resp = await putEmpresa(data);
+      applyUpdates(resp);
     } catch (error) {
       console.error("Erro ao salvar perfil:", error);
       openModal("Falha ao salvar alterações.");
@@ -171,7 +184,7 @@ export default function EditarPerfilEmpresa({
         {/* 🔹 Campos */}
         <div className="flex flex-col items-center gap-4 text-color">
           <Input label="Nome da Empresa" className="w-[80%]" value={formData.name ?? ""} onChange={(v) => handleChange("name", v)} />
-          <Input label="CNPJ" className="w-[80%]" value={formData.cnpj ?? ""} readOnly disabled onChange={() => {}} />
+          <Input label="CNPJ" className="w-[80%]" value={formData.cnpj ?? ""} readOnly disabled onChange={() => { }} />
           <Input label="E-mail" type="email" className="w-[80%]" value={formData.email ?? ""} onChange={(v) => handleChange("email", v)} />
           <Input label="Telefone" className="w-[80%]" value={formData.telefone ?? ""} onChange={(v) => handleMaskedChange("telefone", v, "(00) 00000-0000")} />
           <Input label="CEP" className="w-[80%]" value={formData.cep ?? ""} onChange={(v) => handleMaskedChange("cep", v, "00000-000")} />
