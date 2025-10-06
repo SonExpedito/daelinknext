@@ -76,28 +76,39 @@ export default function EmpresasInfoPage({ empresaId }: Props) {
     } else if (empresa) {
         content = (
             <>
-                <div className="w-full h-[45vh] flex items-center justify-center py-2">
-                    <img src={empresa.imageProfile} alt={empresa.name} className="w-[85%] h-full object-cover object-center rounded-3xl" />
-                </div>
-                <div className="w-full min-h-[30vh] h-auto flex relative items-center pl-36 pb-8">
+                <div className="w-full h-fit flex flex-col items-center justify-center relative mb-8">
+                    <img
+                        src={empresa.imageProfile || "/errors/bannererror.png"}
+                        alt={empresa.name || "Banner da empresa"}
+                        className="w-[70rem] h-80 object-cover rounded-3xl"
+                    />
 
-                    <div className="h-60 w-60 flex items-center justify-center absolute bottom-[50%]
-                        rounded-3xl p-1 border border-white/30 bg-white/10 backdrop-blur-xl shadow-lg
-                         hover:bg-white/20 transition duration-300">
-                        <img src={empresa.imageUrl} alt={empresa.name} className="h-full object-cover rounded-3xl" />
+                    <div className="flex flex-col items-center justify-center relative">
+                        <div
+                            className={`h-60 w-60 mb-40
+                                } flex items-center justify-center absolute 
+            rounded-3xl p-1 border border-white/30 bg-white/10 backdrop-blur-xl shadow-lg
+            hover:bg-white/20 transition duration-300`}
+                        >
+                            <img
+                                src={empresa.imageUrl || "/errors/usererror.png"}
+                                alt={empresa.name || ""}
+                                className="h-full w-full object-cover rounded-3xl"
+                            />
+                        </div>
                     </div>
 
-                    <div className="h-full w-full pt-4 flex flex-col gap-3 ml-72">
-                        <h2 className="text-5xl font-bold primary-color ">{empresa.name}</h2>
-                        <p className="text-xl font-semibold text-color ">{empresa.area}</p>
+                    <div className="flex flex-col gap-2 items-center justify-center mt-12">
+                        <h1 className="text-color text-3xl font-bold text-center">{empresa.name}</h1>
+                        <p className="text-base max-w-[30rem] text-center text-color">
+                            {empresa.sobre || "Nenhuma descrição adicionada."}
+                        </p>
 
-                        <p className="text-lg text-color text-left whitespace-normal break-words line-clamp-3 w-3/5">{empresa.sobre}</p>
                         <div className="flex gap-4 pt-2 ">
                             <Button type="button" label={<><Mail size={24} /> Email</>} className="background-blue" onClick={handleContact} />
                             <Button type="button" label={<><Phone size={24} /> Telefone</>} className="bg-[#5B21B6]" onClick={handleTelefone} />
                         </div>
                     </div>
-
                 </div>
 
                 <ComapanyTabs empresa={empresa} />

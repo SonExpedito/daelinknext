@@ -1,7 +1,7 @@
 'use client'
-import Footer from "@/src/components/elements/footer/footer";
 import Navbar from "@/src/components/elements/navbar/navbar";
 import { useUserStore } from "@/src/components/store/userstore";
+import PerfillEmpresa from "@/src/pages/Companies/perfil/page";
 import PerfilPCD from "@/src/pages/PCDs/Perfil/page";
 
 
@@ -15,7 +15,7 @@ export default function Perfil() {
         paginaatual = <PerfilPCD />;
     } else if (userType === "Empresa") {
 
-        paginaatual = null;
+        paginaatual = <PerfillEmpresa />;
     } 
     return (
         <>

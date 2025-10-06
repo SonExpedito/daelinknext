@@ -66,7 +66,7 @@ export default function CargoAutocomplete({
               <button
                 type="button"
                 onClick={() => selecionarSugestao(sugestao)}
-                className="w-full text-left px-4 py-2 text-gray-700 cursor-pointer hover:bg-blue-100 transition"
+                className="w-full text-left px-4 py-2 text-color cursor-pointer hover:bg-blue-100 transition"
               >
                 {sugestao}
               </button>

@@ -58,14 +58,14 @@ export default function RamosAutoComplete({
           className={`absolute top-[100%] mt-1 w-[80%] ${bgClassName.replace(
             "!bg-",
             "bg-"
-          )} rounded-2xl shadow-lg z-20 border border-gray-200 overflow-hidden max-h-60 overflow-y-auto`}
+          )} rounded-2xl shadow-lg z-40 border border-gray-200 overflow-hidden max-h-60 overflow-y-auto`}
         >
           {filtradas.map((sugestao) => (
             <li key={sugestao.cod}>
               <button
                 type="button"
                 onClick={() => selecionarSugestao(`${sugestao.desc}`)}
-                className="w-full text-left px-4 py-2 text-gray-700 cursor-pointer hover:bg-blue-100 transition"
+                className="w-full text-left px-4 py-2 text-color cursor-pointer hover:bg-blue-100 transition"
               >
                 {sugestao.desc}
               </button>
