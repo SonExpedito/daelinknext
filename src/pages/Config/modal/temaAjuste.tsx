@@ -20,9 +20,10 @@ export default function ThemeModal({ isOpen, onClose }: Readonly<ThemeModalProps
   // Paletas para daltonismo
   const colorBlindPalettes = {
     normal: { primary: "#2469F5", secondary: "#07BEB8", label: "Daelink" },
+    barcelona: { primary: "#a50044", secondary: "#004d98", label: "Barça" },
     protanopia: { primary: "#0072B2", secondary: "#D55E00", label: "Protanopia (dif. vermelho)" },
     deuteranopia: { primary: "#009E73", secondary: "#E69F00", label: "Deuteranopia (dif. verde)" },
-    tritanopia: { primary: "#56B4E9", secondary: "#F0E442", label: "Tritanopia (dif. azul)" },
+    tritanopia: { primary: "#56B4E9", secondary: "#F0E442", label: "Tritanopia (dif. azul)" }
   };
 
   // Carrega valores salvos no localStorage
@@ -109,9 +110,9 @@ export default function ThemeModal({ isOpen, onClose }: Readonly<ThemeModalProps
           </div>
         </div>
 
-        {/* Paletas pré-definidas para daltonismo */}
+        {/* Paletas pré-definidas */}
         <div>
-          <p className="text-lg font-medium mb-3 text-color">Pré-definições para daltonismo</p>
+          <p className="text-lg font-medium mb-3 text-color">Pré-definições</p>
           <div className="flex flex-col gap-2">
             {Object.entries(colorBlindPalettes).map(([key, palette]) => (
               <button
